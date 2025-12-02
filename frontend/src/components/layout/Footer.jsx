@@ -13,9 +13,11 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">L</span>
-              </div>
+              <img 
+                src="https://www.lanos-logic.com/favicon.ico" 
+                alt="Lanos Logic" 
+                className="w-10 h-10 rounded-lg"
+              />
               <span className="text-xl font-bold text-white tracking-tight">
                 Lanos <span className="text-amber-400">Logic</span>
               </span>
