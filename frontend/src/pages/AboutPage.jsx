@@ -91,10 +91,10 @@ const AboutPage = () => {
                   We recognized that many businesses were struggling to keep up
                   with the rapid pace of technological change. Manual processes
                   were holding them back, and traditional software solutions
-                  weren't flexible enough to meet their evolving needs.
+                  weren&apos;t flexible enough to meet their evolving needs.
                 </p>
                 <p>
-                  That's why we built Lanos Logic — to bridge the gap between
+                  That&apos;s why we built Lanos Logic — to bridge the gap between
                   cutting-edge AI technology and practical business applications.
                   Our solutions are designed to be powerful yet accessible,
                   enabling businesses of all sizes to benefit from AI automation.
