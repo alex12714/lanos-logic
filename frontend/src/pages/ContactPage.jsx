@@ -43,26 +43,26 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'hello@lanoslogic.com',
+      content: 'hello@lanos-logic.com',
       description: 'Send us an email anytime'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
+      content: '+1 (518) 864 3528',
       description: 'Mon-Fri from 9am to 6pm'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Innovation Drive',
-      description: 'San Francisco, CA 94103'
+      content: '24 E Washington St Suite 875',
+      description: 'Chicago, IL 60602'
     },
     {
       icon: Clock,
       title: 'Business Hours',
       content: '9:00 AM - 6:00 PM',
-      description: 'Monday to Friday (PST)'
+      description: 'Monday to Friday (CST)'
     }
   ];
 
