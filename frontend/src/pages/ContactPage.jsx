@@ -271,7 +271,7 @@ const ContactPage = () => {
             <div className="aspect-[21/9] bg-gradient-to-br from-purple-900/30 to-indigo-900/30 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="w-16 h-16 text-amber-400/50 mx-auto mb-4" />
-                <p className="text-gray-400">San Francisco, California</p>
+                <p className="text-gray-400">Chicago, Illinois</p>
               </div>
             </div>
           </div>
