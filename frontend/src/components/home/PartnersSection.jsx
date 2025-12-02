@@ -29,7 +29,7 @@ const PartnersSection = () => {
             with tailored automation solutions that drive growth and efficiency.
           </p>
           <p className="text-xl text-white font-medium mb-8">
-            Ready for the leap? We're here to make it count.
+            Ready for the leap? We&apos;re here to make it count.
           </p>
           <Button
             size="lg"
