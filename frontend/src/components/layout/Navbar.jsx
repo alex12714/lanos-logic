@@ -18,10 +18,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
   return (
