@@ -77,17 +77,17 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-amber-400 mt-0.5" />
-                <span className="text-gray-400 text-sm">hello@lanoslogic.com</span>
+                <span className="text-gray-400 text-sm">hello@lanos-logic.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-amber-400 mt-0.5" />
-                <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-400 text-sm">+1 (518) 864 3528</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-400 mt-0.5" />
                 <span className="text-gray-400 text-sm">
-                  123 Innovation Drive<br />
-                  San Francisco, CA 94103
+                  24 E Washington St Suite 875<br />
+                  Chicago, IL 60602
                 </span>
               </li>
             </ul>
