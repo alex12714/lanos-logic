@@ -14,17 +14,38 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-500" />
         
-        {/* Stars/Particles */}
+        {/* Stars/Particles - Pre-generated positions */}
         <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
+          {[
+            { left: '5%', top: '10%', delay: '0s', duration: '3s' },
+            { left: '15%', top: '25%', delay: '0.5s', duration: '4s' },
+            { left: '25%', top: '15%', delay: '1s', duration: '3.5s' },
+            { left: '35%', top: '45%', delay: '1.5s', duration: '2.5s' },
+            { left: '45%', top: '8%', delay: '2s', duration: '4.5s' },
+            { left: '55%', top: '35%', delay: '0.3s', duration: '3.2s' },
+            { left: '65%', top: '55%', delay: '0.8s', duration: '2.8s' },
+            { left: '75%', top: '20%', delay: '1.2s', duration: '3.8s' },
+            { left: '85%', top: '40%', delay: '1.8s', duration: '4.2s' },
+            { left: '95%', top: '12%', delay: '2.5s', duration: '3s' },
+            { left: '10%', top: '60%', delay: '0.2s', duration: '3.3s' },
+            { left: '20%', top: '75%', delay: '0.7s', duration: '4.1s' },
+            { left: '30%', top: '85%', delay: '1.3s', duration: '2.9s' },
+            { left: '40%', top: '70%', delay: '1.9s', duration: '3.7s' },
+            { left: '50%', top: '90%', delay: '2.2s', duration: '4.3s' },
+            { left: '60%', top: '80%', delay: '0.4s', duration: '3.1s' },
+            { left: '70%', top: '65%', delay: '1.1s', duration: '2.7s' },
+            { left: '80%', top: '78%', delay: '1.6s', duration: '3.9s' },
+            { left: '90%', top: '88%', delay: '2.1s', duration: '4.4s' },
+            { left: '8%', top: '30%', delay: '0.6s', duration: '3.4s' },
+          ].map((star, i) => (
             <div
               key={i}
               className="absolute w-1 h-1 bg-white/20 rounded-full animate-twinkle"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
+                left: star.left,
+                top: star.top,
+                animationDelay: star.delay,
+                animationDuration: star.duration
               }}
             />
           ))}
