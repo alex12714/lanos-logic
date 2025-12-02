@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
                 <div className="bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-3xl p-8 md:p-12">
                   <Quote className="w-12 h-12 text-amber-500/30 mb-6" />
                   <p className="text-white text-lg md:text-xl leading-relaxed mb-8">
-                    "{testimonial.content}"
+                    &ldquo;{testimonial.content}&rdquo;
                   </p>
                   <div className="flex items-center gap-4">
                     <Avatar className="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600">
