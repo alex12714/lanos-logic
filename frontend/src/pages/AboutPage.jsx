@@ -190,7 +190,7 @@ const AboutPage = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-gray-400 text-lg mb-10">
-            Let's discuss how we can help transform your business.
+            Let&apos;s discuss how we can help transform your business.
           </p>
           <Button
             size="lg"
