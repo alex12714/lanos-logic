@@ -27,10 +27,10 @@ const AIToolsSection = () => {
               <span className="text-purple-300 text-sm font-medium">Claude AI</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white">
-              Leverage Claude's Advanced Capabilities
+              Leverage Claude&apos;s Advanced Capabilities
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Leverage Claude's advanced natural language capabilities to create
+              Leverage Claude&apos;s advanced natural language capabilities to create
               intelligent conversational agents that understand context and
               deliver human-like interactions with your customers.
             </p>
