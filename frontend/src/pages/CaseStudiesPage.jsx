@@ -152,7 +152,7 @@ const CaseStudiesPage = () => {
             Ready to Be Our Next Success Story?
           </h2>
           <p className="text-gray-400 text-lg mb-10">
-            Let's discuss how we can help transform your business with AI automation.
+            Let&apos;s discuss how we can help transform your business with AI automation.
           </p>
           <Button
             size="lg"
