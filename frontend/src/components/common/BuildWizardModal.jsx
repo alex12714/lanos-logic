@@ -55,6 +55,8 @@ const solutionOptions = [
   }
 ];
 
+const BOOKING_URL = 'https://api.leadconnectorhq.com/widget/booking/EMs6NlYokvHW7xJWUimR';
+
 const BuildWizardModal = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1);
   const [selectedSolution, setSelectedSolution] = useState(null);
@@ -70,16 +72,27 @@ const BuildWizardModal = ({ isOpen, onClose }) => {
     company: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if mobile device
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      // Load the form embed script for calendar
-      const script = document.createElement('script');
-      script.src = 'https://link.msgsndr.com/js/form_embed.js';
-      script.type = 'text/javascript';
-      script.async = true;
-      document.body.appendChild(script);
+      // Load the form embed script for calendar (only for desktop)
+      if (!isMobile) {
+        const script = document.createElement('script');
+        script.src = 'https://link.msgsndr.com/js/form_embed.js';
+        script.type = 'text/javascript';
+        script.async = true;
+        document.body.appendChild(script);
+      }
     } else {
       document.body.style.overflow = 'unset';
       // Reset state when closed
@@ -91,8 +104,9 @@ const BuildWizardModal = ({ isOpen, onClose }) => {
     
     return () => {
       document.body.style.overflow = 'unset';
+      window.removeEventListener('resize', checkMobile);
     };
-  }, [isOpen]);
+  }, [isOpen, isMobile]);
 
   const handleNext = async () => {
     if (step === 4) {
