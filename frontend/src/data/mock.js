@@ -255,7 +255,7 @@ export const caseStudies = [
     title: "Sales Agency Boosts Conversion Rates with AI Outreach",
     category: "Sales Agency",
     description: "A B2B sales agency implemented AI-powered outreach and follow-up sequences, resulting in significantly higher engagement and conversion rates.",
-    image: "https://www.lanos-logic.com/case-study-sales.png",
+    image: "/case-study-sales.png",
     stats: [
       { value: "68%", label: "increase in response rates" },
       { value: "42%", label: "higher conversion rate" },
