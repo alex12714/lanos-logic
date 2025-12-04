@@ -16,18 +16,18 @@ export const heroFeatures = [
 ];
 
 export const platformLogos = [
-  { name: "Make.com", logo: "https://www.lanos-logic.com/make-logo.png" },
-  { name: "AirTable", logo: "https://www.lanos-logic.com/airtable-logo.jpg" },
-  { name: "DocuSign", logo: "https://www.lanos-logic.com/docusign-logo-new.png" },
-  { name: "Miro", logo: "https://www.lanos-logic.com/miro-logo.jpg" },
-  { name: "GoHighLevel", logo: "https://www.lanos-logic.com/gohighlevel-logo-new.jpg" },
-  { name: "ClickUp", logo: "https://www.lanos-logic.com/clickup-logo.png" },
-  { name: "Claude AI", logo: "https://www.lanos-logic.com/claude-logo.png" },
-  { name: "VectorShift", logo: "https://www.lanos-logic.com/vectorshift-logo-new.png" },
-  { name: "Flutter", logo: "https://www.lanos-logic.com/flutter-logo.jpg" },
-  { name: "Twilio", logo: "https://www.lanos-logic.com/twilio-logo.png" },
-  { name: "Stripe", logo: "https://www.lanos-logic.com/stripe-logo.png" },
-  { name: "VAPI", logo: "https://www.lanos-logic.com/vapi-logo.png" }
+  { name: "Make.com", logo: "/make-logo.png" },
+  { name: "AirTable", logo: "/airtable-logo.jpg" },
+  { name: "DocuSign", logo: "/docusign-logo-new.png" },
+  { name: "Miro", logo: "/miro-logo.jpg" },
+  { name: "GoHighLevel", logo: "/gohighlevel-logo-new.jpg" },
+  { name: "ClickUp", logo: "/clickup-logo.png" },
+  { name: "Claude AI", logo: "/claude-logo.png" },
+  { name: "VectorShift", logo: "/vectorshift-logo-new.png" },
+  { name: "Flutter", logo: "/flutter-logo.jpg" },
+  { name: "Twilio", logo: "/twilio-logo.png" },
+  { name: "Stripe", logo: "/stripe-logo.png" },
+  { name: "VAPI", logo: "/vapi-logo.png" }
 ];
 
 export const industries = [
