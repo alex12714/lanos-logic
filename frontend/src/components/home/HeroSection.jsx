@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
 import { heroFeatures } from '../../data/mock';
+import { useBooking } from '../../context/BookingContext';
 
 const HeroSection = () => {
+  const { openBookingModal } = useBooking();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -79,13 +82,11 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button
               size="lg"
+              onClick={openBookingModal}
               className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-full px-8 h-14 gap-2 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 transform hover:scale-105 transition-all duration-300"
-              asChild
             >
-              <Link to="/contact">
-                Book Your Discovery Call
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              Book Your Discovery Call
+              <ArrowRight className="w-5 h-5" />
             </Button>
             <Button
               size="lg"
