@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
 import { heroFeatures } from '../../data/mock';
 import { useBooking } from '../../context/BookingContext';
 
 const HeroSection = () => {
-  const { openBookingModal, openCallbackModal } = useBooking();
+  const { openBookingModal, openCallbackModal, openBuildWizard } = useBooking();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -100,10 +99,10 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
+              onClick={openBuildWizard}
               className="border-white/20 text-white hover:bg-white/5 rounded-full px-8 h-14 transition-all duration-300"
-              asChild
             >
-              <Link to="/services">View Our Solutions</Link>
+              What Do You Want to Build?
             </Button>
           </div>
 
