@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { platformLogos } from '../../data/mock';
+import { useBooking } from '../../context/BookingContext';
 
 const PartnersSection = () => {
+  const { openBookingModal } = useBooking();
+
   return (
     <section className="relative py-24 overflow-hidden">
       {/* Background */}
