@@ -403,15 +403,40 @@ const BuildWizardModal = ({ isOpen, onClose }) => {
                     Now let&apos;s schedule your discovery call to discuss your {selectedSolution?.name} project.
                   </p>
                 </div>
-                <div className="bg-white rounded-xl overflow-hidden">
-                  <iframe 
-                    src="https://api.leadconnectorhq.com/widget/booking/EMs6NlYokvHW7xJWUimR" 
-                    style={{ width: '100%', minHeight: '500px', border: 'none', overflow: 'hidden' }}
-                    scrolling="no" 
-                    id="wizard-booking-iframe"
-                    title="Book Discovery Call"
-                  />
-                </div>
+                
+                {/* Mobile: Show button to redirect */}
+                {isMobile ? (
+                  <div className="text-center space-y-4">
+                    <p className="text-gray-400 text-sm">
+                      Click the button below to open our booking calendar and select a time that works for you.
+                    </p>
+                    <Button
+                      onClick={() => window.open(BOOKING_URL, '_blank')}
+                      className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-xl h-14 gap-2"
+                    >
+                      Book Your Discovery Call
+                      <ArrowRight className="w-5 h-5" />
+                    </Button>
+                    <Button
+                      variant="outline"
+                      onClick={onClose}
+                      className="w-full border-white/20 text-white hover:bg-white/5 rounded-xl h-12"
+                    >
+                      Close
+                    </Button>
+                  </div>
+                ) : (
+                  /* Desktop: Show embedded calendar */
+                  <div className="bg-white rounded-xl overflow-hidden">
+                    <iframe 
+                      src={BOOKING_URL}
+                      style={{ width: '100%', minHeight: '500px', border: 'none', overflow: 'hidden' }}
+                      scrolling="no" 
+                      id="wizard-booking-iframe"
+                      title="Book Discovery Call"
+                    />
+                  </div>
+                )}
               </div>
             )}
           </div>
