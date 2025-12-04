@@ -13,6 +13,7 @@ import ContactPage from './pages/ContactPage';
 import IndustryPage from './pages/IndustryPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsOfServicePage from './pages/TermsOfServicePage';
+import BookPage from './pages/BookPage';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/industries/:industryId" element={<IndustryPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsOfServicePage />} />
+            <Route path="/book" element={<BookPage />} />
           </Routes>
         </BookingProvider>
       </BrowserRouter>
