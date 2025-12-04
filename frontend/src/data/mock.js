@@ -269,7 +269,7 @@ export const caseStudies = [
     title: "Real Estate Firm Automates Client Journey",
     category: "Real Estate",
     description: "A real estate brokerage automated their entire client journey from lead qualification to closing, creating a seamless experience for buyers and sellers.",
-    image: "https://www.lanos-logic.com/case-study-real-estate.png",
+    image: "/case-study-real-estate.png",
     stats: [
       { value: "75%", label: "faster lead qualification" },
       { value: "90%", label: "reduction in paperwork time" },
