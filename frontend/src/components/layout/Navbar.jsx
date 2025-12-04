@@ -3,11 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { navLinks } from '../../data/mock';
+import { useBooking } from '../../context/BookingContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { openBookingModal } = useBooking();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,13 +75,11 @@ const Navbar = () => {
               </Link>
             </Button>
             <Button
+              onClick={openBookingModal}
               className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-full px-5 h-10 gap-2 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 transition-all duration-300"
-              asChild
             >
-              <Link to="/contact">
-                Book a Call
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              Book a Call
+              <ArrowRight className="w-4 h-4" />
             </Button>
             <Button
               variant="outline"
@@ -126,10 +126,13 @@ const Navbar = () => {
           ))}
           <div className="pt-4 space-y-3">
             <Button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                openBookingModal();
+              }}
               className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-full h-12"
-              asChild
             >
-              <Link to="/contact">Book a Call</Link>
+              Book a Call
             </Button>
             <Button
               variant="outline"
