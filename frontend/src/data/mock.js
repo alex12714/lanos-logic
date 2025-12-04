@@ -241,7 +241,7 @@ export const caseStudies = [
     title: "Digital Marketing Agency Scales Operations by 300%",
     category: "Marketing Agency",
     description: "A digital marketing agency automated their client reporting, content creation, and campaign management, allowing them to triple their client base without adding staff.",
-    image: "https://www.lanos-logic.com/case-study-marketing.png",
+    image: "/case-study-marketing.png",
     stats: [
       { value: "300%", label: "increase in client capacity" },
       { value: "85%", label: "reduction in reporting time" },
