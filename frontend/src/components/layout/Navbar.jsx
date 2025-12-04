@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { openBookingModal } = useBooking();
+  const { openBookingModal, openCallbackModal } = useBooking();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,14 +65,12 @@ const Navbar = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button
+              onClick={openCallbackModal}
               variant="outline"
               className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10 hover:border-purple-400 rounded-full px-5 h-10 gap-2 transition-all duration-300"
-              asChild
             >
-              <Link to="/contact">
-                <Phone className="w-4 h-4" />
-                Request Call Back
-              </Link>
+              <Phone className="w-4 h-4" />
+              Request Call Back
             </Button>
             <Button
               onClick={openBookingModal}
@@ -135,11 +133,14 @@ const Navbar = () => {
               Book a Call
             </Button>
             <Button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                openCallbackModal();
+              }}
               variant="outline"
               className="w-full border-purple-500/50 text-purple-300 rounded-full h-12"
-              asChild
             >
-              <Link to="/contact">Request Call Back</Link>
+              Request Call Back
             </Button>
           </div>
         </div>
