@@ -1,0 +1,61 @@
+# Lanos Logic
+
+> AI Business Automation agency specializing in Voice AI agents, AI Agents, Document Automation, Process Automation, and Social Media automation to streamline business operations.
+
+Lanos Logic is a cutting-edge AI Business Automation agency that transforms how businesses operate through intelligent automation solutions. We specialize in implementing Voice AI agents, custom AI Agents, Document Automation, Process Automation, and Social Media automation to help companies reduce manual work, increase efficiency, and scale their operations. Our expertise spans across multiple industries including marketing agencies, sales agencies, e-commerce, healthcare, education, logistics, real estate, professional services, and manufacturing.
+
+## Getting Started
+
+[Homepage](https://lanos-logic.com/): Main landing page showcasing our AI automation services, client testimonials, and platform integrations.
+
+[About Us](https://lanos-logic.com/about): Learn about our team, mission, and expertise in AI business automation solutions.
+
+[Contact](https://lanos-logic.com/contact): Get in touch with our automation experts for consultation and project inquiries.
+
+[Book a Session](https://lanos-logic.com/book): Schedule a Business Analysis session or Discovery Call to discuss your automation needs.
+
+## Services
+
+[AI Agents](https://lanos-logic.com/services/ai-agents): Custom AI agents that automate complex business tasks and decision-making processes.
+
+[Voice AI Agents](https://lanos-logic.com/services/voice-ai-agents): Intelligent voice assistants for customer service, sales calls, and internal communications.
+
+[Document Automation](https://lanos-logic.com/services/document-automation): Automated document generation, processing, and management using AI-powered tools.
+
+[Process Automation](https://lanos-logic.com/services/process-automation): End-to-end business process automation to eliminate manual workflows and increase efficiency.
+
+[Social Media Automation](https://lanos-logic.com/services/social-media-automation): Automated social media management, content creation, and engagement strategies.
+
+[Communication Automation](https://lanos-logic.com/services/communication-automation): Streamlined communication workflows including email automation and customer messaging.
+
+[Mobile App Development](https://lanos-logic.com/services/mobile-app-development): Custom mobile applications with integrated AI and automation features.
+
+[Analytics & Insights](https://lanos-logic.com/services/analytics-insights): Data-driven insights and automated reporting for business intelligence.
+
+## Industries
+
+[Marketing Agencies](https://lanos-logic.com/industries/marketing-agencies): Automation solutions for lead generation, campaign management, and client reporting.
+
+[Sales Agencies](https://lanos-logic.com/industries/sales-agencies): Sales process automation, CRM integration, and lead nurturing systems.
+
+[E-commerce](https://lanos-logic.com/industries/ecommerce): Inventory management, order processing, and customer service automation for online retailers.
+
+[Healthcare](https://lanos-logic.com/industries/healthcare): Patient management, appointment scheduling, and medical record automation solutions.
+
+[Education](https://lanos-logic.com/industries/education): Student enrollment, course management, and administrative process automation.
+
+[Logistics](https://lanos-logic.com/industries/logistics): Supply chain automation, shipment tracking, and inventory management systems.
+
+[Real Estate](https://lanos-logic.com/industries/real-estate): Property management, lead qualification, and transaction process automation.
+
+[Professional Services](https://lanos-logic.com/industries/professional-services): Client onboarding, project management, and billing automation for service providers.
+
+[Manufacturing](https://lanos-logic.com/industries/manufacturing): Production planning, quality control, and supply chain optimization through automation.
+
+## Case Studies
+
+[Case Studies](https://lanos-logic.com/case-studies): Real-world examples of successful AI automation implementations across various industries and business functions.
+
+## Optional
+
+[Services Overview](https://lanos-logic.com/services): Complete overview of all automation services and solutions we provide to businesses.
