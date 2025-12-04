@@ -35,13 +35,11 @@ const PartnersSection = () => {
           </p>
           <Button
             size="lg"
+            onClick={openBookingModal}
             className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-full px-8 h-14 gap-2 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 transform hover:scale-105 transition-all duration-300"
-            asChild
           >
-            <Link to="/contact">
-              Book a Call Now
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+            Book a Call Now
+            <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
 
