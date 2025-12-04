@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src="https://www.lanos-logic.com/favicon.ico" 
+                src="/favicon.ico" 
                 alt="Lanos Logic" 
                 className="w-10 h-10 rounded-lg"
               />
