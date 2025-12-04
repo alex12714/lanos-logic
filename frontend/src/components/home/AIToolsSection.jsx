@@ -54,7 +54,7 @@ const AIToolsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-3xl blur-3xl" />
             <div className="relative bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-3xl p-8 overflow-hidden">
               <img
-                src="https://www.lanos-logic.com/claude-ai-showcase.png"
+                src="/claude-ai-showcase.png"
                 alt="Claude AI Showcase"
                 className="w-full rounded-xl shadow-2xl"
                 onError={(e) => {
