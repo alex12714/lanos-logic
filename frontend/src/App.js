@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import { BookingProvider } from './context/BookingContext';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -17,17 +18,19 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/industries/:industryId" element={<IndustryPage />} />
-          <Route path="/privacy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms" element={<TermsOfServicePage />} />
-        </Routes>
+        <BookingProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/industries/:industryId" element={<IndustryPage />} />
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms" element={<TermsOfServicePage />} />
+          </Routes>
+        </BookingProvider>
       </BrowserRouter>
     </div>
   );
