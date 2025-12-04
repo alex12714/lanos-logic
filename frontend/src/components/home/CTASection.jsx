@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
+import { useBooking } from '../../context/BookingContext';
 
 const CTASection = () => {
+  const { openBookingModal } = useBooking();
+
   return (
     <section className="relative py-24 overflow-hidden">
       {/* Background */}
@@ -29,13 +31,11 @@ const CTASection = () => {
         
         <Button
           size="lg"
+          onClick={openBookingModal}
           className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-full px-10 h-16 gap-3 shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300 text-lg"
-          asChild
         >
-          <Link to="/contact">
-            Book Your Discovery Call Now
-            <ArrowRight className="w-6 h-6" />
-          </Link>
+          Book Your Discovery Call Now
+          <ArrowRight className="w-6 h-6" />
         </Button>
       </div>
     </section>
