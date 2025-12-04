@@ -217,44 +217,26 @@ const ContactPage = () => {
               </form>
             </div>
 
-            {/* Book a Call Section */}
+            {/* Book a Call Section - Embedded Calendar */}
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Schedule a Call</h2>
-              <div className="bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl p-8">
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-amber-500/20 flex items-center justify-center mx-auto mb-6">
-                    <Phone className="w-10 h-10 text-amber-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
+              <div className="bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl overflow-hidden">
+                <div className="p-6 border-b border-white/10">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     Free Discovery Call
                   </h3>
-                  <p className="text-gray-400 mb-8 leading-relaxed">
+                  <p className="text-gray-400 text-sm">
                     Schedule a free 30-minute discovery call with our AI experts
-                    to explore how our solutions can address your specific
-                    business challenges.
                   </p>
-                  <ul className="text-left space-y-3 mb-8">
-                    {[
-                      'Understand your business needs',
-                      'Explore potential automation opportunities',
-                      'Get a customized solution proposal',
-                      'Learn about pricing and timelines'
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
-                          <ArrowRight className="w-3 h-3 text-amber-400" />
-                        </div>
-                        <span className="text-gray-300 text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    size="lg"
-                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-xl h-14 gap-2 shadow-lg shadow-amber-500/25"
-                  >
-                    Book Your Free Call
-                    <ArrowRight className="w-5 h-5" />
-                  </Button>
+                </div>
+                <div className="bg-white">
+                  <iframe 
+                    src="https://api.leadconnectorhq.com/widget/booking/EMs6NlYokvHW7xJWUimR" 
+                    style={{ width: '100%', minHeight: '600px', border: 'none', overflow: 'hidden' }}
+                    scrolling="no" 
+                    id="EMs6NlYokvHW7xJWUimR_contact"
+                    title="Book a Call"
+                  />
                 </div>
               </div>
             </div>
