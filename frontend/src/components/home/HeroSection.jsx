@@ -6,7 +6,7 @@ import { heroFeatures } from '../../data/mock';
 import { useBooking } from '../../context/BookingContext';
 
 const HeroSection = () => {
-  const { openBookingModal } = useBooking();
+  const { openBookingModal, openCallbackModal } = useBooking();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -91,13 +91,11 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
+              onClick={openCallbackModal}
               className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10 hover:border-purple-400 rounded-full px-8 h-14 gap-2 transition-all duration-300"
-              asChild
             >
-              <Link to="/contact">
-                <Phone className="w-5 h-5" />
-                Request Call Back
-              </Link>
+              <Phone className="w-5 h-5" />
+              Request Call Back
             </Button>
             <Button
               size="lg"
