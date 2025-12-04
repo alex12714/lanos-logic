@@ -26,8 +26,29 @@ const ContactFormSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    try {
+      // Send data to webhook
+      await fetch('https://hook.eu1.make.com/5nucde579kgh4uug9f5g37yde6ms64jx', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'contact_form',
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || '',
+          service: formData.service || '',
+          message: formData.message,
+          timestamp: new Date().toISOString(),
+          source: 'lanos-logic-website-homepage'
+        }),
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+    
     setIsSubmitting(false);
     setSubmitted(true);
     setFormData({ name: '', email: '', company: '', service: '', message: '' });
