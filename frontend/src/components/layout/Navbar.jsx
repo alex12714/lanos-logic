@@ -34,7 +34,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <img 
-              src="https://www.lanos-logic.com/favicon.ico" 
+              src="/favicon.ico" 
               alt="Lanos Logic" 
               className="w-10 h-10 rounded-lg transform group-hover:scale-110 transition-transform duration-300"
             />
