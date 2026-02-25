@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Hours Terms &amp; Conditions — Lanos Logic</title>
+<meta name="description" content="Terms and conditions for Lanos Logic support hour retainer packages.">
+<meta property="og:title" content="Support Hours Terms & Conditions — Lanos Logic">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lanos-logic.com/support-terms.html">
+<meta property="og:image" content="https://www.lanos-logic.com/og-image.png">
+<link rel="icon" href="/favicon.ico">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  :root {
+    --bg-primary: #0a0a12;
+    --bg-secondary: #0f0f1a;
+    --bg-card: #141420;
+    --bg-card-hover: #1a1a2a;
+    --border: #1e1e30;
+    --border-light: #2a2a3e;
+    --text-primary: #f5f5f7;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    --accent: #f59e0b;
+    --accent-light: #fbbf24;
+    --accent-glow: rgba(245, 158, 11, 0.12);
+    --accent-green: #10b981;
+    --accent-green-glow: rgba(16, 185, 129, 0.12);
+    --accent-purple: #a78bfa;
+    --accent-purple-glow: rgba(167, 139, 250, 0.12);
+    --gradient-accent: linear-gradient(135deg, #f59e0b, #fbbf24);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ── Background Blobs ── */
+  .bg-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.3;
+    will-change: transform;
+  }
+
+  .blob-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
+    top: -10%;
+    left: -10%;
+    animation: blob-drift-1 25s ease-in-out infinite;
+  }
+
+  .blob-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    top: 40%;
+    right: -10%;
+    animation: blob-drift-2 30s ease-in-out infinite;
+  }
+
+  .blob-3 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    bottom: 5%;
+    left: 10%;
+    animation: blob-drift-3 28s ease-in-out infinite;
+  }
+
+  @keyframes blob-drift-1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    25% { transform: translate(80px, 60px) rotate(90deg) scale(1.1); }
+    50% { transform: translate(40px, 120px) rotate(180deg) scale(0.95); }
+    75% { transform: translate(-30px, 50px) rotate(270deg) scale(1.05); }
+  }
+
+  @keyframes blob-drift-2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    25% { transform: translate(-70px, 80px) rotate(-90deg) scale(1.08); }
+    50% { transform: translate(-100px, 30px) rotate(-180deg) scale(0.92); }
+    75% { transform: translate(-40px, -50px) rotate(-270deg) scale(1.05); }
+  }
+
+  @keyframes blob-drift-3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    33% { transform: translate(100px, -70px) rotate(120deg) scale(1.12); }
+    66% { transform: translate(50px, -120px) rotate(240deg) scale(0.9); }
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── Nav ── */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 18, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+  }
+
+  .nav-logo .logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.025em;
+  }
+
+  .nav-logo .logo-text .logic { color: #fbbf24; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text-primary); }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--accent-light);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .nav-cta:hover {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: var(--accent);
+  }
+
+  /* ── Header ── */
+  .page-header {
+    padding: 80px 0 48px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-header-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-light);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 6px 16px;
+    background: var(--accent-glow);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 100px;
+  }
+
+  .page-header h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .page-header p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .effective-date {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* ── Legal Content ── */
+  .legal {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 80px;
+  }
+
+  .legal-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 36px;
+    margin-bottom: 20px;
+  }
+
+  .legal-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .legal-section h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 8px;
+    background: var(--accent-glow);
+    color: var(--accent-light);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .legal-section p,
+  .legal-section li {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .legal-section p + p {
+    margin-top: 12px;
+  }
+
+  .legal-section ul,
+  .legal-section ol {
+    margin: 12px 0;
+    padding-left: 20px;
+  }
+
+  .legal-section li {
+    margin-bottom: 8px;
+  }
+
+  .legal-section li::marker {
+    color: var(--text-muted);
+  }
+
+  .legal-section strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.06), rgba(251, 191, 36, 0.03));
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .highlight-box strong {
+    color: var(--accent-light);
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 48px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .footer-title {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .footer-email {
+    font-size: 13px;
+    color: var(--accent-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-email:hover { color: var(--accent); }
+
+  .footer-copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 700px) {
+    .page-header h1 { font-size: 28px; }
+    .legal-section { padding: 24px; }
+    .nav-links { display: none; }
+    .nav { padding: 0 20px; }
+    .container { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Background Blobs -->
+<div class="bg-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/favicon.ico" alt="Lanos Logic">
+      <span class="logo-text">Lanos <span class="logic">Logic</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/services">Solutions</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/contact" class="nav-cta">Book a Call &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-label">Legal</div>
+    <h1>Support Hours<br>Terms &amp; Conditions</h1>
+    <p>These terms govern the provision of support hour retainer packages by Lanos Logic Ltd ("Lanos Logic", "we", "us") to the client ("you", "Client").</p>
+    <div class="effective-date">Effective: March 1, 2025 &middot; Last updated: February 2025</div>
+  </div>
+</div>
+
+<!-- Legal Content -->
+<div class="legal">
+  <div class="container">
+
+    <div class="legal-section">
+      <h2><span class="num">1</span> Scope of Support Services</h2>
+      <p>Support hours cover the following services for your existing systems and platforms maintained by Lanos Logic:</p>
+      <ul>
+        <li><strong>Bug fixes and troubleshooting</strong> — diagnosing and resolving defects in existing functionality</li>
+        <li><strong>Incremental enhancements</strong> — minor feature additions, UI refinements, and workflow improvements</li>
+        <li><strong>Maintenance and updates</strong> — dependency updates, security patches, and platform compatibility</li>
+        <li><strong>Technical consultation</strong> — advice, guidance, and strategic recommendations on your existing systems</li>
+        <li><strong>Monitoring and incident response</strong> — responding to system alerts and service disruptions</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">2</span> Exclusions</h2>
+      <p>The following are <strong>not included</strong> in support hours and require a separate engagement or project agreement:</p>
+      <ul>
+        <li>New product development, full feature builds, or standalone applications</li>
+        <li>Infrastructure provisioning, server migration, or new deployment environments</li>
+        <li>Third-party system integrations not previously built or maintained by Lanos Logic</li>
+        <li>Data recovery from client-caused incidents (accidental deletion, credential compromise)</li>
+        <li>Training or onboarding for new staff beyond reasonable handover documentation</li>
+        <li>Work on systems or codebases not originally created or maintained by Lanos Logic</li>
+      </ul>
+      <p>If a support request falls outside scope, we will notify you before any work begins and may propose a separate project engagement.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">3</span> Hour Allocation &amp; Tracking</h2>
+      <p>Each retainer package includes a fixed allocation of support hours as specified in your agreement.</p>
+      <ul>
+        <li>Time is tracked in <strong>15-minute increments</strong>, rounded up to the nearest increment per task</li>
+        <li>All time is tracked from the point work begins, including research, diagnosis, implementation, and testing</li>
+        <li>A summary of hours used is available upon request at any time during the retainer period</li>
+        <li>Communication time (emails, calls, messages) exceeding 15 minutes per interaction is billable against the retainer</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">4</span> Validity &amp; Expiration</h2>
+      <div class="highlight-box">
+        <strong>Important:</strong> Support hours are valid for a fixed period and expire at the end of the retainer term, regardless of usage. Unused hours do not roll over, carry forward, or transfer to subsequent periods.
+      </div>
+      <ul>
+        <li>Each retainer package has a <strong>defined validity period</strong> (typically 3 months) as specified in your agreement</li>
+        <li>The validity period begins on the <strong>date of purchase or the agreed start date</strong>, whichever is later</li>
+        <li>All allocated hours must be utilised within the validity period</li>
+        <li><strong>Unused hours expire automatically</strong> at 11:59 PM (EST) on the last day of the validity period</li>
+        <li>No refunds, credits, or extensions are provided for unused or expired hours</li>
+        <li>Lanos Logic may, at its sole discretion, offer a one-time grace period extension of up to 14 days in exceptional circumstances — this is not guaranteed and should not be relied upon</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">5</span> Renewal</h2>
+      <p>Retainer packages do not auto-renew. At the end of each validity period:</p>
+      <ul>
+        <li>You will receive a renewal reminder at least <strong>14 days before expiration</strong></li>
+        <li>Renewal is available at the then-current rate, which may differ from your previous package</li>
+        <li>Loyalty or promotional rates apply only to the specific period stated and are not guaranteed for renewal</li>
+        <li>A new retainer must be purchased before additional support work can begin</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">6</span> Response Times &amp; Priority</h2>
+      <p>Retainer clients receive priority scheduling over ad-hoc requests:</p>
+      <ul>
+        <li><strong>Critical issues</strong> (system down, data loss risk): response within <strong>4 business hours</strong></li>
+        <li><strong>High priority</strong> (major feature broken, significant user impact): response within <strong>1 business day</strong></li>
+        <li><strong>Standard requests</strong> (enhancements, minor bugs, consultation): response within <strong>2 business days</strong></li>
+        <li><strong>Low priority</strong> (cosmetic issues, future planning): scheduled within the retainer period</li>
+      </ul>
+      <p>Response time means initial acknowledgement and assessment — not necessarily resolution. Resolution time depends on complexity and will be communicated during triage.</p>
+      <p><strong>Business hours</strong> are Monday to Friday, 9:00 AM to 6:00 PM Eastern Time (ET), excluding U.S. federal holidays.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">7</span> Communication &amp; Requests</h2>
+      <p>Support requests should be submitted via the agreed communication channel (email, project management tool, or messaging platform). We recommend:</p>
+      <ul>
+        <li>A clear description of the issue or request</li>
+        <li>Steps to reproduce (for bugs) or expected behaviour (for enhancements)</li>
+        <li>Screenshots, screen recordings, or error logs where applicable</li>
+        <li>Priority level from your perspective</li>
+      </ul>
+      <p>Requests submitted outside business hours will be acknowledged on the next business day.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">8</span> Intellectual Property</h2>
+      <p>All work produced under a support retainer is subject to the intellectual property terms of your original project agreement with Lanos Logic. In general:</p>
+      <ul>
+        <li>Custom code, configurations, and deliverables created specifically for your systems are owned by you upon full payment</li>
+        <li>Lanos Logic retains ownership of proprietary tools, frameworks, libraries, and methodologies used in the delivery of services</li>
+        <li>Open-source components remain subject to their respective licences</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">9</span> Confidentiality</h2>
+      <p>Both parties agree to keep confidential any proprietary information, trade secrets, business processes, and technical details shared during the course of the engagement. This obligation survives termination of the retainer.</p>
+      <p>Lanos Logic will not share your data, credentials, or system access with third parties without your explicit written consent, except where required by law.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">10</span> Termination</h2>
+      <ul>
+        <li>Either party may terminate the retainer with <strong>14 days written notice</strong></li>
+        <li>Upon termination, any unused hours are forfeited — no refunds are provided for unused time</li>
+        <li>Work in progress at the time of termination will be completed if within the remaining hour balance, or delivered in its current state</li>
+        <li>Lanos Logic reserves the right to terminate immediately if the Client engages in abusive behaviour, makes unreasonable demands, or breaches these terms</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">11</span> Limitation of Liability</h2>
+      <p>Lanos Logic's total liability under any support retainer shall not exceed the total fees paid for that retainer period. We are not liable for:</p>
+      <ul>
+        <li>Indirect, incidental, or consequential damages including loss of revenue, data, or business opportunities</li>
+        <li>Downtime or issues caused by third-party services, hosting providers, or API changes outside our control</li>
+        <li>Issues arising from modifications made by the Client or unauthorised third parties</li>
+        <li>Delays caused by incomplete information, delayed approvals, or lack of access provided by the Client</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">12</span> Governing Law</h2>
+      <p>These terms are governed by and construed in accordance with the laws of the State of Illinois, United States. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of Cook County, Illinois.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">13</span> Amendments</h2>
+      <p>Lanos Logic reserves the right to update these terms at any time. Changes take effect for new retainer periods only — your current retainer period is governed by the terms in effect at the time of purchase. We will notify existing clients of material changes at least 30 days in advance.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">14</span> Contact</h2>
+      <p>Questions about these terms or your retainer? Reach out:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:alex@lanos-logic.com" style="color: var(--accent-light); text-decoration: none;">alex@lanos-logic.com</a></li>
+        <li><strong>Web:</strong> <a href="/contact" style="color: var(--accent-light); text-decoration: none;">lanos-logic.com/contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="container">
+    <div class="footer-name">Lanos Logic Ltd</div>
+    <div class="footer-title">24 E Washington St Suite 875, Chicago, IL 60602</div>
+    <a class="footer-email" href="mailto:alex@lanos-logic.com">alex@lanos-logic.com</a>
+    <div class="footer-copyright">&copy; 2026 Lanos Logic. All rights reserved.</div>
+  </div>
+</div>
+
+</body>
+</html>
