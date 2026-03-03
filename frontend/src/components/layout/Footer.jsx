@@ -111,6 +111,9 @@ const Footer = () => {
             <a href="/support-terms.html" className="text-gray-500 hover:text-amber-400 text-sm transition-colors">
               Support Terms
             </a>
+            <a href="/hosting-terms.html" className="text-gray-500 hover:text-amber-400 text-sm transition-colors">
+              Hosting Terms
+            </a>
           </div>
         </div>
       </div>
