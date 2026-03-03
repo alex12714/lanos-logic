@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosting &amp; Cloud Services Terms &amp; Conditions — Lanos Logic</title>
+<meta name="description" content="Terms and conditions for Lanos Logic hosting, website management, and cloud services.">
+<meta property="og:title" content="Hosting & Cloud Services Terms & Conditions — Lanos Logic">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lanos-logic.com/hosting-terms.html">
+<meta property="og:image" content="https://www.lanos-logic.com/og-image.png">
+<link rel="icon" href="/favicon.ico">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  :root {
+    --bg-primary: #0a0a12;
+    --bg-secondary: #0f0f1a;
+    --bg-card: #141420;
+    --bg-card-hover: #1a1a2a;
+    --border: #1e1e30;
+    --border-light: #2a2a3e;
+    --text-primary: #f5f5f7;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    --accent: #f59e0b;
+    --accent-light: #fbbf24;
+    --accent-glow: rgba(245, 158, 11, 0.12);
+    --accent-green: #10b981;
+    --accent-green-glow: rgba(16, 185, 129, 0.12);
+    --accent-purple: #a78bfa;
+    --accent-purple-glow: rgba(167, 139, 250, 0.12);
+    --gradient-accent: linear-gradient(135deg, #f59e0b, #fbbf24);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .bg-blobs {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0; overflow: hidden; pointer-events: none;
+  }
+
+  .blob { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.3; will-change: transform; }
+
+  .blob-1 {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
+    top: -10%; left: -10%;
+    animation: blob-drift-1 25s ease-in-out infinite;
+  }
+
+  .blob-2 {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    top: 40%; right: -10%;
+    animation: blob-drift-2 30s ease-in-out infinite;
+  }
+
+  .blob-3 {
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    bottom: 5%; left: 10%;
+    animation: blob-drift-3 28s ease-in-out infinite;
+  }
+
+  @keyframes blob-drift-1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    25% { transform: translate(80px, 60px) rotate(90deg) scale(1.1); }
+    50% { transform: translate(40px, 120px) rotate(180deg) scale(0.95); }
+    75% { transform: translate(-30px, 50px) rotate(270deg) scale(1.05); }
+  }
+
+  @keyframes blob-drift-2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    25% { transform: translate(-70px, 80px) rotate(-90deg) scale(1.08); }
+    50% { transform: translate(-100px, 30px) rotate(-180deg) scale(0.92); }
+    75% { transform: translate(-40px, -50px) rotate(-270deg) scale(1.05); }
+  }
+
+  @keyframes blob-drift-3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    33% { transform: translate(100px, -70px) rotate(120deg) scale(1.12); }
+    66% { transform: translate(50px, -120px) rotate(240deg) scale(0.9); }
+  }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10, 10, 18, 0.85);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border); padding: 0 32px;
+  }
+
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; height: 64px;
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { height: 40px; width: 40px; border-radius: 8px; }
+
+  .nav-logo .logo-text {
+    font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.025em;
+  }
+
+  .nav-logo .logo-text .logic { color: #fbbf24; }
+
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+
+  .nav-links a {
+    color: var(--text-secondary); text-decoration: none;
+    font-size: 14px; font-weight: 500; transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text-primary); }
+
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: transparent; color: var(--accent-light);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    font-size: 13px; font-weight: 600; padding: 8px 18px;
+    border-radius: 8px; text-decoration: none; transition: all 0.2s;
+  }
+
+  .nav-cta:hover { background: rgba(245, 158, 11, 0.08); border-color: var(--accent); }
+
+  .page-header { padding: 80px 0 48px; text-align: center; position: relative; z-index: 1; }
+
+  .page-header-label {
+    display: inline-block; font-size: 12px; font-weight: 700;
+    color: var(--accent-light); letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 20px; padding: 6px 16px;
+    background: var(--accent-glow); border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 100px;
+  }
+
+  .page-header h1 {
+    font-size: 40px; font-weight: 800; letter-spacing: -1.5px;
+    line-height: 1.15; margin-bottom: 16px;
+  }
+
+  .page-header p {
+    font-size: 16px; color: var(--text-secondary);
+    max-width: 560px; margin: 0 auto; line-height: 1.8;
+  }
+
+  .effective-date { margin-top: 12px; font-size: 13px; color: var(--text-muted); }
+
+  .legal { position: relative; z-index: 1; padding: 0 0 80px; }
+
+  .legal-section {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 36px; margin-bottom: 20px;
+  }
+
+  .legal-section h2 {
+    font-size: 20px; font-weight: 700; letter-spacing: -0.3px;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+
+  .legal-section h2 .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; min-width: 28px; border-radius: 8px;
+    background: var(--accent-glow); color: var(--accent-light);
+    font-size: 13px; font-weight: 700;
+  }
+
+  .legal-section p, .legal-section li {
+    font-size: 15px; color: var(--text-secondary); line-height: 1.8;
+  }
+
+  .legal-section p + p { margin-top: 12px; }
+
+  .legal-section ul, .legal-section ol { margin: 12px 0; padding-left: 20px; }
+  .legal-section li { margin-bottom: 8px; }
+  .legal-section li::marker { color: var(--text-muted); }
+  .legal-section strong { color: var(--text-primary); font-weight: 600; }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.06), rgba(251, 191, 36, 0.03));
+    border: 1px solid rgba(245, 158, 11, 0.15); border-radius: 10px;
+    padding: 20px 24px; margin: 16px 0;
+    font-size: 14px; color: var(--text-secondary); line-height: 1.7;
+  }
+
+  .highlight-box strong { color: var(--accent-light); }
+
+  .footer {
+    padding: 48px 0; border-top: 1px solid var(--border);
+    text-align: center; position: relative; z-index: 1;
+  }
+
+  .footer-name { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+  .footer-title { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+
+  .footer-email {
+    font-size: 13px; color: var(--accent-light);
+    text-decoration: none; transition: color 0.2s;
+  }
+
+  .footer-email:hover { color: var(--accent); }
+  .footer-copyright { margin-top: 20px; font-size: 12px; color: var(--text-muted); opacity: 0.6; }
+
+  @media (max-width: 700px) {
+    .page-header h1 { font-size: 28px; }
+    .legal-section { padding: 24px; }
+    .nav-links { display: none; }
+    .nav { padding: 0 20px; }
+    .container { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/favicon.ico" alt="Lanos Logic">
+      <span class="logo-text">Lanos <span class="logic">Logic</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/services">Solutions</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/contact" class="nav-cta">Book a Call &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <div class="page-header-label">Legal</div>
+    <h1>Hosting &amp; Cloud Services<br>Terms &amp; Conditions</h1>
+    <p>These terms govern the provision of website hosting, cloud infrastructure, and managed services by Lanos Logic Ltd ("Lanos Logic", "we", "us") to the client ("you", "Client").</p>
+    <div class="effective-date">Effective: March 3, 2026 &middot; Last updated: March 2026</div>
+  </div>
+</div>
+
+<div class="legal">
+  <div class="container">
+
+    <div class="legal-section">
+      <h2><span class="num">1</span> Definitions</h2>
+      <ul>
+        <li><strong>"Services"</strong> means website hosting, domain management, cloud infrastructure, email hosting, managed server administration, and any related services as specified in the Client's service agreement or invoice.</li>
+        <li><strong>"Service Period"</strong> means the billing cycle (monthly, quarterly, or annual) as specified in the Client's agreement.</li>
+        <li><strong>"Content"</strong> means all data, files, databases, applications, and materials uploaded, stored, or processed on the Services by the Client.</li>
+        <li><strong>"Acceptable Use"</strong> means use of the Services in compliance with Section 5 of these terms and all applicable laws.</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">2</span> Scope of Services</h2>
+      <p>Lanos Logic provides the following hosting and cloud services, subject to the specific plan and configuration agreed upon:</p>
+      <ul>
+        <li><strong>Website hosting</strong> — deployment, configuration, and ongoing operation of websites and web applications on managed infrastructure</li>
+        <li><strong>Cloud infrastructure</strong> — provisioning and management of virtual servers, containers, databases, and related cloud resources</li>
+        <li><strong>Domain management</strong> — domain registration, DNS configuration, SSL/TLS certificate provisioning and renewal</li>
+        <li><strong>Email hosting</strong> — business email setup, configuration, and management where included in the service plan</li>
+        <li><strong>Managed administration</strong> — server maintenance, security patching, software updates, and performance monitoring</li>
+        <li><strong>Backups</strong> — automated backups at intervals specified in the service plan, with retention as agreed</li>
+        <li><strong>Technical support</strong> — assistance with service-related issues during business hours (see Section 8)</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">3</span> Service Level Commitment</h2>
+      <p>Lanos Logic targets the following service levels for managed hosting services:</p>
+      <ul>
+        <li><strong>Uptime target:</strong> 99.9% monthly uptime for managed infrastructure (excluding scheduled maintenance)</li>
+        <li><strong>Scheduled maintenance:</strong> performed during low-traffic periods with a minimum of 24 hours advance notice where reasonably possible</li>
+        <li><strong>Incident response:</strong> critical outages acknowledged within 1 hour during business hours, 4 hours outside business hours</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Note:</strong> Uptime targets are best-effort commitments. Lanos Logic is not liable for downtime caused by third-party providers, force majeure events, DDoS attacks, or issues arising from the Client's own actions or Content.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">4</span> Client Responsibilities</h2>
+      <p>The Client agrees to:</p>
+      <ul>
+        <li>Provide accurate and complete information required for service setup and ongoing management</li>
+        <li>Maintain the confidentiality of all account credentials, API keys, and access tokens</li>
+        <li>Ensure all Content complies with applicable laws and these terms</li>
+        <li>Notify Lanos Logic promptly of any security incidents or suspected unauthorized access</li>
+        <li>Maintain independent backups of critical data — while we provide backups, ultimate responsibility for data preservation rests with the Client</li>
+        <li>Keep contact information current for billing and service notifications</li>
+        <li>Respond to security-related communications from Lanos Logic within a reasonable timeframe</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">5</span> Acceptable Use Policy</h2>
+      <p>The Client shall not use the Services to:</p>
+      <ul>
+        <li>Host, store, or distribute content that is illegal, infringing, defamatory, or harmful</li>
+        <li>Send unsolicited bulk email (spam) or operate mailing lists without proper consent</li>
+        <li>Run cryptocurrency mining software, torrent trackers, or proxy/anonymisation services</li>
+        <li>Host phishing pages, malware distribution, or any deceptive content</li>
+        <li>Consume excessive shared resources in a manner that degrades service for other clients</li>
+        <li>Attempt to access, probe, or exploit other systems or accounts on the infrastructure</li>
+        <li>Store or process data subject to specific regulatory requirements (HIPAA, PCI-DSS) unless explicitly agreed in writing</li>
+      </ul>
+      <p>Violation of this policy may result in immediate suspension or termination of Services without refund. Lanos Logic reserves the right to remove any Content that violates these terms without prior notice in urgent cases.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">6</span> Fees, Billing &amp; Payment</h2>
+      <ul>
+        <li>Services are billed in advance at the start of each Service Period as specified in the Client's agreement</li>
+        <li>Payment is due within <strong>14 days</strong> of invoice date unless otherwise agreed</li>
+        <li>All fees are quoted in <strong>US Dollars (USD)</strong> unless otherwise specified</li>
+        <li>Late payments may incur a fee of <strong>1.5% per month</strong> (or the maximum permitted by law, whichever is lower)</li>
+        <li>Lanos Logic reserves the right to suspend Services after <strong>14 days</strong> of non-payment, with prior written notice</li>
+        <li>Data will be retained for <strong>30 days</strong> after suspension due to non-payment, after which it may be permanently deleted</li>
+        <li>Prices may be adjusted with <strong>30 days written notice</strong> before the start of a new Service Period</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">7</span> Data, Backups &amp; Security</h2>
+      <ul>
+        <li>The Client retains full ownership of all Content stored on the Services</li>
+        <li>Lanos Logic performs automated backups as specified in the service plan (typically daily, with 7–30 day retention)</li>
+        <li>Backup restoration requests are fulfilled within <strong>1 business day</strong> and may be subject to a service fee depending on complexity</li>
+        <li>Lanos Logic implements industry-standard security measures including firewalls, encryption at rest and in transit, access controls, and regular security updates</li>
+        <li>Lanos Logic will notify the Client within <strong>48 hours</strong> of discovering any security breach that may affect the Client's data</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Important:</strong> While Lanos Logic takes every reasonable measure to protect and back up Client data, we strongly recommend the Client maintains independent backups of all critical data. Lanos Logic is not liable for data loss resulting from circumstances beyond our reasonable control.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">8</span> Support &amp; Communication</h2>
+      <p>Hosting and cloud service support is provided as follows:</p>
+      <ul>
+        <li><strong>Critical issues</strong> (complete service outage, security breach): response within <strong>1 hour</strong> during business hours, <strong>4 hours</strong> outside business hours</li>
+        <li><strong>High priority</strong> (significant service degradation): response within <strong>4 business hours</strong></li>
+        <li><strong>Standard requests</strong> (configuration changes, general queries): response within <strong>1 business day</strong></li>
+        <li><strong>Low priority</strong> (feature requests, optimisation suggestions): scheduled as capacity permits</li>
+      </ul>
+      <p><strong>Business hours</strong> are Monday to Friday, 9:00 AM to 6:00 PM Eastern Time (ET), excluding U.S. federal holidays.</p>
+      <p>Support requests should be submitted via email or the agreed communication channel. Emergency out-of-hours contact details are provided in the Client's service agreement.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">9</span> Suspension &amp; Termination</h2>
+      <p><strong>By the Client:</strong></p>
+      <ul>
+        <li>The Client may cancel Services with <strong>30 days written notice</strong> before the end of the current Service Period</li>
+        <li>No refunds are provided for unused portions of a prepaid Service Period</li>
+        <li>Upon cancellation, the Client has <strong>14 days</strong> to retrieve all Content before it is permanently deleted</li>
+      </ul>
+      <p><strong>By Lanos Logic:</strong></p>
+      <ul>
+        <li>Lanos Logic may terminate Services with <strong>30 days written notice</strong> for any reason</li>
+        <li>Lanos Logic may suspend or terminate Services <strong>immediately</strong> in cases of: Acceptable Use Policy violations, non-payment exceeding 30 days, actions that pose a security risk to infrastructure or other clients, or if required by law or regulatory action</li>
+        <li>In cases of immediate termination for cause, no refunds are provided</li>
+        <li>In cases of termination without cause by Lanos Logic, a pro-rated refund for the unused portion of the Service Period will be provided</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">10</span> Intellectual Property</h2>
+      <ul>
+        <li>The Client retains all intellectual property rights in their Content</li>
+        <li>Lanos Logic retains all rights in its infrastructure, tools, configurations, scripts, and proprietary systems used to deliver the Services</li>
+        <li>Custom configurations, deployment scripts, or automation created specifically for the Client's services are owned by the Client upon full payment</li>
+        <li>Open-source software used in the provision of Services remains subject to its respective licences</li>
+        <li>Lanos Logic may reference the Client as a customer in marketing materials unless the Client opts out in writing</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">11</span> Confidentiality</h2>
+      <p>Both parties agree to keep confidential all proprietary information, credentials, system configurations, business data, and technical details exchanged during the provision of Services.</p>
+      <p>Lanos Logic will not access, review, or share Client Content except as necessary to provide the Services, comply with legal requirements, or respond to the Client's support requests.</p>
+      <p>This obligation survives termination of the Services.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">12</span> Limitation of Liability</h2>
+      <p>Lanos Logic's total aggregate liability under these terms shall not exceed the total fees paid by the Client in the <strong>12 months preceding the claim</strong>. Lanos Logic is not liable for:</p>
+      <ul>
+        <li>Indirect, incidental, special, or consequential damages, including loss of revenue, data, business opportunities, or goodwill</li>
+        <li>Downtime, outages, or service degradation caused by third-party providers, upstream network issues, or force majeure events</li>
+        <li>Data loss resulting from the Client's failure to maintain independent backups</li>
+        <li>Issues arising from the Client's Content, code, or configurations</li>
+        <li>Unauthorized access resulting from the Client's failure to secure credentials</li>
+        <li>Damages resulting from modifications made by the Client or unauthorized third parties to managed systems</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">13</span> Indemnification</h2>
+      <p>The Client agrees to indemnify and hold harmless Lanos Logic, its officers, directors, employees, and agents from any claims, damages, losses, or expenses (including reasonable legal fees) arising from:</p>
+      <ul>
+        <li>The Client's use of the Services or Content hosted on the Services</li>
+        <li>Violations of these terms or the Acceptable Use Policy</li>
+        <li>Infringement of any third-party rights by the Client's Content</li>
+        <li>Any claim by a third party related to the Client's use of the Services</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">14</span> Force Majeure</h2>
+      <p>Neither party shall be liable for delays or failures in performance resulting from events beyond their reasonable control, including but not limited to: natural disasters, acts of government, pandemic, war, terrorism, civil unrest, power outages, internet outages, or failure of third-party services. The affected party shall notify the other party promptly and use reasonable efforts to mitigate the impact.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">15</span> Governing Law &amp; Dispute Resolution</h2>
+      <p>These terms are governed by and construed in accordance with the laws of the State of Illinois, United States.</p>
+      <p>Any disputes arising from these terms shall first be subject to good-faith negotiation between the parties for a period of 30 days. If unresolved, disputes shall be subject to the exclusive jurisdiction of the courts of Cook County, Illinois.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">16</span> Amendments</h2>
+      <p>Lanos Logic reserves the right to update these terms at any time. Material changes will be communicated to the Client at least <strong>30 days</strong> before taking effect. Continued use of the Services after changes take effect constitutes acceptance of the updated terms. Changes do not apply retroactively to the current Service Period unless required by law.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">17</span> Entire Agreement</h2>
+      <p>These terms, together with any applicable service agreement, invoice, or order form, constitute the entire agreement between the parties regarding the hosting and cloud services described herein. They supersede all prior discussions, representations, and agreements relating to the subject matter.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2><span class="num">18</span> Contact</h2>
+      <p>Questions about these terms or your hosting services? Reach out:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:alex@lanos-logic.com" style="color: var(--accent-light); text-decoration: none;">alex@lanos-logic.com</a></li>
+        <li><strong>Web:</strong> <a href="/contact" style="color: var(--accent-light); text-decoration: none;">lanos-logic.com/contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="footer-name">Lanos Logic Ltd</div>
+    <div class="footer-title">24 E Washington St Suite 875, Chicago, IL 60602</div>
+    <a class="footer-email" href="mailto:alex@lanos-logic.com">alex@lanos-logic.com</a>
+    <div class="footer-copyright">&copy; 2026 Lanos Logic. All rights reserved.</div>
+  </div>
+</div>
+
+</body>
+</html>
