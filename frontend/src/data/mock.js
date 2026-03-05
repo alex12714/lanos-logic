@@ -10,8 +10,8 @@ export const navLinks = [
 
 export const heroFeatures = [
   "AI-Powered",
-  "24/7 Automation",
-  "Seamless Integration",
+  "Vector Databases",
+  "Enterprise Solutions",
   "Proven Results"
 ];
 
@@ -93,10 +93,55 @@ export const industries = [
     description: "Enhance production planning, quality control, inventory management, and supply chain operations.",
     stats: ["Predictive maintenance", "Automated quality checks", "Supply chain optimization"],
     href: "/industries/manufacturing"
+  },
+  {
+    id: "government",
+    name: "U.S. Government & Federal",
+    description: "FedRAMP-aligned AI solutions for federal agencies, defense contractors, and state governments. Secure document processing, citizen services automation, and compliance workflows.",
+    stats: ["FedRAMP-aligned architecture", "Secure document classification", "Automated compliance reporting"],
+    href: "/industries/government"
+  },
+  {
+    id: "pharmaceutical",
+    name: "Pharmaceutical",
+    description: "AI-driven drug discovery support, clinical trial data management, regulatory submission automation, and pharmacovigilance with vector database-powered knowledge retrieval.",
+    stats: ["Accelerated regulatory submissions", "AI-powered adverse event detection", "Clinical data pipeline automation"],
+    href: "/industries/pharmaceutical"
+  },
+  {
+    id: "life-sciences",
+    name: "Life Sciences",
+    description: "Intelligent research data management, genomic data processing, lab automation integration, and AI-assisted literature review using semantic search and vector embeddings.",
+    stats: ["Semantic research discovery", "Automated lab data integration", "AI literature analysis"],
+    href: "/industries/life-sciences"
+  },
+  {
+    id: "legal",
+    name: "Law & Attorneys",
+    description: "AI-powered contract analysis, legal research automation, case management workflows, and document review using vector databases for precedent discovery and due diligence.",
+    stats: ["80% faster contract review", "AI-powered legal research", "Automated due diligence"],
+    href: "/industries/legal"
   }
 ];
 
 export const services = [
+  {
+    id: "vector-database-solutions",
+    name: "Vector Database Solutions",
+    shortDescription: "Enterprise-grade vector database architecture for semantic search, knowledge retrieval, and AI-powered discovery across massive document collections.",
+    icon: "Database",
+    href: "/services/vector-database-solutions",
+    features: [
+      "Semantic Search & Retrieval",
+      "Document Embedding Pipelines",
+      "RAG Architecture Design"
+    ],
+    benefits: [
+      { title: "Instant Knowledge Discovery", description: "Find relevant information across millions of documents in seconds using semantic similarity." },
+      { title: "Enterprise RAG Systems", description: "Build retrieval-augmented generation systems that ground AI responses in your proprietary data." },
+      { title: "Scalable Architecture", description: "Vector database infrastructure that scales from thousands to billions of embeddings." }
+    ]
+  },
   {
     id: "ai-agents",
     name: "AI Agents",
@@ -277,6 +322,34 @@ export const caseStudies = [
     ],
     tags: ["Document Automation", "Process Automation", "AI Agents"],
     href: "/case-studies/real-estate-automation"
+  },
+  {
+    id: "vector-database-integration",
+    title: "Vector Database Architecture Powers Enterprise Knowledge Discovery",
+    category: "Enterprise AI",
+    description: "A Fortune 500 pharmaceutical company deployed a vector database architecture to unify 15+ years of research data, enabling semantic search across 2M+ documents and reducing research discovery time from weeks to minutes.",
+    image: "/case-study-saas.png",
+    stats: [
+      { value: "95%", label: "faster research discovery" },
+      { value: "2M+", label: "documents indexed semantically" },
+      { value: "60%", label: "reduction in duplicate research" }
+    ],
+    tags: ["Vector Databases", "AI Agents", "Knowledge Management"],
+    href: "/case-studies/vector-database-integration"
+  },
+  {
+    id: "government-compliance",
+    title: "Federal Agency Automates Compliance with AI Document Processing",
+    category: "U.S. Government",
+    description: "A federal regulatory agency implemented AI-powered document classification and compliance automation, processing 500K+ annual submissions with 99.2% accuracy while maintaining FedRAMP-aligned security standards.",
+    image: "/case-study-legal.png",
+    stats: [
+      { value: "99.2%", label: "document classification accuracy" },
+      { value: "500K+", label: "annual submissions processed" },
+      { value: "70%", label: "reduction in manual review" }
+    ],
+    tags: ["Document Automation", "AI Agents", "Compliance"],
+    href: "/case-studies/government-compliance"
   }
 ];
 
@@ -387,6 +460,15 @@ export const teamMembers = [
     bio: "Dedicated to ensuring clients achieve maximum value from their automation implementations.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
   }
+];
+
+export const caseStudyCategories = [
+  { id: 'all', label: 'All Case Studies' },
+  { id: 'Marketing Agency', label: 'Marketing' },
+  { id: 'Sales Agency', label: 'Sales' },
+  { id: 'Real Estate', label: 'Real Estate' },
+  { id: 'Enterprise AI', label: 'Enterprise AI' },
+  { id: 'U.S. Government', label: 'Government' }
 ];
 
 export const companyStats = [

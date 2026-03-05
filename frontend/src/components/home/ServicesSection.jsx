@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3 } from 'lucide-react';
+import { ArrowRight, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database } from 'lucide-react';
 import { services } from '../../data/mock';
 
 const iconMap = {
@@ -11,7 +11,8 @@ const iconMap = {
   Share2: Share2,
   MessageSquare: MessageSquare,
   Smartphone: Smartphone,
-  BarChart3: BarChart3
+  BarChart3: BarChart3,
+  Database: Database
 };
 
 const ServicesSection = () => {

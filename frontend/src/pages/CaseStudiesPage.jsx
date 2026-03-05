@@ -11,6 +11,8 @@ const CaseStudiesPage = () => {
 
   const categories = [
     { id: 'all', label: 'All Case Studies' },
+    { id: 'Enterprise AI', label: 'Enterprise AI' },
+    { id: 'U.S. Government', label: 'Government' },
     { id: 'Marketing Agency', label: 'Marketing' },
     { id: 'Sales Agency', label: 'Sales' },
     { id: 'Real Estate', label: 'Real Estate' }

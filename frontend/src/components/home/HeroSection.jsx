@@ -64,7 +64,7 @@ const HeroSection = () => {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="text-white">Strategic </span>
             <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
-              AI Automations
+              AI Solutions
             </span>
             <br />
             <span className="text-white">For Modern Businesses</span>
@@ -72,9 +72,9 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-            Plug in AI experts to power your business processes, customer
-            interactions, and revenue automations with cutting-edge artificial
-            intelligence.
+            Enterprise-grade AI solutions that transform operations across government,
+            healthcare, legal, and life sciences — from intelligent document processing
+            to vector database architectures.
           </p>
 
           {/* CTA Buttons */}

@@ -8,16 +8,16 @@ const IndustriesSection = () => {
 
   const filters = [
     { id: 'all', label: 'All Industries' },
-    { id: 'marketing', label: 'Marketing Agencies' },
-    { id: 'sales', label: 'Sales Agencies' },
-    { id: 'other', label: 'Other Businesses' }
+    { id: 'regulated', label: 'Government & Regulated' },
+    { id: 'agencies', label: 'Agencies' },
+    { id: 'enterprise', label: 'Enterprise' }
   ];
 
   const filteredIndustries = industries.filter(industry => {
     if (activeFilter === 'all') return true;
-    if (activeFilter === 'marketing') return industry.id === 'marketing';
-    if (activeFilter === 'sales') return industry.id === 'sales';
-    return !['marketing', 'sales'].includes(industry.id);
+    if (activeFilter === 'regulated') return ['government', 'pharmaceutical', 'life-sciences', 'legal'].includes(industry.id);
+    if (activeFilter === 'agencies') return ['marketing', 'sales'].includes(industry.id);
+    return !['marketing', 'sales', 'government', 'pharmaceutical', 'life-sciences', 'legal'].includes(industry.id);
   });
 
   return (
