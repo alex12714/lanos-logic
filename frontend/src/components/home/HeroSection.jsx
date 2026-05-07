@@ -1,22 +1,59 @@
 import React from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Phone, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
 import { heroFeatures } from '../../data/mock';
 import { useBooking } from '../../context/BookingContext';
+import { useReducedMotion } from '../../hooks/useReducedMotion';
+
+const spring = { type: 'spring', stiffness: 55, damping: 18, mass: 0.8 };
 
 const HeroSection = () => {
   const { openBookingModal, openCallbackModal, openBuildWizard } = useBooking();
+  const prefersReduced = useReducedMotion();
+  const { scrollY } = useScroll();
+
+  const orb1Y = useTransform(scrollY, [0, 600], [0, prefersReduced ? 0 : -80]);
+  const orb2Y = useTransform(scrollY, [0, 600], [0, prefersReduced ? 0 : -50]);
+  const orb3Y = useTransform(scrollY, [0, 600], [0, prefersReduced ? 0 : -110]);
+
+  const containerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.11, delayChildren: 0.05 } },
+  };
+
+  const itemVariants = prefersReduced
+    ? { hidden: {}, visible: {} }
+    : {
+        hidden: { opacity: 0, y: 28 },
+        visible: { opacity: 1, y: 0, transition: spring },
+      };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[#0a0a12]">
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-500" />
-        
-        {/* Stars/Particles - Pre-generated positions */}
+        {/* Gradient Orbs with parallax */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"
+          style={{ y: orb1Y }}
+          animate={prefersReduced ? {} : { scale: [1, 1.08, 1], opacity: [0.2, 0.28, 0.2] }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"
+          style={{ y: orb2Y }}
+          animate={prefersReduced ? {} : { scale: [1, 1.06, 1], opacity: [0.1, 0.18, 0.1] }}
+          transition={{ duration: 7, delay: 1, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute top-1/2 right-1/3 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
+          style={{ y: orb3Y }}
+          animate={prefersReduced ? {} : { scale: [1, 1.1, 1], opacity: [0.1, 0.16, 0.1] }}
+          transition={{ duration: 5, delay: 0.5, repeat: Infinity, ease: 'easeInOut' }}
+        />
+
+        {/* Stars/Particles — pre-generated positions */}
         <div className="absolute inset-0">
           {[
             { left: '5%', top: '10%', delay: '0s', duration: '3s' },
@@ -47,38 +84,52 @@ const HeroSection = () => {
                 left: star.left,
                 top: star.top,
                 animationDelay: star.delay,
-                animationDuration: star.duration
+                animationDuration: star.duration,
               }}
             />
           ))}
         </div>
-        
+
         {/* Grid overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:64px_64px]" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="text-center space-y-8">
+        <motion.div
+          className="text-center space-y-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Main Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+          <motion.h1
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight"
+            variants={itemVariants}
+          >
             <span className="text-white">Strategic </span>
             <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
               AI Solutions
             </span>
             <br />
             <span className="text-white">For Modern Businesses</span>
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+          <motion.p
+            className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed"
+            variants={itemVariants}
+          >
             Enterprise-grade AI solutions that transform operations across government,
             healthcare, legal, and life sciences — from intelligent document processing
             to vector database architectures.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
+            variants={itemVariants}
+          >
             <Button
               size="lg"
               onClick={openBookingModal}
@@ -104,18 +155,19 @@ const HeroSection = () => {
             >
               What Do You Want to Build?
             </Button>
-          </div>
+          </motion.div>
 
           {/* Feature Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-12">
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-2 pt-12"
+            variants={itemVariants}
+          >
             <div className="flex items-center gap-2 bg-gradient-to-r from-amber-900/40 to-amber-800/20 border border-amber-500/30 rounded-full px-6 py-3 backdrop-blur-sm">
               {heroFeatures.map((feature, index) => (
                 <React.Fragment key={feature}>
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-amber-400" />
-                    <span className="text-amber-200 text-sm font-medium">
-                      {feature}
-                    </span>
+                    <span className="text-amber-200 text-sm font-medium">{feature}</span>
                   </div>
                   {index < heroFeatures.length - 1 && (
                     <span className="text-amber-500/50">|</span>
@@ -123,8 +175,8 @@ const HeroSection = () => {
                 </React.Fragment>
               ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Bottom gradient fade */}
