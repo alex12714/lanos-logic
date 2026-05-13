@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Check } from 'lucide-react';
+import { ArrowRight, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Check, Database, ScanLine, ShieldAlert, ShieldCheck } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { Button } from '../components/ui/button';
 import { services } from '../data/mock';
@@ -13,7 +13,11 @@ const iconMap = {
   Share2: Share2,
   MessageSquare: MessageSquare,
   Smartphone: Smartphone,
-  BarChart3: BarChart3
+  BarChart3: BarChart3,
+  Database: Database,
+  ScanLine: ScanLine,
+  ShieldAlert: ShieldAlert,
+  ShieldCheck: ShieldCheck
 };
 
 const ServicesPage = () => {

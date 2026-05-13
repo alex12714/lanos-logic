@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Lanos Logic - AI Automation Solutions",
+  "name_for_model": "lanos_logic",
+  "description_for_human": "Strategic AI solutions provider specializing in business automation, AI agents, voice AI, document automation, and vector database architectures for enterprises across the US, UK, and globally.",
+  "description_for_model": "Lanos Logic is a strategic AI automation company based in Chicago, IL (US) and serving UK/global clients. They build AI agents, voice AI systems, document automation, process automation, vector database solutions (RAG architectures), mobile apps (Flutter), and analytics platforms. Industries served: marketing agencies, sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, US government/federal, pharmaceutical, life sciences, and legal/law firms. Founded by Daniel Roberts (UK-chartered CEO). Key results: 300% capacity increase, 85% processing time reduction, 42% higher conversion rates. Technology stack includes Claude AI, Make.com, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, Stripe. Contact: hello@lanos-logic.com, +1 (518) 864 3528.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://lanos-logic.com/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://lanos-logic.com/favicon.ico",
+  "contact_email": "hello@lanos-logic.com",
+  "legal_info_url": "https://lanos-logic.com/terms"
+}
