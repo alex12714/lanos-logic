@@ -30,6 +30,9 @@ const RequestCallbackModal = ({ isOpen, onClose }) => {
     'Communication Automation',
     'Mobile App Development',
     'Analytics & Insights',
+    'Security Vulnerability Scanning',
+    'Penetration Testing',
+    'Systems Hardening',
     'General Consultation'
   ];
 
