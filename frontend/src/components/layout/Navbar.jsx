@@ -113,16 +113,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
 
-            {/* Home */}
-            <Link
-              to="/"
-              className={`text-sm font-medium transition-all duration-300 hover:text-amber-400 ${
-                location.pathname === '/' ? 'text-amber-400' : 'text-gray-300'
-              }`}
-            >
-              Home
-            </Link>
-
             {/* Solutions dropdown trigger */}
             <div className="relative" ref={dropdownRef}>
               <button
@@ -264,16 +254,6 @@ const Navbar = () => {
         }`}
       >
         <div className="px-4 py-5 space-y-1">
-
-          {/* Home */}
-          <Link
-            to="/"
-            className={`block px-3 py-2.5 rounded-xl text-base font-medium transition-colors ${
-              location.pathname === '/' ? 'text-amber-400 bg-amber-500/5' : 'text-gray-300 hover:text-amber-400 hover:bg-white/5'
-            }`}
-          >
-            Home
-          </Link>
 
           {/* Solutions accordion */}
           <div>
