@@ -86,11 +86,13 @@ const Navbar = () => {
   }, []);
 
   const isServiceActive = location.pathname.startsWith('/services');
+  const isHomePage = location.pathname === '/';
+  const hasBackground = isScrolled || !isHomePage || solutionsOpen;
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        hasBackground
           ? 'bg-[#0a0a12]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl'
           : 'bg-transparent'
       }`}
