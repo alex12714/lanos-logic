@@ -489,70 +489,70 @@ export const teamMembers = [
     name: "Daniel Roberts",
     role: "Head of Business Development",
     bio: "Daniel leads strategic partnerships and growth initiatives, helping clients identify automation opportunities that increase efficiency and revenue. Outside of work, he enjoys restoring vintage motorcycles and often spends weekends on long-distance road trips across Europe.",
-    image: "https://ui-avatars.com/api/?name=Daniel+Roberts&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/daniel-roberts.jpg"
   },
   {
     id: 2,
     name: "Alex Podbrezsky",
     role: "Founder & AI Solutions Architect",
     bio: "Alex designs AI-powered systems that combine automation, messaging, and business workflows into scalable digital products. He is deeply interested in emerging technologies, futurism, and the intersection between AI, communication, and human behavior.",
-    image: "https://ui-avatars.com/api/?name=Alex+Podbrezsky&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/alex-podbrezsky.jpg"
   },
   {
     id: 3,
     name: "Adrian Ionescu",
     role: "Lead Backend Developer",
     bio: "Adrian oversees backend architecture and infrastructure reliability across client and internal platforms. He is known for building custom electronics projects at home and has a personal workshop filled with experimental hardware prototypes.",
-    image: "https://ui-avatars.com/api/?name=Adrian+Ionescu&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/adrian-ionescu.jpg"
   },
   {
     id: 4,
     name: "Leo Katz",
     role: "Product Strategy & Operations Manager",
     bio: "Leo coordinates product development and operational execution, ensuring projects move efficiently from concept to launch. He previously traveled through more than 20 countries while working remotely and enjoys studying behavioral psychology and negotiation.",
-    image: "https://ui-avatars.com/api/?name=Leo+Katz&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/leo-katz.jpg"
   },
   {
     id: 5,
     name: "Alex Tanaka",
     role: "AI Integrations Engineer",
     bio: "Alex specializes in connecting AI models, APIs, and third-party platforms into unified automation ecosystems. In his free time, he practices digital music production and experiments with AI-generated audio tools.",
-    image: "https://ui-avatars.com/api/?name=Alex+Tanaka&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/alex-tanaka.jpg"
   },
   {
     id: 6,
     name: "Anna Kowalska",
     role: "Client Success & Onboarding Specialist",
     bio: "Anna guides clients through onboarding and implementation, ensuring smooth adoption of automation systems and digital tools. She is passionate about languages and can comfortably communicate in four different languages.",
-    image: "https://ui-avatars.com/api/?name=Anna+Kowalska&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/anna-kowalska.jpg"
   },
   {
     id: 7,
     name: "Sophia Mitchell",
     role: "Marketing Director",
     bio: "Sophia leads brand strategy, digital campaigns, and content positioning for both the agency and its clients. She has a background in documentary photography and often incorporates storytelling principles into marketing campaigns.",
-    image: "https://ui-avatars.com/api/?name=Sophia+Mitchell&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/sophia-mitchell.jpg"
   },
   {
     id: 8,
     name: "Marcus Halvorsen",
     role: "Sales Director",
     bio: "Marcus manages sales strategy and client acquisition, helping businesses understand how AI automation can solve operational bottlenecks. He enjoys mountain hiking in Scandinavia and is known internally for turning client meetings into strategic brainstorming sessions.",
-    image: "https://ui-avatars.com/api/?name=Marcus+Halvorsen&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/marcus-halvorsen.jpg"
   },
   {
     id: 9,
     name: "Daria Melnyk",
     role: "UI/UX Designer & Brand Creative",
     bio: "Daria creates intuitive interfaces and visual identities that make complex technology feel simple and engaging. She is inspired by modern architecture and frequently sketches interface concepts while visiting cafes and galleries.",
-    image: "https://ui-avatars.com/api/?name=Daria+Melnyk&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/daria-melnyk.jpg"
   },
   {
     id: 10,
     name: "Erik Dahlgren",
     role: "DevOps & Infrastructure Engineer",
     bio: "Erik manages cloud infrastructure, deployment pipelines, and system scalability for high-availability applications. He is an avid sailing enthusiast and enjoys applying engineering precision both to systems architecture and open-water navigation.",
-    image: "https://ui-avatars.com/api/?name=Erik+Dahlgren&background=1a1a2e&color=f59e0b&size=200&bold=true"
+    image: "/team/erik-dahlgren.jpg"
   }
 ];
 
