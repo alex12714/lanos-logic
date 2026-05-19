@@ -71,6 +71,39 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Meet Our Team</h2>
+            <p className="text-gray-400 text-lg">
+              The experts behind your AI automation success.
+            </p>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member) => (
+              <div
+                key={member.id}
+                className="bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl p-6 text-center hover:border-amber-500/30 transition-all duration-300 group"
+              >
+                <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-amber-500/30 group-hover:border-amber-500/60 transition-colors">
+                  <AvatarImage src={member.image} alt={member.name} />
+                  <AvatarFallback className="bg-gradient-to-br from-amber-500 to-amber-600 text-black text-xl font-bold">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </AvatarFallback>
+                </Avatar>
+                <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                <p className="text-amber-400 text-sm mb-3">{member.role}</p>
+                <p className="text-gray-400 text-sm">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Our Story Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
@@ -141,39 +174,6 @@ const AboutPage = () => {
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{value.title}</h3>
                 <p className="text-gray-400 text-sm">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-            <p className="text-gray-400 text-lg">
-              The experts behind your AI automation success.
-            </p>
-          </div>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member) => (
-              <div
-                key={member.id}
-                className="bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl p-6 text-center hover:border-amber-500/30 transition-all duration-300 group"
-              >
-                <Avatar className="w-24 h-24 mx-auto mb-4 border-2 border-amber-500/30 group-hover:border-amber-500/60 transition-colors">
-                  <AvatarImage src={member.image} alt={member.name} />
-                  <AvatarFallback className="bg-gradient-to-br from-amber-500 to-amber-600 text-black text-xl font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </AvatarFallback>
-                </Avatar>
-                <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-amber-400 text-sm mb-3">{member.role}</p>
-                <p className="text-gray-400 text-sm">{member.bio}</p>
               </div>
             ))}
           </div>

@@ -87,7 +87,7 @@ const Navbar = () => {
 
   const isServiceActive = location.pathname.startsWith('/services');
   const isHomePage = location.pathname === '/';
-  const hasBackground = isScrolled || !isHomePage || solutionsOpen;
+  const hasBackground = isScrolled || !isHomePage;
 
   return (
     <nav
@@ -131,7 +131,7 @@ const Navbar = () => {
 
               {/* Mega dropdown panel */}
               {solutionsOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-[#0f0f1e]/98 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-black/60 overflow-hidden">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-[#0f0f1e] border border-white/10 rounded-2xl shadow-2xl shadow-black/60 overflow-hidden">
                   {/* Header row */}
                   <div className="flex items-center justify-between px-6 py-4 border-b border-white/5">
                     <div className="flex items-center gap-2 text-white font-semibold">
