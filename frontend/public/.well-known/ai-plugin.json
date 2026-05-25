@@ -1,9 +1,9 @@
 {
   "schema_version": "v1",
-  "name_for_human": "Lanos Logic - AI Automation Solutions",
+  "name_for_human": "Lanos Logic — AI Automation Solutions",
   "name_for_model": "lanos_logic",
-  "description_for_human": "Strategic AI solutions provider specializing in business automation, AI agents, voice AI, document automation, and vector database architectures for enterprises across the US, UK, and globally.",
-  "description_for_model": "Lanos Logic is a strategic AI automation company based in Chicago, IL (US) and serving UK/global clients. They build AI agents, voice AI systems, document automation, process automation, vector database solutions (RAG architectures), mobile apps (Flutter), and analytics platforms. Industries served: marketing agencies, sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, US government/federal, pharmaceutical, life sciences, and legal/law firms. Founded by Daniel Roberts (UK-chartered CEO). Key results: 300% capacity increase, 85% processing time reduction, 42% higher conversion rates. Technology stack includes Claude AI, Make.com, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, Stripe. Contact: hello@lanos-logic.com, +1 (518) 864 3528.",
+  "description_for_human": "Browse Lanos Logic AI automation services, case studies, and industries. Submit contact inquiries.",
+  "description_for_model": "Lanos Logic is a strategic AI automation company (Chicago IL + UK) building AI agents, voice AI, document automation, process automation, vector database (RAG) solutions, mobile apps, and analytics platforms. Industries: marketing, sales, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, US government, pharmaceutical, life sciences, legal. Key results: 300% capacity increase, 85% processing time reduction, 42% higher conversion rates. Tech: Claude AI, Make.com, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, Stripe. MCP endpoint (JSON-RPC 2.0, protocol 2024-11-05): https://lanos-logic.com/mcp — 7 tools: list_services, get_service, list_case_studies, get_case_study, list_industries, get_company_info, submit_inquiry. Contact: hello@lanos-logic.com, +1 (518) 864 3528.",
   "auth": {
     "type": "none"
   },
@@ -12,7 +12,7 @@
     "url": "https://lanos-logic.com/openapi.yaml",
     "is_user_authenticated": false
   },
-  "logo_url": "https://lanos-logic.com/favicon.ico",
+  "logo_url": "https://lanos-logic.com/icon.svg",
   "contact_email": "hello@lanos-logic.com",
   "legal_info_url": "https://lanos-logic.com/terms"
 }

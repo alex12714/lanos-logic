@@ -1,0 +1,50 @@
+{
+  "name": "Lanos Logic",
+  "description": "Strategic AI automation solutions provider. Provides tools to browse AI services, case studies, industries, and submit inquiries.",
+  "url": "https://lanos-logic.com",
+  "version": "1.0.0",
+  "skills": [
+    {
+      "id": "browse-services",
+      "name": "Browse AI Services",
+      "description": "List and get details on Lanos Logic AI automation services including AI agents, voice AI, document automation, vector databases, and more.",
+      "tags": ["services", "ai", "automation"]
+    },
+    {
+      "id": "browse-case-studies",
+      "name": "Browse Case Studies",
+      "description": "Search 42 real-world automation case studies filterable by industry, platform, country, and type.",
+      "tags": ["case-studies", "portfolio", "results"]
+    },
+    {
+      "id": "browse-industries",
+      "name": "Browse Industries",
+      "description": "Explore 13 industries served including healthcare, legal, government, pharmaceutical, and marketing.",
+      "tags": ["industries", "verticals"]
+    },
+    {
+      "id": "company-info",
+      "name": "Company Information",
+      "description": "Get team members, contact details, technology stack, and engagement process.",
+      "tags": ["company", "team", "contact"]
+    },
+    {
+      "id": "submit-inquiry",
+      "name": "Submit Inquiry",
+      "description": "Submit a contact form to the Lanos Logic sales team. Rate limited to 5/min.",
+      "tags": ["contact", "lead", "sales"]
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["application/json"],
+  "endpoints": {
+    "mcp": "https://lanos-logic.com/mcp",
+    "rest": "https://lanos-logic.com/tools",
+    "openapi": "https://lanos-logic.com/openapi.yaml"
+  }
+}

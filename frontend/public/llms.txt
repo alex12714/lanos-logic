@@ -121,6 +121,33 @@ Real-time dashboards, performance metrics, and predictive analytics to optimize 
 2. **Prepare**: Refine and align processes with future state planning
 3. **Implement**: Deploy automations that deliver immediate results
 
+
+## AI Agent Integration (MCP)
+
+Lanos Logic exposes a native MCP (Model Context Protocol) server for direct agentic interaction.
+
+**MCP Endpoint**: https://lanos-logic.com/mcp
+**Protocol**: JSON-RPC 2.0, MCP version 2024-11-05
+**Auth**: None required
+**Discovery**: https://lanos-logic.com/.well-known/mcp.json
+
+### Available Tools
+
+- **list_services** — List all 12 AI automation services with features and URLs
+- **get_service** — Get full details for a service by ID (e.g. `ai-agents`, `vector-database-solutions`)
+- **list_case_studies** — Browse 42 case studies; filter by industry, platform, country, or type
+- **get_case_study** — Get complete case study detail including stats, platforms, and solution description
+- **list_industries** — Get all 13 industries served with outcomes
+- **get_company_info** — Team, contact, tech stack, stats, and engagement process
+- **submit_inquiry** — Submit a contact form directly to the sales team (rate limited: 5/min)
+
+### REST API
+
+OpenAPI 3.1 spec: https://lanos-logic.com/openapi.yaml
+Base URL: https://lanos-logic.com/tools/
+
+Endpoints: GET /tools/services · GET /tools/services/{id} · GET /tools/case-studies · GET /tools/case-studies/{id} · GET /tools/industries · GET /tools/company · POST /tools/inquiry
+
 ## Technology Stack
 
 Claude AI, Make.com, n8n, Zapier, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, Stripe, DocuSign, ClickUp, Miro, PandaDoc

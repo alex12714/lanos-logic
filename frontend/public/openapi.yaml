@@ -1,0 +1,285 @@
+openapi: "3.1.0"
+info:
+  title: Lanos Logic API
+  description: >
+    REST API for Lanos Logic AI automation services.
+    Browse services, case studies, industries, and company information.
+    Submit inquiries to the sales team.
+    For agentic interaction also see the MCP endpoint at /mcp (JSON-RPC 2.0, protocol 2024-11-05).
+  version: "1.0.0"
+  contact:
+    name: Lanos Logic
+    email: hello@lanos-logic.com
+    url: https://lanos-logic.com
+servers:
+  - url: https://lanos-logic.com
+    description: Production
+paths:
+  /tools/services:
+    get:
+      operationId: listServices
+      summary: List all AI automation services
+      tags: [Services]
+      responses:
+        "200":
+          description: Array of services
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  services:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/ServiceSummary"
+                  total:
+                    type: integer
+  /tools/services/{service_id}:
+    get:
+      operationId: getService
+      summary: Get details for a specific service
+      tags: [Services]
+      parameters:
+        - name: service_id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: ai-agents
+      responses:
+        "200":
+          description: Service detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ServiceDetail"
+  /tools/case-studies:
+    get:
+      operationId: listCaseStudies
+      summary: Browse case studies with optional filters
+      tags: [Case Studies]
+      parameters:
+        - name: category
+          in: query
+          schema:
+            type: string
+          description: "Industry filter e.g. Healthcare, Legal, SaaS"
+        - name: platform
+          in: query
+          schema:
+            type: string
+          description: "Platform filter e.g. AirTable, Make.com"
+        - name: country
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+            maximum: 20
+      responses:
+        "200":
+          description: List of case studies
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  case_studies:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/CaseStudySummary"
+                  total:
+                    type: integer
+  /tools/case-studies/{case_study_id}:
+    get:
+      operationId: getCaseStudy
+      summary: Get full details of a specific case study
+      tags: [Case Studies]
+      parameters:
+        - name: case_study_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Case study detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CaseStudyDetail"
+  /tools/industries:
+    get:
+      operationId: listIndustries
+      summary: List all industries served by Lanos Logic
+      tags: [Industries]
+      responses:
+        "200":
+          description: List of industries
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  industries:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Industry"
+                  total:
+                    type: integer
+  /tools/company:
+    get:
+      operationId: getCompanyInfo
+      summary: Get company information
+      tags: [Company]
+      parameters:
+        - name: section
+          in: query
+          schema:
+            type: string
+            enum: [all, team, contact, stats, tech_stack, process]
+            default: all
+      responses:
+        "200":
+          description: Company information
+          content:
+            application/json:
+              schema:
+                type: object
+  /tools/inquiry:
+    post:
+      operationId: submitInquiry
+      summary: Submit a contact inquiry to Lanos Logic
+      description: Rate limited to 5 submissions per minute per IP.
+      tags: [Actions]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InquiryRequest"
+      responses:
+        "200":
+          description: Inquiry submitted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+        "400":
+          description: Validation error
+        "429":
+          description: Rate limit exceeded
+components:
+  schemas:
+    ServiceSummary:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        features:
+          type: array
+          items:
+            type: string
+        url:
+          type: string
+    ServiceDetail:
+      allOf:
+        - $ref: "#/components/schemas/ServiceSummary"
+        - type: object
+          properties:
+            benefits:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                  description:
+                    type: string
+    CaseStudySummary:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        category:
+          type: string
+        country:
+          type: string
+        year:
+          type: string
+        description:
+          type: string
+        stats:
+          type: array
+          items:
+            type: object
+        tags:
+          type: array
+          items:
+            type: string
+        platforms:
+          type: array
+          items:
+            type: string
+        monthly_hours_saved:
+          type: integer
+        url:
+          type: string
+    CaseStudyDetail:
+      allOf:
+        - $ref: "#/components/schemas/CaseStudySummary"
+        - type: object
+          properties:
+            solution:
+              type: string
+            days_to_complete:
+              type: integer
+    Industry:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        key_outcomes:
+          type: array
+          items:
+            type: string
+        url:
+          type: string
+    InquiryRequest:
+      type: object
+      required: [name, email, message]
+      properties:
+        name:
+          type: string
+          example: Jane Smith
+        email:
+          type: string
+          format: email
+          example: jane@acme.com
+        message:
+          type: string
+          example: We need help automating our document workflow.
+        company:
+          type: string
+          example: Acme Corp
+        service:
+          type: string
+          example: Document Automation

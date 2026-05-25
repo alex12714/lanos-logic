@@ -1,0 +1,7 @@
+{
+  "url": "https://lanos-logic.com/mcp",
+  "name": "Lanos Logic",
+  "version": "1.0.0",
+  "description": "MCP server for Lanos Logic AI automation services. Exposes tools to browse services, case studies, industries, company info, and submit inquiries.",
+  "contact": "hello@lanos-logic.com"
+}
