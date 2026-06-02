@@ -86,6 +86,10 @@ const Footer = () => {
                 <span className="text-gray-400 text-sm">+1 (518) 864 3528</span>
               </li>
               <li className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-amber-400 mt-0.5" />
+                <span className="text-gray-400 text-sm">+44 1313 813160 (UK)</span>
+              </li>
+              <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-400 mt-0.5" />
                 <span className="text-gray-400 text-sm">
                   24 E Washington St Suite 875<br />

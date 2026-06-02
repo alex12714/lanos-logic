@@ -70,9 +70,15 @@ const ContactPage = () => {
     },
     {
       icon: Phone,
-      title: 'Call Us',
+      title: 'Call Us (US)',
       content: '+1 (518) 864 3528',
       description: 'Mon-Fri from 9am to 6pm'
+    },
+    {
+      icon: Phone,
+      title: 'Call Us (UK)',
+      content: '+44 1313 813160',
+      description: 'Mon-Fri from 9am to 6pm GMT'
     },
     {
       icon: MapPin,
