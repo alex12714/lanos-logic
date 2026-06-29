@@ -69,9 +69,11 @@ const AboutPage = () => {
               About <span className="text-amber-400">Lanos Logic</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              We are a team of AI enthusiasts and automation experts dedicated to
-              helping businesses transform their operations through intelligent
-              automation solutions.
+              Lanos Logic is an AI automation company that helps businesses
+              transform their operations through intelligent automation — AI
+              agents, voice AI, document and process automation, vector
+              databases, and custom mobile apps — delivered by a team of AI and
+              automation experts.
             </p>
           </div>
         </div>

@@ -35,91 +35,91 @@ export const industries = [
   {
     id: "marketing",
     name: "Marketing Agencies",
-    description: "Automate campaign management, content creation, analytics reporting, and client onboarding processes.",
+    description: "AI automation helps marketing agencies automate campaign management, content creation, analytics reporting, and client onboarding. Lanos Logic builds automations that cut reporting time, scale content production, and nurture leads without adding headcount.",
     stats: ["50% faster client reporting", "3x more content production", "Automated lead nurturing"],
     href: "/industries/marketing-agencies"
   },
   {
     id: "sales",
     name: "Sales Agencies",
-    description: "Streamline lead qualification, follow-ups, proposal generation, and sales pipeline management.",
+    description: "AI automation helps sales agencies streamline lead qualification, follow-ups, proposal generation, and pipeline management. Lanos Logic builds automations that qualify more leads and keep personalized follow-up sequences running automatically.",
     stats: ["40% increase in qualified leads", "Automated follow-up sequences", "Smart contract generation"],
     href: "/industries/sales-agencies"
   },
   {
     id: "ecommerce",
     name: "E-commerce",
-    description: "Enhance customer support, inventory management, order processing, and personalized marketing.",
+    description: "AI automation helps e-commerce businesses run 24/7 customer support, inventory management, order processing, and personalized marketing. Lanos Logic builds automations that answer customers instantly and recommend products at scale.",
     stats: ["24/7 customer support", "Automated inventory alerts", "Personalized recommendations"],
     href: "/industries/ecommerce"
   },
   {
     id: "education",
     name: "Education",
-    description: "Automate student enrollment, course management, grading, and personalized learning experiences.",
+    description: "AI automation helps education providers automate student enrollment, course management, grading, and personalized learning. Lanos Logic builds automations that streamline admissions and free educators from repetitive administrative work.",
     stats: ["Streamlined admissions", "Automated grading", "Personalized learning paths"],
     href: "/industries/education"
   },
   {
     id: "healthcare",
     name: "Healthcare",
-    description: "Improve patient scheduling, billing, record management, and follow-up communications.",
+    description: "AI automation helps healthcare providers improve patient scheduling, billing, record management, and follow-up communications. Lanos Logic builds automations that reduce no-shows and streamline billing while keeping patient data secure.",
     stats: ["Reduced no-shows", "Streamlined billing", "Automated patient follow-ups"],
     href: "/industries/healthcare"
   },
   {
     id: "logistics",
     name: "Logistics",
-    description: "Optimize route planning, shipment tracking, inventory management, and customer communications.",
+    description: "AI automation helps logistics companies optimize route planning, shipment tracking, inventory management, and customer notifications. Lanos Logic builds automations that deliver real-time tracking updates and optimized delivery routes.",
     stats: ["Real-time tracking updates", "Optimized delivery routes", "Automated shipping notifications"],
     href: "/industries/logistics"
   },
   {
     id: "real-estate",
     name: "Real Estate",
-    description: "Automate lead qualification, property matching, document management, and client communications.",
+    description: "AI automation helps real estate firms automate lead qualification, property matching, document management, and client communications. Lanos Logic builds automations that send property alerts and process documents without manual work.",
     stats: ["Automated property alerts", "Smart document processing", "Virtual property tours"],
     href: "/industries/real-estate"
   },
   {
     id: "professional-services",
     name: "Professional Services",
-    description: "Streamline client onboarding, project management, billing, and reporting processes.",
+    description: "AI automation helps professional services firms streamline client onboarding, project management, billing, and reporting. Lanos Logic builds automations for time tracking, document generation, and self-service client portals.",
     stats: ["Automated time tracking", "Smart document generation", "Client portal access"],
     href: "/industries/professional-services"
   },
   {
     id: "manufacturing",
     name: "Manufacturing",
-    description: "Enhance production planning, quality control, inventory management, and supply chain operations.",
+    description: "AI automation helps manufacturers improve production planning, quality control, inventory management, and supply chain operations. Lanos Logic builds automations for predictive maintenance, automated quality checks, and supply chain optimization.",
     stats: ["Predictive maintenance", "Automated quality checks", "Supply chain optimization"],
     href: "/industries/manufacturing"
   },
   {
     id: "government",
     name: "U.S. Government & Federal",
-    description: "FedRAMP-aligned AI solutions for federal agencies, defense contractors, and state governments. Secure document processing, citizen services automation, and compliance workflows.",
+    description: "AI automation helps U.S. federal agencies, defense contractors, and state governments process documents, automate citizen services, and run compliance workflows securely. Lanos Logic builds FedRAMP-aligned AI solutions with secure document classification and automated compliance reporting.",
     stats: ["FedRAMP-aligned architecture", "Secure document classification", "Automated compliance reporting"],
     href: "/industries/government"
   },
   {
     id: "pharmaceutical",
     name: "Pharmaceutical",
-    description: "AI-driven drug discovery support, clinical trial data management, regulatory submission automation, and pharmacovigilance with vector database-powered knowledge retrieval.",
+    description: "AI automation helps pharmaceutical companies support drug discovery, manage clinical trial data, automate regulatory submissions, and run pharmacovigilance. Lanos Logic builds vector database-powered knowledge retrieval for accelerated submissions and AI-powered adverse event detection.",
     stats: ["Accelerated regulatory submissions", "AI-powered adverse event detection", "Clinical data pipeline automation"],
     href: "/industries/pharmaceutical"
   },
   {
     id: "life-sciences",
     name: "Life Sciences",
-    description: "Intelligent research data management, genomic data processing, lab automation integration, and AI-assisted literature review using semantic search and vector embeddings.",
+    description: "AI automation helps life sciences organizations manage research data, process genomic data, integrate lab automation, and review literature faster. Lanos Logic builds semantic search and vector embeddings for AI-assisted research discovery and automated lab data integration.",
     stats: ["Semantic research discovery", "Automated lab data integration", "AI literature analysis"],
     href: "/industries/life-sciences"
   },
   {
     id: "legal",
     name: "Law & Attorneys",
-    description: "AI-powered contract analysis, legal research automation, case management workflows, and document review using vector databases for precedent discovery and due diligence.",
+    description: "AI automation helps law firms and attorneys analyze contracts, automate legal research, manage cases, and review documents faster. Lanos Logic builds vector database-powered precedent discovery and automated due diligence that speed up contract review.",
     stats: ["80% faster contract review", "AI-powered legal research", "Automated due diligence"],
     href: "/industries/legal"
   }
@@ -129,7 +129,7 @@ export const services = [
   {
     id: "vector-database-solutions",
     name: "Vector Database Solutions",
-    shortDescription: "Enterprise-grade vector database architecture for semantic search, knowledge retrieval, and AI-powered discovery across massive document collections.",
+    shortDescription: "Vector database solutions store your documents as numerical embeddings so AI can search by meaning instead of exact keywords. Lanos Logic builds enterprise-grade vector database architecture for semantic search, knowledge retrieval, and retrieval-augmented generation (RAG) across massive document collections.",
     icon: "Database",
     href: "/services/vector-database-solutions",
     features: [
@@ -146,7 +146,7 @@ export const services = [
   {
     id: "ai-agents",
     name: "AI Agents",
-    shortDescription: "Intelligent virtual assistants that automate customer interactions, answer queries, and execute tasks 24/7.",
+    shortDescription: "AI agents are software assistants that understand natural language to automate customer interactions, answer queries, and complete multi-step tasks 24/7. Lanos Logic builds AI agents that work around the clock and scale with demand without increasing headcount.",
     icon: "Bot",
     href: "/services/ai-agents",
     features: [
@@ -163,7 +163,7 @@ export const services = [
   {
     id: "voice-ai-agents",
     name: "Voice AI Agents",
-    shortDescription: "Natural-sounding voice assistants that handle calls, appointments, and customer support with human-like conversation.",
+    shortDescription: "Voice AI agents are automated phone assistants that answer and place calls, qualify leads, book appointments, and handle customer support 24/7 with natural, human-like conversation. Lanos Logic builds voice AI agents that capture every call and hand off to a human team member when needed.",
     icon: "Phone",
     href: "/services/voice-ai-agents",
     features: [
@@ -180,7 +180,7 @@ export const services = [
   {
     id: "document-automation",
     name: "Document Automation",
-    shortDescription: "Intelligent document processing that extracts data, manages contracts, and automates approval workflows.",
+    shortDescription: "Document automation uses AI to read documents, extract data, manage contracts, and run approval workflows automatically, turning hours of manual paperwork into minutes. Lanos Logic builds document automation with OCR, data extraction, e-signature, and compliance-ready audit trails.",
     icon: "FileText",
     href: "/services/document-automation",
     features: [
@@ -197,7 +197,7 @@ export const services = [
   {
     id: "process-automation",
     name: "Process Automation",
-    shortDescription: "End-to-end business process automation that eliminates repetitive tasks and streamlines operations.",
+    shortDescription: "Process automation connects your systems and software to run repetitive business workflows end to end without manual effort. Lanos Logic designs process automation that eliminates repetitive tasks, integrates your existing tools, and streamlines operations.",
     icon: "Workflow",
     href: "/services/process-automation",
     features: [
@@ -214,7 +214,7 @@ export const services = [
   {
     id: "social-media-automation",
     name: "Social Media Automation",
-    shortDescription: "AI-powered content creation, scheduling, and engagement management across all social platforms.",
+    shortDescription: "Social media automation uses AI to create content, schedule posts, and manage engagement across every social platform from one workflow. Lanos Logic builds social media automation that keeps posting consistent and on-brand while tracking performance.",
     icon: "Share2",
     href: "/services/social-media-automation",
     features: [
@@ -231,7 +231,7 @@ export const services = [
   {
     id: "communication-automation",
     name: "Communication Automation",
-    shortDescription: "Streamline customer communications with Twilio-powered SMS, voice, and messaging solutions.",
+    shortDescription: "Communication automation delivers SMS, voice, and multi-channel messaging to customers automatically and at scale. Lanos Logic builds Twilio-powered communication automation for fast, personalized, two-way customer messaging.",
     icon: "MessageSquare",
     href: "/services/communication-automation",
     features: [
@@ -248,7 +248,7 @@ export const services = [
   {
     id: "mobile-app-development",
     name: "Mobile App Development",
-    shortDescription: "Custom mobile applications built with Flutter framework that integrate with your business automations.",
+    shortDescription: "Mobile app development delivers custom iOS and Android applications from a single Flutter codebase that connect directly to your business automations. Lanos Logic builds cross-platform mobile apps with native performance and built-in automation integration.",
     icon: "Smartphone",
     href: "/services/mobile-app-development",
     features: [
@@ -265,7 +265,7 @@ export const services = [
   {
     id: "analytics-insights",
     name: "Analytics & Insights",
-    shortDescription: "Data-driven insights and performance tracking to optimize your automation strategies.",
+    shortDescription: "Analytics and insights turn your automation data into real-time dashboards, performance metrics, and predictive analysis so you can measure ROI and act on it. Lanos Logic builds analytics that show what your automations deliver and where to improve.",
     icon: "BarChart3",
     href: "/services/analytics-insights",
     features: [
@@ -282,7 +282,7 @@ export const services = [
   {
     id: "security-vulnerability-scanning",
     name: "Security Vulnerability Scanning",
-    shortDescription: "Automated and continuous vulnerability discovery using OWASP Top 10, CVE databases, and enterprise scanning platforms to identify exploitable weaknesses before attackers do.",
+    shortDescription: "Security vulnerability scanning is the continuous, automated process of finding known weaknesses across your apps, APIs, and cloud before attackers do. Lanos Logic runs vulnerability scanning against the OWASP Top 10, daily-updated CVE databases, and enterprise scanning platforms to surface exploitable weaknesses.",
     icon: "ScanLine",
     href: "/services/security-vulnerability-scanning",
     features: [
@@ -299,7 +299,7 @@ export const services = [
   {
     id: "penetration-testing",
     name: "Penetration Testing",
-    shortDescription: "Adversarial simulation by certified ethical hackers using PTES, OWASP, and MITRE ATT&CK methodologies to expose exploitable vulnerabilities in web apps, APIs, networks, and cloud infrastructure.",
+    shortDescription: "Penetration testing is an authorized, simulated cyberattack run by certified ethical hackers to expose exploitable vulnerabilities before real attackers find them. Lanos Logic pentests web apps, APIs, networks, and cloud infrastructure using PTES, OWASP, and MITRE ATT&CK methodologies.",
     icon: "ShieldAlert",
     href: "/services/penetration-testing",
     features: [
@@ -316,7 +316,7 @@ export const services = [
   {
     id: "systems-hardening",
     name: "Systems Hardening",
-    shortDescription: "Defense-in-depth hardening of cloud infrastructure, servers, and applications following CIS Benchmarks, NIST SP 800-123, and Zero Trust Architecture principles to minimize your attack surface.",
+    shortDescription: "Systems hardening is the proactive work of configuring servers, cloud infrastructure, and applications securely to shrink your attack surface. Lanos Logic hardens systems with defense-in-depth controls following CIS Benchmarks, NIST SP 800-123, and Zero Trust Architecture principles.",
     icon: "ShieldCheck",
     href: "/services/systems-hardening",
     features: [
@@ -337,7 +337,7 @@ export const caseStudies = [
     id: "marketing-automation",
     title: "Digital Marketing Agency Scales Operations by 300%",
     category: "Marketing Agency",
-    description: "A digital marketing agency automated their client reporting, content creation, and campaign management, allowing them to triple their client base without adding staff.",
+    description: "A digital marketing agency tripled its client capacity (a 300% increase) without adding staff by automating client reporting, content creation, and campaign management, cutting reporting time by 85% and lifting revenue by 45%.",
     image: "/case-study-marketing.png",
     stats: [
       { value: "300%", label: "increase in client capacity" },
@@ -351,7 +351,7 @@ export const caseStudies = [
     id: "sales-outreach",
     title: "Sales Agency Boosts Conversion Rates with AI Outreach",
     category: "Sales Agency",
-    description: "A B2B sales agency implemented AI-powered outreach and follow-up sequences, resulting in significantly higher engagement and conversion rates.",
+    description: "A B2B sales agency implemented AI-powered outreach and follow-up sequences, lifting response rates by 68% and conversion rates by 42% for a 3.5x return on its automation investment.",
     image: "/case-study-sales.png",
     stats: [
       { value: "68%", label: "increase in response rates" },
@@ -365,7 +365,7 @@ export const caseStudies = [
     id: "real-estate-automation",
     title: "Real Estate Firm Automates Client Journey",
     category: "Real Estate",
-    description: "A real estate brokerage automated their entire client journey from lead qualification to closing, creating a seamless experience for buyers and sellers.",
+    description: "A real estate brokerage automated its entire client journey from lead qualification to closing, qualifying leads 75% faster, cutting paperwork time by 90%, and increasing closings by 28%.",
     image: "/case-study-real-estate.png",
     stats: [
       { value: "75%", label: "faster lead qualification" },

@@ -62,8 +62,10 @@ const ServicesPage = () => {
               Our <span className="text-amber-400">AI Solutions</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Comprehensive AI automation services designed to transform your
-              business operations and drive growth.
+              Lanos Logic builds AI automation services — AI agents, voice AI,
+              vector databases, document and process automation, mobile apps,
+              analytics, and enterprise security — that transform business
+              operations and drive growth.
             </p>
           </div>
         </div>

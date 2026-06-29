@@ -48,8 +48,10 @@ const CaseStudiesPage = () => {
               Client <span className="text-amber-400">Success Stories</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Discover how our AI automation solutions have transformed businesses
-              across various industries.
+              Lanos Logic has delivered AI automation across healthcare,
+              government, legal, real estate, marketing, sales, education, and
+              SaaS — every case study below reports measurable, documented
+              results.
             </p>
           </div>
         </div>

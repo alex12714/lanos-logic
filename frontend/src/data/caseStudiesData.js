@@ -9,7 +9,7 @@ export const allCaseStudies = [
     vertical: 'Medical',
     type: 'Low-Code',
     description:
-      "Major Medical Equipment testing company's reduced 4 FTEs by automating 9600 certificates generation on annual basis receiving printed and emailed PDF documents generated on the fly using field engineers data on medical equipment testing results.",
+      'A major medical equipment testing company cut 4 full-time roles and now auto-generates 9,600 compliance certificates a year, with PDFs printed and emailed on the fly from field engineers\' equipment-testing data.',
     image: '/assets/case-studies/medical-equipment-testing-automated-crm-pdf-certificates/hero.png',
     gallery: [
       '/assets/case-studies/medical-equipment-testing-automated-crm-pdf-certificates/1.png',
@@ -59,7 +59,7 @@ export const allCaseStudies = [
     vertical: 'SaaS',
     type: 'Low-Code',
     description:
-      'A set of powerful automations that take data from AirTable content database and posts according to schedule to FB, IG, X (Twitter), LinkedIn, YouTube with results tracking and allows for quick content repurposing.',
+      'A SaaS company\'s content engine pulls from an AirTable database and auto-posts on schedule to Facebook, Instagram, X (Twitter), LinkedIn, and YouTube, with results tracking and fast content repurposing, delivered in 5 days.',
     image: '/assets/case-studies/saas-airtable-automated-social-media-content-machine/hero.png',
     gallery: [
       '/assets/case-studies/saas-airtable-automated-social-media-content-machine/1.png',
@@ -110,7 +110,7 @@ export const allCaseStudies = [
     vertical: 'SaaS',
     type: 'Low-Code',
     description:
-      'Saving around 10 hours month automating follow up with speaker and RSVPd participants with reminders and personalised content.',
+      'A marketing agency saves around 10 hours a month by automating follow-ups with speakers and RSVP\'d participants, including reminders and personalized content.',
     image: '/assets/case-studies/marketing-agency-live-events-automation/hero.png',
     gallery: [
       '/assets/case-studies/marketing-agency-live-events-automation/1.png',
@@ -169,7 +169,7 @@ export const allCaseStudies = [
     vertical: 'Education, Marketing',
     type: 'Low-Code',
     description:
-      'Ty Frankel has seen increased conversions by 15% in his funnel 1 week after we implemented automations. This included communication automation in Slack Discord, Contract automation and Onboarding into learning systems and Learning Gamification Automation with badges, ranks and certificates.',
+      'A marketing agency (Ty Frankel) increased funnel conversions by 15% within one week of launch, using Slack and Discord communication automation, contract automation, learning-system onboarding, and gamification with badges, ranks, and certificates.',
     image: '/assets/case-studies/marketing-agency-funnel-onboarding-gamification-automation/hero.png',
     gallery: [
       '/assets/case-studies/marketing-agency-funnel-onboarding-gamification-automation/1.png',
@@ -277,7 +277,7 @@ export const allCaseStudies = [
     vertical: 'Education',
     type: 'Low-Code',
     description:
-      'Hong Kong School required notification system to connect teachers, students and parents during the pick up process, saving cumulatively over 2,000 hours annually in teacher, Business Office staff, and student learning time.',
+      'A Hong Kong school\'s SMS notification system connects teachers, students, and parents during student pick-up, saving over 2,000 hours a year of teacher, office-staff, and student learning time.',
     image: '/assets/case-studies/twilio-sms-notion-student-pickup-automation/hero.png',
     gallery: [
       '/assets/case-studies/twilio-sms-notion-student-pickup-automation/1.png',
@@ -334,7 +334,7 @@ export const allCaseStudies = [
     vertical: 'Education',
     type: 'Low-Code',
     description:
-      'The school in Hong Kong required marketing automation across various social media platforms which included automated content generation and scheduled posting using no-code tools.',
+      'A high-end Hong Kong school automated marketing across 9 social platforms, with AI content generation and scheduled posting built entirely on no-code tools.',
     image: '/assets/case-studies/hk-school-social-media-marketing-automation/hero.png',
     gallery: [
       '/assets/case-studies/hk-school-social-media-marketing-automation/1.png',
@@ -394,7 +394,7 @@ export const allCaseStudies = [
     vertical: 'Government',
     type: 'Code, Low-Code',
     description:
-      'Lone workers in dangerous situations need safety monitoring.',
+      'A GPS lone-worker monitoring platform keeps workers in dangerous situations safe with 24/7 real-time location monitoring, built in 60 days.',
     image: '/assets/case-studies/gps-lone-worker-monitoring-platform/hero.png',
     gallery: [
       '/assets/case-studies/gps-lone-worker-monitoring-platform/1.png',
@@ -458,7 +458,7 @@ export const allCaseStudies = [
     vertical: 'Entertainment, Events, Services',
     type: 'Low-Code',
     description:
-      'Entertainment business wanted to streamline and automate their operations.',
+      'An events and entertainment company automated 100% of its core operations across 7 integrated platforms, delivered in 27 days.',
     image: '/assets/case-studies/events-entertainment-company-full-business-automation/hero.png',
     gallery: [
       '/assets/case-studies/events-entertainment-company-full-business-automation/1.png',
@@ -540,7 +540,7 @@ export const allCaseStudies = [
     vertical: 'Services',
     type: 'Low-Code',
     description:
-      "Liams team benefitted from a high conversion funnel, onboarding and contract automation for his coaching business within DWY and DFY programs.",
+      'A cleaning-business coaching agency (Liam\'s team) runs a high-conversion funnel with onboarding and contract automation across its DWY and DFY programs, saving 74 hours a month.',
     image: '/assets/case-studies/cleaning-business-agency-funnel-marketing-automation/hero.png',
     gallery: [],
     fullContent: [
@@ -604,7 +604,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Low-Code',
     description:
-      'Softr and AirTable based platform to accumulate, track and distribute ads to advertising networks with MRSS.',
+      'A Softr and AirTable platform accumulates, tracks, and distributes video ads to advertising networks via MRSS, delivered in 10 days.',
     image: '/assets/case-studies/ad-tech-video-platform-client-portal-api-development/hero.png',
     gallery: [
       '/assets/case-studies/ad-tech-video-platform-client-portal-api-development/1.png',
@@ -680,7 +680,7 @@ export const allCaseStudies = [
     vertical: 'SaaS',
     type: 'Low-Code',
     description:
-      'Automated gifting service platform allowing scheduled gifts and API triggers for gifts.',
+      'An automated gifting service platform lets customers schedule gifts and trigger them via API, delivered in 5 days.',
     image: '/assets/case-studies/gifting-service-portal-and-automations/hero.png',
     gallery: [
       '/assets/case-studies/gifting-service-portal-and-automations/1.png',
@@ -730,7 +730,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Low-Code',
     description:
-      'The platform allowing discovery of white collar service workers.',
+      'A 100% no-code platform helps clients discover and match with white-collar service workers, delivered in 1 day.',
     image: '/assets/case-studies/white-collar-service-matching/hero.png',
     gallery: [
       '/assets/case-studies/white-collar-service-matching/1.png',
@@ -784,7 +784,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Low-Code',
     description:
-      'AirTable based solution saves 85+ hours every season when summer camp is in session, providing automated WhatsApp, Telegram messages and sending out pre-filled documents for e-Signature.',
+      'An AirTable-based summer camp system saves 85+ hours every season by automating WhatsApp and Telegram messaging and sending pre-filled documents for e-signature across 11 integrated platforms.',
     image: '/assets/case-studies/summer-camp-registration-onboarding-messaging-automation/hero.png',
     gallery: [
       '/assets/case-studies/summer-camp-registration-onboarding-messaging-automation/1.png',
@@ -905,7 +905,7 @@ export const allCaseStudies = [
     vertical: 'Production, Real Estate',
     type: 'Low-Code',
     description:
-      'The Real Estate design company has seen 32% cross timezone team time saving from automating internal processes and migration to AirTable from Google Sheets driven business.',
+      'A real estate 3D design company saved 32% of its cross-timezone team time by automating internal processes and migrating from a Google Sheets-driven business to AirTable.',
     image: '/assets/case-studies/real-estate-3d-design-google-sheets-airtable-migration/hero.png',
     gallery: [
       '/assets/case-studies/real-estate-3d-design-google-sheets-airtable-migration/1.gif',
@@ -965,7 +965,7 @@ export const allCaseStudies = [
     vertical: 'Finance',
     type: 'Low-Code',
     description:
-      '250+ hours saved on DocuSign bulk send automation to send out and track 1000s of custom contracts to multiple signatories.',
+      'An investment capital fund saved 250+ hours by automating DocuSign bulk send, dispatching and tracking thousands of custom contracts to multiple signatories.',
     image: '/assets/case-studies/investment-capital-fund-bulk-contract-docusign-automation/hero.png',
     gallery: [
       '/assets/case-studies/investment-capital-fund-bulk-contract-docusign-automation/1.png',
@@ -1023,7 +1023,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Code, Low-Code',
     description:
-      'The automated system based on AirTable (+6 other platforms) has increased the speed of payment collection by 72% and increased 50% increased turnover from $2.5M to $5M+ per annum.',
+      'A care company sped up payment collection by 72% and grew annual turnover 50%, from $2.5M to $5M+, using an AirTable-based system integrated with 6 other platforms including QuickBooks Desktop and Stripe.',
     image: '/assets/case-studies/care-company-payment-collection-qb-stripe/hero.png',
     gallery: [
       '/assets/case-studies/care-company-payment-collection-qb-stripe/1.png',
@@ -1126,7 +1126,7 @@ export const allCaseStudies = [
     vertical: 'Legal',
     type: 'Low-Code',
     description:
-      '90 hours per month saved in sending and tracking 10,000+ custom pre-filled DocuSign contracts.',
+      'A law firm saves 90 hours a month sending and tracking 10,000+ custom pre-filled DocuSign contracts.',
     image: '/assets/case-studies/law-firm-document-flow-docusign-contract-automation/hero.png',
     gallery: [
       '/assets/case-studies/law-firm-document-flow-docusign-contract-automation/1.png',
@@ -1172,7 +1172,7 @@ export const allCaseStudies = [
     vertical: 'Medical',
     type: 'Low-Code',
     description:
-      'Automated recruitment system has helped gain $100k for US Ambulance through HR recruitment and onboarding automation.',
+      'An automated recruitment and onboarding system helped a US ambulance service gain $100K, saving 167 hours a month through HR recruitment and onboarding automation.',
     image: '/assets/case-studies/us-ambulance-services-application-onboarding-automation/hero.png',
     gallery: [
       '/assets/case-studies/us-ambulance-services-application-onboarding-automation/1.png',
@@ -1239,7 +1239,7 @@ export const allCaseStudies = [
     vertical: 'Education',
     type: 'Low-Code',
     description:
-      'Student onboarding solution has saved 80% of admin time on Student onboarding. Provided client with custom contract generation Google Docs and DocuSign with SmartSuite allowing them to scale and track contract signatures.',
+      'A student onboarding solution for the University of Minnesota cut admin time by 80%, with custom contract generation in Google Docs and DocuSign plus SmartSuite to scale and track signatures.',
     image: '/assets/case-studies/university-of-minnesota-student-onboarding/hero.png',
     gallery: [
       '/assets/case-studies/university-of-minnesota-student-onboarding/1.png',
@@ -1317,7 +1317,7 @@ export const allCaseStudies = [
     vertical: 'Education',
     type: 'Low-Code',
     description:
-      'Saved 60% of admin time via automating onboarding, messaging, high quality 10 type exercises generation, student specific lesson plans based on AI from YouTube video as a source, study summaries and YouTube video summaries using ChatGPT.',
+      'A language school cut admin time by 60% by automating onboarding and messaging and using ChatGPT to generate 10 exercise types, student-specific lesson plans from YouTube sources, study summaries, and video summaries across 6 platforms.',
     image: '/assets/case-studies/language-school-contracts-onboarding-chatgpt-automation/hero.png',
     gallery: [
       '/assets/case-studies/language-school-contracts-onboarding-chatgpt-automation/1.png',
@@ -1422,7 +1422,7 @@ export const allCaseStudies = [
     vertical: 'Medical, Services',
     type: 'Low-Code',
     description:
-      'AirTable based solution provides 90% time reduction in sending pharmaceutical prescriptions. This amounts to 47 hours every month.',
+      'An AirTable-based solution cut the time to send pharmaceutical prescriptions by 90%, saving 47 hours every month.',
     image: '/assets/case-studies/us-pharmaceutical-prescriptions-automation/hero.png',
     gallery: [
       '/assets/case-studies/us-pharmaceutical-prescriptions-automation/1.png',
@@ -1489,7 +1489,7 @@ export const allCaseStudies = [
     vertical: 'Education, Professional Services',
     type: 'Low-Code',
     description:
-      'Client onboarding automation helps 239K job seekers to get 5 most effective strategies for landing dream jobs. Zoom call tracking and downloads, contract and Stripe payments automation.',
+      'A career coaching agency\'s onboarding automation helps 239K job seekers access the 5 most effective strategies for landing a job, with Zoom call tracking and downloads, contract automation, and Stripe payments.',
     image: '/assets/case-studies/career-coaching-agency-onboarding-funnel-automation/hero.png',
     gallery: [
       '/assets/case-studies/career-coaching-agency-onboarding-funnel-automation/1.png',
@@ -1579,7 +1579,7 @@ export const allCaseStudies = [
     vertical: 'Finance, Legal',
     type: 'Low-Code',
     description:
-      'Near native integration of 14 different DocuSign templates are used depending on the investor type with 2 different subscriptions within the process. The automation reads and writes subscription data from Salesforce reading completed envelope data from DocuSign API, as well as parsing outgoing emails.',
+      'An investment fund automation natively integrates 14 DocuSign templates by investor type across 2 subscription types, saving 136 hours a month by reading and writing subscription data in Salesforce, parsing completed DocuSign envelopes via API, and parsing outgoing emails.',
     image: '/assets/case-studies/investment-fund-contracts-signing-tracking/hero.png',
     gallery: [],
     fullContent: [
@@ -1624,7 +1624,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Low-Code',
     description:
-      'Automated data lookup solution saves 8 hours every week updating vehicle information from Samsara fleet management platform.',
+      'An automated data-lookup solution saves a US film equipment rental company 8 hours a week (32 hours a month) by updating vehicle information from the Samsara fleet-management platform.',
     image: '/assets/case-studies/us-film-equipment-rental-gps-vehicle-tracking/hero.png',
     gallery: [],
     fullContent: [
@@ -1667,7 +1667,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Low-Code',
     description:
-      'US Nationwide Film Production Equipment leasing company implemented automations have saved 40+ hours a month. Via automating their accounting processes with QBO replicating invoices and Bills into 6 internal companies.',
+      'CES Power, a US nationwide film-production equipment rental company, saves 40+ hours a month by automating QBO accounting and replicating invoices and bills across 6 internal companies.',
     image: '/assets/case-studies/ces-power-film-equipment-rental-qbo-accounting-automation/hero.png',
     gallery: [
       '/assets/case-studies/ces-power-film-equipment-rental-qbo-accounting-automation/1.png',
@@ -1734,7 +1734,7 @@ export const allCaseStudies = [
     vertical: 'Medical, Services',
     type: 'Low-Code',
     description:
-      '5 different forms with different structures using structured 6 component request with JSON output written into Close CRM with automated lead follow up.',
+      'A care agency processes 5 differently structured lead forms using a structured 6-component ChatGPT request that outputs JSON into Close CRM with automated lead follow-up, delivered in 3 days.',
     image: '/assets/case-studies/care-agency-crm-chatgpt-lead-processing-close-crm/hero.png',
     gallery: [
       '/assets/case-studies/care-agency-crm-chatgpt-lead-processing-close-crm/1.jpg',
@@ -1766,7 +1766,7 @@ export const allCaseStudies = [
     vertical: 'Services',
     type: 'Low-Code',
     description:
-      'Parse 120+ emails monthly with automated workflows generating 15-20 articles, saving 38+ hours, and creating 3-5 additional opportunities.',
+      'An HR journalist\'s automated workflow parses 120+ emails a month, generates 15-20 articles, saves 38+ hours, and creates 3-5 additional opportunities.',
     image: '/assets/case-studies/hr-journalist-chatgpt-email-processing-reply-generation/hero.png',
     gallery: [],
     fullContent: [
@@ -1833,7 +1833,7 @@ export const allCaseStudies = [
     vertical: 'Services',
     type: 'Low-Code',
     description:
-      'Over 67 hours and $7,250 per month saved with a daily generation of 40+ contracts.',
+      'A gym licensing agency saves 67 hours and $7,250 a month by auto-generating 40+ contracts a day from 9 custom contract templates.',
     image: '/assets/case-studies/gym-licensing-agency-custom-contract-templates/hero.png',
     gallery: [
       '/assets/case-studies/gym-licensing-agency-custom-contract-templates/1.jpg',
@@ -1882,7 +1882,7 @@ export const allCaseStudies = [
     vertical: 'Services',
     type: 'Low-Code',
     description:
-      '95% admin operations saved for clients Dog Owners Certificates and Shipping labels generation with automated printing using PrintNode. Reducing manual time from 10 minutes to 20 seconds per record.',
+      'The American Canine Association cut admin operations by 95% for dog-owner certificates and shipping-label generation, with automated printing via PrintNode reducing handling from 10 minutes to 20 seconds per record.',
     image: '/assets/case-studies/american-canine-association-postal-stamps-pdf-contracts/hero.png',
     gallery: [
       '/assets/case-studies/american-canine-association-postal-stamps-pdf-contracts/1.png',
@@ -1950,7 +1950,7 @@ export const allCaseStudies = [
     vertical: 'Entertainment, Professional Services',
     type: 'Code, Low-Code',
     description:
-      'Q Music has expanded its reach to being a US National brand beyond Chicago, Detroit into New Yorks and Miamis competitive Soho houses and Hotel market, as well as recently into Toronto Canada.',
+      'Q Music expanded beyond Chicago and Detroit into New York, Miami, and Toronto\'s competitive Soho House and hotel market to become a US national brand, while saving 153 hours a month across 10 integrated platforms.',
     image: '/assets/case-studies/music-artist-agency-international-expansion-airtable-softr/hero.png',
     gallery: [
       '/assets/case-studies/music-artist-agency-international-expansion-airtable-softr/1.png',
@@ -2057,7 +2057,7 @@ export const allCaseStudies = [
     vertical: 'Agency, Professional Services',
     type: 'Low-Code',
     description:
-      'In just 84 days, a U.S.-based sales agency generated $147K in revenue by automating business processes.',
+      'In just 84 days, a U.S.-based sales agency generated $147K in revenue by automating its business processes across 13 platforms, saving 43 hours a month.',
     image: '/assets/case-studies/data-driven-automation-boosts-sales-agency-147k/hero.png',
     gallery: [
       '/assets/case-studies/data-driven-automation-boosts-sales-agency-147k/1.png',
@@ -2140,7 +2140,7 @@ export const allCaseStudies = [
     vertical: 'Sales',
     type: 'Low-Code',
     description:
-      'The AI agent now qualifies 100-150 leads per week with a 98% completion rate, reduces lead intake time by 90%, operates fully autonomously 24/7, and has increased lead-to-booked-call conversions by 35%.',
+      'A 24/7 voice AI agent qualifies 100-150 leads per week at a 98% completion rate, cuts lead-intake time by 90%, runs fully autonomously, and has increased lead-to-booked-call conversions by 35%.',
     image: '/assets/case-studies/247-voice-ai-agent-qualifies-100-leads-per-week/hero.png',
     gallery: [
       '/assets/case-studies/247-voice-ai-agent-qualifies-100-leads-per-week/1.png',
@@ -2182,7 +2182,7 @@ export const allCaseStudies = [
     vertical: 'Education, Marketing, SaaS, Sales',
     type: 'Low-Code',
     description:
-      '7 custom web applications integrating V0, Supabase, Airtable, Google Calendar, and AI APIs -- serving over 1,000 users. Reduced manual operations by up to 90%.',
+      'Seven custom web applications integrate V0, Supabase, Airtable, Google services, and AI APIs to serve over 1,000 users, reducing manual operations by up to 90%.',
     image: '/assets/case-studies/7-integrated-web-tools-1000-users-5-apis/hero.png',
     gallery: [
       '/assets/case-studies/7-integrated-web-tools-1000-users-5-apis/1.png',
@@ -2239,7 +2239,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Low-Code',
     description:
-      'Reduced content creation time by 95%, enabling users to post 3-5x more consistently. Posts generated through the system achieved an average 60% higher engagement rate.',
+      'A LinkedIn content AI agent built on Vectorshift cut content-creation time by 95%, enabling 3-5x more consistent posting, with generated posts achieving 60% higher engagement on average.',
     image: '/assets/case-studies/linkedin-content-ai-agent-thought-leadership-vectorshift/hero.png',
     gallery: [
       '/assets/case-studies/linkedin-content-ai-agent-thought-leadership-vectorshift/1.png',
@@ -2278,7 +2278,7 @@ export const allCaseStudies = [
     vertical: 'SaaS',
     type: 'Code, Low-Code',
     description:
-      'Messaging app with 95% shared code between iOS and Android. Features real-time chat, media sharing, voice and video calls, offline mode, and end-to-end encryption.',
+      'A cross-platform messenger app built with Flutter and Supabase shares 95% of its code between iOS and Android, with real-time chat, media sharing, voice and video calls, offline mode, and end-to-end encryption.',
     image: '/assets/case-studies/ios-android-messenger-app-flutter-supabase/hero.png',
     gallery: [
       '/assets/case-studies/ios-android-messenger-app-flutter-supabase/1.png',
@@ -2357,7 +2357,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Low-Code',
     description:
-      'Deployed a 3-agent Voice AI system handling 500+ calls weekly that responds to Facebook leads within minutes.',
+      'A 3-agent voice AI system for an NYC hair salon handles 500+ calls a week and responds to Facebook leads within minutes, saving 50 hours a month.',
     image: '/assets/case-studies/speed-to-lead-voice-ai-500-weekly-calls-nyc-hair-salon/hero.png',
     gallery: [
       '/assets/case-studies/speed-to-lead-voice-ai-500-weekly-calls-nyc-hair-salon/1.png',
@@ -2529,7 +2529,7 @@ export const allCaseStudies = [
     vertical: 'Manufacturing, Professional Services',
     type: 'Low-Code',
     description:
-      'Client invoices now feature fully customized HTML/CSS design, reduced invoice-to-signature turnaround by 60%.',
+      'A Monday.com and QBO e-signature workflow for an LA boutique stone-fireplace company gives invoices fully custom HTML/CSS design and cut invoice-to-signature turnaround by 60%, delivered in 7 days.',
     image: '/assets/case-studies/monday-qbo-esignature-la-stone-fireplaces/hero.png',
     gallery: [
       '/assets/case-studies/monday-qbo-esignature-la-stone-fireplaces/1.png',
@@ -2587,7 +2587,7 @@ export const allCaseStudies = [
     vertical: 'Entertainment',
     type: 'Code',
     description:
-      'Q Music expanded from regional to US National brand, secured FIFA 2026 vendor partnership, manages 1000+ vendors across 36+ locations, 220+ shifts per weekend, 62+ automation flows saving 253+ hours monthly.',
+      'An iOS Flutter app helped Q Music expand from a regional to a US national brand and secure a FIFA 2026 vendor partnership, managing 1,000+ vendors across 36+ locations and 220+ shifts per weekend, with 62+ automation flows saving 253+ hours a month.',
     image: '/assets/case-studies/ios-flutter-mobile-app-chicago-music-vendor/hero.png',
     gallery: [
       '/assets/case-studies/ios-flutter-mobile-app-chicago-music-vendor/1.png',
@@ -2719,7 +2719,7 @@ export const allCaseStudies = [
     vertical: 'Real Estate',
     type: 'Low-Code',
     description:
-      'AI-powered email workflow that analyzes incoming inquiries, matches them to correct property brochure, auto-assigns listing agent, creates Follow Up Boss opportunities.',
+      'An AI-powered email workflow for a Florida commercial real estate agent analyzes incoming inquiries, matches them to the correct property brochure, auto-assigns the listing agent, and creates Follow Up Boss opportunities, saving 40 hours a month.',
     image: '/assets/case-studies/speed-to-lead-ai-chatbot-florida-commercial-real-estate/hero.png',
     gallery: [
       '/assets/case-studies/speed-to-lead-ai-chatbot-florida-commercial-real-estate/1.png',
@@ -2775,7 +2775,7 @@ export const allCaseStudies = [
     vertical: 'Professional Services',
     type: 'Low-Code',
     description:
-      'Custom AirTable CRM with e-Signature integration for a large NYC cleaning company, automating customer contact, data collection, document workflows, and onboarding.',
+      'A custom AirTable CRM with e-signature for a large NYC cleaning company automates customer contact, data collection, document workflows, and onboarding, saving 150 hours a month.',
     image: '/assets/case-studies/custom-airtable-crm-esignature-nyc-cleaning-company/hero.png',
     gallery: [],
     stats: [
@@ -2802,7 +2802,7 @@ export const allCaseStudies = [
     vertical: 'Marketing, Professional Services',
     type: 'Low-Code',
     description:
-      'Reduced monthly newsletter creation from 4-6 hours to 5-7 minutes of review -- a 95% time savings.',
+      'An automated AI newsletter generator cut monthly newsletter creation from 4-6 hours to 5-7 minutes of review, a 95% time saving of about 32 hours a month.',
     image: '/assets/case-studies/automated-ai-newsletter-blog-post-generator/hero.png',
     gallery: [
       '/assets/case-studies/automated-ai-newsletter-blog-post-generator/1.png',
@@ -2846,7 +2846,7 @@ export const allCaseStudies = [
     vertical: 'SaaS, Sales',
     type: 'Code',
     description:
-      "This integration provides a secure, scalable bridge between Flutter applications and Twilio's communications infrastructure.",
+      'A Twilio API integration provides a secure, scalable bridge between Flutter applications and Twilio\'s communications infrastructure, delivered in 10 days.',
     image: '/assets/case-studies/twilio-api-flutter-ios-app-integration/hero.png',
     gallery: [
       '/assets/case-studies/twilio-api-flutter-ios-app-integration/1.png',
