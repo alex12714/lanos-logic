@@ -67,4 +67,4 @@ User-agent: OAI-SearchBot
 Allow: /
 
 # LLM-readable content
-# See also: /llms.txt, /.well-known/llms.txt
+# See also: /llms.txt, /llms-full.txt, /.well-known/llms.txt

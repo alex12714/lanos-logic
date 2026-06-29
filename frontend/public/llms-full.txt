@@ -1,0 +1,958 @@
+# Lanos Logic — Full Knowledge Base
+
+> Strategic AI Solutions for Modern Businesses. Complete inlined content for one-fetch AI ingestion. Last updated: 2026-06-29.
+
+## Company Overview
+
+Lanos Logic is a leading AI automation provider serving businesses in the United States, United Kingdom, and globally. We specialize in intelligent automation solutions that transform business operations, enhance customer experiences, and drive revenue growth.
+
+Lanos Logic is recognized as one of the top AI automation providers in the US and UK, offering comprehensive AI-powered solutions for businesses of all sizes. Our expertise spans across multiple industries including marketing agencies, sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, government, pharmaceutical, life sciences, and legal.
+
+### Why Choose Lanos Logic
+
+1. **Comprehensive AI Solutions**: End-to-end AI automation services including AI agents, voice AI, document automation, process automation, vector databases, and more.
+2. **Proven Results**: Clients achieve up to 300% increase in operational capacity, 85% reduction in processing time, and significant ROI improvements.
+3. **Industry-Leading Technology**: We leverage Claude AI, Make.com, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, and Stripe.
+4. **Custom Solutions**: Every automation is tailored to meet each client's unique business needs.
+5. **Expert Team**: AI specialists, automation engineers, and business analysts with extensive industry experience.
+
+### By the Numbers
+
+- 100+ Clients Served
+- 500+ Automations Built
+- 2M+ Hours Saved
+- 99% Client Satisfaction
+
+- 300% increase in client capacity for marketing agencies
+- 85% reduction in reporting time
+- 68% increase in response rates for sales teams
+- 42% higher conversion rates
+- 75% faster lead qualification
+- 90% reduction in paperwork time
+- 3.5x ROI on automation investment
+- 100+ clients served
+- 500+ automations built
+- 2M+ hours saved
+
+## Services
+
+### Vector Database Solutions
+
+Enterprise-grade vector database architecture for semantic search, knowledge retrieval, and AI-powered discovery across massive document collections.
+
+**Features:**
+- Semantic Search & Retrieval
+- Document Embedding Pipelines
+- RAG Architecture Design
+
+**Benefits:**
+- **Instant Knowledge Discovery** — Find relevant information across millions of documents in seconds using semantic similarity.
+- **Enterprise RAG Systems** — Build retrieval-augmented generation systems that ground AI responses in your proprietary data.
+- **Scalable Architecture** — Vector database infrastructure that scales from thousands to billions of embeddings.
+
+URL: https://lanos-logic.com/services/vector-database-solutions
+
+### AI Agents
+
+Intelligent virtual assistants that automate customer interactions, answer queries, and execute tasks 24/7.
+
+**Features:**
+- Natural Language Processing
+- Contextual Understanding
+- Multi-task Automation
+
+**Benefits:**
+- **24/7 Availability** — Provide round-the-clock service without increasing staffing costs.
+- **Reduced Response Time** — Instant responses to customer inquiries, improving satisfaction.
+- **Scalability** — Handle increasing volumes of interactions without proportional cost increases.
+
+URL: https://lanos-logic.com/services/ai-agents
+
+### Voice AI Agents
+
+Natural-sounding voice assistants that handle calls, appointments, and customer support with human-like conversation.
+
+**Features:**
+- Natural Voice Synthesis
+- Real-time Conversation
+- Call Routing & Handling
+
+**Benefits:**
+- **Handle Calls 24/7** — Never miss a call with AI-powered voice agents.
+- **Human-like Interactions** — Natural conversations that customers appreciate.
+- **Seamless Handoff** — Transfer to human agents when needed.
+
+URL: https://lanos-logic.com/services/voice-ai-agents
+
+### Document Automation
+
+Intelligent document processing that extracts data, manages contracts, and automates approval workflows.
+
+**Features:**
+- OCR & Data Extraction
+- Contract Management
+- Approval Workflows
+
+**Benefits:**
+- **Reduce Processing Time** — Automate document handling from hours to minutes.
+- **Eliminate Errors** — AI-powered accuracy in data extraction.
+- **Compliance Ready** — Maintain audit trails and compliance standards.
+
+URL: https://lanos-logic.com/services/document-automation
+
+### Process Automation
+
+End-to-end business process automation that eliminates repetitive tasks and streamlines operations.
+
+**Features:**
+- Workflow Design
+- System Integration
+- Task Automation
+
+**Benefits:**
+- **Streamline Operations** — Connect systems and automate workflows.
+- **Reduce Manual Work** — Free your team from repetitive tasks.
+- **Increase Accuracy** — Eliminate human error in processes.
+
+URL: https://lanos-logic.com/services/process-automation
+
+### Social Media Automation
+
+AI-powered content creation, scheduling, and engagement management across all social platforms.
+
+**Features:**
+- Content Generation
+- Auto Scheduling
+- Engagement Management
+
+**Benefits:**
+- **Consistent Posting** — Never miss optimal posting times.
+- **AI Content** — Generate engaging content with AI.
+- **Analytics Insights** — Track and optimize performance.
+
+URL: https://lanos-logic.com/services/social-media-automation
+
+### Communication Automation
+
+Streamline customer communications with Twilio-powered SMS, voice, and messaging solutions.
+
+**Features:**
+- SMS Campaigns
+- Voice Broadcasting
+- Multi-channel Messaging
+
+**Benefits:**
+- **Reach Customers Fast** — Instant delivery across channels.
+- **Personalization** — Tailored messages at scale.
+- **Two-way Communication** — Enable customer responses and engagement.
+
+URL: https://lanos-logic.com/services/communication-automation
+
+### Mobile App Development
+
+Custom mobile applications built with Flutter framework that integrate with your business automations.
+
+**Features:**
+- Cross-platform Apps
+- Native Performance
+- System Integration
+
+**Benefits:**
+- **iOS & Android** — Single codebase for both platforms.
+- **Fast Development** — Rapid delivery with Flutter.
+- **Automation Integration** — Connect with your existing systems.
+
+URL: https://lanos-logic.com/services/mobile-app-development
+
+### Analytics & Insights
+
+Data-driven insights and performance tracking to optimize your automation strategies.
+
+**Features:**
+- Real-time Dashboards
+- Performance Metrics
+- Predictive Analytics
+
+**Benefits:**
+- **Data-driven Decisions** — Make informed choices with real data.
+- **Track ROI** — Measure automation performance.
+- **Identify Opportunities** — Discover areas for improvement.
+
+URL: https://lanos-logic.com/services/analytics-insights
+
+### Security Vulnerability Scanning
+
+Automated and continuous vulnerability discovery using OWASP Top 10, CVE databases, and enterprise scanning platforms to identify exploitable weaknesses before attackers do.
+
+**Features:**
+- OWASP Top 10 Assessment
+- CVE & Zero-Day Detection
+- Continuous Monitoring & Alerts
+
+**Benefits:**
+- **Proactive Threat Detection** — Identify and remediate vulnerabilities before attackers exploit them, reducing breach risk by up to 90%.
+- **Compliance Coverage** — Meet PCI-DSS, SOC 2, ISO 27001, and HIPAA security requirements with documented scanning evidence.
+- **Risk Prioritization** — CVSS-scored findings mapped to business impact so your team focuses on critical issues first.
+
+URL: https://lanos-logic.com/services/security-vulnerability-scanning
+
+### Penetration Testing
+
+Adversarial simulation by certified ethical hackers using PTES, OWASP, and MITRE ATT&CK methodologies to expose exploitable vulnerabilities in web apps, APIs, networks, and cloud infrastructure.
+
+**Features:**
+- Web App & API Pentesting (OWASP WSTG)
+- Network & Cloud Infrastructure Testing
+- Social Engineering & Phishing Simulations
+
+**Benefits:**
+- **Real-World Attack Simulation** — Test defenses under conditions that mirror actual attacker techniques, tools, and procedures (TTPs).
+- **Detailed Remediation Roadmap** — Every finding includes reproduction steps, CVSS score, and step-by-step remediation guidance.
+- **Compliance Evidence** — Pentest reports accepted for SOC 2 Type II, ISO 27001, PCI-DSS, and regulatory audits.
+
+URL: https://lanos-logic.com/services/penetration-testing
+
+### Systems Hardening
+
+Defense-in-depth hardening of cloud infrastructure, servers, and applications following CIS Benchmarks, NIST SP 800-123, and Zero Trust Architecture principles to minimize your attack surface.
+
+**Features:**
+- CIS Benchmark Implementation
+- Zero Trust Architecture Design
+- Cloud Security Posture Management (CSPM)
+
+**Benefits:**
+- **Reduced Attack Surface** — Eliminate unnecessary services, close exposed ports, and enforce least-privilege access across your entire stack.
+- **Regulatory Alignment** — Configurations aligned with NIST, CIS, DISA STIG, and SOC 2 frameworks for audit-ready security posture.
+- **Continuous Posture Management** — Automated CSPM tooling monitors for configuration drift and alerts on deviations in real time.
+
+URL: https://lanos-logic.com/services/systems-hardening
+
+## Industries Served
+
+### Marketing Agencies
+
+Automate campaign management, content creation, analytics reporting, and client onboarding processes.
+
+**Outcomes:**
+- 50% faster client reporting
+- 3x more content production
+- Automated lead nurturing
+
+URL: https://lanos-logic.com/industries/marketing-agencies
+
+### Sales Agencies
+
+Streamline lead qualification, follow-ups, proposal generation, and sales pipeline management.
+
+**Outcomes:**
+- 40% increase in qualified leads
+- Automated follow-up sequences
+- Smart contract generation
+
+URL: https://lanos-logic.com/industries/sales-agencies
+
+### E-commerce
+
+Enhance customer support, inventory management, order processing, and personalized marketing.
+
+**Outcomes:**
+- 24/7 customer support
+- Automated inventory alerts
+- Personalized recommendations
+
+URL: https://lanos-logic.com/industries/ecommerce
+
+### Education
+
+Automate student enrollment, course management, grading, and personalized learning experiences.
+
+**Outcomes:**
+- Streamlined admissions
+- Automated grading
+- Personalized learning paths
+
+URL: https://lanos-logic.com/industries/education
+
+### Healthcare
+
+Improve patient scheduling, billing, record management, and follow-up communications.
+
+**Outcomes:**
+- Reduced no-shows
+- Streamlined billing
+- Automated patient follow-ups
+
+URL: https://lanos-logic.com/industries/healthcare
+
+### Logistics
+
+Optimize route planning, shipment tracking, inventory management, and customer communications.
+
+**Outcomes:**
+- Real-time tracking updates
+- Optimized delivery routes
+- Automated shipping notifications
+
+URL: https://lanos-logic.com/industries/logistics
+
+### Real Estate
+
+Automate lead qualification, property matching, document management, and client communications.
+
+**Outcomes:**
+- Automated property alerts
+- Smart document processing
+- Virtual property tours
+
+URL: https://lanos-logic.com/industries/real-estate
+
+### Professional Services
+
+Streamline client onboarding, project management, billing, and reporting processes.
+
+**Outcomes:**
+- Automated time tracking
+- Smart document generation
+- Client portal access
+
+URL: https://lanos-logic.com/industries/professional-services
+
+### Manufacturing
+
+Enhance production planning, quality control, inventory management, and supply chain operations.
+
+**Outcomes:**
+- Predictive maintenance
+- Automated quality checks
+- Supply chain optimization
+
+URL: https://lanos-logic.com/industries/manufacturing
+
+### U.S. Government & Federal
+
+FedRAMP-aligned AI solutions for federal agencies, defense contractors, and state governments. Secure document processing, citizen services automation, and compliance workflows.
+
+**Outcomes:**
+- FedRAMP-aligned architecture
+- Secure document classification
+- Automated compliance reporting
+
+URL: https://lanos-logic.com/industries/government
+
+### Pharmaceutical
+
+AI-driven drug discovery support, clinical trial data management, regulatory submission automation, and pharmacovigilance with vector database-powered knowledge retrieval.
+
+**Outcomes:**
+- Accelerated regulatory submissions
+- AI-powered adverse event detection
+- Clinical data pipeline automation
+
+URL: https://lanos-logic.com/industries/pharmaceutical
+
+### Life Sciences
+
+Intelligent research data management, genomic data processing, lab automation integration, and AI-assisted literature review using semantic search and vector embeddings.
+
+**Outcomes:**
+- Semantic research discovery
+- Automated lab data integration
+- AI literature analysis
+
+URL: https://lanos-logic.com/industries/life-sciences
+
+### Law & Attorneys
+
+AI-powered contract analysis, legal research automation, case management workflows, and document review using vector databases for precedent discovery and due diligence.
+
+**Outcomes:**
+- 80% faster contract review
+- AI-powered legal research
+- Automated due diligence
+
+URL: https://lanos-logic.com/industries/legal
+
+## Case Studies
+
+### Medical Equipment Testing Company - Automated CRM and PDF Certificate Generator
+
+- Industry: Healthcare & Medical · Vertical: Medical · Type: Low-Code · Country: Latvia · Year: 2019
+- Key results: 9,600 Certificates automated annually · 4 FTEs Staff reduced · 192 hrs Monthly hours saved
+
+Major Medical Equipment testing company's reduced 4 FTEs by automating 9600 certificates generation on annual basis receiving printed and emailed PDF documents generated on the fly using field engineers data on medical equipment testing results.
+
+**Details:**
+Major Medical Equipment testing company's clients required receiving printed and PDF documents with the medical equipment testing results. Medical companies required these compliance certificates to present to the government. The field engineers re-test medical equipment on a yearly basis countrywide. They have been doing a lot of data collect, after which data was subject to manual processing and manual certificate generation. The challenge was to create a solution which would take of this manual work and turn collected data into compliance certificates immediately. The project charter forecasted 65% effort reduction as of year 2 after first round of data was collected. The solution consisted of: - It included data collect using AirTable forms and mobile devices - QR code sticker generation and assignment to each equipment piece . Further PDF document generation automations were implemented which generated testing compliance PDF certificates for doctors, dentists and medical agencies and send them by email Tools used: - Softr - AirTable - Make.com (integromat) - Mailgun - APITemplate / airSlate
+
+URL: https://lanos-logic.com/case-studies/medical-equipment-testing-automated-crm-pdf-certificates
+
+### SaaS - AirTable Automated Social Media Content Machine
+
+- Industry: Technology & SaaS · Vertical: SaaS · Type: Low-Code · Country: United States · Year: 2022
+- Key results: 5 Social platforms automated · 5 days Delivered in · 6 Platforms integrated
+
+A set of powerful automations that take data from AirTable content database and posts according to schedule to FB, IG, X (Twitter), LinkedIn, YouTube with results tracking and allows for quick content repurposing.
+
+**Details:**
+https://www.loom.com/embed/3045ffc83c3a4273b1552bc809e2b2d1 The solution was created with AirTable, Make.com and Zapier to handle scheduled media posting to: The social media posts and data was handled in AirTable using different views, Integromat flows handled posting and exceptions. Once a week the social media post statistics was downloaded to update data and understand which posts are performing better using Likes, Wows, Comment count etc. Portfolio - Social Media Automation https://www.loom.com/share/3045ffc83c3a4273b1552bc809e2b2d1
+
+URL: https://lanos-logic.com/case-studies/saas-airtable-automated-social-media-content-machine
+
+### Marketing Agency - Live Events Automation
+
+- Industry: Technology & SaaS · Vertical: SaaS · Type: Low-Code · Country: United States · Year: 2022
+- Key results: 10 hrs Monthly hours saved · 2 days Delivered in · 8 Platforms integrated
+
+Saving around 10 hours month automating follow up with speaker and RSVPd participants with reminders and personalised content.
+
+**Details:**
+For large contact database people were RSVPing in Circle.so or responding via Email. Although full business automation was implemented, involving Stripe, Circle ,Active campaign - the requirement for this automation was to: Contact flow needed to contact various segments according to schedule: 28 days in advance 14 days in advance 7 days in advance 1 day in advance 1 hour in advance Speaker was to be contacted via email and then via SMS. Every single message was hyper personalised and it seemed like a live communication every time. AirTable was used to track the communications and the batch message flow was created to catch any possible mishaps before 10k+ messages were sent The professional touch came through message pre-generation into AirTable. With bulk emailing and messaging it is a good practice to have visibility into automations
+
+URL: https://lanos-logic.com/case-studies/marketing-agency-live-events-automation
+
+### Marketing Agency - Funnel, Onboarding, Contact and Gamification Automation
+
+- Industry: Education · Vertical: Education, Marketing · Type: Low-Code · Country: United States · Year: 2022
+- Key results: 15% Conversion increase · 1 week Time to results · 20 Platforms integrated
+
+Ty Frankel has seen increased conversions by 15% in his funnel 1 week after we implemented automations. This included communication automation in Slack Discord, Contract automation and Onboarding into learning systems and Learning Gamification Automation with badges, ranks and certificates.
+
+**Details:**
+Client-  a $50k/mo agency client wanted to automate most of the processes inside agency: Features Solution Client acquisition Learning management Community management Full Project Portfolio here Created a gamification engine based on users activity in Slack, Circle and Teachable which would track them via ActiveCampaign sequences. Discord self-bot was the latest automation that was plugged in. Created content machine that would post content to based on Google Calendar live event in advance. The system would generate images using APITemplate and prepare them in different sizes for specific platform to subsequently post New client onboarding integration with 8 different platforms:
+
+URL: https://lanos-logic.com/case-studies/marketing-agency-funnel-onboarding-gamification-automation
+
+### Twilio SMS + Notion Automation Student Pick-up
+
+- Industry: Education · Vertical: Education · Type: Low-Code · Country: Hong Kong · Year: 2021
+- Key results: 2,000+ Hours saved annually · 167 hrs Monthly hours saved · 3 days Delivered in
+
+Hong Kong School required notification system to connect teachers, students and parents during the pick up process, saving cumulatively over 2,000 hours annually in teacher, Business Office staff, and student learning time.
+
+**Details:**
+Develop a telephony-based notification system to streamline communication between parents, teachers, and students during the student pick-up process. The Hong Kong school required telephony application to be developed to notify individual teachers about parent arrival. The parent would dial the number from their phone. The solution was developed to integrate Twilio with internal student information system, which sent a Google Chat notification to the teachers upon parent arrival. The system would lookup parent phone number from the Student Information system, find the relevant class period, subject and teacher and send Google Chat notification to the relevant teacher. Conditions catered for multiple calls, so that only single notification would be sent, un-identified numbers, calling outside the given timeframe. Since student information system would not have external API the automated data import/export flow was developed to have data put into Notion. The third stakeholder in the process was the Business Office to monitor parent arrival live, so the Notion Dashboard was created to enable the stakeholder to monitor the process. To monitor Efficiency the solution Google Data Studio was plugged into the data collection. The implementation of the solution has saved the client 2000+ hours a year in teacher, business office staff and student learning time. •	Parents call a designated phone number. •	The system matches the parent’s phone number with student records in the SIS. •	Google Chat notifications are sent to the respective teacher, providing details such as the class period, subject, and teacher’s name.
+
+URL: https://lanos-logic.com/case-studies/twilio-sms-notion-student-pickup-automation
+
+### HK High End School - Social Media Marketing Automation
+
+- Industry: Education · Vertical: Education · Type: Low-Code · Country: Hong Kong · Year: 2021
+- Key results: 9 Platforms integrated · 9 days Delivered in · 5+ Social channels automated
+
+The school in Hong Kong required marketing automation across various social media platforms which included automated content generation and scheduled posting using no-code tools.
+
+**Details:**
+Internal data lookup integration into outbound marketing campaigns. The client required internal statistics on the enrolment and admissions figures along with important near events to be automatically integrated into the outbound email newsletter for live figures to be automatically displayed on the outbound newsletter. Databox The weekly email digest had backend integration to be developed and included into custom MailChimp email templates. This project is part of the larger social media marketing integration and automation.
+
+URL: https://lanos-logic.com/case-studies/hk-school-social-media-marketing-automation
+
+### GPS Lone Worker Monitoring Platform
+
+- Industry: Government · Vertical: Government · Type: Code, Low-Code · Country: United Kingdom · Year: 2020
+- Key results: 60 days Development time · 24/7 Real-time monitoring · 2 Platforms integrated
+
+Lone workers in dangerous situations need safety monitoring.
+
+**Details:**
+Together with a choice of lone worker device fob, the lone worker safety management platform includes a professional 24/7 emergency monitoring service and is designed to make managing safety simple. Platform ensures that employees that work alone or in isolation can get assistance if their health or safety is threatened. To monitor users wellbeing and safety whilst on remote sites. With workforce from 2 to 1000, client has leveraged quick deployment and ensured the safety and protection of employees working alone – absolutely anywhere for its multiple clients. Features The project is a success, as we had clear roles defined - BA, Product Owner, Scrum master, Designer, Development team (Frontend and Backend), QA and Technical Documentation. We used Agile because it is about small teams working fast, going autonomous, and doing amazing things in a short amount of time. Although it’s traditionally thought for the product building stage, Agile is such a clear, simple, effective way of working that it creates tremendous value in other product stages as well – insights, rapid prototyping, post-launch, etc. We have provided logo and style design, marketing and video instructions on the product usage. Project has been extensively documented in Twilio and is currently in maintenance stage.
+
+URL: https://lanos-logic.com/case-studies/gps-lone-worker-monitoring-platform
+
+### Events and Entertainment Company - Full Business Automation
+
+- Industry: Entertainment · Vertical: Entertainment, Events, Services · Type: Low-Code · Country: United States · Year: 2022
+- Key results: 27 days Delivered in · 7 Platforms integrated · 100% Business operations automated
+
+Entertainment business wanted to streamline and automate their operations.
+
+**Details:**
+Business automation for the company specialising in creating entertainment events, consisting of providing decorations as well as additional services. Full automation of the business was requested. The challenge was to create double payment system where the customer would pay 50% deposit and then the remaining amount before upcoming event. We completed this using integration between AirTable, Make.com and GHL to create 3x invoices to cater for each case m. The customer would then receive email with button selections to pay correct amount.
+
+URL: https://lanos-logic.com/case-studies/events-entertainment-company-full-business-automation
+
+### Cleaning Business Agency - Funnel and Marketing Automation
+
+- Industry: Professional Services · Vertical: Services · Type: Low-Code · Country: Canada · Year: 2022
+- Key results: 74 hrs Monthly hours saved · 9 Platforms integrated · 10 days Delivered in
+
+Liams team benefitted from a high conversion funnel, onboarding and contract automation for his coaching business within DWY and DFY programs.
+
+**Details:**
+Liams team needed funnel, onboarding and contract automation for his coaching business within DWY and DFY programs The following tech stack was used to automate
+
+URL: https://lanos-logic.com/case-studies/cleaning-business-agency-funnel-marketing-automation
+
+### Ad-Tech Video Platform, Client Portal and API Development
+
+- Industry: Professional Services · Vertical: Professional Services · Type: Low-Code · Country: United States · Year: 2022
+- Key results: 10 days Delivered in · 4 Platforms integrated · MRSS Ad distribution protocol
+
+Softr and AirTable based platform to accumulate, track and distribute ads to advertising networks with MRSS.
+
+**Details:**
+Full Portfolio and intro available at the link: Client View Login Page Front page SOPs and documentation Full Portfolio and intro here: Business Scaling with AI and Automations https://youtu.be/IWqCql5V4RI https://www.youtube.com/watch?v=dLqFaCVPHCc Solution for Marketing Agency included automated forms and SOPs for content submission. Freelancers were able to submit images, videos, HTML5 ad contact into the client portal. Clients were able to login and get to the approved content Softr client portal was built with custom AirTable views embedded and commenting capability and formulas to  cater for Client Comments
+
+URL: https://lanos-logic.com/case-studies/ad-tech-video-platform-client-portal-api-development
+
+### Gifting Service - Portal and Automations
+
+- Industry: Technology & SaaS · Vertical: SaaS · Type: Low-Code · Country: United Kingdom · Year: 2022
+- Key results: 5 days Delivered in · 6 Platforms integrated · API Gift trigger automation
+
+Automated gifting service platform allowing scheduled gifts and API triggers for gifts.
+
+**Details:**
+The local natural cosmetics manufacturing and distribution client wanted to convert sales and customer data into automated marketing follow-up. We have plugged in Twilio and Integromat/Make.com to retrieve sales and client data from Shopify to improve customer journey during abandoned carts, pre-sales and post-sales follow up via branded SMS coming from the company name and branded email communication. There has been a 13% increase in sales during 6 month period following the automation and the client saw a reduction in abandoned carts by 7%. The Google Data Studio visualisation of communication trends has helped to shape their marketing strategy better to take into consideration client behavior.
+
+URL: https://lanos-logic.com/case-studies/gifting-service-portal-and-automations
+
+### White-Collar Service Matching
+
+- Industry: Professional Services · Vertical: Professional Services · Type: Low-Code · Country: Latvia · Year: 2022
+- Key results: 1 day Delivered in · 3 Platforms integrated · 100% No-code solution
+
+The platform allowing discovery of white collar service workers.
+
+**Details:**
+The platform to match white collar workers and the people who are looking for these type of services. AirTable as the Backend, Softr for the portal
+
+URL: https://lanos-logic.com/case-studies/white-collar-service-matching
+
+### Summer Camp Registration, Onboarding and Messaging Automation
+
+- Industry: Professional Services · Vertical: Professional Services · Type: Low-Code · Country: Latvia · Year: 2024
+- Key results: 85+ Hours saved per season · 11 Platforms integrated · 3 Messaging channels automated
+
+AirTable based solution saves 85+ hours every season when summer camp is in session, providing automated WhatsApp, Telegram messages and sending out pre-filled documents for e-Signature.
+
+**Details:**
+Description GlideApps app Budget entries with statuses, notes for reporting Message Generation templates Individual Messages Sent Staff tasks Inventory list Real Time reporting dashboard Contract Example in Documint Customer journey Diagram List of automations involved Automated Message Generation IOS integration with Make.com for Channel sending via WhatsApp and SMS The yearly summer camp was taking about 85+ hours every year to deal with repetitive tasks, such as bulk messaging, contract signing, onboarding information sharing. In addition to that, the registration time during the camp was taking away time from the experience and taking staff time. It was required to automate: The solution was created in GHL with the simple registration link that would take users phone number and take them through automations further. The camp has also benefitted from the GlideApps mobile app
+
+URL: https://lanos-logic.com/case-studies/summer-camp-registration-onboarding-messaging-automation
+
+### Real Estate 3D Design Company - Google Sheets to AirTable Transition and Business Automation
+
+- Industry: Real Estate · Vertical: Production, Real Estate · Type: Low-Code · Country: United States · Year: 2023
+- Key results: 32% Team time saved · 30 days Delivered in · 3 Platforms integrated
+
+The Real Estate design company has seen 32% cross timezone team time saving from automating internal processes and migration to AirTable from Google Sheets driven business.
+
+**Details:**
+The company that concentrates on content creation for real estate marketing has seen at least 32% of calculated time and effort saving through introduced new automated processes. The following artefacts have been used within internal processes and migration to AirTable from Google Sheets Some processes were fragmented as data collect was done through email communication. New process has replaced manual data with adaptable Typeform that feeds data directly into AirTable. The deliverables by area and split by platform tracked in project management tool.
+
+URL: https://lanos-logic.com/case-studies/real-estate-3d-design-google-sheets-airtable-migration
+
+### Investment Capital Fund - Bulk Contract Send DocuSign Automation
+
+- Industry: Finance & Legal · Vertical: Finance · Type: Low-Code · Country: United States · Year: 2023
+- Key results: 250+ Hours saved · 1,000s Custom contracts automated · 4 days Delivered in
+
+250+ hours saved on DocuSign bulk send automation to send out and track 1000s of custom contracts to multiple signatories.
+
+**Details:**
+Client wanted to develop a system to automate the allocation of potential portfolio company investments not yet held by the funds. The solution included AirTable interface that would trigger send, track, store and manage 5,000 contracts. The company’s data from Google Sheets was converted into AirTable base. Used for generating and sending out pre-filled envelopes The structure of the base used for sending
+
+URL: https://lanos-logic.com/case-studies/investment-capital-fund-bulk-contract-docusign-automation
+
+### Care Company - Payment Collection Automation with QB Desktop and Stripe
+
+- Industry: Professional Services · Vertical: Professional Services · Type: Code, Low-Code · Country: United States · Year: 2023
+- Key results: 72% Faster payment collection · $5M+ Annual turnover achieved · 50% Revenue increase
+
+The automated system based on AirTable (+6 other platforms) has increased the speed of payment collection by 72% and increased 50% increased turnover from $2.5M to $5M+ per annum.
+
+**Details:**
+Monthly payment collection form clients is a 2x week long process to send invoices and corrections manually. The improved process was required. The solution increased the speed of payment collection by 72% for massive turnover gain speedup on the way from $2.5M per annum to $5M+ per annum. The challenge to overcome was to integrate existing QB Desktop, by creating custom Cloud Based API. Quickbooks Desktop integration using NodeJS QB Web Connector instance hosted on Google Apps engine for leading provider of compassionate care management solutions for older adults. 💡 Note the animated GIF images below may take a moment to download There is around 40 automations on the backend that comprise this solution
+
+URL: https://lanos-logic.com/case-studies/care-company-payment-collection-qb-stripe
+
+### Law Firm - Document Flow and DocuSign Contract Automation
+
+- Industry: Finance & Legal · Vertical: Legal · Type: Low-Code · Country: United States · Year: 2023
+- Key results: 90 hrs Monthly hours saved · 10,000+ Contracts automated · 5 days Delivered in
+
+90 hours per month saved in sending and tracking 10,000+ custom pre-filled DocuSign contracts.
+
+**Details:**
+DocuSign Bulk send with capabilities to preview, correct, void and adjust data in DocuSign envelopes. Client needed to send, track, store and manage 10,000 custom envelopes. AirTable management interface has been created linked with Make.com and DocuSign to achieve this
+
+URL: https://lanos-logic.com/case-studies/law-firm-document-flow-docusign-contract-automation
+
+### US Ambulance Services - Application Management and Onboarding Automation
+
+- Industry: Healthcare & Medical · Vertical: Medical · Type: Low-Code · Country: United States · Year: 2023
+- Key results: $100K Revenue gained · 167 hrs Monthly hours saved · 40 days Delivered in
+
+Automated recruitment system has helped gain $100k for US Ambulance through HR recruitment and onboarding automation.
+
+**Details:**
+Ambulance services required automating the HR onboarding process for their employees. 40+ Automations enabled the company save $100k every year for recruitment, saving 1 FTE per location and robust error free recruitment structure to 6 locations.
+
+URL: https://lanos-logic.com/case-studies/us-ambulance-services-application-onboarding-automation
+
+### University of Minnesota - Student Onboarding
+
+- Industry: Education · Vertical: Education · Type: Low-Code · Country: United States · Year: 2023
+- Key results: 80% Admin time saved · 4,000 hrs Monthly hours saved · 10 days Delivered in
+
+Student onboarding solution has saved 80% of admin time on Student onboarding. Provided client with custom contract generation Google Docs and DocuSign with SmartSuite allowing them to scale and track contract signatures.
+
+**Details:**
+Student onboarding app was needed to streamline process of contract distribution, signing and tracking during September and January enrolment
+
+URL: https://lanos-logic.com/case-studies/university-of-minnesota-student-onboarding
+
+### Language School - Contracts, Onboarding, SMS, WhatsApp, Telegram, ChatGPT Lesson Plan Automation
+
+- Industry: Education · Vertical: Education · Type: Low-Code · Country: United States · Year: 2025
+- Key results: 60% Admin time saved · 10 Exercise types auto-generated · 6 Platforms integrated
+
+Saved 60% of admin time via automating onboarding, messaging, high quality 10 type exercises generation, student specific lesson plans based on AI from YouTube video as a source, study summaries and YouTube video summaries using ChatGPT.
+
+**Details:**
+Automation solution for online language school, that would save 30-40% of admin time provide tracking, scheduling and messaging for lessons, invoice messages, lesson reminders. This amounts to 20 hours per month per teacher. The process map is created as a DNA for the automation solution Online teachers are using lesson management interface to deal with incoming flow of lessons This automation takes into consideration the following information about the student to generate relevant content for the lesson: This automation saves 15-20 minutes per plan
+
+URL: https://lanos-logic.com/case-studies/language-school-contracts-onboarding-chatgpt-automation
+
+### US Pharmaceutical Prescriptions Automation
+
+- Industry: Healthcare & Medical · Vertical: Medical, Services · Type: Low-Code · Country: United States · Year: 2023
+- Key results: 90% Time reduction · 47 hrs Monthly hours saved · 7 days Delivered in
+
+AirTable based solution provides 90% time reduction in sending pharmaceutical prescriptions. This amounts to 47 hours every month.
+
+**Details:**
+LA Pharmacy was compiling and sending out DocuSign envelopes with prescriptions to agencies and prescribers manually, with the use of MS SharePoint as the file storage facility. With up to 20,000 documents processed in one month the manual work has become unmanageable.
+
+URL: https://lanos-logic.com/case-studies/us-pharmaceutical-prescriptions-automation
+
+### Career Coaching Agency - Onboarding Funnel Automation
+
+- Industry: Education · Vertical: Education, Professional Services · Type: Low-Code · Country: United States · Year: 2025
+- Key results: 239K Job seekers served · 7 Platforms integrated · 5 days Delivered in
+
+Client onboarding automation helps 239K job seekers to get 5 most effective strategies for landing dream jobs. Zoom call tracking and downloads, contract and Stripe payments automation.
+
+**Details:**
+Client testimonial Solution walkthrough Project Description AirTable base User Acceptance List Process Documentation Make.com Automations Stripe payment to Onboarding Email sequence to DocuSign envelope Pre-filled DocuSign envelope generation Client onboarding flow automations were requested by the client that helps 239K+ job seekers to get 5 most effective strategies for landing dream jobs. Automated DocuSign pre-filled envelope is sent to the new applicants with signing status tracked in AirTable. Every client record is created in easy to use AirTable interface. Every zoom call is appended to the database and linked to clients record Wishlist onboarding for every relevant client using API calls to Wordpress infrastructure.
+
+URL: https://lanos-logic.com/case-studies/career-coaching-agency-onboarding-funnel-automation
+
+### Investment Fund Contracts Signing and Tracking
+
+- Industry: Finance & Legal · Vertical: Finance, Legal · Type: Low-Code · Country: United States · Year: 2023
+- Key results: 14 DocuSign templates automated · 136 hrs Monthly hours saved · 20 days Delivered in
+
+Near native integration of 14 different DocuSign templates are used depending on the investor type with 2 different subscriptions within the process. The automation reads and writes subscription data from Salesforce reading completed envelope data from DocuSign API, as well as parsing outgoing emails.
+
+**Details:**
+This project involves the near-native integration of 14 unique DocuSign templates tailored to investor types and two distinct subscription models. The automation is designed to streamline the subscription process, ensuring efficient handling of subscription data, document tracking, and communication using the data from SalesForce CRM. •	Integration with 14 different DocuSign templates, automatically selected based on investor type and subscription model. •	Automation reads and writes subscription data directly from Salesforce, ensuring a centralized and up-to-date database. •	Real-time synchronization with DocuSign API to fetch and process completed envelope data. •	Parsing outgoing emails to enhance subscription-related communication and streamline notifications.
+
+URL: https://lanos-logic.com/case-studies/investment-fund-contracts-signing-tracking
+
+### US Film Equipment Rental Company GPS Vehicle Tracking Automation
+
+- Industry: Professional Services · Vertical: Professional Services · Type: Low-Code · Country: United States · Year: 2023
+- Key results: 8 hrs Weekly hours saved · 3 days Delivered in · 32 hrs Monthly hours saved
+
+Automated data lookup solution saves 8 hours every week updating vehicle information from Samsara fleet management platform.
+
+**Details:**
+This project delivers a streamlined Automated Data Lookup Solution designed to save 8 hours weekly in updating vehicle information. It integrates the Samsara Fleet Management Platform with Office 365 Hosted Excel, ensuring seamless synchronization of vehicle mileage and asset details by VIN number. • Integration with Samsara API : Retrieves up-to-date mileage and tracking data for all vehicles in the fleet. • Excel 365 Synchronization via Microsoft Graph API : Automatically updates hosted spreadsheets with accurate vehicle information in real-time. • Automation Workflow with Make.com : Coordinates data retrieval, transformation, and synchronization tasks, ensuring a fully automated process. •	Eliminates manual data entry, reducing errors and freeing up administrative time.
+
+URL: https://lanos-logic.com/case-studies/us-film-equipment-rental-gps-vehicle-tracking
+
+### CES Power - Film Industry Equipment Rental Company - QBO Invoice and Bill Accounting Automation
+
+- Industry: Professional Services · Vertical: Professional Services · Type: Low-Code · Country: United States · Year: 2024
+- Key results: 40+ Monthly hours saved · 6 Internal companies synced · 6 days Delivered in
+
+US Nationwide Film Production Equipment leasing company implemented automations have saved 40+ hours a month. Via automating their accounting processes with QBO replicating invoices and Bills into 6 internal companies.
+
+**Details:**
+Full portfolio and meet me on video here: Business Scaling with AI and Automations Description The solution Business logic flow Automations Documentation Property and plant equipment rental company needed help with accounting processes automation. Existing invoices were manually replicated into their 6 internal companies each with its own QBO login and database. The automations created has saved the company on average 40 hours a month. The implemented logic has ensured that https://www.youtube.com/watch?v=leDRn5hYVYw
+
+URL: https://lanos-logic.com/case-studies/ces-power-film-equipment-rental-qbo-accounting-automation
+
+### Care Agency CRM and Lead ChatGPT Lead Processing into Close CRM
+
+- Industry: Healthcare & Medical · Vertical: Medical, Services · Type: Low-Code · Country: United States · Year: 2024
+- Key results: 5 Form types automated · 3 days Delivered in · 3 Platforms integrated
+
+5 different forms with different structures using structured 6 component request with JSON output written into Close CRM with automated lead follow up.
+
+URL: https://lanos-logic.com/case-studies/care-agency-crm-chatgpt-lead-processing-close-crm
+
+### HR Journalist ChatGPT Email Processing and Reply Generation
+
+- Industry: Sales & Marketing · Vertical: Services · Type: Low-Code · Country: United States · Year: 2024
+- Key results: 120+ Emails processed monthly · 38+ hrs Monthly hours saved · 15-20 Articles auto-generated
+
+Parse 120+ emails monthly with automated workflows generating 15-20 articles, saving 38+ hours, and creating 3-5 additional opportunities.
+
+**Details:**
+6 step formula and Tree Prompt engineering with JSON output Objective Key Features and Workflow Tree Prompt Engineering with JSON Output 2. Automated Article Creation 3. Personalized Outreach 4. Seamless Integration Benefits Achieved Tools Used The project aimed to streamline the process of extracting relevant article titles from incoming newsletters, generating content, and engaging with requesters by automating the entire workflow. This solution was designed to enhance productivity by focusing only on topics related to the HR and journalist knowledge domains. •	Incoming newsletter emails were analyzed to identify article titles. •	Using Make.com , logic was implemented to filter emails that contained titles pertinent to the HR or journalist domains, based on predefined keywords and criteria.
+
+URL: https://lanos-logic.com/case-studies/hr-journalist-chatgpt-email-processing-reply-generation
+
+### Gym Licensing Agency - 9x Custom Contract Templates Saves $7K per Month
+
+- Industry: Professional Services · Vertical: Services · Type: Low-Code · Country: Georgia · Year: 2024
+- Key results: $7,250 Monthly savings · 67 hrs Monthly hours saved · 40+ Daily contracts generated
+
+Over 67 hours and $7,250 per month saved with a daily generation of 40+ contracts.
+
+**Details:**
+Thanks to Alex's expertise in implementing Zapier, DocuSign, and Monday board, our Gym Licensing Agency has experienced a dramatic shift. With nine different contract templates, I had  to sign upwards of 40 contracts daily with some sent for legal approval - believe me - it was tedious. The streamlined Zapier workflow has lightened my workload drastically. We save an impressive 67 hours monthly, freeing up my and colleagues time for growth. Giorgi A. - Gym Licensing Agency - Georgia
+
+URL: https://lanos-logic.com/case-studies/gym-licensing-agency-custom-contract-templates
+
+### American Canine Association - Automated US Postal Stamps and PDF Contracts Generator
+
+- Industry: Professional Services · Vertical: Services · Type: Low-Code · Country: United States · Year: 2024
+- Key results: 95% Admin operations saved · 20 sec Per record (from 10 min) · 35 hrs Monthly hours saved
+
+95% admin operations saved for clients Dog Owners Certificates and Shipping labels generation with automated printing using PrintNode. Reducing manual time from 10 minutes to 20 seconds per record.
+
+**Details:**
+Core Objectives Key Components and Tools Benefits and Outcomes 1.	Automate the creation and distribution of dog owner certificates. 2.	Simplify the generation and printing of shipping labels. 3.	Provide a scalable, user-friendly interface for record management. 4.	Ensure seamless regeneration of PDFs when required.
+
+URL: https://lanos-logic.com/case-studies/american-canine-association-postal-stamps-pdf-contracts
+
+### Music Artist Agency - International Expansion with AirTable Softr
+
+- Industry: Entertainment · Vertical: Entertainment, Professional Services · Type: Code, Low-Code · Country: United States · Year: 2025
+- Key results: 153 hrs Monthly hours saved · 86 days Development time · 10 Platforms integrated
+
+Q Music has expanded its reach to being a US National brand beyond Chicago, Detroit into New Yorks and Miamis competitive Soho houses and Hotel market, as well as recently into Toronto Canada.
+
+**Details:**
+Key system metrics Phase 2 Solution Blueprint Mapping Payment processing automation for clients Invoice Payment request and payment automation Day of the event and Post event automations Bidding Process Automations Map AirTable admin interface for event and Shift management Gig calendar Softr Artist Portal and Contracts User Acceptance Testing list 4 Separate Softr portals with 10+ pages each Green checked items are showing that the element has been developed, tested and correct operation confirmed by client
+
+URL: https://lanos-logic.com/case-studies/music-artist-agency-international-expansion-airtable-softr
+
+### Data-Driven Automation Boosts Sales Agency to $147K in 84 Days
+
+- Industry: Sales & Marketing · Vertical: Agency, Professional Services · Type: Low-Code · Country: United States · Year: 2025
+- Key results: $147K Revenue in 84 days · 43 hrs Monthly hours saved · 13 Platforms integrated
+
+In just 84 days, a U.S.-based sales agency generated $147K in revenue by automating business processes.
+
+**Details:**
+The remarkable revenue growth was made possible through a meticulous analysis and setup of key business processes, ensuring every aspect of the sales pipeline was optimized for automation. By correctly identifying bottlenecks and inefficiencies in areas such as data collection, customer onboarding, and communication, the team implemented streamlined workflows using a low-code stack. This strategic approach allowed for seamless integration between tools like Airtable, Zapier, and GoHighLevel, enabling real-time updates and automating routine tasks. These automations freed up valuable time, reducing human error and improving responsiveness, which directly enhanced the customer experience and accelerated the path to revenue. The careful alignment of automation with business goals was instrumental in achieving the impressive $147K in revenue within a short time frame. Business KPIs tracking Ad Spend Metrics tracking Triagers KPI metrics tracking Closers KPI metrics tracking Onboarding process automation Sales Pipeline Automation with speed to lead via Kixie Powerdialler Weekly client progress follow up notification flow Partial payments automation using GHL, Zapier and  NMI VAPI - Outbound Voice Agent
+
+URL: https://lanos-logic.com/case-studies/data-driven-automation-boosts-sales-agency-147k
+
+### 24/7 Voice AI Agent That Qualifies 100+ Leads per Week
+
+- Industry: Sales & Marketing · Vertical: Sales · Type: Low-Code · Country: United States · Year: 2025
+- Key results: 100-150 Leads qualified weekly · 98% Completion rate · 35% Conversion increase
+
+The AI agent now qualifies 100-150 leads per week with a 98% completion rate, reduces lead intake time by 90%, operates fully autonomously 24/7, and has increased lead-to-booked-call conversions by 35%.
+
+**Details:**
+This project involves building a voice-based AI agent using VAPI, integrated with Make.com and GoHighLevel (GHL). The agent conducts structured conversations with potential leads, gathering key information such as name, email, and intent. Once collected, the data is automatically pushed to GHL, triggering relevant workflows and optionally scheduling appointments. The system uses advanced voice synthesis with custom prosody settings, allowing the agent to sound natural, adapt its tone, and even respond to humor. The goal was to create a fully automated yet human-like conversational interface for lead intake. https://www.youtube.com/watch?v=yIg4mZYyYBY Every GHL sequence fro inbound leads is now being served by voice AI qualifying the prospects and booking the appointment an autopilot.
+
+URL: https://lanos-logic.com/case-studies/247-voice-ai-agent-qualifies-100-leads-per-week
+
+### 7 Integrated Web Tools Handling 1,000+ "icon", 5+ APIs, and 3 Platforms
+
+- Industry: Technology & SaaS · Vertical: Education, Marketing, SaaS, Sales · Type: Low-Code · Country: United States
+- Key results: 1,000+ Active users · 90% Manual operations reduced · 7 Web apps built
+
+7 custom web applications integrating V0, Supabase, Airtable, Google "icon", and AI APIs -- serving over 1,000 users. Reduced manual operations by up to 90%.
+
+**Details:**
+1. Screen Management Solution (V0  + Google Calendar + Airtable) 2. Waitlist API System (V0 + Supabase) 3. Restaurant Kitchen Stock & Menu Manager + AI Recipe Generator (Supabase + V0 + ChatGPT) 4. Investment ROI Calculator (V0 + Supabase) 5. Sales Website (Basehub + Vercel + Airtable) 6. AI Agency Website (V0 + Supabase + Airtable + GHL) 7. Camp Website (Vercel + Supabase + Airtable) A real-time screen content manager for offices and events, integrated with Google Calendar to auto-display schedules, updates, or announcements. Uses V0 for the UI, Supabase for auth and media storage, and Airtable as the central content control hub for screen configurations and overrides. Admins can update content via Airtable or directly override screens via a custom dashboard. Deployed on Vercel. A flexible waitlist API system designed to support launches, gated access, or beta programs. User signups are stored in Supabase and synced to Airtable for manual segmentation, prioritization, and campaign planning. Admins can manage waitlist rules and content via Basehub. Includes webhooks for triggering onboarding emails or product access. An internal operations tool for restaurant kitchens to manage live inventory and menu availability. Uses Supabase to track stock levels, Airtable for ingredient management and supplier ordering, and OpenAI to generate recipes based on available ingredients. Menu items are auto-updated through Airtable sync, and V0 powers the intuitive kitchen dashboard. An embeddable, customizable ROI calculator for financial sites. Built with V0 and deployed via Vercel, the calculator pulls scenario presets and assumptions from Airtable, while Supabase handles user data and saved calculations. Supports ROI comparisons across stocks, real estate, and crypto, with export/share functionality.
+
+URL: https://lanos-logic.com/case-studies/7-integrated-web-tools-1000-users-5-apis
+
+### LinkedIn Content AI Agent - Thought Leadership via Vectorshift
+
+- Industry: Sales & Marketing · Vertical: Professional Services · Type: Low-Code · Country: United States
+- Key results: 95% Content creation time reduced · 60% Higher engagement rate · 3-5x More consistent posting
+
+Reduced content creation time by 95%, enabling users to post 3-5x more consistently. Posts generated through the system achieved an average 60% higher engagement rate.
+
+**Details:**
+Developed an AI agent for generating personalized LinkedIn posts using Vectorshift’s workflow engine, custom vector storage, and an LLM-based content synthesis pipeline. The system analyzes past post performance, extracts tone, style, and topic patterns, and generates high-conversion content aligned with the user’s voice. Inputs can include recent achievements, industry news, or calendar events, all processed through a vectored prompt chain to maintain contextual relevance and personality.
+
+URL: https://lanos-logic.com/case-studies/linkedin-content-ai-agent-thought-leadership-vectorshift
+
+### iOS Android Messenger App: Flutter + Supabase Real-Time Communications
+
+- Industry: Technology & SaaS · Vertical: SaaS · Type: Code, Low-Code · Country: United States · Year: 2025
+- Key results: 95% Shared code iOS/Android · E2E End-to-end encryption · 5 Platforms integrated
+
+Messaging app with 95% shared code between iOS and Android. Features real-time chat, media sharing, voice and video calls, offline mode, and end-to-end encryption.
+
+**Details:**
+Successfully scaled from 100 to 50,000 concurrent users on Supabase's managed infrastructure with automatic horizontal scaling, maintaining consistent performance without infrastructure changes. Flutter | Dart | Supabase | PostgreSQL | WebSockets | FCM/APNS | Riverpod | SQLite | WebRTC | IOS | Android
+
+URL: https://lanos-logic.com/case-studies/ios-android-messenger-app-flutter-supabase
+
+### Speed to Lead Voice AI: 500+ Weekly Calls Automated for NYC Hair Salon
+
+- Industry: Professional Services · Vertical: Professional Services · Type: Low-Code · Country: United States · Year: 2025
+- Key results: 500+ Weekly calls automated · 3 Voice AI agents deployed · 50 hrs Monthly hours saved
+
+Deployed a 3-agent Voice AI system handling 500+ calls weekly that responds to Facebook leads within minutes.
+
+**Details:**
+https://www.youtube.com/watch?v=yIg4mZYyYBY Project Overview The Challenge Technical Solution Three-Agent Architecture Platform Integration Stack Advanced Features Implemented Self-Improving System Business Impact Quantitative Results Qualitative Benefits Technical Complexity Highlights Project Duration Technologies Used Deployed an enterprise-grade Voice AI assistant system for a hair restoration clinic that calls prospects by name within minutes of Facebook ad form submission, handles hundreds of weekly calls autonomously, and continuously improves through automated conversation analysis. Client needed to convert Facebook ad leads into booked appointments faster while maintaining personalized, professional interactions. Challenges included: Timeline: 4 weeks from requirements to full deployment Ongoing: Weekly script improvements via automated Vector Shift analysis
+
+URL: https://lanos-logic.com/case-studies/speed-to-lead-voice-ai-500-weekly-calls-nyc-hair-salon
+
+### Monday.com QBO Bespoke eSignature for LA Boutique Stone Fireplaces
+
+- Industry: Professional Services · Vertical: Manufacturing, Professional Services · Type: Low-Code · Country: United States · Year: 2025
+- Key results: 60% Faster invoice turnaround · 7 days Delivered in · 5 Platforms integrated
+
+Client invoices now feature fully customized HTML/CSS design, reduced invoice-to-signature turnaround by 60%.
+
+**Details:**
+Mobile responsive custom Signing Flow Action board where client triggers outbound emails from Client Reference Design language for custom e-Signature flow The main Signing Method Select and PDF Email sending flow 4 automations taking care of the custom solution Desktop view of the signature section within the invoice Desktop view of the generated invoice The QuickBooks invoices generating a PDF and an email that cannot be customized, so the client wanted to customize the outbound email that clients receive with the terms and conditions included into the invoice, and the client receiving the invoice should be signing it. The existing solutions would have forced client to jump between a different solutions which could hardly be customized for clients design needs. Custom HTML / CSS/ Javascript solution was created to send fully branded invoice, terms and conditions and final signed document to client whilst maintaining the design language branded as per clients requirements. The invoice itself is being done and tracked in QBO, and using Make.com the invoice information is extracted, parsed and present to client in Mobile responsive view, Desktop view for easy signing process
+
+URL: https://lanos-logic.com/case-studies/monday-qbo-esignature-la-stone-fireplaces
+
+### iOS Flutter Mobile App for Chicago Music Vendor
+
+- Industry: Entertainment · Vertical: Entertainment · Type: Code · Country: United States · Year: 2025
+- Key results: 1,000+ Vendors managed · 253+ hrs Monthly hours saved · FIFA 2026 Vendor partnership secured
+
+Q Music expanded from regional to US National brand, secured FIFA 2026 vendor partnership, manages 1000+ vendors across 36+ locations, 220+ shifts per weekend, 62+ automation flows saving 253+ hours monthly.
+
+**Details:**
+Built with Flutter for iOS & Android, featuring a sleek dark theme with gold accent and powered by AirTable backend and technically replacing the Softr PWA. The app provides role-based access (Admin, Client, A/V) with multi-location support for venues managing entertainment across multiple properties. QMusic Venue App - App Store Download QMusic Venue by QMusic LLC on the App Store. See screenshots, ratings and reviews, user tips, and more games like QMusic Venue. https://apps.apple.com/app/qmusic-venue/id6755474782 Core Platform The base project link 📊 Dashboard 📅 Calendar 📝 Booking Requests 💬 Messages ⭐ Artist Ratings & Tiers 🏢 Venue Guide 👤 Profile & Account 🔧 Technical Highlights Music Artist Agency - International expansion with AirTable Softr | Notion Key system metrics https://bit.ly/3WAvDDo
+
+URL: https://lanos-logic.com/case-studies/ios-flutter-mobile-app-chicago-music-vendor
+
+### Speed to Lead and AI Chatbot for Florida Commercial Real Estate Agent
+
+- Industry: Real Estate · Vertical: Real Estate · Type: Low-Code · Country: United States · Year: 2025
+- Key results: 40 hrs Monthly hours saved · 10 days Delivered in · 4 Platforms integrated
+
+AI-powered email workflow that analyzes incoming inquiries, matches them to correct property brochure, auto-assigns listing agent, creates Follow Up Boss opportunities.
+
+**Details:**
+This workflow automates the entire client inquiry-to-agent-assignment pipeline:
+
+URL: https://lanos-logic.com/case-studies/speed-to-lead-ai-chatbot-florida-commercial-real-estate
+
+### Custom AirTable CRM and e-Signature Solution for Large NYC Cleaning Company
+
+- Industry: Professional Services · Vertical: Professional Services · Type: Low-Code · Country: United States · Year: 2025
+- Key results: 150 hrs Monthly hours saved · 30 days Delivered in · 1 Unified CRM platform
+
+Custom AirTable CRM with e-Signature integration for a large NYC cleaning company, automating customer contact, data collection, document workflows, and onboarding.
+
+URL: https://lanos-logic.com/case-studies/custom-airtable-crm-esignature-nyc-cleaning-company
+
+### Automated AI Newsletter Blog Post Generator
+
+- Industry: Sales & Marketing · Vertical: Marketing, Professional Services · Type: Low-Code · Country: United States · Year: 2025
+- Key results: 95% Time savings · 5-7 min Review time (from 4-6 hrs) · 32 hrs Monthly hours saved
+
+Reduced monthly newsletter creation from 4-6 hours to 5-7 minutes of review -- a 95% time savings.
+
+**Details:**
+Process Multi-source data aggregation (Airtable records, podcast episodes, video descriptions, upcoming events) → AI-powered content synthesis with structured JSON output → Dynamic template formatting with image retrieval → Automated Mailchimp publishing
+
+URL: https://lanos-logic.com/case-studies/automated-ai-newsletter-blog-post-generator
+
+### Twilio API Flutter iOS App Integration
+
+- Industry: Technology & SaaS · Vertical: SaaS, Sales · Type: Code · Country: United States · Year: 2025
+- Key results: 10 days Delivered in · 4 Platforms integrated · 100% Cross-platform compatible
+
+This integration provides a secure, scalable bridge between Flutter applications and Twilio's communications infrastructure.
+
+**Details:**
+A comprehensive Flutter/Dart API wrapper for Twilio communications with enterprise-grade security, A2P 10DLC compliance, and AI agent integration via LiveKit. Scroll down to see project screenshots 👇 Project integration highlights 1. Cost Drain Attack Protection 2. A2P 10DLC Verification API 3. Phone Number Management 4. Inbound/Outbound Filtering Project screenshots Mobile phone number lookup and purchase Outbound calling built into IOS app Phone number A2P 10DLC verification with Twilio over API Phone number cost drain attack protection Sophisticated multi-layer protection system preventing fraudulent usage and unexpected billing spikes. Complete programmatic management of A2P 10DLC registration for US messaging compliance.
+
+URL: https://lanos-logic.com/case-studies/twilio-api-flutter-ios-app-integration
+
+## Team
+
+### Daniel Roberts — Head of Business Development
+
+Daniel leads strategic partnerships and growth initiatives, helping clients identify automation opportunities that increase efficiency and revenue. Outside of work, he enjoys restoring vintage motorcycles and often spends weekends on long-distance road trips across Europe.
+
+### Alex Podbrezsky — Founder & AI Solutions Architect
+
+Alex designs AI-powered systems that combine automation, messaging, and business workflows into scalable digital products. He is deeply interested in emerging technologies, futurism, and the intersection between AI, communication, and human behavior.
+
+### Adrian Ionescu — Lead Backend Developer
+
+Adrian oversees backend architecture and infrastructure reliability across client and internal platforms. He is known for building custom electronics projects at home and has a personal workshop filled with experimental hardware prototypes.
+
+### Leo Katz — Product Strategy & Operations Manager
+
+Leo coordinates product development and operational execution, ensuring projects move efficiently from concept to launch. He previously traveled through more than 20 countries while working remotely and enjoys studying behavioral psychology and negotiation.
+
+### Alex Tanaka — AI Integrations Engineer
+
+Alex specializes in connecting AI models, APIs, and third-party platforms into unified automation ecosystems. In his free time, he practices digital music production and experiments with AI-generated audio tools.
+
+### Anna Kowalska — Client Success & Onboarding Specialist
+
+Anna guides clients through onboarding and implementation, ensuring smooth adoption of automation systems and digital tools. She is passionate about languages and can comfortably communicate in four different languages.
+
+### Sophia Mitchell — Marketing Director
+
+Sophia leads brand strategy, digital campaigns, and content positioning for both the agency and its clients. She has a background in documentary photography and often incorporates storytelling principles into marketing campaigns.
+
+### Marcus Halvorsen — Sales Director
+
+Marcus manages sales strategy and client acquisition, helping businesses understand how AI automation can solve operational bottlenecks. He enjoys mountain hiking in Scandinavia and is known internally for turning client meetings into strategic brainstorming sessions.
+
+### Daria Melnyk — UI/UX Designer & Brand Creative
+
+Daria creates intuitive interfaces and visual identities that make complex technology feel simple and engaging. She is inspired by modern architecture and frequently sketches interface concepts while visiting cafes and galleries.
+
+### Erik Dahlgren — DevOps & Infrastructure Engineer
+
+Erik manages cloud infrastructure, deployment pipelines, and system scalability for high-availability applications. He is an avid sailing enthusiast and enjoys applying engineering precision both to systems architecture and open-water navigation.
+
+## Engagement Process
+
+1. **Analyze** — Plan, analyze, and blueprint business processes using BPMN and documentation.
+2. **Prepare** — Refine and align processes with future state planning.
+3. **Implement** — Deploy automations that deliver immediate results.
+
+## Blog
+
+### Lanos Logic Now Offers Enterprise Cybersecurity Services: Penetration Testing, Vulnerability Scanning & Systems Hardening
+
+- By Alex Podbrezsky · May 13, 2026 · Security
+
+We're expanding beyond AI automation to deliver the security foundation every modern enterprise needs — adversarial testing, continuous vulnerability discovery, and defense-in-depth hardening built on OWASP, NIST, and CIS standards.
+
+URL: https://lanos-logic.com/blog/we-now-offer-cybersecurity-services
+
+## Contact
+
+**Lanos Logic**
+24 E Washington St Suite 875
+Chicago, IL 60602, USA
+
+- Email: hello@lanos-logic.com
+- Phone: +1 (518) 864 3528
+- Website: https://lanos-logic.com
+- Book a consultation: https://lanos-logic.com/book
+
+**Service Areas:** United States, United Kingdom, Canada, Australia, Germany, France, Netherlands, Ireland, Singapore, United Arab Emirates, and worldwide remote services.
+
+**Technology Stack:** Claude AI, Make.com, n8n, Zapier, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, Stripe, DocuSign, ClickUp, Miro, PandaDoc
+
+## AI Agent Integration (MCP & REST API)
+
+- MCP Endpoint: https://lanos-logic.com/mcp (JSON-RPC 2.0, MCP 2024-11-05, no auth)
+- MCP Discovery: https://lanos-logic.com/.well-known/mcp.json
+- OpenAPI 3.1 spec: https://lanos-logic.com/openapi.yaml
+- REST base URL: https://lanos-logic.com/tools/
+- Curated index: https://lanos-logic.com/llms.txt
+
+---
+© 2025 Lanos Logic. All rights reserved.
