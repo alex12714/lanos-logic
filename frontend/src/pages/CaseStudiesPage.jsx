@@ -6,7 +6,7 @@ import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { caseStudies } from '../data/mock';
-import { breadcrumb } from '../lib/seo';
+import { breadcrumb, speakableWebPage } from '../lib/seo';
 
 const CaseStudiesPage = () => {
   const [filter, setFilter] = useState('all');
@@ -30,10 +30,18 @@ const CaseStudiesPage = () => {
         title="AI Automation Case Studies & Client Success Stories | Lanos Logic"
         description="Real-world AI automation case studies from Lanos Logic across healthcare, government, legal, real estate, marketing, and more — with measurable results and ROI."
         path="/case-studies"
-        jsonLd={breadcrumb([
-          { name: 'Home', path: '/' },
-          { name: 'Case Studies', path: '/case-studies' },
-        ])}
+        jsonLd={[
+          breadcrumb([
+            { name: 'Home', path: '/' },
+            { name: 'Case Studies', path: '/case-studies' },
+          ]),
+          speakableWebPage({
+            name: 'AI Automation Case Studies & Client Success Stories | Lanos Logic',
+            description:
+              'Real-world AI automation case studies from Lanos Logic across healthcare, government, legal, real estate, marketing, and more — with measurable results and ROI.',
+            url: '/case-studies',
+          }),
+        ]}
       />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -47,7 +55,7 @@ const CaseStudiesPage = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Client <span className="text-amber-400">Success Stories</span>
             </h1>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <p className="page-intro text-gray-400 text-lg max-w-3xl mx-auto">
               Lanos Logic has delivered AI automation across healthcare,
               government, legal, real estate, marketing, sales, education, and
               SaaS — every case study below reports measurable, documented

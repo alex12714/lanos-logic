@@ -7,7 +7,7 @@ import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { allCaseStudies } from '../data/caseStudiesData';
-import { SITE, ORG, breadcrumb, youTubeVideoObject } from '../lib/seo';
+import { SITE, ORG, breadcrumb, youTubeVideoObject, SPEAKABLE } from '../lib/seo';
 import { getCaseStudyFaqs } from '../data/faqData';
 
 const CaseStudyDetailPage = () => {
@@ -87,11 +87,17 @@ const CaseStudyDetailPage = () => {
       description: caseStudy.description,
       ...(caseStudy.image ? { image: `${SITE}${caseStudy.image}` } : {}),
       articleSection: caseStudy.category,
-      author: ORG,
+      author: {
+        '@type': 'Person',
+        name: 'Alex Podbrezsky',
+        jobTitle: 'Founder & AI Solutions Architect',
+        worksFor: { '@type': 'Organization', name: 'Lanos Logic' },
+      },
       publisher: ORG,
       ...(caseStudy.year ? { datePublished: String(caseStudy.year) } : {}),
       mainEntityOfPage: `${SITE}/case-studies/${caseStudy.id}`,
       url: `${SITE}/case-studies/${caseStudy.id}`,
+      speakable: SPEAKABLE,
     },
     breadcrumb([
       { name: 'Home', path: '/' },
@@ -130,7 +136,7 @@ const CaseStudyDetailPage = () => {
               {caseStudy.title}
             </h1>
 
-            <p className="text-gray-400 text-lg max-w-3xl mb-10">
+            <p className="page-intro text-gray-400 text-lg max-w-3xl mb-10">
               {caseStudy.description}
             </p>
 

@@ -6,7 +6,7 @@ import Seo from '../components/seo/Seo';
 import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { industries, services } from '../data/mock';
-import { SITE, ORG, breadcrumb } from '../lib/seo';
+import { SITE, ORG, breadcrumb, speakableWebPage } from '../lib/seo';
 import { getIndustryFaqs } from '../data/faqData';
 
 const IndustryPage = () => {
@@ -51,6 +51,11 @@ const IndustryPage = () => {
       { name: 'Home', path: '/' },
       { name: industry.name, path: industry.href },
     ]),
+    speakableWebPage({
+      name: `AI Automation for ${industry.name} | Lanos Logic`,
+      description: industry.description,
+      url: industry.href,
+    }),
   ];
 
   return (
@@ -81,7 +86,7 @@ const IndustryPage = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               AI Automation for <span className="text-amber-400">{industry.name}</span>
             </h1>
-            <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+            <p className="page-intro text-gray-400 text-lg mb-8 leading-relaxed">
               {industry.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

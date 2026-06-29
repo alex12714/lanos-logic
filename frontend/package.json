@@ -59,7 +59,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "postbuild": "node scripts/prerender.mjs || echo '[postbuild] prerender skipped/failed — serving SPA shell (non-fatal)'",
+    "postbuild": "(node scripts/prerender.mjs || echo '[postbuild] prerender skipped/failed — serving SPA shell (non-fatal)') && (node scripts/generate-og-images.mjs || echo '[postbuild] og-image generation skipped/failed — falling back to global og-image (non-fatal)')",
     "test": "craco test"
   },
   "browserslist": {

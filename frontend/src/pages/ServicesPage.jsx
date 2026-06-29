@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { services } from '../data/mock';
-import { SITE, breadcrumb } from '../lib/seo';
+import { SITE, breadcrumb, speakableWebPage } from '../lib/seo';
 
 const iconMap = {
   Bot: Bot,
@@ -39,6 +39,12 @@ const ServicesPage = () => {
         url: `${SITE}${service.href}`,
       })),
     },
+    speakableWebPage({
+      name: 'AI Automation Services | Lanos Logic',
+      description:
+        "Lanos Logic's AI automation services: AI agents, voice AI, vector databases, document and process automation, communication automation, mobile apps, analytics, and enterprise security.",
+      url: '/services',
+    }),
   ];
 
   return (
@@ -61,7 +67,7 @@ const ServicesPage = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Our <span className="text-amber-400">AI Solutions</span>
             </h1>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <p className="page-intro text-gray-400 text-lg max-w-3xl mx-auto">
               Lanos Logic builds AI automation services — AI agents, voice AI,
               vector databases, document and process automation, mobile apps,
               analytics, and enterprise security — that transform business

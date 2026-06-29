@@ -6,7 +6,7 @@ import Seo from '../components/seo/Seo';
 import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { services } from '../data/mock';
-import { breadcrumb, serviceSchema } from '../lib/seo';
+import { breadcrumb, serviceSchema, speakableWebPage } from '../lib/seo';
 import { getServiceFaqs } from '../data/faqData';
 
 const iconMap = {
@@ -58,6 +58,11 @@ const ServiceDetailPage = () => {
       { name: 'Services', path: '/services' },
       { name: service.name, path: service.href },
     ]),
+    speakableWebPage({
+      name: `${service.name} — AI Automation Service | Lanos Logic`,
+      description: service.shortDescription,
+      url: service.href,
+    }),
   ];
 
   return (
@@ -92,7 +97,7 @@ const ServiceDetailPage = () => {
               <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 {service.name}
               </h1>
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+              <p className="page-intro text-gray-400 text-lg mb-8 leading-relaxed">
                 {service.shortDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">

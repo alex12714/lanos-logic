@@ -117,7 +117,7 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <motion.p
-            className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed"
+            className="page-intro text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
             Enterprise-grade AI solutions that transform operations across government,

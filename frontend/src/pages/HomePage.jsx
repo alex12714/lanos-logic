@@ -14,7 +14,7 @@ import TestimonialsSection from '../components/home/TestimonialsSection';
 import CTASection from '../components/home/CTASection';
 import ContactFormSection from '../components/home/ContactFormSection';
 import { homeFaqs } from '../data/faqData';
-import { ORG } from '../lib/seo';
+import { speakableWebPage } from '../lib/seo';
 
 const howToSchema = {
   '@context': 'https://schema.org',
@@ -57,7 +57,15 @@ const HomePage = () => {
         title="Lanos Logic — Strategic AI Automation Solutions for Modern Businesses"
         description="Lanos Logic builds AI agents, voice AI, document and process automation, vector databases, and mobile apps that help companies automate operations and scale efficiently. Book a free discovery call."
         path="/"
-        jsonLd={[howToSchema]}
+        jsonLd={[
+          howToSchema,
+          speakableWebPage({
+            name: 'Lanos Logic — Strategic AI Automation Solutions',
+            description:
+              'Lanos Logic builds AI agents, voice AI, document and process automation, vector databases, and mobile apps that help companies automate operations and scale efficiently.',
+            url: '/',
+          }),
+        ]}
       />
       <HeroSection />
       <AIToolsSection />

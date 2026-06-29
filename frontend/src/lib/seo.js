@@ -18,6 +18,49 @@ export const ORG = {
 export const absoluteUrl = (path = '/') =>
   path.startsWith('http') ? path : `${SITE}${path}`;
 
+// Default/fallback Open Graph card served for routes that opt out of (or have no)
+// per-route generated card.
+export const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
+
+// Slugify a route pathname into the filename stem used for its generated OG card.
+// '/' → 'home'; '/services/voice-ai-agents' → 'services-voice-ai-agents'.
+// This MUST stay in lock-step with scripts/generate-og-images.mjs (slugForRoute).
+export const slugifyRoute = (pathname = '/') => {
+  const clean = String(pathname).split('?')[0].split('#')[0].replace(/\/+$/, '');
+  if (!clean || clean === '/') return 'home';
+  const slug = clean
+    .replace(/^\/+/, '')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase();
+  return slug || 'home';
+};
+
+// Absolute URL of the per-route generated OG card for a given pathname.
+export const ogImageForPath = (pathname = '/') =>
+  `${SITE}/og/${slugifyRoute(pathname)}.png`;
+
+// SpeakableSpecification targeting the main heading + page intro text. Both
+// selectors reference elements that actually exist in the prerendered DOM:
+// every content page renders a single <h1>, and its lead paragraph carries the
+// `.page-intro` class.
+export const SPEAKABLE = {
+  '@type': 'SpeakableSpecification',
+  cssSelector: ['h1', '.page-intro'],
+};
+
+// WebPage schema carrying a speakable specification, for content pages whose
+// page-level schema is otherwise a list/term-set/how-to rather than an Article.
+export const speakableWebPage = ({ name, description, url }) => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name,
+  ...(description ? { description } : {}),
+  url: absoluteUrl(url),
+  isPartOf: { '@type': 'WebSite', name: 'Lanos Logic', url: SITE },
+  speakable: SPEAKABLE,
+});
+
 // Convert a human-readable date (e.g. "May 13, 2026") to an ISO 8601 calendar
 // date (YYYY-MM-DD) for schema.org date fields. Uses local date components to
 // avoid UTC off-by-one for date-only values. Returns the original string if it

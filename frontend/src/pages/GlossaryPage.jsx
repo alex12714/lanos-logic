@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { glossaryTerms } from '../data/glossaryData';
-import { breadcrumb, definedTermSet } from '../lib/seo';
+import { breadcrumb, definedTermSet, speakableWebPage } from '../lib/seo';
 
 const GlossaryPage = () => {
   const jsonLd = [
@@ -19,6 +19,12 @@ const GlossaryPage = () => {
         'Clear, answer-first definitions of the core AI automation and cybersecurity terms used by Lanos Logic — from AI agents and RAG to BPMN and penetration testing.',
       url: '/glossary',
       items: glossaryTerms,
+    }),
+    speakableWebPage({
+      name: 'AI Automation Glossary — Key Terms Explained | Lanos Logic',
+      description:
+        'A plain-English glossary of AI automation and cybersecurity terms: AI agents, voice AI, vector databases, RAG, MCP, BPMN, document automation, penetration testing and more.',
+      url: '/glossary',
     }),
   ];
 
@@ -45,7 +51,7 @@ const GlossaryPage = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             AI Automation <span className="text-amber-400">Glossary</span>
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="page-intro text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
             Clear, plain-English definitions of the core terms behind AI agents,
             automation, and security. Each entry is a self-contained answer you
             can use to understand exactly what Lanos Logic builds.
