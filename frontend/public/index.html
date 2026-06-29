@@ -4,6 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#0a0a12" />
+    <!-- Resource hints: warm up the only third-party origins this app talks to.
+         PostHog (analytics array.js + ingest) loads on every page, so preconnect.
+         YouTube embeds appear only on some pages (Book / case studies), so the
+         lighter dns-prefetch avoids opening unused sockets on other routes.
+         Fonts are system-only (no web-font origin) — nothing to preconnect. -->
+    <link rel="preconnect" href="https://us-assets.i.posthog.com" crossorigin />
+    <link rel="preconnect" href="https://us.i.posthog.com" crossorigin />
+    <link rel="dns-prefetch" href="https://us-assets.i.posthog.com" />
+    <link rel="dns-prefetch" href="https://us.i.posthog.com" />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="dns-prefetch" href="https://i.ytimg.com" />
     <!-- Per-route <title>, description, canonical, og:title/description/url/type and
          twitter:title/description are rendered by the React <Seo> component
          (React 19 hoists document metadata into <head>). Only constant tags live here. -->
