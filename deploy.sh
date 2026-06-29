@@ -30,8 +30,11 @@ if [ -d "$SITE_DIR/repo/frontend" ]; then
     /usr/bin/yarn build >> $LOG 2>&1
 
     echo "[$(date)] Copying build to html..." >> $LOG
-    rm -rf $SITE_DIR/html/*
-    cp -r build/* $SITE_DIR/html/
+    # Clear regular + dotfiles, and copy with `build/.` so dot-dirs like
+    # .well-known/ are included (plain `build/*` / `html/*` skip dotfiles,
+    # which previously froze .well-known/ at its first-deploy contents).
+    rm -rf $SITE_DIR/html/* $SITE_DIR/html/.[!.]*
+    cp -a build/. $SITE_DIR/html/
 
     echo "[$(date)] Removing Emergent badge..." >> $LOG
     sed -i 's|<script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>||g' $SITE_DIR/html/index.html
