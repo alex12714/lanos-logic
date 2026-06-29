@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Send, User, Building2, MessageSquare, Clock, ArrowRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
+import FaqSection from '../components/common/FaqSection';
 import { ORG, breadcrumb } from '../lib/seo';
 import { Button } from '../components/ui/button';
+import { contactFaqs } from '../data/faqData';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import {
@@ -299,6 +301,12 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FaqSection
+        faqs={contactFaqs}
+        subheading="Answers to common questions about reaching and working with Lanos Logic."
+      />
 
       {/* Map Section Placeholder */}
       <section className="relative py-16 overflow-hidden">

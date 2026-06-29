@@ -162,3 +162,162 @@ export const getIndustryFaqs = (industry) => [
     a: 'Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.',
   },
 ];
+
+// Build accurate FAQs from a case study's own data (title, description, stats,
+// platforms, category, country, year, delivery time). Everything is drawn from
+// the case study record — no invented figures — so the answers always match the
+// visible page. Phrased to mirror how people ask AI assistants about a project.
+const caseStudyResults = (caseStudy) => {
+  if (!Array.isArray(caseStudy.stats) || caseStudy.stats.length === 0) {
+    return '';
+  }
+  return caseStudy.stats
+    .map((stat) => `${stat.value} ${stat.label}`.trim())
+    .filter(Boolean)
+    .join(', ');
+};
+
+export const getCaseStudyFaqs = (caseStudy) => {
+  const faqs = [];
+
+  faqs.push({
+    q: `What did Lanos Logic build in the "${caseStudy.title}" project?`,
+    a: caseStudy.description,
+  });
+
+  const results = caseStudyResults(caseStudy);
+  if (results) {
+    faqs.push({
+      q: 'What results did this automation deliver?',
+      a: `Key outcomes from this project: ${results}.`,
+    });
+  }
+
+  if (Array.isArray(caseStudy.platforms) && caseStudy.platforms.length) {
+    faqs.push({
+      q: 'Which platforms and tools powered this solution?',
+      a: `This ${
+        caseStudy.category || 'automation'
+      } project was built using ${list(caseStudy.platforms)}.`,
+    });
+  }
+
+  // Delivery / client context, assembled only from fields that exist.
+  const contextParts = [];
+  if (caseStudy.daysToComplete) {
+    contextParts.push(
+      `delivered in ${caseStudy.daysToComplete} ${
+        caseStudy.daysToComplete === 1 ? 'day' : 'days'
+      }`
+    );
+  }
+  if (caseStudy.country) contextParts.push(`for a client in ${caseStudy.country}`);
+  if (caseStudy.year) contextParts.push(`in ${caseStudy.year}`);
+  if (contextParts.length) {
+    const sentence =
+      contextParts.join(', ').charAt(0).toUpperCase() +
+      contextParts.join(', ').slice(1);
+    faqs.push({
+      q: 'How long did the project take and where was the client based?',
+      a: `${sentence}.`,
+    });
+  }
+
+  faqs.push({
+    q: 'Can Lanos Logic build something similar for my business?',
+    a: `Yes. Projects like this start with a free discovery call where we map your processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.${
+      caseStudy.category
+        ? ` We have delivered automation across ${caseStudy.category} and many other sectors.`
+        : ''
+    }`,
+  });
+
+  return faqs;
+};
+
+// Hand-written, accurate FAQs for individual blog posts, keyed by slug. Answers
+// are drawn from the post's own content so they are factual and quotable. Posts
+// without a curated set fall back to a concise summary-based FAQ.
+const BLOG_FAQS = {
+  'we-now-offer-cybersecurity-services': [
+    {
+      q: 'What cybersecurity services does Lanos Logic offer?',
+      a: 'Lanos Logic offers three interconnected enterprise cybersecurity services: Security Vulnerability Scanning (continuous identification of known weaknesses), Penetration Testing (authorised simulated attacks by certified security engineers), and Systems Hardening (proactive configuration hardening to reduce attack surface).',
+    },
+    {
+      q: 'What is the difference between vulnerability scanning and penetration testing?',
+      a: 'Vulnerability scanning is the continuous, automated process of identifying known weaknesses across web apps, APIs, and cloud infrastructure, with CVSS-scored findings mapped to business risk. Penetration testing goes further: it is an authorised, simulated attack by certified engineers who think like adversaries, covering authentication bypass, injection attacks, broken access control, and business logic flaws.',
+    },
+    {
+      q: 'Which security standards and frameworks does Lanos Logic follow?',
+      a: 'Engagements are grounded in recognised standards: the OWASP Top 10, WSTG, and ASVS for application security; the NIST Cybersecurity Framework (CSF 2.0); CIS Controls v8 and CIS Benchmarks for hardening; and MITRE ATT&CK for threat modelling. Reports are accepted as evidence for SOC 2 Type II, ISO 27001, PCI-DSS, and HIPAA audits.',
+    },
+    {
+      q: 'Who are these cybersecurity services for?',
+      a: 'They are designed for organisations that have built real systems and now need to protect them — SaaS companies approaching their first SOC 2 audit, fintech and healthtech startups handling regulated data, enterprises integrating AI into customer-facing workflows, and government contractors requiring FedRAMP-aligned security posture.',
+    },
+    {
+      q: 'How do I get started with a security engagement?',
+      a: 'Every security engagement begins with a free 30-minute scoping call where Lanos Logic maps your digital estate, understands your compliance obligations, and identifies which service delivers the highest immediate risk reduction. A risk assessment is returned within 48 hours.',
+    },
+  ],
+};
+
+export const getBlogFaqs = (post) => {
+  if (BLOG_FAQS[post.slug]) return BLOG_FAQS[post.slug];
+  if (!post.summary) return [];
+  return [
+    {
+      q: `What is "${post.title}" about?`,
+      a: post.summary,
+    },
+  ];
+};
+
+// Static, accurate FAQs for the About page — drawn from real company facts.
+export const aboutFaqs = [
+  {
+    q: 'What does Lanos Logic do?',
+    a: 'Lanos Logic is an AI automation company that helps businesses transform their operations through intelligent automation — AI agents, voice AI, document and process automation, vector databases, and custom mobile apps — plus enterprise cybersecurity. Solutions are delivered by a team of AI and automation experts.',
+  },
+  {
+    q: 'Where is Lanos Logic based and which regions does it serve?',
+    a: 'Lanos Logic is headquartered at 24 E Washington St Suite 875, Chicago, IL 60602, USA, and serves businesses across the United States, United Kingdom, and globally via remote delivery.',
+  },
+  {
+    q: 'What are Lanos Logic’s core values?',
+    a: 'Lanos Logic is mission-driven (helping businesses harness AI to achieve their goals), client-focused (every solution is tailored to the client’s unique needs), committed to excellence in everything from code to customer service, and focused on innovation by staying at the forefront of AI technology.',
+  },
+  {
+    q: 'How does Lanos Logic approach a new automation project?',
+    a: 'Lanos Logic follows a 3-phase process: Analyze (plan and blueprint business processes using BPMN), Prepare (refine and align processes with future-state planning), and Implement (deploy automations that deliver immediate, measurable results).',
+  },
+  {
+    q: 'Do I need an in-house engineering team to work with Lanos Logic?',
+    a: 'No. Lanos Logic maps your existing processes, designs the automation, builds it, and provides monitoring and support — so you get results without needing an in-house engineering team.',
+  },
+];
+
+// Static, accurate FAQs for the Contact page — drawn from real contact details.
+export const contactFaqs = [
+  {
+    q: 'How do I contact Lanos Logic?',
+    a: 'You can email hello@lanos-logic.com, call +1 (518) 864 3528 in the US or +44 1313 813160 in the UK, or use the contact form on this page. Business hours are 9:00 AM to 6:00 PM, Monday to Friday (CST).',
+  },
+  {
+    q: 'How do I book a free consultation with Lanos Logic?',
+    a: 'Use the embedded calendar on this page to schedule a free 30-minute discovery call with the team, or visit the Book page to choose between a Discovery Call and a deeper Business Analysis session.',
+  },
+  {
+    q: 'How quickly will Lanos Logic respond to my enquiry?',
+    a: 'The team responds to enquiries submitted through the contact form during business hours (9:00 AM to 6:00 PM CST, Monday to Friday). For the fastest path to a tailored recommendation, book a discovery call directly from the calendar.',
+  },
+  {
+    q: 'Is the discovery call free and is there any commitment?',
+    a: 'Yes — the discovery call is free and carries no commitment. It is a chance to understand your business challenges, explore automation opportunities, and get expert recommendations tailored to your needs.',
+  },
+  {
+    q: 'Where is Lanos Logic located?',
+    a: 'Lanos Logic is located at 24 E Washington St Suite 875, Chicago, IL 60602, USA, and works with clients across the US, UK, and worldwide.',
+  },
+];

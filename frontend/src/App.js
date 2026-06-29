@@ -22,6 +22,7 @@ import TermsOfServicePage from './pages/TermsOfServicePage';
 import BookPage from './pages/BookPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
+import GlossaryPage from './pages/GlossaryPage';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route path="/book" element={<BookPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/glossary" element={<GlossaryPage />} />
           </Routes>
         </BookingProvider>
       </BrowserRouter>

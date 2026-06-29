@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Settings, Calendar, CheckCircle, Users, FileText, TestTube, ArrowRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
-import { breadcrumb } from '../lib/seo';
+import { breadcrumb, youTubeVideoObject } from '../lib/seo';
 import { Button } from '../components/ui/button';
 import {
   Dialog,
@@ -54,10 +54,17 @@ const BookPage = () => {
         title="Book a Free Discovery Call — Business Analysis & BPMN | Lanos Logic"
         description="Book a free discovery call with Lanos Logic. Get a BPMN process blueprint, business analysis, and a clear, production-ready path to AI automation."
         path="/book"
-        jsonLd={breadcrumb([
-          { name: 'Home', path: '/' },
-          { name: 'Book a Call', path: '/book' },
-        ])}
+        jsonLd={[
+          breadcrumb([
+            { name: 'Home', path: '/' },
+            { name: 'Book a Call', path: '/book' },
+          ]),
+          youTubeVideoObject('https://www.youtube.com/embed/9fFQA-JOXA0', {
+            name: 'What Is Business Analytics? | Business: Explained',
+            description:
+              'An educational walkthrough of the fundamentals of business analysis and how it can transform business operations — featured on the Lanos Logic booking page to explain what a Business Analysis session covers.',
+          }),
+        ]}
       />
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 overflow-hidden">

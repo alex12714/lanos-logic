@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Users, Award, Zap } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
+import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { teamMembers, companyStats } from '../data/mock';
 import { SITE, ORG, breadcrumb } from '../lib/seo';
+import { aboutFaqs } from '../data/faqData';
 
 const AboutPage = () => {
   const values = [
@@ -206,11 +208,17 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FaqSection
+        faqs={aboutFaqs}
+        subheading="Answers to common questions about Lanos Logic and how we work."
+      />
+
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Work With Us?
