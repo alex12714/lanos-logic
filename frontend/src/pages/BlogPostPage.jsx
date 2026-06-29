@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { blogPosts } from '../data/mock';
-import { SITE, ORG, breadcrumb } from '../lib/seo';
+import { SITE, ORG, breadcrumb, toISODate } from '../lib/seo';
 
 const categoryColors = {
   Security: 'bg-red-500/20 text-red-400 border-red-500/30',
@@ -36,6 +36,8 @@ const BlogPostPage = () => {
     );
   }
 
+  const publishedISO = toISODate(post.date);
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -44,8 +46,16 @@ const BlogPostPage = () => {
       description: post.summary,
       articleSection: post.category,
       keywords: post.tags,
-      author: { '@type': 'Person', name: post.author, jobTitle: post.authorRole },
+      author: {
+        '@type': 'Person',
+        name: post.author,
+        ...(post.authorRole ? { jobTitle: post.authorRole } : {}),
+        worksFor: { '@type': 'Organization', name: 'Lanos Logic' },
+      },
       publisher: ORG,
+      ...(publishedISO
+        ? { datePublished: publishedISO, dateModified: publishedISO }
+        : {}),
       mainEntityOfPage: `${SITE}/blog/${post.slug}`,
       url: `${SITE}/blog/${post.slug}`,
     },

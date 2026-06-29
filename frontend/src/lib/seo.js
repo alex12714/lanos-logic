@@ -9,10 +9,28 @@ export const ORG = {
   '@type': 'Organization',
   name: 'Lanos Logic',
   url: SITE,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${SITE}/icon.svg`,
+  },
 };
 
 export const absoluteUrl = (path = '/') =>
   path.startsWith('http') ? path : `${SITE}${path}`;
+
+// Convert a human-readable date (e.g. "May 13, 2026") to an ISO 8601 calendar
+// date (YYYY-MM-DD) for schema.org date fields. Uses local date components to
+// avoid UTC off-by-one for date-only values. Returns the original string if it
+// cannot be parsed, and undefined for empty input (dropped by JSON.stringify).
+export const toISODate = (value) => {
+  if (!value) return undefined;
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return value;
+  const year = parsed.getFullYear();
+  const month = String(parsed.getMonth() + 1).padStart(2, '0');
+  const day = String(parsed.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
 
 // BreadcrumbList from [{ name, path }] items.
 export const breadcrumb = (items) => ({
