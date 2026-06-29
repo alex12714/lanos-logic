@@ -14,7 +14,6 @@ import TestimonialsSection from '../components/home/TestimonialsSection';
 import CTASection from '../components/home/CTASection';
 import ContactFormSection from '../components/home/ContactFormSection';
 import { homeFaqs } from '../data/faqData';
-import { testimonials } from '../data/mock';
 import { ORG } from '../lib/seo';
 
 const howToSchema = {
@@ -45,32 +44,11 @@ const howToSchema = {
   ],
 };
 
-// Organization schema carrying real client testimonials as Review items.
-// Conservative by design: each review uses only the author name and review body
-// already present in the repo. No ratingValue and no aggregateRating are added,
-// because no numeric ratings exist in the source data.
-const organizationReviewSchema = {
-  '@context': 'https://schema.org',
-  ...ORG,
-  review: testimonials.map((testimonial) => ({
-    '@type': 'Review',
-    reviewBody: testimonial.content,
-    author: {
-      '@type': 'Person',
-      name: testimonial.author,
-      ...(testimonial.role ? { jobTitle: testimonial.role } : {}),
-    },
-    ...(testimonial.company
-      ? {
-          publisher: {
-            '@type': 'Organization',
-            name: testimonial.company,
-          },
-        }
-      : {}),
-    itemReviewed: { '@type': 'Organization', name: ORG.name },
-  })),
-};
+// NOTE: Review schema intentionally NOT emitted. The testimonials in mock.js
+// read as seed/placeholder data (generic company names, no verifiable source);
+// publishing them as Review structured data would be misleading and risks
+// Google review-spam penalties. Re-add real Reviews (with provenance) only
+// once genuine, attributable client testimonials are available.
 
 const HomePage = () => {
   return (
@@ -79,7 +57,7 @@ const HomePage = () => {
         title="Lanos Logic — Strategic AI Automation Solutions for Modern Businesses"
         description="Lanos Logic builds AI agents, voice AI, document and process automation, vector databases, and mobile apps that help companies automate operations and scale efficiently. Book a free discovery call."
         path="/"
-        jsonLd={[howToSchema, organizationReviewSchema]}
+        jsonLd={[howToSchema]}
       />
       <HeroSection />
       <AIToolsSection />
