@@ -80,7 +80,11 @@ const PartnersSection = () => {
                 <div className="w-16 h-16 rounded-xl bg-white/5 flex items-center justify-center overflow-hidden group-hover:bg-white/10 transition-all duration-300 group-hover:scale-110">
                   <img
                     src={platform.logo}
-                    alt={platform.name}
+                    alt={`${platform.name} platform logo`}
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    decoding="async"
                     className="w-10 h-10 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                     onError={(e) => {
                       e.target.style.display = 'none';

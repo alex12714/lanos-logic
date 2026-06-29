@@ -79,8 +79,12 @@ const AIToolsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-3xl blur-3xl" />
             <div className="relative bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-3xl p-8 overflow-hidden">
               <img
-                src="/claude-ai-showcase.png"
-                alt="Claude AI Showcase"
+                src="/claude-ai-showcase.webp"
+                alt="Claude AI conversational agent powering Lanos Logic automation solutions"
+                width="1024"
+                height="675"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-xl shadow-2xl"
                 onError={(e) => {
                   e.target.style.display = 'none';

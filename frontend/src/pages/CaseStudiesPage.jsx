@@ -95,7 +95,11 @@ const CaseStudiesPage = () => {
                 <div className="relative aspect-video overflow-hidden">
                   <img
                     src={study.image}
-                    alt={study.title}
+                    alt={`${study.title} — AI automation case study by Lanos Logic`}
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     onError={(e) => {
                       e.target.parentElement.innerHTML = `

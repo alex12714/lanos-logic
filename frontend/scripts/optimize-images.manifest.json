@@ -1,0 +1,198 @@
+[
+  {
+    "src": "/make-logo.png",
+    "webp": "/make-logo.webp",
+    "oldSize": 50240,
+    "newSize": 19146,
+    "written": true
+  },
+  {
+    "src": "/airtable-logo.jpg",
+    "webp": "/airtable-logo.webp",
+    "oldSize": 11876,
+    "newSize": 4790,
+    "written": true
+  },
+  {
+    "src": "/docusign-logo-new.png",
+    "webp": "/docusign-logo-new.webp",
+    "oldSize": 13420,
+    "newSize": 28756,
+    "written": false
+  },
+  {
+    "src": "/miro-logo.jpg",
+    "webp": "/miro-logo.webp",
+    "oldSize": 17670,
+    "newSize": 7188,
+    "written": true
+  },
+  {
+    "src": "/gohighlevel-logo-new.jpg",
+    "webp": "/gohighlevel-logo-new.webp",
+    "oldSize": 6371,
+    "newSize": 3330,
+    "written": true
+  },
+  {
+    "src": "/clickup-logo.png",
+    "webp": "/clickup-logo.webp",
+    "oldSize": 27172,
+    "newSize": 31242,
+    "written": false
+  },
+  {
+    "src": "/claude-logo.png",
+    "webp": "/claude-logo.webp",
+    "oldSize": 142791,
+    "newSize": 13678,
+    "written": true
+  },
+  {
+    "src": "/vectorshift-logo-new.png",
+    "webp": "/vectorshift-logo-new.webp",
+    "oldSize": 23254,
+    "newSize": 6056,
+    "written": true
+  },
+  {
+    "src": "/flutter-logo.jpg",
+    "webp": "/flutter-logo.webp",
+    "oldSize": 5045,
+    "newSize": 2512,
+    "written": true
+  },
+  {
+    "src": "/twilio-logo.png",
+    "webp": "/twilio-logo.webp",
+    "oldSize": 104845,
+    "newSize": 49982,
+    "written": true
+  },
+  {
+    "src": "/stripe-logo.png",
+    "webp": "/stripe-logo.webp",
+    "oldSize": 26803,
+    "newSize": 12316,
+    "written": true
+  },
+  {
+    "src": "/vapi-logo.png",
+    "webp": "/vapi-logo.webp",
+    "oldSize": 76635,
+    "newSize": 3988,
+    "written": true
+  },
+  {
+    "src": "/case-study-marketing.png",
+    "webp": "/case-study-marketing.webp",
+    "oldSize": 712479,
+    "newSize": 48074,
+    "written": true
+  },
+  {
+    "src": "/case-study-sales.png",
+    "webp": "/case-study-sales.webp",
+    "oldSize": 751012,
+    "newSize": 45724,
+    "written": true
+  },
+  {
+    "src": "/case-study-real-estate.png",
+    "webp": "/case-study-real-estate.webp",
+    "oldSize": 842581,
+    "newSize": 35978,
+    "written": true
+  },
+  {
+    "src": "/case-study-saas.png",
+    "webp": "/case-study-saas.webp",
+    "oldSize": 11265,
+    "newSize": 4240,
+    "written": true
+  },
+  {
+    "src": "/case-study-legal.png",
+    "webp": "/case-study-legal.webp",
+    "oldSize": 11265,
+    "newSize": 4240,
+    "written": true
+  },
+  {
+    "src": "/claude-ai-showcase.png",
+    "webp": "/claude-ai-showcase.webp",
+    "oldSize": 552650,
+    "newSize": 17744,
+    "written": true
+  },
+  {
+    "src": "/team/daniel-roberts.jpg",
+    "webp": "/team/daniel-roberts.webp",
+    "oldSize": 71432,
+    "newSize": 47852,
+    "written": true
+  },
+  {
+    "src": "/team/alex-podbrezsky.jpg",
+    "webp": "/team/alex-podbrezsky.webp",
+    "oldSize": 138674,
+    "newSize": 54814,
+    "written": true
+  },
+  {
+    "src": "/team/adrian-ionescu.jpg",
+    "webp": "/team/adrian-ionescu.webp",
+    "oldSize": 107860,
+    "newSize": 46766,
+    "written": true
+  },
+  {
+    "src": "/team/leo-katz.jpg",
+    "webp": "/team/leo-katz.webp",
+    "oldSize": 93633,
+    "newSize": 48872,
+    "written": true
+  },
+  {
+    "src": "/team/alex-tanaka.jpg",
+    "webp": "/team/alex-tanaka.webp",
+    "oldSize": 200069,
+    "newSize": 109036,
+    "written": true
+  },
+  {
+    "src": "/team/anna-kowalska.jpg",
+    "webp": "/team/anna-kowalska.webp",
+    "oldSize": 104742,
+    "newSize": 43314,
+    "written": true
+  },
+  {
+    "src": "/team/sophia-mitchell.jpg",
+    "webp": "/team/sophia-mitchell.webp",
+    "oldSize": 106123,
+    "newSize": 50500,
+    "written": true
+  },
+  {
+    "src": "/team/marcus-halvorsen.jpg",
+    "webp": "/team/marcus-halvorsen.webp",
+    "oldSize": 81800,
+    "newSize": 33282,
+    "written": true
+  },
+  {
+    "src": "/team/daria-melnyk.jpg",
+    "webp": "/team/daria-melnyk.webp",
+    "oldSize": 107824,
+    "newSize": 46302,
+    "written": true
+  },
+  {
+    "src": "/team/erik-dahlgren.jpg",
+    "webp": "/team/erik-dahlgren.webp",
+    "oldSize": 79958,
+    "newSize": 35922,
+    "written": true
+  }
+]

@@ -17,18 +17,18 @@ export const heroFeatures = [
 ];
 
 export const platformLogos = [
-  { name: "Make.com", logo: "/make-logo.png" },
-  { name: "AirTable", logo: "/airtable-logo.jpg" },
+  { name: "Make.com", logo: "/make-logo.webp" },
+  { name: "AirTable", logo: "/airtable-logo.webp" },
   { name: "DocuSign", logo: "/docusign-logo-new.png" },
-  { name: "Miro", logo: "/miro-logo.jpg" },
-  { name: "GoHighLevel", logo: "/gohighlevel-logo-new.jpg" },
+  { name: "Miro", logo: "/miro-logo.webp" },
+  { name: "GoHighLevel", logo: "/gohighlevel-logo-new.webp" },
   { name: "ClickUp", logo: "/clickup-logo.png" },
-  { name: "Claude AI", logo: "/claude-logo.png" },
-  { name: "VectorShift", logo: "/vectorshift-logo-new.png" },
-  { name: "Flutter", logo: "/flutter-logo.jpg" },
-  { name: "Twilio", logo: "/twilio-logo.png" },
-  { name: "Stripe", logo: "/stripe-logo.png" },
-  { name: "VAPI", logo: "/vapi-logo.png" }
+  { name: "Claude AI", logo: "/claude-logo.webp" },
+  { name: "VectorShift", logo: "/vectorshift-logo-new.webp" },
+  { name: "Flutter", logo: "/flutter-logo.webp" },
+  { name: "Twilio", logo: "/twilio-logo.webp" },
+  { name: "Stripe", logo: "/stripe-logo.webp" },
+  { name: "VAPI", logo: "/vapi-logo.webp" }
 ];
 
 export const industries = [
@@ -338,7 +338,7 @@ export const caseStudies = [
     title: "Digital Marketing Agency Scales Operations by 300%",
     category: "Marketing Agency",
     description: "A digital marketing agency tripled its client capacity (a 300% increase) without adding staff by automating client reporting, content creation, and campaign management, cutting reporting time by 85% and lifting revenue by 45%.",
-    image: "/case-study-marketing.png",
+    image: "/case-study-marketing.webp",
     stats: [
       { value: "300%", label: "increase in client capacity" },
       { value: "85%", label: "reduction in reporting time" },
@@ -352,7 +352,7 @@ export const caseStudies = [
     title: "Sales Agency Boosts Conversion Rates with AI Outreach",
     category: "Sales Agency",
     description: "A B2B sales agency implemented AI-powered outreach and follow-up sequences, lifting response rates by 68% and conversion rates by 42% for a 3.5x return on its automation investment.",
-    image: "/case-study-sales.png",
+    image: "/case-study-sales.webp",
     stats: [
       { value: "68%", label: "increase in response rates" },
       { value: "42%", label: "higher conversion rate" },
@@ -366,7 +366,7 @@ export const caseStudies = [
     title: "Real Estate Firm Automates Client Journey",
     category: "Real Estate",
     description: "A real estate brokerage automated its entire client journey from lead qualification to closing, qualifying leads 75% faster, cutting paperwork time by 90%, and increasing closings by 28%.",
-    image: "/case-study-real-estate.png",
+    image: "/case-study-real-estate.webp",
     stats: [
       { value: "75%", label: "faster lead qualification" },
       { value: "90%", label: "reduction in paperwork time" },
@@ -380,7 +380,7 @@ export const caseStudies = [
     title: "Vector Database Architecture Powers Enterprise Knowledge Discovery",
     category: "Enterprise AI",
     description: "A Fortune 500 pharmaceutical company deployed a vector database architecture to unify 15+ years of research data, enabling semantic search across 2M+ documents and reducing research discovery time from weeks to minutes.",
-    image: "/case-study-saas.png",
+    image: "/case-study-saas.webp",
     stats: [
       { value: "95%", label: "faster research discovery" },
       { value: "2M+", label: "documents indexed semantically" },
@@ -394,7 +394,7 @@ export const caseStudies = [
     title: "Federal Agency Automates Compliance with AI Document Processing",
     category: "U.S. Government",
     description: "A federal regulatory agency implemented AI-powered document classification and compliance automation, processing 500K+ annual submissions with 99.2% accuracy while maintaining FedRAMP-aligned security standards.",
-    image: "/case-study-legal.png",
+    image: "/case-study-legal.webp",
     stats: [
       { value: "99.2%", label: "document classification accuracy" },
       { value: "500K+", label: "annual submissions processed" },
@@ -489,70 +489,70 @@ export const teamMembers = [
     name: "Daniel Roberts",
     role: "Head of Business Development",
     bio: "Daniel leads strategic partnerships and growth initiatives, helping clients identify automation opportunities that increase efficiency and revenue. Outside of work, he enjoys restoring vintage motorcycles and often spends weekends on long-distance road trips across Europe.",
-    image: "/team/daniel-roberts.jpg"
+    image: "/team/daniel-roberts.webp"
   },
   {
     id: 2,
     name: "Alex Podbrezsky",
     role: "Founder & AI Solutions Architect",
     bio: "Alex designs AI-powered systems that combine automation, messaging, and business workflows into scalable digital products. He is deeply interested in emerging technologies, futurism, and the intersection between AI, communication, and human behavior.",
-    image: "/team/alex-podbrezsky.jpg"
+    image: "/team/alex-podbrezsky.webp"
   },
   {
     id: 3,
     name: "Adrian Ionescu",
     role: "Lead Backend Developer",
     bio: "Adrian oversees backend architecture and infrastructure reliability across client and internal platforms. He is known for building custom electronics projects at home and has a personal workshop filled with experimental hardware prototypes.",
-    image: "/team/adrian-ionescu.jpg"
+    image: "/team/adrian-ionescu.webp"
   },
   {
     id: 4,
     name: "Leo Katz",
     role: "Product Strategy & Operations Manager",
     bio: "Leo coordinates product development and operational execution, ensuring projects move efficiently from concept to launch. He previously traveled through more than 20 countries while working remotely and enjoys studying behavioral psychology and negotiation.",
-    image: "/team/leo-katz.jpg"
+    image: "/team/leo-katz.webp"
   },
   {
     id: 5,
     name: "Alex Tanaka",
     role: "AI Integrations Engineer",
     bio: "Alex specializes in connecting AI models, APIs, and third-party platforms into unified automation ecosystems. In his free time, he practices digital music production and experiments with AI-generated audio tools.",
-    image: "/team/alex-tanaka.jpg"
+    image: "/team/alex-tanaka.webp"
   },
   {
     id: 6,
     name: "Anna Kowalska",
     role: "Client Success & Onboarding Specialist",
     bio: "Anna guides clients through onboarding and implementation, ensuring smooth adoption of automation systems and digital tools. She is passionate about languages and can comfortably communicate in four different languages.",
-    image: "/team/anna-kowalska.jpg"
+    image: "/team/anna-kowalska.webp"
   },
   {
     id: 7,
     name: "Sophia Mitchell",
     role: "Marketing Director",
     bio: "Sophia leads brand strategy, digital campaigns, and content positioning for both the agency and its clients. She has a background in documentary photography and often incorporates storytelling principles into marketing campaigns.",
-    image: "/team/sophia-mitchell.jpg"
+    image: "/team/sophia-mitchell.webp"
   },
   {
     id: 8,
     name: "Marcus Halvorsen",
     role: "Sales Director",
     bio: "Marcus manages sales strategy and client acquisition, helping businesses understand how AI automation can solve operational bottlenecks. He enjoys mountain hiking in Scandinavia and is known internally for turning client meetings into strategic brainstorming sessions.",
-    image: "/team/marcus-halvorsen.jpg"
+    image: "/team/marcus-halvorsen.webp"
   },
   {
     id: 9,
     name: "Daria Melnyk",
     role: "UI/UX Designer & Brand Creative",
     bio: "Daria creates intuitive interfaces and visual identities that make complex technology feel simple and engaging. She is inspired by modern architecture and frequently sketches interface concepts while visiting cafes and galleries.",
-    image: "/team/daria-melnyk.jpg"
+    image: "/team/daria-melnyk.webp"
   },
   {
     id: 10,
     name: "Erik Dahlgren",
     role: "DevOps & Infrastructure Engineer",
     bio: "Erik manages cloud infrastructure, deployment pipelines, and system scalability for high-availability applications. He is an avid sailing enthusiast and enjoys applying engineering precision both to systems architecture and open-water navigation.",
-    image: "/team/erik-dahlgren.jpg"
+    image: "/team/erik-dahlgren.webp"
   }
 ];
 
