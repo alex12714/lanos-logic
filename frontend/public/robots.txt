@@ -3,8 +3,8 @@
 
 User-agent: *
 Allow: /
-Disallow: /static/js/
-Disallow: /static/css/
+# JS/CSS bundles intentionally crawlable so JS-rendering engines
+# (Googlebot/Bingbot) can fetch and render the app.
 
 # Sitemap
 Sitemap: https://lanos-logic.com/sitemap.xml
@@ -67,4 +67,4 @@ User-agent: OAI-SearchBot
 Allow: /
 
 # LLM-readable content
-# See also: /llms.txt, /.well-known/llms.txt
+# See also: /llms.txt, /llms-full.txt, /.well-known/llms.txt

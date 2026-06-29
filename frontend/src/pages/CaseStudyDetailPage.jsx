@@ -2,9 +2,11 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ExternalLink, Calendar, MapPin, Clock, Layers } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { allCaseStudies } from '../data/caseStudiesData';
+import { SITE, ORG, breadcrumb } from '../lib/seo';
 
 const CaseStudyDetailPage = () => {
   const { caseStudyId } = useParams();
@@ -13,6 +15,12 @@ const CaseStudyDetailPage = () => {
   if (!caseStudy) {
     return (
       <Layout>
+        <Seo
+          title="Case Study Not Found | Lanos Logic"
+          description="The case study you are looking for doesn't exist or has been removed."
+          path={`/case-studies/${caseStudyId || ''}`}
+          noindex
+        />
         <div className="min-h-screen bg-[#0a0a12] flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Case Study Not Found</h1>
@@ -47,8 +55,41 @@ const CaseStudyDetailPage = () => {
     e.target.nextSibling?.classList.remove('hidden');
   };
 
+  const metaDescription =
+    caseStudy.description.length > 160
+      ? `${caseStudy.description.slice(0, 157)}...`
+      : caseStudy.description;
+
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: caseStudy.title,
+      description: caseStudy.description,
+      ...(caseStudy.image ? { image: `${SITE}${caseStudy.image}` } : {}),
+      articleSection: caseStudy.category,
+      author: ORG,
+      publisher: ORG,
+      ...(caseStudy.year ? { datePublished: String(caseStudy.year) } : {}),
+      mainEntityOfPage: `${SITE}/case-studies/${caseStudy.id}`,
+      url: `${SITE}/case-studies/${caseStudy.id}`,
+    },
+    breadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Case Studies', path: '/case-studies' },
+      { name: caseStudy.title, path: `/case-studies/${caseStudy.id}` },
+    ]),
+  ];
+
   return (
     <Layout>
+      <Seo
+        title={`${caseStudy.title} | Lanos Logic Case Study`}
+        description={metaDescription}
+        path={`/case-studies/${caseStudy.id}`}
+        type="article"
+        jsonLd={jsonLd}
+      />
       <div className="min-h-screen bg-[#0a0a12]">
         {/* Hero Section */}
         <section className="pt-32 pb-16">

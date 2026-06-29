@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Check, Database, ScanLine, ShieldAlert, ShieldCheck } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { services } from '../data/mock';
+import { SITE, breadcrumb } from '../lib/seo';
 
 const iconMap = {
   Bot: Bot,
@@ -21,8 +23,32 @@ const iconMap = {
 };
 
 const ServicesPage = () => {
+  const jsonLd = [
+    breadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Services', path: '/services' },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Lanos Logic AI Automation Services',
+      itemListElement: services.map((service, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: service.name,
+        url: `${SITE}${service.href}`,
+      })),
+    },
+  ];
+
   return (
     <Layout>
+      <Seo
+        title="AI Automation Services — AI Agents, Voice AI & Document Automation | Lanos Logic"
+        description="Explore Lanos Logic's AI automation services: AI agents, voice AI, vector databases, document and process automation, communication automation, mobile apps, analytics, and enterprise security."
+        path="/services"
+        jsonLd={jsonLd}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">

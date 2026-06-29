@@ -2,8 +2,12 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowRight, Check, ArrowLeft, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
+import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { services } from '../data/mock';
+import { breadcrumb, serviceSchema } from '../lib/seo';
+import { getServiceFaqs } from '../data/faqData';
 
 const iconMap = {
   Bot: Bot,
@@ -27,6 +31,12 @@ const ServiceDetailPage = () => {
   if (!service) {
     return (
       <Layout>
+        <Seo
+          title="Service Not Found | Lanos Logic"
+          description="The service you are looking for could not be found."
+          path={`/services/${serviceId || ''}`}
+          noindex
+        />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Service Not Found</h1>
@@ -40,9 +50,24 @@ const ServiceDetailPage = () => {
   }
 
   const IconComponent = iconMap[service.icon] || Bot;
+  const faqs = getServiceFaqs(service);
+  const jsonLd = [
+    serviceSchema(service),
+    breadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Services', path: '/services' },
+      { name: service.name, path: service.href },
+    ]),
+  ];
 
   return (
     <Layout>
+      <Seo
+        title={`${service.name} — AI Automation Service | Lanos Logic`}
+        description={service.shortDescription}
+        path={service.href}
+        jsonLd={jsonLd}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">
@@ -155,11 +180,17 @@ const ServiceDetailPage = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FaqSection
+        faqs={faqs}
+        subheading={`Common questions about ${service.name} from Lanos Logic.`}
+      />
+
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with {service.name}?

@@ -2,8 +2,10 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, ArrowRight, Tag, CheckCircle2 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { blogPosts } from '../data/mock';
+import { SITE, ORG, breadcrumb } from '../lib/seo';
 
 const categoryColors = {
   Security: 'bg-red-500/20 text-red-400 border-red-500/30',
@@ -18,6 +20,12 @@ const BlogPostPage = () => {
   if (!post) {
     return (
       <Layout>
+        <Seo
+          title="Article Not Found | Lanos Logic"
+          description="The article you are looking for could not be found."
+          path={`/blog/${slug || ''}`}
+          noindex
+        />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
@@ -28,8 +36,35 @@ const BlogPostPage = () => {
     );
   }
 
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.summary,
+      articleSection: post.category,
+      keywords: post.tags,
+      author: { '@type': 'Person', name: post.author, jobTitle: post.authorRole },
+      publisher: ORG,
+      mainEntityOfPage: `${SITE}/blog/${post.slug}`,
+      url: `${SITE}/blog/${post.slug}`,
+    },
+    breadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Blog', path: '/blog' },
+      { name: post.title, path: `/blog/${post.slug}` },
+    ]),
+  ];
+
   return (
     <Layout>
+      <Seo
+        title={`${post.title} | Lanos Logic Blog`}
+        description={post.summary}
+        path={`/blog/${post.slug}`}
+        type="article"
+        jsonLd={jsonLd}
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className={`absolute inset-0 bg-gradient-to-b ${post.heroGradient || 'from-[#0a0a12]'} to-[#0a0a12]`}>

@@ -9,6 +9,7 @@ import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import AboutPage from './pages/AboutPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
+import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
 import ContactPage from './pages/ContactPage';
 import IndustryPage from './pages/IndustryPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/industries/:industryId" element={<IndustryPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />

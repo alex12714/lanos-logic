@@ -2,12 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
+import { breadcrumb } from '../lib/seo';
 
 const PrivacyPolicyPage = () => {
   const lastUpdated = 'July 1, 2025';
 
   return (
     <Layout>
+      <Seo
+        title="Privacy Policy | Lanos Logic"
+        description="Read the Lanos Logic privacy policy: how we collect, use, and protect your data when you use our AI automation services and website."
+        path="/privacy"
+        jsonLd={breadcrumb([
+          { name: 'Home', path: '/' },
+          { name: 'Privacy Policy', path: '/privacy' },
+        ])}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">
