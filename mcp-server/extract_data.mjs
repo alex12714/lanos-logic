@@ -1,5 +1,13 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { createRequire } from 'module';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+// Resolve paths relative to this script so it runs both locally and on the
+// deploy host (previously hardcoded to /data/websites/... — host-only).
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const SRC_DIR = join(__dirname, '..', 'frontend', 'src', 'data');
+const OUT_FILE = join(__dirname, 'data.json');
 
 function makeCJS(path) {
   const src = readFileSync(path, 'utf-8')
@@ -11,8 +19,8 @@ function makeCJS(path) {
   return src;
 }
 
-writeFileSync('/tmp/mock_cjs.cjs', makeCJS('/data/websites/lanos-logic.com/repo/frontend/src/data/mock.js'));
-writeFileSync('/tmp/cs_cjs.cjs', makeCJS('/data/websites/lanos-logic.com/repo/frontend/src/data/caseStudiesData.js'));
+writeFileSync('/tmp/mock_cjs.cjs', makeCJS(join(SRC_DIR, 'mock.js')));
+writeFileSync('/tmp/cs_cjs.cjs', makeCJS(join(SRC_DIR, 'caseStudiesData.js')));
 
 const require = createRequire(import.meta.url);
 const mock = require('/tmp/mock_cjs.cjs');
@@ -56,7 +64,7 @@ const output = {
   allCaseStudies: allCS
 };
 
-writeFileSync('/data/websites/lanos-logic.com/mcp-server/data.json', JSON.stringify(output, null, 2));
+writeFileSync(OUT_FILE, JSON.stringify(output, null, 2));
 console.log('Services:', output.services.length);
 console.log('Industries:', output.industries.length);
 console.log('Team:', output.teamMembers.length);

@@ -51,68 +51,68 @@ Erik manages cloud infrastructure, deployment pipelines, and system scalability 
 ## AI Automation Services
 
 ### Vector Database Solutions
-Enterprise-grade vector database architecture for semantic search, knowledge retrieval, and AI-powered discovery across massive document collections.
+Vector database solutions store your documents as numerical embeddings so AI can search by meaning instead of exact keywords. Lanos Logic builds enterprise-grade vector database architecture for semantic search, knowledge retrieval, and retrieval-augmented generation (RAG) across massive document collections.
 → https://lanos-logic.com/services/vector-database-solutions
 
 ### AI Agents
-Intelligent virtual assistants that automate customer interactions, answer queries, and execute tasks 24/7.
+AI agents are software assistants that understand natural language to automate customer interactions, answer queries, and complete multi-step tasks 24/7. Lanos Logic builds AI agents that work around the clock and scale with demand without increasing headcount.
 → https://lanos-logic.com/services/ai-agents
 
 ### Voice AI Agents
-Natural-sounding voice assistants that handle calls, appointments, and customer support with human-like conversation.
+Voice AI agents are automated phone assistants that answer and place calls, qualify leads, book appointments, and handle customer support 24/7 with natural, human-like conversation. Lanos Logic builds voice AI agents that capture every call and hand off to a human team member when needed.
 → https://lanos-logic.com/services/voice-ai-agents
 
 ### Document Automation
-Intelligent document processing that extracts data, manages contracts, and automates approval workflows.
+Document automation uses AI to read documents, extract data, manage contracts, and run approval workflows automatically, turning hours of manual paperwork into minutes. Lanos Logic builds document automation with OCR, data extraction, e-signature, and compliance-ready audit trails.
 → https://lanos-logic.com/services/document-automation
 
 ### Process Automation
-End-to-end business process automation that eliminates repetitive tasks and streamlines operations.
+Process automation connects your systems and software to run repetitive business workflows end to end without manual effort. Lanos Logic designs process automation that eliminates repetitive tasks, integrates your existing tools, and streamlines operations.
 → https://lanos-logic.com/services/process-automation
 
 ### Social Media Automation
-AI-powered content creation, scheduling, and engagement management across all social platforms.
+Social media automation uses AI to create content, schedule posts, and manage engagement across every social platform from one workflow. Lanos Logic builds social media automation that keeps posting consistent and on-brand while tracking performance.
 → https://lanos-logic.com/services/social-media-automation
 
 ### Communication Automation
-Streamline customer communications with Twilio-powered SMS, voice, and messaging solutions.
+Communication automation delivers SMS, voice, and multi-channel messaging to customers automatically and at scale. Lanos Logic builds Twilio-powered communication automation for fast, personalized, two-way customer messaging.
 → https://lanos-logic.com/services/communication-automation
 
 ### Mobile App Development
-Custom mobile applications built with Flutter framework that integrate with your business automations.
+Mobile app development delivers custom iOS and Android applications from a single Flutter codebase that connect directly to your business automations. Lanos Logic builds cross-platform mobile apps with native performance and built-in automation integration.
 → https://lanos-logic.com/services/mobile-app-development
 
 ### Analytics & Insights
-Data-driven insights and performance tracking to optimize your automation strategies.
+Analytics and insights turn your automation data into real-time dashboards, performance metrics, and predictive analysis so you can measure ROI and act on it. Lanos Logic builds analytics that show what your automations deliver and where to improve.
 → https://lanos-logic.com/services/analytics-insights
 
 ### Security Vulnerability Scanning
-Automated and continuous vulnerability discovery using OWASP Top 10, CVE databases, and enterprise scanning platforms to identify exploitable weaknesses before attackers do.
+Security vulnerability scanning is the continuous, automated process of finding known weaknesses across your apps, APIs, and cloud before attackers do. Lanos Logic runs vulnerability scanning against the OWASP Top 10, daily-updated CVE databases, and enterprise scanning platforms to surface exploitable weaknesses.
 → https://lanos-logic.com/services/security-vulnerability-scanning
 
 ### Penetration Testing
-Adversarial simulation by certified ethical hackers using PTES, OWASP, and MITRE ATT&CK methodologies to expose exploitable vulnerabilities in web apps, APIs, networks, and cloud infrastructure.
+Penetration testing is an authorized, simulated cyberattack run by certified ethical hackers to expose exploitable vulnerabilities before real attackers find them. Lanos Logic pentests web apps, APIs, networks, and cloud infrastructure using PTES, OWASP, and MITRE ATT&CK methodologies.
 → https://lanos-logic.com/services/penetration-testing
 
 ### Systems Hardening
-Defense-in-depth hardening of cloud infrastructure, servers, and applications following CIS Benchmarks, NIST SP 800-123, and Zero Trust Architecture principles to minimize your attack surface.
+Systems hardening is the proactive work of configuring servers, cloud infrastructure, and applications securely to shrink your attack surface. Lanos Logic hardens systems with defense-in-depth controls following CIS Benchmarks, NIST SP 800-123, and Zero Trust Architecture principles.
 → https://lanos-logic.com/services/systems-hardening
 
 ## Industries Served
 
-- **Marketing Agencies**: Automate campaign management, content creation, analytics reporting, and client onboarding processes.
-- **Sales Agencies**: Streamline lead qualification, follow-ups, proposal generation, and sales pipeline management.
-- **E-commerce**: Enhance customer support, inventory management, order processing, and personalized marketing.
-- **Education**: Automate student enrollment, course management, grading, and personalized learning experiences.
-- **Healthcare**: Improve patient scheduling, billing, record management, and follow-up communications.
-- **Logistics**: Optimize route planning, shipment tracking, inventory management, and customer communications.
-- **Real Estate**: Automate lead qualification, property matching, document management, and client communications.
-- **Professional Services**: Streamline client onboarding, project management, billing, and reporting processes.
-- **Manufacturing**: Enhance production planning, quality control, inventory management, and supply chain operations.
-- **U.S. Government & Federal**: FedRAMP-aligned AI solutions for federal agencies, defense contractors, and state governments. Secure document processing, citizen services automation, and compliance workflows.
-- **Pharmaceutical**: AI-driven drug discovery support, clinical trial data management, regulatory submission automation, and pharmacovigilance with vector database-powered knowledge retrieval.
-- **Life Sciences**: Intelligent research data management, genomic data processing, lab automation integration, and AI-assisted literature review using semantic search and vector embeddings.
-- **Law & Attorneys**: AI-powered contract analysis, legal research automation, case management workflows, and document review using vector databases for precedent discovery and due diligence.
+- **Marketing Agencies**: AI automation helps marketing agencies automate campaign management, content creation, analytics reporting, and client onboarding. Lanos Logic builds automations that cut reporting time, scale content production, and nurture leads without adding headcount.
+- **Sales Agencies**: AI automation helps sales agencies streamline lead qualification, follow-ups, proposal generation, and pipeline management. Lanos Logic builds automations that qualify more leads and keep personalized follow-up sequences running automatically.
+- **E-commerce**: AI automation helps e-commerce businesses run 24/7 customer support, inventory management, order processing, and personalized marketing. Lanos Logic builds automations that answer customers instantly and recommend products at scale.
+- **Education**: AI automation helps education providers automate student enrollment, course management, grading, and personalized learning. Lanos Logic builds automations that streamline admissions and free educators from repetitive administrative work.
+- **Healthcare**: AI automation helps healthcare providers improve patient scheduling, billing, record management, and follow-up communications. Lanos Logic builds automations that reduce no-shows and streamline billing while keeping patient data secure.
+- **Logistics**: AI automation helps logistics companies optimize route planning, shipment tracking, inventory management, and customer notifications. Lanos Logic builds automations that deliver real-time tracking updates and optimized delivery routes.
+- **Real Estate**: AI automation helps real estate firms automate lead qualification, property matching, document management, and client communications. Lanos Logic builds automations that send property alerts and process documents without manual work.
+- **Professional Services**: AI automation helps professional services firms streamline client onboarding, project management, billing, and reporting. Lanos Logic builds automations for time tracking, document generation, and self-service client portals.
+- **Manufacturing**: AI automation helps manufacturers improve production planning, quality control, inventory management, and supply chain operations. Lanos Logic builds automations for predictive maintenance, automated quality checks, and supply chain optimization.
+- **U.S. Government & Federal**: AI automation helps U.S. federal agencies, defense contractors, and state governments process documents, automate citizen services, and run compliance workflows securely. Lanos Logic builds FedRAMP-aligned AI solutions with secure document classification and automated compliance reporting.
+- **Pharmaceutical**: AI automation helps pharmaceutical companies support drug discovery, manage clinical trial data, automate regulatory submissions, and run pharmacovigilance. Lanos Logic builds vector database-powered knowledge retrieval for accelerated submissions and AI-powered adverse event detection.
+- **Life Sciences**: AI automation helps life sciences organizations manage research data, process genomic data, integrate lab automation, and review literature faster. Lanos Logic builds semantic search and vector embeddings for AI-assisted research discovery and automated lab data integration.
+- **Law & Attorneys**: AI automation helps law firms and attorneys analyze contracts, automate legal research, manage cases, and review documents faster. Lanos Logic builds vector database-powered precedent discovery and automated due diligence that speed up contract review.
 
 ## Case Studies
 
