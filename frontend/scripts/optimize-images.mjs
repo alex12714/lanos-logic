@@ -50,6 +50,11 @@ const TARGETS = [
   'case-study-real-estate.png',
   'case-study-saas.png',
   'case-study-legal.png',
+  'case-study-ecommerce.png',
+  'case-study-education.png',
+  'case-study-healthcare.png',
+  'case-study-logistics.png',
+  'case-study-manufacturing.png',
   // AI showcase (components/home/AIToolsSection.jsx)
   'claude-ai-showcase.png',
   // Team photos (data/mock.js -> AboutPage)

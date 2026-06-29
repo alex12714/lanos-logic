@@ -119,6 +119,41 @@
     "written": true
   },
   {
+    "src": "/case-study-ecommerce.png",
+    "webp": "/case-study-ecommerce.webp",
+    "oldSize": 1281625,
+    "newSize": 144224,
+    "written": true
+  },
+  {
+    "src": "/case-study-education.png",
+    "webp": "/case-study-education.webp",
+    "oldSize": 11265,
+    "newSize": 4240,
+    "written": true
+  },
+  {
+    "src": "/case-study-healthcare.png",
+    "webp": "/case-study-healthcare.webp",
+    "oldSize": 777150,
+    "newSize": 25998,
+    "written": true
+  },
+  {
+    "src": "/case-study-logistics.png",
+    "webp": "/case-study-logistics.webp",
+    "oldSize": 11265,
+    "newSize": 4240,
+    "written": true
+  },
+  {
+    "src": "/case-study-manufacturing.png",
+    "webp": "/case-study-manufacturing.webp",
+    "oldSize": 11265,
+    "newSize": 4240,
+    "written": true
+  },
+  {
     "src": "/claude-ai-showcase.png",
     "webp": "/claude-ai-showcase.webp",
     "oldSize": 552650,
