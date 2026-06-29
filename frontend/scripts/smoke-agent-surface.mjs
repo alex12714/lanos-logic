@@ -123,6 +123,12 @@ async function checkLlmsFeed(path) {
     const { status, body } = await getText(path);
     if (status !== 200) return record(path, false, `HTTP ${status}`);
     if (!body || body.trim().length === 0) return record(path, false, "empty body");
+    // Guard against the nginx SPA catch-all: a missing file falls back to
+    // index.html (HTTP 200), which would otherwise be a false pass.
+    if (/<div id="root"|<!doctype html/i.test(body)) {
+      return record(path, false, "SPA shell served (file missing — nginx fallback)");
+    }
+    if (!/lanos logic/i.test(body)) return record(path, false, "missing expected content marker");
     record(path, true, `200, ${body.length}B`);
   } catch (e) {
     record(path, false, `request error: ${e.message}`);

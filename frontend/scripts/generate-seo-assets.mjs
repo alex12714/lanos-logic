@@ -496,7 +496,6 @@ function buildSitemap(data) {
     entries: [
       { path: '/', changefreq: 'weekly', priority: '1.0' },
       { path: '/services', changefreq: 'weekly', priority: '0.9' },
-      { path: '/industries', changefreq: 'monthly', priority: '0.8' },
       { path: '/case-studies', changefreq: 'weekly', priority: '0.9' },
       { path: '/about', changefreq: 'monthly', priority: '0.8' },
       { path: '/contact', changefreq: 'monthly', priority: '0.8' },
@@ -583,8 +582,8 @@ function buildRobots() {
   L.push('');
   L.push('User-agent: *');
   L.push('Allow: /');
-  L.push('Disallow: /static/js/');
-  L.push('Disallow: /static/css/');
+  L.push('# JS/CSS bundles intentionally crawlable so JS-rendering engines');
+  L.push('# (Googlebot/Bingbot) can fetch and render the app.');
   L.push('');
   L.push('# Sitemap');
   L.push('Sitemap: https://lanos-logic.com/sitemap.xml');
