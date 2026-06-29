@@ -44,6 +44,49 @@ export const breadcrumb = (items) => ({
   })),
 });
 
+// Extract a YouTube video id from common URL shapes (watch?v=, youtu.be/,
+// /embed/). Returns null when no id can be found.
+export const youTubeId = (url = '') => {
+  const match = String(url).match(
+    /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{6,})/
+  );
+  return match ? match[1] : null;
+};
+
+// VideoObject schema for an embedded YouTube video. Only honestly-sourceable
+// fields are populated: name, description, thumbnailUrl (YouTube's canonical
+// thumbnail), embedUrl and contentUrl. uploadDate is intentionally omitted when
+// it cannot be sourced (undefined keys are dropped by JSON.stringify).
+export const youTubeVideoObject = (url, { name, description, uploadDate } = {}) => {
+  const id = youTubeId(url);
+  if (!id) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+    embedUrl: `https://www.youtube.com/embed/${id}`,
+    contentUrl: `https://www.youtube.com/watch?v=${id}`,
+    ...(uploadDate ? { uploadDate } : {}),
+  };
+};
+
+// DefinedTermSet schema for a glossary. items: [{ term, definition }].
+export const definedTermSet = ({ name, description, url, items }) => ({
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTermSet',
+  name,
+  description,
+  url: absoluteUrl(url),
+  hasDefinedTerm: items.map((item) => ({
+    '@type': 'DefinedTerm',
+    name: item.term,
+    description: item.definition,
+    inDefinedTermSet: absoluteUrl(url),
+  })),
+});
+
 // Service schema for a service-detail page.
 export const serviceSchema = (service, { areaServed } = {}) => ({
   '@context': 'https://schema.org',

@@ -3,10 +3,12 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ExternalLink, Calendar, MapPin, Clock, Layers } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
+import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { allCaseStudies } from '../data/caseStudiesData';
-import { SITE, ORG, breadcrumb } from '../lib/seo';
+import { SITE, ORG, breadcrumb, youTubeVideoObject } from '../lib/seo';
+import { getCaseStudyFaqs } from '../data/faqData';
 
 const CaseStudyDetailPage = () => {
   const { caseStudyId } = useParams();
@@ -60,6 +62,23 @@ const CaseStudyDetailPage = () => {
       ? `${caseStudy.description.slice(0, 157)}...`
       : caseStudy.description;
 
+  const faqs = getCaseStudyFaqs(caseStudy);
+
+  // VideoObject schema for any embedded YouTube videos in the case study body.
+  // Only YouTube videos are included (thumbnail can be sourced honestly from
+  // YouTube); Loom embeds are skipped. uploadDate is omitted (not sourceable).
+  const videoObjects = Array.isArray(caseStudy.fullContent)
+    ? caseStudy.fullContent
+        .filter((section) => section.type === 'video' && section.url)
+        .map((section) =>
+          youTubeVideoObject(section.url, {
+            name: `${caseStudy.title} — project walkthrough`,
+            description: caseStudy.description,
+          })
+        )
+        .filter(Boolean)
+    : [];
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -79,6 +98,7 @@ const CaseStudyDetailPage = () => {
       { name: 'Case Studies', path: '/case-studies' },
       { name: caseStudy.title, path: `/case-studies/${caseStudy.id}` },
     ]),
+    ...videoObjects,
   ];
 
   return (
@@ -435,6 +455,12 @@ const CaseStudyDetailPage = () => {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FaqSection
+          faqs={faqs}
+          subheading={`Common questions about the ${caseStudy.title} project.`}
+        />
 
         {/* Related Case Studies */}
         {relatedStudies.length > 0 && (

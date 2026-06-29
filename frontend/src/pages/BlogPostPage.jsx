@@ -3,9 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, ArrowRight, Tag, CheckCircle2 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
+import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { blogPosts } from '../data/mock';
 import { SITE, ORG, breadcrumb, toISODate } from '../lib/seo';
+import { getBlogFaqs } from '../data/faqData';
 
 const categoryColors = {
   Security: 'bg-red-500/20 text-red-400 border-red-500/30',
@@ -37,6 +39,7 @@ const BlogPostPage = () => {
   }
 
   const publishedISO = toISODate(post.date);
+  const faqs = getBlogFaqs(post);
 
   const jsonLd = [
     {
@@ -193,6 +196,14 @@ const BlogPostPage = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {faqs.length > 0 && (
+        <FaqSection
+          faqs={faqs}
+          subheading="Answers to common questions about this article and our services."
+        />
+      )}
     </Layout>
   );
 };

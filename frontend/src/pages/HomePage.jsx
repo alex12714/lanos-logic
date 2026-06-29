@@ -14,6 +14,8 @@ import TestimonialsSection from '../components/home/TestimonialsSection';
 import CTASection from '../components/home/CTASection';
 import ContactFormSection from '../components/home/ContactFormSection';
 import { homeFaqs } from '../data/faqData';
+import { testimonials } from '../data/mock';
+import { ORG } from '../lib/seo';
 
 const howToSchema = {
   '@context': 'https://schema.org',
@@ -43,6 +45,33 @@ const howToSchema = {
   ],
 };
 
+// Organization schema carrying real client testimonials as Review items.
+// Conservative by design: each review uses only the author name and review body
+// already present in the repo. No ratingValue and no aggregateRating are added,
+// because no numeric ratings exist in the source data.
+const organizationReviewSchema = {
+  '@context': 'https://schema.org',
+  ...ORG,
+  review: testimonials.map((testimonial) => ({
+    '@type': 'Review',
+    reviewBody: testimonial.content,
+    author: {
+      '@type': 'Person',
+      name: testimonial.author,
+      ...(testimonial.role ? { jobTitle: testimonial.role } : {}),
+    },
+    ...(testimonial.company
+      ? {
+          publisher: {
+            '@type': 'Organization',
+            name: testimonial.company,
+          },
+        }
+      : {}),
+    itemReviewed: { '@type': 'Organization', name: ORG.name },
+  })),
+};
+
 const HomePage = () => {
   return (
     <Layout>
@@ -50,7 +79,7 @@ const HomePage = () => {
         title="Lanos Logic — Strategic AI Automation Solutions for Modern Businesses"
         description="Lanos Logic builds AI agents, voice AI, document and process automation, vector databases, and mobile apps that help companies automate operations and scale efficiently. Book a free discovery call."
         path="/"
-        jsonLd={howToSchema}
+        jsonLd={[howToSchema, organizationReviewSchema]}
       />
       <HeroSection />
       <AIToolsSection />
