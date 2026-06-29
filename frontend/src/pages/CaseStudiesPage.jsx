@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { caseStudies } from '../data/mock';
+import { breadcrumb } from '../lib/seo';
 
 const CaseStudiesPage = () => {
   const [filter, setFilter] = useState('all');
@@ -24,6 +26,15 @@ const CaseStudiesPage = () => {
 
   return (
     <Layout>
+      <Seo
+        title="AI Automation Case Studies & Client Success Stories | Lanos Logic"
+        description="Real-world AI automation case studies from Lanos Logic across healthcare, government, legal, real estate, marketing, and more — with measurable results and ROI."
+        path="/case-studies"
+        jsonLd={breadcrumb([
+          { name: 'Home', path: '/' },
+          { name: 'Case Studies', path: '/case-studies' },
+        ])}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">

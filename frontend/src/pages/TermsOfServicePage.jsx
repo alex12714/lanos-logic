@@ -2,12 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
+import { breadcrumb } from '../lib/seo';
 
 const TermsOfServicePage = () => {
   const lastUpdated = 'July 1, 2025';
 
   return (
     <Layout>
+      <Seo
+        title="Terms of Service | Lanos Logic"
+        description="Review the Lanos Logic terms of service governing the use of our AI automation services, website, and related offerings."
+        path="/terms"
+        jsonLd={breadcrumb([
+          { name: 'Home', path: '/' },
+          { name: 'Terms of Service', path: '/terms' },
+        ])}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">

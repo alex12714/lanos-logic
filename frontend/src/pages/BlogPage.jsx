@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
 import { blogPosts } from '../data/mock';
+import { SITE, ORG, breadcrumb } from '../lib/seo';
 
 const categoryColors = {
   Security: 'bg-red-500/20 text-red-400 border-red-500/30',
@@ -11,8 +13,35 @@ const categoryColors = {
 };
 
 const BlogPage = () => {
+  const jsonLd = [
+    breadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'Blog', path: '/blog' },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: 'Lanos Logic Blog',
+      url: `${SITE}/blog`,
+      publisher: ORG,
+      blogPost: blogPosts.map((post) => ({
+        '@type': 'BlogPosting',
+        headline: post.title,
+        description: post.summary,
+        url: `${SITE}/blog/${post.slug}`,
+        author: { '@type': 'Person', name: post.author },
+      })),
+    },
+  ];
+
   return (
     <Layout>
+      <Seo
+        title="Lanos Logic Blog — AI Automation & Enterprise Security Insights"
+        description="Insights from Lanos Logic on AI automation, enterprise security, and the technology shaping modern business operations."
+        path="/blog"
+        jsonLd={jsonLd}
+      />
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse" />

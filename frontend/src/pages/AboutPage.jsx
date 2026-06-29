@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Users, Award, Zap } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { teamMembers, companyStats } from '../data/mock';
+import { SITE, ORG, breadcrumb } from '../lib/seo';
 
 const AboutPage = () => {
   const values = [
@@ -30,8 +32,30 @@ const AboutPage = () => {
     }
   ];
 
+  const jsonLd = [
+    breadcrumb([
+      { name: 'Home', path: '/' },
+      { name: 'About', path: '/about' },
+    ]),
+    ...teamMembers.map((member) => ({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: member.name,
+      jobTitle: member.role,
+      worksFor: ORG,
+      description: member.bio,
+      image: `${SITE}${member.image}`,
+    })),
+  ];
+
   return (
     <Layout>
+      <Seo
+        title="About Lanos Logic — AI Automation Experts & Our Team"
+        description="Meet the Lanos Logic team of AI and automation experts. Learn our story, values, and how we help businesses transform operations with intelligent automation."
+        path="/about"
+        jsonLd={jsonLd}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">

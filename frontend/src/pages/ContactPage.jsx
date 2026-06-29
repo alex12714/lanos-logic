@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Send, User, Building2, MessageSquare, Clock, ArrowRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
+import { ORG, breadcrumb } from '../lib/seo';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
@@ -96,6 +98,32 @@ const ContactPage = () => {
 
   return (
     <Layout>
+      <Seo
+        title="Contact Lanos Logic — Book a Free AI Automation Consultation"
+        description="Get in touch with Lanos Logic to discuss AI automation for your business. Book a free consultation and get a custom solution recommendation."
+        path="/contact"
+        jsonLd={[
+          breadcrumb([
+            { name: 'Home', path: '/' },
+            { name: 'Contact', path: '/contact' },
+          ]),
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact Lanos Logic',
+            url: 'https://lanos-logic.com/contact',
+            mainEntity: {
+              ...ORG,
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+1-518-864-3528',
+                email: 'hello@lanos-logic.com',
+                contactType: 'sales',
+              },
+            },
+          },
+        ]}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">

@@ -2,8 +2,12 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowRight, ArrowLeft, ChevronRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+import Seo from '../components/seo/Seo';
+import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { industries, services } from '../data/mock';
+import { SITE, ORG, breadcrumb } from '../lib/seo';
+import { getIndustryFaqs } from '../data/faqData';
 
 const IndustryPage = () => {
   const { industryId } = useParams();
@@ -12,6 +16,12 @@ const IndustryPage = () => {
   if (!industry) {
     return (
       <Layout>
+        <Seo
+          title="Industry Not Found | Lanos Logic"
+          description="The industry page you are looking for could not be found."
+          path={`/industries/${industryId || ''}`}
+          noindex
+        />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Industry Not Found</h1>
@@ -24,8 +34,33 @@ const IndustryPage = () => {
     );
   }
 
+  const faqs = getIndustryFaqs(industry);
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: `AI Automation for ${industry.name}`,
+      serviceType: 'AI Automation',
+      provider: ORG,
+      description: industry.description,
+      areaServed: ['US', 'GB', 'CA', 'AU', 'DE', 'FR', 'NL', 'IE', 'SG', 'AE'],
+      audience: { '@type': 'BusinessAudience', name: industry.name },
+      url: `${SITE}${industry.href}`,
+    },
+    breadcrumb([
+      { name: 'Home', path: '/' },
+      { name: industry.name, path: industry.href },
+    ]),
+  ];
+
   return (
     <Layout>
+      <Seo
+        title={`AI Automation for ${industry.name} | Lanos Logic`}
+        description={industry.description}
+        path={industry.href}
+        jsonLd={jsonLd}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]">
@@ -131,11 +166,17 @@ const IndustryPage = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FaqSection
+        faqs={faqs}
+        subheading={`How Lanos Logic applies AI automation to ${industry.name}.`}
+      />
+
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Transform Your {industry.name} Business?
