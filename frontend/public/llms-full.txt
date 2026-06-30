@@ -370,6 +370,8 @@ Our process starts with an audit of how AI systems see you today: which AI crawl
 
 Why it matters: if your competitors are the ones being cited in AI answers, you lose the buyer before they ever reach a search result or your homepage — and unlike a ranking you can watch, you never see it happen. GEO is also durable; the structured, well-explained content that earns citations keeps working as models update. Every engagement begins with a free discovery call and a visibility audit, is quoted as a fixed project price, and includes measurement of where AI engines mention your brand so we can close the gaps. Agentic SEO & GEO pairs naturally with our Vector Database Solutions and AI Agents work when you also want an assistant of your own grounded in the same content.
 
+We deliver this through the 5-Layer GEO Stack — the same system we run on our own website: (1) Crawl Access — make sure AI crawlers like GPTBot, ClaudeBot, PerplexityBot, Google-Extended and OAI-SearchBot can reach and read your site; (2) Machine Legibility — JSON-LD schema, an llms.txt / llms-full.txt knowledge base, and agent-native surfaces (MCP, agent.json) so models parse you cleanly; (3) Retrieval-Ready Content — self-contained, question-and-answer passages tuned for the hybrid lexical and semantic retrieval (Reciprocal Rank Fusion) that AI engines use to pick sources; (4) Authority & Citations — the entity consistency, citations, and mentions that make a model trust and repeat your brand; and (5) Visibility Monitoring — tracking where and how you are cited across ChatGPT, Claude, Perplexity, and Gemini so we can close the gaps.
+
 **Features:**
 - Generative & Answer Engine Optimization
 - llms.txt, Schema & AI Crawler Access
@@ -1376,7 +1378,9 @@ Daria creates intuitive interfaces and visual identities that make complex techn
 
 Erik manages cloud infrastructure, deployment pipelines, and system scalability for high-availability applications. He is an avid sailing enthusiast and enjoys applying engineering precision both to systems architecture and open-water navigation.
 
-## Engagement Process
+## The ROI-First Method (Engagement Process)
+
+Every engagement runs on the ROI-First Method — a three-phase approach (Analyze, Prepare, Implement) that targets your highest-return workflows first so each automation pays for itself before we move to the next.
 
 1. **Analyze** — Plan, analyze, and blueprint business processes using BPMN and documentation.
 2. **Prepare** — Refine and align processes with future state planning.

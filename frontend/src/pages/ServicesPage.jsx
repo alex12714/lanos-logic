@@ -129,6 +129,69 @@ const ServicesPage = () => {
         </div>
       </section>
 
+      {/* Pricing / How we work — transparent model + real ROI anchor */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Fixed-price, not hourly
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Every project is scoped on a free audit and quoted as a fixed price
+              up front — no open-ended hourly billing, no surprises. You only pay
+              for outcomes, and we build until you’re satisfied.
+            </p>
+          </div>
+
+          {/* Productized entry offer */}
+          <div className="bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-amber-500/20 rounded-3xl p-8 sm:p-10 mb-10">
+            <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 rounded-full px-4 py-1.5 mb-5">
+              <span className="text-amber-400 text-sm font-semibold">Start here</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+              The ROI-First Automation Sprint
+            </h3>
+            <p className="text-gray-400 leading-relaxed mb-6 max-w-3xl">
+              A focused first engagement: we pick your single highest-ROI workflow
+              from the free audit, build and ship it on a fixed price, and have it
+              live in 2–6 weeks. It’s the low-risk way to see results before
+              committing to a larger roadmap.
+            </p>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-full px-8 h-14 gap-2"
+              asChild
+            >
+              <Link to="/contact">
+                Get Your Free Automation Audit
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </Button>
+          </div>
+
+          {/* Real ROI anchor — pulled from case studies */}
+          <p className="text-center text-gray-500 text-sm mb-6">
+            What that investment returns — real results from real projects:
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {[
+              { value: '$147K', label: 'new revenue in 84 days (sales agency)' },
+              { value: '10,000+', label: 'contracts automated (law firm)' },
+              { value: '192 hrs', label: 'saved per month (medical testing co.)' },
+              { value: '80%', label: 'admin time cut (University of Minnesota)' },
+            ].map((s) => (
+              <div key={s.label} className="text-center">
+                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
+                  {s.value}
+                </div>
+                <div className="text-gray-400 text-xs mt-1 leading-snug">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />

@@ -239,6 +239,61 @@ const ServiceDetailPage = () => {
         </div>
       </section>
 
+      {/* The 5-Layer GEO Stack — only on the GEO service page */}
+      {isGeo && (
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                The 5-Layer GEO Stack
+              </h2>
+              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                Our repeatable system for getting a site cited by AI — the same
+                stack we run on this website.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                {
+                  name: 'Crawl Access',
+                  desc: 'Make sure the AI crawlers that feed answer engines — GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot — can actually reach and read your site.',
+                },
+                {
+                  name: 'Machine Legibility',
+                  desc: 'Structure your pages for machines: JSON-LD schema, an llms.txt / llms-full.txt knowledge base, and agent-native surfaces (MCP, agent.json) so models can parse you cleanly.',
+                },
+                {
+                  name: 'Retrieval-Ready Content',
+                  desc: 'Rewrite content into self-contained, question-and-answer passages tuned for the hybrid lexical + semantic retrieval (Reciprocal Rank Fusion) that AI engines use to choose sources.',
+                },
+                {
+                  name: 'Authority & Citations',
+                  desc: 'Build the entity consistency, citations, and mentions that make a model trust — and repeat — your brand as the answer.',
+                },
+                {
+                  name: 'Visibility Monitoring',
+                  desc: 'Track where and how you are cited across ChatGPT, Claude, Perplexity, and Gemini, and close the gaps that keep you out of generated answers.',
+                },
+              ].map((layer, i) => (
+                <div
+                  key={layer.name}
+                  className="flex items-start gap-5 bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl p-6"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 flex items-center justify-center">
+                    <span className="text-xl font-bold text-amber-400">{i + 1}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1">{layer.name}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{layer.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQ Section */}
       <FaqSection
         faqs={faqs}

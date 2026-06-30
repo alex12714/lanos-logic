@@ -13,12 +13,18 @@ const ProcessSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInUp className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 rounded-full px-4 py-2 mb-5">
+            <span className="text-amber-400 text-sm font-semibold tracking-wide">
+              The ROI-First Method™
+            </span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Our 3-Step Process in a Nutshell
+            We lead with ROI, not technology
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            We follow a proven methodology to implement AI solutions that deliver
-            measurable results.
+            The ROI-First Method is our three-phase approach — Analyze, Prepare,
+            Implement — that targets your highest-return workflows first, so every
+            automation pays for itself before we move to the next.
           </p>
         </FadeInUp>
 

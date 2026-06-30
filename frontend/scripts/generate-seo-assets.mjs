@@ -280,7 +280,11 @@ function buildLlmsTxt(data) {
   CLIENT_SUCCESS_METRICS.forEach((m) => L.push(`- ${m}`));
   L.push('');
 
-  L.push('## Our Process');
+  L.push('## The ROI-First Method (Our Process)');
+  L.push('');
+  L.push(
+    'Lanos Logic delivers every engagement with the ROI-First Method — a three-phase approach that targets the highest-return workflows first so each automation pays for itself before the next.'
+  );
   L.push('');
   PROCESS_STEPS.forEach((p, i) =>
     L.push(`${i + 1}. **${p.title}**: ${p.description}`)
@@ -483,7 +487,11 @@ function buildLlmsFullTxt(data) {
     L.push('');
   });
 
-  L.push('## Engagement Process');
+  L.push('## The ROI-First Method (Engagement Process)');
+  L.push('');
+  L.push(
+    'Every engagement runs on the ROI-First Method — a three-phase approach (Analyze, Prepare, Implement) that targets your highest-return workflows first so each automation pays for itself before we move to the next.'
+  );
   L.push('');
   PROCESS_STEPS.forEach((p, i) =>
     L.push(`${i + 1}. **${p.title}** — ${p.description}`)

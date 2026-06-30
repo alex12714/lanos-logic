@@ -218,7 +218,9 @@ Systems hardening is the proactive work of configuring servers, cloud infrastruc
 - 500+ automations built
 - 2M+ hours saved
 
-## Our Process
+## The ROI-First Method (Our Process)
+
+Lanos Logic delivers every engagement with the ROI-First Method — a three-phase approach that targets the highest-return workflows first so each automation pays for itself before the next.
 
 1. **Analyze**: Plan, analyze, and blueprint business processes using BPMN and documentation.
 2. **Prepare**: Refine and align processes with future state planning.
