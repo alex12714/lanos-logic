@@ -95,9 +95,10 @@ const CaseStudiesPage = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredStudies.map((study) => (
-              <div
+              <Link
                 key={study.id}
-                className="group bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/30 transition-all duration-500"
+                to={study.href}
+                className="group block bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/30 transition-all duration-500"
               >
                 {/* Image */}
                 <div className="relative aspect-video overflow-hidden">
@@ -155,15 +156,12 @@ const CaseStudiesPage = () => {
                     ))}
                   </div>
 
-                  <Link
-                    to={study.href}
-                    className="inline-flex items-center gap-2 text-amber-400 text-sm font-medium hover:text-amber-300 transition-colors group/link"
-                  >
+                  <span className="inline-flex items-center gap-2 text-amber-400 text-sm font-medium group-hover:text-amber-300 transition-colors">
                     Read Full Case Study
-                    <ArrowRight className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
