@@ -364,6 +364,8 @@ function buildLlmsTxt(data) {
   L.push('- Case Studies: https://lanos-logic.com/case-studies');
   L.push('- Contact: https://lanos-logic.com/contact');
   L.push('- Blog: https://lanos-logic.com/blog');
+  L.push('- Free Tools: https://lanos-logic.com/tools');
+  L.push('- AI Crawler Access Checker (free tool): https://lanos-logic.com/tools/ai-crawler-checker');
   L.push('- Book Consultation: https://lanos-logic.com/book');
   L.push('- LLM Knowledge Base (full): https://lanos-logic.com/llms-full.txt');
   L.push('');
@@ -572,6 +574,8 @@ function buildSitemap(data) {
       { path: '/book', changefreq: 'monthly', priority: '0.7' },
       { path: '/blog', changefreq: 'weekly', priority: '0.7' },
       { path: '/glossary', changefreq: 'monthly', priority: '0.6' },
+      { path: '/tools', changefreq: 'monthly', priority: '0.7' },
+      { path: '/tools/ai-crawler-checker', changefreq: 'monthly', priority: '0.7' },
       { path: '/privacy', changefreq: 'yearly', priority: '0.3' },
       { path: '/terms', changefreq: 'yearly', priority: '0.3' },
     ],

@@ -23,6 +23,8 @@ import BookPage from './pages/BookPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import GlossaryPage from './pages/GlossaryPage';
+import ToolsPage from './pages/ToolsPage';
+import AiCrawlerCheckerPage from './pages/AiCrawlerCheckerPage';
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/glossary" element={<GlossaryPage />} />
+            <Route path="/tools" element={<ToolsPage />} />
+            <Route path="/tools/ai-crawler-checker" element={<AiCrawlerCheckerPage />} />
           </Routes>
         </BookingProvider>
       </BrowserRouter>
