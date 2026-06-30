@@ -1,0 +1,21 @@
+services:
+  lanos-tools-api:
+    build: .
+    container_name: lanos-tools-api
+    restart: unless-stopped
+    networks:
+      - coolify
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=coolify
+      # HTTPS router, path-scoped so it never shadows the nginx site router.
+      - traefik.http.routers.lanostools-https.entrypoints=https
+      - traefik.http.routers.lanostools-https.rule=Host(`lanos-logic.com`) && PathPrefix(`/api/tools`)
+      - traefik.http.routers.lanostools-https.priority=200
+      - traefik.http.routers.lanostools-https.tls=true
+      - traefik.http.routers.lanostools-https.tls.certresolver=letsencrypt
+      - traefik.http.services.lanostools.loadbalancer.server.port=8090
+
+networks:
+  coolify:
+    external: true
