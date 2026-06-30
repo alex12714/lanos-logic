@@ -29,19 +29,26 @@ if [ -d "$SITE_DIR/repo/frontend" ]; then
     echo "[$(date)] Building React app (postbuild prerenders all routes)..." >> $LOG
     /usr/bin/yarn build >> $LOG 2>&1
 
-    echo "[$(date)] Copying build to html..." >> $LOG
-    # Clear regular + dotfiles, and copy with `build/.` so dot-dirs like
-    # .well-known/ are included (plain `build/*` / `html/*` skip dotfiles,
-    # which previously froze .well-known/ at its first-deploy contents).
-    rm -rf $SITE_DIR/html/* $SITE_DIR/html/.[!.]*
-    cp -a build/. $SITE_DIR/html/
+    # Prerender-success gate: only replace the live html if the build produced
+    # real prerendered route files (not just the empty SPA shell). Without this,
+    # a failed prerender would wipe the site down to a blank shell.
+    if [ -f "build/index.html" ] && [ -s "build/services/ai-agents/index.html" ]; then
+        echo "[$(date)] Copying build to html..." >> $LOG
+        # Clear regular + dotfiles, and copy with `build/.` so dot-dirs like
+        # .well-known/ are included (plain `build/*` / `html/*` skip dotfiles,
+        # which previously froze .well-known/ at its first-deploy contents).
+        rm -rf $SITE_DIR/html/* $SITE_DIR/html/.[!.]*
+        cp -a build/. $SITE_DIR/html/
 
-    echo "[$(date)] Removing Emergent badge..." >> $LOG
-    sed -i 's|<script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>||g' $SITE_DIR/html/index.html
-    sed -i 's|<a id="emergent-badge"[^>]*>.*</a>||g' $SITE_DIR/html/index.html
+        echo "[$(date)] Removing Emergent badge..." >> $LOG
+        sed -i 's|<script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>||g' $SITE_DIR/html/index.html
+        sed -i 's|<a id="emergent-badge"[^>]*>.*</a>||g' $SITE_DIR/html/index.html
 
-    docker cp $SITE_DIR/nginx.conf lanos-logic-com:/etc/nginx/conf.d/default.conf 2>/dev/null && \
-    docker exec lanos-logic-com nginx -s reload >> $LOG 2>&1
+        docker cp $SITE_DIR/nginx.conf lanos-logic-com:/etc/nginx/conf.d/default.conf 2>/dev/null && \
+        docker exec lanos-logic-com nginx -s reload >> $LOG 2>&1
+    else
+        echo "[$(date)] BUILD/PRERENDER INCOMPLETE — keeping previous html (not wiping site)." >> $LOG
+    fi
 
     # Post-deploy: validate the agent surface (MCP tools, .well-known, feeds).
     # Non-fatal — logs failures without blocking the deploy.
@@ -66,6 +73,19 @@ if [ -d "$SITE_DIR/repo/mcp-server" ]; then
     docker build -t lanos-mcp-server:latest . >> $LOG 2>&1
     cd /data/websites && docker compose up -d --force-recreate lanos-mcp >> $LOG 2>&1
     echo "[$(date)] MCP server restarted" >> $LOG
+fi
+
+# Redeploy the Free Tools API container (repo/tools-api -> /opt/lanos-tools-api).
+# Static nginx can't run server-side tools, so the AI Crawler Access Checker is
+# a small sidecar routed by Traefik PathPrefix(/api/tools). Deployed from a
+# stable /opt compose project (no container-name conflict); non-fatal.
+if [ -d "$SITE_DIR/repo/tools-api" ]; then
+    echo "[$(date)] Deploying tools-api..." >> $LOG
+    mkdir -p /opt/lanos-tools-api
+    cp -a $SITE_DIR/repo/tools-api/. /opt/lanos-tools-api/
+    ( cd /opt/lanos-tools-api && docker compose up -d --build ) >> $LOG 2>&1 \
+        && echo "[$(date)] tools-api up" >> $LOG \
+        || echo "[$(date)] tools-api deploy failed (non-fatal)" >> $LOG
 fi
 
 echo "[$(date)] Deployment complete" >> $LOG
