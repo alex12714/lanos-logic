@@ -54,6 +54,9 @@ const ServiceDetailPage = () => {
   const IconComponent = iconMap[service.icon] || Bot;
   const faqs = getServiceFaqs(service);
   const overview = getServiceOverview(service.id);
+  // Self-hosted Pexels hero photo (public/services/<id>.jpg). Falls back to the
+  // icon-only card if the image is missing (img is hidden onError).
+  const heroImage = `/services/${service.id}.jpg`;
   const jsonLd = [
     serviceSchema(service),
     breadcrumb([
@@ -126,8 +129,26 @@ const ServiceDetailPage = () => {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-transparent rounded-3xl blur-3xl" />
-              <div className="relative bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-3xl p-8 aspect-square flex items-center justify-center">
-                <IconComponent className="w-32 h-32 text-amber-400/30" />
+              <div className="relative bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-3xl aspect-square overflow-hidden">
+                {/* Centered icon shows through if the photo is missing/slow */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <IconComponent className="w-32 h-32 text-amber-400/30" />
+                </div>
+                <img
+                  src={heroImage}
+                  alt={`${service.name} — Lanos Logic AI automation`}
+                  width={1200}
+                  height={627}
+                  loading="eager"
+                  className="relative w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a12] via-[#0a0a12]/20 to-transparent" />
+                <div className="absolute bottom-5 left-5 w-14 h-14 rounded-2xl bg-[#0a0a12]/70 backdrop-blur-md border border-white/10 flex items-center justify-center">
+                  <IconComponent className="w-7 h-7 text-amber-400" />
+                </div>
               </div>
             </div>
           </div>
