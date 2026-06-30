@@ -4,7 +4,7 @@ import {
   Menu, X, Phone, ArrowRight, ChevronDown,
   Bot, Workflow, Share2, MessageSquare, Database,
   BarChart3, FileText, Smartphone, ScanLine, ShieldAlert, ShieldCheck,
-  ExternalLink, Grid3x3,
+  ExternalLink, Grid3x3, Sparkles,
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useBooking } from '../../context/BookingContext';
@@ -28,6 +28,7 @@ const serviceGroups = [
     items: [
       { name: 'Vector Database Solutions', href: '/services/vector-database-solutions', icon: Database,   desc: 'Semantic search at scale' },
       { name: 'Analytics & Insights',      href: '/services/analytics-insights',        icon: BarChart3,  desc: 'Data-driven decisions' },
+      { name: 'Agentic SEO & GEO',         href: '/services/agentic-seo-geo',           icon: Sparkles,   desc: 'Get cited by AI search' },
       { name: 'Document Automation',       href: '/services/document-automation',       icon: FileText,   desc: 'Intelligent document processing' },
       { name: 'Mobile App Development',    href: '/services/mobile-app-development',    icon: Smartphone, desc: 'Cross-platform Flutter apps' },
     ],

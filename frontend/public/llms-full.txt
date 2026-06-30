@@ -360,6 +360,45 @@ A: Analytics & Insights is custom-built and scoped on a free discovery call, the
 
 URL: https://lanos-logic.com/services/analytics-insights
 
+### Agentic SEO & GEO
+
+Agentic SEO and Generative Engine Optimization (GEO) make your website the source AI assistants cite — optimizing for ChatGPT, Claude, Perplexity, Google AI Overviews, and Gemini, not just classic search rankings. Lanos Logic structures your content, schema, and crawler access so large language models can find, understand, and quote your business by name.
+
+Search is moving from a list of blue links to a single AI-generated answer. People increasingly ask ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews instead of scrolling a results page — and those assistants cite a handful of sources rather than ranking ten. Generative Engine Optimization (GEO), also called Answer Engine Optimization, is the practice of making sure your business is one of the sources the AI quotes by name. Lanos Logic optimizes your site for how language models actually retrieve and cite content, so you show up where your buyers are now starting their research.
+
+Our process starts with an audit of how AI systems see you today: which AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended and others) can reach your site, what structured data you expose, and whether your content is even retrievable. We then make your pages machine-legible — adding JSON-LD schema (Organization, Service, FAQ, Speakable), an llms.txt and llms-full.txt knowledge base, and agent-native surfaces like an MCP endpoint and agent.json so assistants can read you directly. The core of the work is structuring content for hybrid retrieval: AI search engines fuse keyword (lexical) and meaning-based (semantic) search using Reciprocal Rank Fusion, so we co-locate clear question-and-answer passages, entity names, and self-contained explanations that score in both — the passages models actually pull into an answer.
+
+Why it matters: if your competitors are the ones being cited in AI answers, you lose the buyer before they ever reach a search result or your homepage — and unlike a ranking you can watch, you never see it happen. GEO is also durable; the structured, well-explained content that earns citations keeps working as models update. Every engagement begins with a free discovery call and a visibility audit, is quoted as a fixed project price, and includes measurement of where AI engines mention your brand so we can close the gaps. Agentic SEO & GEO pairs naturally with our Vector Database Solutions and AI Agents work when you also want an assistant of your own grounded in the same content.
+
+**Features:**
+- Generative & Answer Engine Optimization
+- llms.txt, Schema & AI Crawler Access
+- Hybrid Retrieval (RRF) Content Structuring
+
+**Benefits:**
+- **Get Cited by AI Assistants** — Become the answer ChatGPT, Claude, Perplexity, and Google AI Overviews surface when buyers research — where more of the journey now starts.
+- **Future-Proof Visibility** — As search shifts from ten blue links to AI-generated answers, your content stays discoverable and quotable by the models that matter.
+- **Measurable AI Presence** — See where and how AI engines mention your brand, then close the gaps that keep you out of generated answers.
+
+**Frequently Asked Questions:**
+
+Q: What is GEO (Generative Engine Optimization)?
+A: GEO, also called Answer Engine Optimization, is the practice of optimizing a website so AI assistants like ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews cite it in their generated answers. Instead of chasing classic keyword rankings, GEO makes your content easy for large language models to find, understand, and quote by name.
+
+Q: How is GEO different from traditional SEO?
+A: Traditional SEO optimizes for ranking on a page of blue links; GEO optimizes for being the source an AI quotes inside a single generated answer. The two overlap on fundamentals (crawlability, clear content, structured data) but GEO adds AI-crawler access, llms.txt knowledge bases, schema for machine reading, and content structured for the hybrid lexical+semantic retrieval AI engines use.
+
+Q: Which AI search engines does Lanos Logic optimize for?
+A: We optimize for the assistants and AI search surfaces buyers actually use: ChatGPT and ChatGPT Search, Claude, Perplexity, Google AI Overviews and Gemini, and Bing Copilot. We make sure their crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot and others) can access your site and that your content is structured to be retrieved and cited.
+
+Q: How do you get a website cited by ChatGPT or Perplexity?
+A: We audit how AI systems see your site, open access to AI crawlers, add JSON-LD schema and an llms.txt/llms-full.txt knowledge base, and restructure content into self-contained, question-and-answer passages that score well in both keyword and semantic retrieval (the Reciprocal Rank Fusion that AI engines use to pick sources). We can also add agent-native surfaces like an MCP endpoint so assistants can read your business directly.
+
+Q: How much does agentic SEO / GEO cost and how long does it take?
+A: It is scoped on a free discovery call and quoted as a fixed project price based on the size of your site and the depth of optimization. An initial GEO audit and the core structural work are typically delivered within 2-6 weeks, with ongoing measurement of where AI engines mention your brand so we can keep closing gaps.
+
+URL: https://lanos-logic.com/services/agentic-seo-geo
+
 ### Security Vulnerability Scanning
 
 Security vulnerability scanning is the continuous, automated process of finding known weaknesses across your apps, APIs, and cloud before attackers do. Lanos Logic runs vulnerability scanning against the OWASP Top 10, daily-updated CVE databases, and enterprise scanning platforms to surface exploitable weaknesses.

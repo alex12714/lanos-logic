@@ -109,6 +109,28 @@ const SERVICE_FAQS = {
       a: 'Cost depends on data volume, ingestion pipelines, and hosting. We scope it on a free discovery call and quote a fixed project price for the architecture and implementation.',
     },
   ],
+  'agentic-seo-geo': [
+    {
+      q: 'What is GEO (Generative Engine Optimization)?',
+      a: 'GEO, also called Answer Engine Optimization, is the practice of optimizing a website so AI assistants like ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews cite it in their generated answers. Instead of chasing classic keyword rankings, GEO makes your content easy for large language models to find, understand, and quote by name.',
+    },
+    {
+      q: 'How is GEO different from traditional SEO?',
+      a: 'Traditional SEO optimizes for ranking on a page of blue links; GEO optimizes for being the source an AI quotes inside a single generated answer. The two overlap on fundamentals (crawlability, clear content, structured data) but GEO adds AI-crawler access, llms.txt knowledge bases, schema for machine reading, and content structured for the hybrid lexical+semantic retrieval AI engines use.',
+    },
+    {
+      q: 'Which AI search engines does Lanos Logic optimize for?',
+      a: 'We optimize for the assistants and AI search surfaces buyers actually use: ChatGPT and ChatGPT Search, Claude, Perplexity, Google AI Overviews and Gemini, and Bing Copilot. We make sure their crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot and others) can access your site and that your content is structured to be retrieved and cited.',
+    },
+    {
+      q: 'How do you get a website cited by ChatGPT or Perplexity?',
+      a: 'We audit how AI systems see your site, open access to AI crawlers, add JSON-LD schema and an llms.txt/llms-full.txt knowledge base, and restructure content into self-contained, question-and-answer passages that score well in both keyword and semantic retrieval (the Reciprocal Rank Fusion that AI engines use to pick sources). We can also add agent-native surfaces like an MCP endpoint so assistants can read your business directly.',
+    },
+    {
+      q: 'How much does agentic SEO / GEO cost and how long does it take?',
+      a: 'It is scoped on a free discovery call and quoted as a fixed project price based on the size of your site and the depth of optimization. An initial GEO audit and the core structural work are typically delivered within 2-6 weeks, with ongoing measurement of where AI engines mention your brand so we can keep closing gaps.',
+    },
+  ],
 };
 
 const list = (items) => items.join(', ');

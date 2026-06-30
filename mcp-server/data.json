@@ -235,6 +235,32 @@
       ]
     },
     {
+      "id": "agentic-seo-geo",
+      "name": "Agentic SEO & GEO",
+      "shortDescription": "Agentic SEO and Generative Engine Optimization (GEO) make your website the source AI assistants cite — optimizing for ChatGPT, Claude, Perplexity, Google AI Overviews, and Gemini, not just classic search rankings. Lanos Logic structures your content, schema, and crawler access so large language models can find, understand, and quote your business by name.",
+      "icon": "Sparkles",
+      "href": "/services/agentic-seo-geo",
+      "features": [
+        "Generative & Answer Engine Optimization",
+        "llms.txt, Schema & AI Crawler Access",
+        "Hybrid Retrieval (RRF) Content Structuring"
+      ],
+      "benefits": [
+        {
+          "title": "Get Cited by AI Assistants",
+          "description": "Become the answer ChatGPT, Claude, Perplexity, and Google AI Overviews surface when buyers research — where more of the journey now starts."
+        },
+        {
+          "title": "Future-Proof Visibility",
+          "description": "As search shifts from ten blue links to AI-generated answers, your content stays discoverable and quotable by the models that matter."
+        },
+        {
+          "title": "Measurable AI Presence",
+          "description": "See where and how AI engines mention your brand, then close the gaps that keep you out of generated answers."
+        }
+      ]
+    },
+    {
       "id": "security-vulnerability-scanning",
       "name": "Security Vulnerability Scanning",
       "shortDescription": "Security vulnerability scanning is the continuous, automated process of finding known weaknesses across your apps, APIs, and cloud before attackers do. Lanos Logic runs vulnerability scanning against the OWASP Top 10, daily-updated CVE databases, and enterprise scanning platforms to surface exploitable weaknesses.",

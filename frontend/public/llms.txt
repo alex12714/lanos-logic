@@ -86,6 +86,10 @@ Mobile app development delivers custom iOS and Android applications from a singl
 Analytics and insights turn your automation data into real-time dashboards, performance metrics, and predictive analysis so you can measure ROI and act on it. Lanos Logic builds analytics that show what your automations deliver and where to improve.
 → https://lanos-logic.com/services/analytics-insights
 
+### Agentic SEO & GEO
+Agentic SEO and Generative Engine Optimization (GEO) make your website the source AI assistants cite — optimizing for ChatGPT, Claude, Perplexity, Google AI Overviews, and Gemini, not just classic search rankings. Lanos Logic structures your content, schema, and crawler access so large language models can find, understand, and quote your business by name.
+→ https://lanos-logic.com/services/agentic-seo-geo
+
 ### Security Vulnerability Scanning
 Security vulnerability scanning is the continuous, automated process of finding known weaknesses across your apps, APIs, and cloud before attackers do. Lanos Logic runs vulnerability scanning against the OWASP Top 10, daily-updated CVE databases, and enterprise scanning platforms to surface exploitable weaknesses.
 → https://lanos-logic.com/services/security-vulnerability-scanning
@@ -232,7 +236,7 @@ Lanos Logic exposes a native MCP (Model Context Protocol) server for direct agen
 
 ### Available Tools
 
-- **list_services** — List all 12 AI automation services with features and URLs
+- **list_services** — List all 13 AI automation services with features and URLs
 - **get_service** — Get full details for a service by ID (e.g. `ai-agents`, `vector-database-solutions`)
 - **list_case_studies** — Browse 42 case studies; filter by industry, platform, country, or type
 - **get_case_study** — Get complete case study detail including stats, platforms, and solution description
