@@ -53,7 +53,7 @@ const CaseStudiesSection = () => {
               >
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <img
-                    src={study.image}
+                    src={`/case-studies/${study.id}.jpg`}
                     alt={study.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     onError={(e) => {
@@ -112,7 +112,7 @@ const CaseStudiesSection = () => {
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src={study.image}
+                    src={`/case-studies/${study.id}.jpg`}
                     alt={study.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     onError={(e) => {

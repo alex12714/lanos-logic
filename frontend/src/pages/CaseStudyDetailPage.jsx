@@ -85,7 +85,7 @@ const CaseStudyDetailPage = () => {
       '@type': 'Article',
       headline: caseStudy.title,
       description: caseStudy.description,
-      ...(caseStudy.image ? { image: `${SITE}${caseStudy.image}` } : {}),
+      ...(caseStudy.id ? { image: `${SITE}/case-studies/${caseStudy.id}.jpg` } : {}),
       articleSection: caseStudy.category,
       author: {
         '@type': 'Person',
@@ -201,7 +201,7 @@ const CaseStudyDetailPage = () => {
             {caseStudy.image && (
               <div className="relative w-full max-h-[500px] rounded-2xl overflow-hidden">
                 <img
-                  src={caseStudy.image}
+                  src={`/case-studies/${caseStudy.id}.jpg`}
                   alt={caseStudy.title}
                   className="w-full max-h-[500px] object-cover rounded-2xl"
                   onError={(e) => {
@@ -484,7 +484,7 @@ const CaseStudyDetailPage = () => {
                       {study.image ? (
                         <>
                           <img
-                            src={study.image}
+                            src={`/case-studies/${study.id}.jpg`}
                             alt={study.title}
                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                             onError={handleImageError}

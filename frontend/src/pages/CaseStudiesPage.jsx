@@ -102,7 +102,7 @@ const CaseStudiesPage = () => {
                 {/* Image */}
                 <div className="relative aspect-video overflow-hidden">
                   <img
-                    src={study.image}
+                    src={`/case-studies/${study.id}.jpg`}
                     alt={`${study.title} — AI automation case study by Lanos Logic`}
                     width="1280"
                     height="720"
