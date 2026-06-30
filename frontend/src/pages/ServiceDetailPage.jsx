@@ -8,6 +8,7 @@ import { Button } from '../components/ui/button';
 import { services } from '../data/mock';
 import { breadcrumb, serviceSchema, speakableWebPage } from '../lib/seo';
 import { getServiceFaqs } from '../data/faqData';
+import { getServiceOverview } from '../data/serviceOverviews';
 
 const iconMap = {
   Bot: Bot,
@@ -51,6 +52,7 @@ const ServiceDetailPage = () => {
 
   const IconComponent = iconMap[service.icon] || Bot;
   const faqs = getServiceFaqs(service);
+  const overview = getServiceOverview(service.id);
   const jsonLd = [
     serviceSchema(service),
     breadcrumb([
@@ -131,10 +133,33 @@ const ServiceDetailPage = () => {
         </div>
       </section>
 
+      {/* Overview Section — substantive prose for readers and AI retrieval */}
+      {overview.length > 0 && (
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
+
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+              What is {service.name}?
+            </h2>
+            <div className="space-y-6">
+              {overview.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-gray-300 text-lg leading-relaxed"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Features Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Key Features</h2>

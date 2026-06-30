@@ -1,6 +1,6 @@
 # Lanos Logic — Full Knowledge Base
 
-> Strategic AI Solutions for Modern Businesses. Complete inlined content for one-fetch AI ingestion. Last updated: 2026-06-29.
+> Strategic AI Solutions for Modern Businesses. Complete inlined content for one-fetch AI ingestion. Last updated: 2026-06-30.
 
 ## Company Overview
 
@@ -40,6 +40,12 @@ Lanos Logic is recognized as one of the top AI automation providers in the US an
 
 Vector database solutions store your documents as numerical embeddings so AI can search by meaning instead of exact keywords. Lanos Logic builds enterprise-grade vector database architecture for semantic search, knowledge retrieval, and retrieval-augmented generation (RAG) across massive document collections.
 
+A vector database stores your documents, tickets, contracts, and knowledge as high-dimensional embeddings — numerical fingerprints of meaning — so an AI can retrieve information by intent rather than exact keywords. When someone asks "which suppliers can ship refrigerated freight to Texas," a keyword search needs those literal words to appear; a vector search finds the right passage even when the document says "cold-chain logistics, Dallas hub." Lanos Logic designs and builds this retrieval layer end to end: chunking and cleaning your source content, generating embeddings, indexing them in a production vector store, and tuning similarity search for precision and recall on your real queries.
+
+Most clients use a vector database as the foundation for retrieval-augmented generation (RAG), where an AI assistant answers from your proprietary data instead of guessing. We build the full pipeline — document ingestion, embedding models, the vector index, and a retrieval step that grounds every AI response in cited source passages — so answers stay accurate and auditable. The same architecture powers internal knowledge search, customer-facing support bots, and contract or policy lookup across collections that scale from a few thousand documents to billions of embeddings.
+
+A typical engagement starts with a free discovery call and a BPMN analysis of where your team loses time hunting for information, then a fixed-price build delivered in 2-6 weeks. Because retrieval is grounded and source-cited, teams find the right document in seconds instead of minutes and trust the answers enough to act on them. Vector Database Solutions pair naturally with our AI Agents and Document Automation services when you want the retrieved knowledge to drive a conversation or trigger a workflow.
+
 **Features:**
 - Semantic Search & Retrieval
 - Document Embedding Pipelines
@@ -50,11 +56,31 @@ Vector database solutions store your documents as numerical embeddings so AI can
 - **Enterprise RAG Systems** — Build retrieval-augmented generation systems that ground AI responses in your proprietary data.
 - **Scalable Architecture** — Vector database infrastructure that scales from thousands to billions of embeddings.
 
+**Frequently Asked Questions:**
+
+Q: What is a vector database and why do I need one?
+A: A vector database stores the meaning of your content as embeddings so you can run semantic search and retrieval-augmented generation (RAG). It lets AI answer questions grounded in your proprietary documents instead of guessing.
+
+Q: What is RAG (retrieval-augmented generation)?
+A: RAG combines a vector database with a language model: relevant passages are retrieved from your data and given to the model so its answers are accurate, current, and traceable to your sources.
+
+Q: How large a document collection can a vector database handle?
+A: Our architectures scale from thousands to billions of embeddings. One client unified 15+ years of research into semantic search across 2M+ documents, cutting discovery time from weeks to minutes.
+
+Q: How much does a vector database solution cost?
+A: Cost depends on data volume, ingestion pipelines, and hosting. We scope it on a free discovery call and quote a fixed project price for the architecture and implementation.
+
 URL: https://lanos-logic.com/services/vector-database-solutions
 
 ### AI Agents
 
 AI agents are software assistants that understand natural language to automate customer interactions, answer queries, and complete multi-step tasks 24/7. Lanos Logic builds AI agents that work around the clock and scale with demand without increasing headcount.
+
+An AI agent is a software assistant that understands natural language and completes real work — answering customer questions, qualifying leads, looking up account details, and carrying out multi-step tasks — 24/7 without a human in the loop for routine cases. Unlike a scripted chatbot, an agent holds context across a conversation, reasons about what the user actually needs, and calls your systems to get things done. Lanos Logic builds AI agents on Claude AI and connects them to your stack through Make.com, n8n, AirTable, and GoHighLevel so they can read and write the same data your team uses.
+
+We design each agent around the jobs it must do: a support agent that resolves tier-1 tickets and escalates the rest, a sales agent that qualifies inbound leads and books meetings, or an operations agent that updates records and triggers downstream automations. The agent understands intent, pulls grounded answers from your knowledge base (often backed by our Vector Database Solutions), and performs actions through secured integrations — then hands off cleanly to a person whenever a request falls outside its scope, with full conversation context attached.
+
+The result is capacity that scales with demand instead of headcount: clients commonly handle large jumps in interaction volume — up to a 300% increase in operational capacity — while cutting response times to near-instant. Every agent is custom-scoped on a free discovery call, quoted as a fixed project price, and typically live within 2-6 weeks including testing against your real conversations. We monitor and tune the agent after launch so accuracy improves as it sees more traffic.
 
 **Features:**
 - Natural Language Processing
@@ -66,11 +92,31 @@ AI agents are software assistants that understand natural language to automate c
 - **Reduced Response Time** — Instant responses to customer inquiries, improving satisfaction.
 - **Scalability** — Handle increasing volumes of interactions without proportional cost increases.
 
+**Frequently Asked Questions:**
+
+Q: What is an AI agent and what can it do?
+A: An AI agent is an intelligent virtual assistant that automates customer interactions, answers queries using natural language, and executes multi-step tasks 24/7 with contextual understanding of your business.
+
+Q: How much does an AI agent cost?
+A: AI agents are custom-built and priced per project after a free discovery call. Cost depends on the channels covered, the integrations required, and the complexity of the tasks the agent automates.
+
+Q: Will an AI agent replace my support team?
+A: No — it augments them. AI agents handle high-volume, repetitive queries instantly so your team can focus on complex, high-value conversations, with smooth hand-off when human judgement is needed.
+
+Q: How long does it take to deploy an AI agent?
+A: Most AI agents are deployed within 2-6 weeks, following our Analyze, Prepare, and Implement process and grounded in your real knowledge base and workflows.
+
 URL: https://lanos-logic.com/services/ai-agents
 
 ### Voice AI Agents
 
 Voice AI agents are automated phone assistants that answer and place calls, qualify leads, book appointments, and handle customer support 24/7 with natural, human-like conversation. Lanos Logic builds voice AI agents that capture every call and hand off to a human team member when needed.
+
+A voice AI agent is an automated phone assistant that answers and places calls with natural, human-like conversation — qualifying leads, booking appointments, taking orders, and handling support around the clock. Lanos Logic builds voice agents on VAPI and Twilio telephony, integrated with your calendar, CRM, and automations, so the agent does more than talk: it checks availability, writes the booking, updates the contact record, and sends the confirmation. Callers get answered on the first ring at any hour instead of reaching voicemail.
+
+We design the call flow around your business — the intents the agent should handle, the questions it asks to qualify a caller, and the exact point where it performs a warm hand-off to a human team member. The agent recognizes when a conversation needs a person (a complex complaint, a high-value deal, a request outside its scope) and transfers with full context so the caller never repeats themselves. Because it runs on real telephony, it works for inbound reception, outbound follow-up campaigns, appointment reminders, and after-hours coverage.
+
+For most clients the highest ROI is simply capturing calls that used to be missed — every after-hours or overflow call that would have gone to voicemail becomes a booked appointment or a qualified lead. A focused voice deployment is typically live within 2-4 weeks, including script design, telephony integration, and tuning against real call recordings, and is quoted as a fixed project price after a free discovery call. Voice AI Agents pair with our Communication Automation service when you want SMS follow-up to fire automatically after a call.
 
 **Features:**
 - Natural Voice Synthesis
@@ -82,11 +128,31 @@ Voice AI agents are automated phone assistants that answer and place calls, qual
 - **Human-like Interactions** — Natural conversations that customers appreciate.
 - **Seamless Handoff** — Transfer to human agents when needed.
 
+**Frequently Asked Questions:**
+
+Q: How much does a voice AI agent cost?
+A: Voice AI is priced per project based on call volume, the number of intents handled, and telephony usage. We scope it on a free discovery call and quote a fixed price up front. Most clients recover the cost quickly by capturing leads and calls that would otherwise be missed.
+
+Q: What is a voice AI agent?
+A: A voice AI agent is a natural-sounding virtual assistant that answers and places phone calls, books appointments, qualifies leads, and handles support 24/7 with human-like conversation, escalating to a human when needed.
+
+Q: Can the voice agent transfer calls to a human?
+A: Yes. Our voice agents handle the conversation autonomously and perform a seamless warm hand-off to a human team member whenever a call needs escalation or a request falls outside their scope.
+
+Q: How long does it take to launch a voice AI agent?
+A: A focused voice AI deployment is typically live within 2-4 weeks, including script design, telephony integration, testing, and tuning against real call recordings.
+
 URL: https://lanos-logic.com/services/voice-ai-agents
 
 ### Document Automation
 
 Document automation uses AI to read documents, extract data, manage contracts, and run approval workflows automatically, turning hours of manual paperwork into minutes. Lanos Logic builds document automation with OCR, data extraction, e-signature, and compliance-ready audit trails.
+
+Document automation turns hours of manual paperwork into minutes by letting AI read documents, extract the data that matters, route them for approval, and file them with a clean audit trail. Lanos Logic builds the full pipeline: OCR and AI-powered data extraction that pulls fields from PDFs, scans, and forms; contract generation and e-signature through DocuSign or PandaDoc; and approval workflows orchestrated in Make.com or n8n that move a document from intake to signed to archived without anyone rekeying information.
+
+A common build looks like this: a contract or application arrives by email, the system extracts the customer details and key terms, validates them against your records in AirTable or your CRM, generates the right document from a template, sends it for signature, and — once signed — updates every connected system and stores a compliance-ready copy. Because extraction is AI-driven rather than template-rigid, it handles the messy variety of real-world documents while keeping accuracy high and eliminating the transcription errors that creep into manual data entry.
+
+Clients in legal, healthcare, finance, and care services use this to collapse onboarding and contract cycles — commonly cutting document processing time by up to 90% — while maintaining the audit trails that PCI-DSS, SOC 2, HIPAA, and internal compliance require. Every workflow is mapped on a free discovery call with a BPMN analysis, quoted at a fixed price, and typically delivered in 2-6 weeks. Document Automation pairs with our Vector Database Solutions when you also need to search the contents of everything you process.
 
 **Features:**
 - OCR & Data Extraction
@@ -98,11 +164,31 @@ Document automation uses AI to read documents, extract data, manage contracts, a
 - **Eliminate Errors** — AI-powered accuracy in data extraction.
 - **Compliance Ready** — Maintain audit trails and compliance standards.
 
+**Frequently Asked Questions:**
+
+Q: What is document automation?
+A: Document automation uses AI to extract data, manage contracts, and run approval workflows automatically — including OCR, data extraction, e-signature, and compliance-ready audit trails — turning hours of manual document handling into minutes.
+
+Q: How much time can document automation save?
+A: Clients routinely cut document processing time by 80-90% and remove entire categories of manual data entry. One client automated 9,600 compliance certificates a year and reduced four full-time roles.
+
+Q: Is document automation compliant and auditable?
+A: Yes. Every workflow maintains audit trails and is designed to meet compliance standards, with AI-assisted accuracy that eliminates common manual data-entry errors.
+
+Q: How much does document automation cost?
+A: Pricing is project-based and scoped on a free discovery call after we map your document workflows with a BPMN analysis, so you get a fixed price before any build starts.
+
 URL: https://lanos-logic.com/services/document-automation
 
 ### Process Automation
 
 Process automation connects your systems and software to run repetitive business workflows end to end without manual effort. Lanos Logic designs process automation that eliminates repetitive tasks, integrates your existing tools, and streamlines operations.
+
+Process automation connects the systems you already use and runs your repetitive, multi-step workflows end to end — no copy-paste, no swivel-chair between tabs, no tasks forgotten on a Friday afternoon. Lanos Logic designs these workflows on Make.com, n8n, and Zapier, integrating tools like AirTable, GoHighLevel, ClickUp, Stripe, and Twilio so data flows automatically from one step to the next. We start by mapping your current process in BPMN with Miro, find the steps that are pure mechanical effort, and rebuild them as a reliable automation with error handling and alerts.
+
+The work that disappears is the work nobody should be doing by hand: a new order in Stripe creating a project in ClickUp and a record in AirTable, a form submission triggering a sequence of emails and SMS, data syncing between two systems that were never meant to talk, or a nightly reconciliation that used to take an analyst an hour. Each automation is built to run unattended, retry on transient failures, and notify a human only when something genuinely needs judgment — so your team trades repetitive operations work for the exceptions that actually need them.
+
+Because the automation enforces a single consistent path, it removes the human errors that come from manual handoffs and frees staff for higher-value work. Engagements are scoped on a free discovery call, quoted as a fixed project price, and typically delivered in 2-6 weeks following our Analyze, Prepare, Implement process. Process Automation is the connective tissue behind most of our other services — AI Agents, Document Automation, and Communication Automation all rely on it to actually move data and trigger actions.
 
 **Features:**
 - Workflow Design
@@ -114,11 +200,31 @@ Process automation connects your systems and software to run repetitive business
 - **Reduce Manual Work** — Free your team from repetitive tasks.
 - **Increase Accuracy** — Eliminate human error in processes.
 
+**Frequently Asked Questions:**
+
+Q: What is Process Automation?
+A: Process automation connects your systems and software to run repetitive business workflows end to end without manual effort. Lanos Logic designs process automation that eliminates repetitive tasks, integrates your existing tools, and streamlines operations.
+
+Q: What does Lanos Logic’s Process Automation include?
+A: Our Process Automation service includes Workflow Design, System Integration, Task Automation.
+
+Q: How can Process Automation help my business?
+A: Streamline Operations: Connect systems and automate workflows. Reduce Manual Work: Free your team from repetitive tasks. Increase Accuracy: Eliminate human error in processes.
+
+Q: How much does Process Automation cost and how do I get started?
+A: Process Automation is custom-built and scoped on a free discovery call, then quoted as a fixed project price. Most solutions are deployed within 2-6 weeks following our Analyze, Prepare, and Implement process.
+
 URL: https://lanos-logic.com/services/process-automation
 
 ### Social Media Automation
 
 Social media automation uses AI to create content, schedule posts, and manage engagement across every social platform from one workflow. Lanos Logic builds social media automation that keeps posting consistent and on-brand while tracking performance.
+
+Social media automation uses AI to plan, create, schedule, and manage content across every platform from a single workflow — so posting stays consistent and on-brand without a person manually publishing each day. Lanos Logic builds these systems on Make.com and n8n with Claude AI handling content generation: drafting captions in your voice, adapting a single idea into platform-specific posts, and queuing them at optimal times. Approvals stay in human hands where you want them, while the mechanical work of formatting and publishing runs automatically.
+
+A typical setup generates a content calendar from your themes and campaigns, produces draft posts for review, schedules approved content across channels, and routes incoming comments and messages so engagement is never missed. Performance data flows back into dashboards (often through our Analytics & Insights service) so you can see what resonates and feed those learnings into the next batch of content. The system keeps your presence active during busy weeks, launches, and holidays when manual posting usually slips.
+
+The outcome is a consistent, measurable social presence that scales without adding social-media headcount — every optimal posting window hit, every message answered, every campaign tracked. Builds are scoped on a free discovery call, quoted at a fixed price, and typically delivered in 2-6 weeks. Social Media Automation pairs with Communication Automation and AI Agents when you want inbound DMs and comments triaged or answered automatically.
 
 **Features:**
 - Content Generation
@@ -130,11 +236,31 @@ Social media automation uses AI to create content, schedule posts, and manage en
 - **AI Content** — Generate engaging content with AI.
 - **Analytics Insights** — Track and optimize performance.
 
+**Frequently Asked Questions:**
+
+Q: What is Social Media Automation?
+A: Social media automation uses AI to create content, schedule posts, and manage engagement across every social platform from one workflow. Lanos Logic builds social media automation that keeps posting consistent and on-brand while tracking performance.
+
+Q: What does Lanos Logic’s Social Media Automation include?
+A: Our Social Media Automation service includes Content Generation, Auto Scheduling, Engagement Management.
+
+Q: How can Social Media Automation help my business?
+A: Consistent Posting: Never miss optimal posting times. AI Content: Generate engaging content with AI. Analytics Insights: Track and optimize performance.
+
+Q: How much does Social Media Automation cost and how do I get started?
+A: Social Media Automation is custom-built and scoped on a free discovery call, then quoted as a fixed project price. Most solutions are deployed within 2-6 weeks following our Analyze, Prepare, and Implement process.
+
 URL: https://lanos-logic.com/services/social-media-automation
 
 ### Communication Automation
 
 Communication automation delivers SMS, voice, and multi-channel messaging to customers automatically and at scale. Lanos Logic builds Twilio-powered communication automation for fast, personalized, two-way customer messaging.
+
+Communication automation delivers SMS, voice, and multi-channel messaging to your customers automatically and at scale — appointment reminders, order updates, payment links, re-engagement campaigns, and two-way conversations that actually get replies. Lanos Logic builds these flows on Twilio, integrated with your CRM and automations through Make.com and n8n, so messages are triggered by real events (a booking, a missed call, an abandoned cart) and personalized with the customer’s own details rather than blasted generically.
+
+Because it is two-way, the system does more than send: a customer can reply to confirm, reschedule, or ask a question, and that response routes into your workflow or to a human — or to one of our AI Agents — for an instant answer. Voice broadcasting handles announcements and reminders at volume, while multi-channel logic falls back from one channel to another so an important message reaches the customer wherever they actually respond. Everything is logged against the contact record for a complete communication history.
+
+Clients use this to lift response and conversion — personalized, well-timed messaging commonly drives meaningfully higher response rates and faster lead follow-up — while removing the manual effort of chasing customers one at a time. Each build is scoped on a free discovery call, quoted at a fixed project price, and typically live within 2-6 weeks. Communication Automation pairs naturally with our Voice AI Agents and Process Automation services.
 
 **Features:**
 - SMS Campaigns
@@ -146,11 +272,31 @@ Communication automation delivers SMS, voice, and multi-channel messaging to cus
 - **Personalization** — Tailored messages at scale.
 - **Two-way Communication** — Enable customer responses and engagement.
 
+**Frequently Asked Questions:**
+
+Q: What is Communication Automation?
+A: Communication automation delivers SMS, voice, and multi-channel messaging to customers automatically and at scale. Lanos Logic builds Twilio-powered communication automation for fast, personalized, two-way customer messaging.
+
+Q: What does Lanos Logic’s Communication Automation include?
+A: Our Communication Automation service includes SMS Campaigns, Voice Broadcasting, Multi-channel Messaging.
+
+Q: How can Communication Automation help my business?
+A: Reach Customers Fast: Instant delivery across channels. Personalization: Tailored messages at scale. Two-way Communication: Enable customer responses and engagement.
+
+Q: How much does Communication Automation cost and how do I get started?
+A: Communication Automation is custom-built and scoped on a free discovery call, then quoted as a fixed project price. Most solutions are deployed within 2-6 weeks following our Analyze, Prepare, and Implement process.
+
 URL: https://lanos-logic.com/services/communication-automation
 
 ### Mobile App Development
 
 Mobile app development delivers custom iOS and Android applications from a single Flutter codebase that connect directly to your business automations. Lanos Logic builds cross-platform mobile apps with native performance and built-in automation integration.
+
+Lanos Logic builds custom iOS and Android apps from a single Flutter codebase, so you get native performance on both platforms without paying to build and maintain two separate apps. Flutter compiles to genuinely native code and renders a consistent, fast UI across devices, which keeps development time and cost down while delivering the smooth feel users expect. We design, build, and ship the app — and, crucially, wire it directly into the automations and systems that run your business.
+
+What sets our mobile work apart is integration: the app is not an island. It connects to your existing automations, CRM, vector databases, and AI agents through secure APIs, so a field technician can capture data that instantly triggers a workflow, a customer can book and pay through Stripe, or a manager can see live operational data from the same systems your back office uses. That makes the app a front end to your automated operations rather than yet another disconnected tool your team has to reconcile.
+
+A single codebase also means one place to add features and fix bugs, so the app evolves quickly as your needs change. Projects are scoped on a free discovery call, quoted as a fixed price, and planned around a clear delivery timeline with testing on real devices before launch. Mobile App Development pairs with Process Automation and AI Agents when the app needs to drive — or be driven by — the automations behind it.
 
 **Features:**
 - Cross-platform Apps
@@ -162,11 +308,31 @@ Mobile app development delivers custom iOS and Android applications from a singl
 - **Fast Development** — Rapid delivery with Flutter.
 - **Automation Integration** — Connect with your existing systems.
 
+**Frequently Asked Questions:**
+
+Q: What is Mobile App Development?
+A: Mobile app development delivers custom iOS and Android applications from a single Flutter codebase that connect directly to your business automations. Lanos Logic builds cross-platform mobile apps with native performance and built-in automation integration.
+
+Q: What does Lanos Logic’s Mobile App Development include?
+A: Our Mobile App Development service includes Cross-platform Apps, Native Performance, System Integration.
+
+Q: How can Mobile App Development help my business?
+A: iOS & Android: Single codebase for both platforms. Fast Development: Rapid delivery with Flutter. Automation Integration: Connect with your existing systems.
+
+Q: How much does Mobile App Development cost and how do I get started?
+A: Mobile App Development is custom-built and scoped on a free discovery call, then quoted as a fixed project price. Most solutions are deployed within 2-6 weeks following our Analyze, Prepare, and Implement process.
+
 URL: https://lanos-logic.com/services/mobile-app-development
 
 ### Analytics & Insights
 
 Analytics and insights turn your automation data into real-time dashboards, performance metrics, and predictive analysis so you can measure ROI and act on it. Lanos Logic builds analytics that show what your automations deliver and where to improve.
+
+Analytics and insights turn the data your automations generate into real-time dashboards, performance metrics, and predictive analysis — so you can prove ROI and know exactly where to improve. Lanos Logic builds reporting that pulls from the systems your workflows already touch (AirTable, Stripe, your CRM, Twilio, GoHighLevel) and surfaces the numbers that matter: how many leads each automation captured, how much time it saved, conversion and response rates, and the cost per outcome. Instead of guessing whether automation is working, you watch it on a live dashboard.
+
+We design the metrics around your decisions, not vanity numbers. A sales leader sees lead source, qualification speed, and conversion by campaign; an operations manager sees throughput, processing time, and exception rates; an owner sees ROI and hours saved across every automation. Predictive analytics layer on top — spotting trends, forecasting volume, and flagging where a process is starting to slip — so you can act before a problem shows up in revenue.
+
+The point is a continuous feedback loop: measure what the automations deliver, identify the next highest-ROI opportunity, and improve. Clients commonly use these dashboards to justify expanding automation across more of the business once they can see the returns clearly. Analytics & Insights are scoped on a free discovery call and quoted at a fixed price; they pair with every other service as the layer that makes the results visible and measurable.
 
 **Features:**
 - Real-time Dashboards
@@ -178,11 +344,31 @@ Analytics and insights turn your automation data into real-time dashboards, perf
 - **Track ROI** — Measure automation performance.
 - **Identify Opportunities** — Discover areas for improvement.
 
+**Frequently Asked Questions:**
+
+Q: What is Analytics & Insights?
+A: Analytics and insights turn your automation data into real-time dashboards, performance metrics, and predictive analysis so you can measure ROI and act on it. Lanos Logic builds analytics that show what your automations deliver and where to improve.
+
+Q: What does Lanos Logic’s Analytics & Insights include?
+A: Our Analytics & Insights service includes Real-time Dashboards, Performance Metrics, Predictive Analytics.
+
+Q: How can Analytics & Insights help my business?
+A: Data-driven Decisions: Make informed choices with real data. Track ROI: Measure automation performance. Identify Opportunities: Discover areas for improvement.
+
+Q: How much does Analytics & Insights cost and how do I get started?
+A: Analytics & Insights is custom-built and scoped on a free discovery call, then quoted as a fixed project price. Most solutions are deployed within 2-6 weeks following our Analyze, Prepare, and Implement process.
+
 URL: https://lanos-logic.com/services/analytics-insights
 
 ### Security Vulnerability Scanning
 
 Security vulnerability scanning is the continuous, automated process of finding known weaknesses across your apps, APIs, and cloud before attackers do. Lanos Logic runs vulnerability scanning against the OWASP Top 10, daily-updated CVE databases, and enterprise scanning platforms to surface exploitable weaknesses.
+
+Security vulnerability scanning is the continuous, automated process of finding known weaknesses across your applications, APIs, and cloud infrastructure before attackers do. Lanos Logic runs authenticated and unauthenticated scans against the OWASP Top 10, daily-updated CVE databases, and enterprise scanning platforms, then validates the results to cut false positives — so your team gets a list of real, exploitable issues rather than raw scanner noise. Scanning runs on a schedule and on every meaningful change, so newly disclosed CVEs and zero-days are caught as they emerge.
+
+Every finding is CVSS-scored and mapped to business impact, so remediation effort goes to the issues that actually matter first. Reports include where the weakness is, why it is exploitable, and a clear fix, and the documented scanning evidence supports PCI-DSS, SOC 2, ISO 27001, and HIPAA requirements. Continuous monitoring with alerting means you learn about a critical exposure when it appears, not at the next quarterly review.
+
+Done consistently, proactive scanning materially reduces breach risk — identifying and closing vulnerabilities before they can be exploited. Engagements are scoped on a free discovery call and quoted at a fixed price, and the program is built to run continuously rather than as a one-off. Security Vulnerability Scanning is the detection layer of our cybersecurity practice; it pairs with Penetration Testing for adversarial validation and Systems Hardening to fix the configuration weaknesses scanning surfaces.
 
 **Features:**
 - OWASP Top 10 Assessment
@@ -194,11 +380,31 @@ Security vulnerability scanning is the continuous, automated process of finding 
 - **Compliance Coverage** — Meet PCI-DSS, SOC 2, ISO 27001, and HIPAA security requirements with documented scanning evidence.
 - **Risk Prioritization** — CVSS-scored findings mapped to business impact so your team focuses on critical issues first.
 
+**Frequently Asked Questions:**
+
+Q: What is Security Vulnerability Scanning?
+A: Security vulnerability scanning is the continuous, automated process of finding known weaknesses across your apps, APIs, and cloud before attackers do. Lanos Logic runs vulnerability scanning against the OWASP Top 10, daily-updated CVE databases, and enterprise scanning platforms to surface exploitable weaknesses.
+
+Q: What does Lanos Logic’s Security Vulnerability Scanning include?
+A: Our Security Vulnerability Scanning service includes OWASP Top 10 Assessment, CVE & Zero-Day Detection, Continuous Monitoring & Alerts.
+
+Q: How can Security Vulnerability Scanning help my business?
+A: Proactive Threat Detection: Identify and remediate vulnerabilities before attackers exploit them, reducing breach risk by up to 90%. Compliance Coverage: Meet PCI-DSS, SOC 2, ISO 27001, and HIPAA security requirements with documented scanning evidence. Risk Prioritization: CVSS-scored findings mapped to business impact so your team focuses on critical issues first.
+
+Q: How much does Security Vulnerability Scanning cost and how do I get started?
+A: Security Vulnerability Scanning is custom-built and scoped on a free discovery call, then quoted as a fixed project price. Most solutions are deployed within 2-6 weeks following our Analyze, Prepare, and Implement process.
+
 URL: https://lanos-logic.com/services/security-vulnerability-scanning
 
 ### Penetration Testing
 
 Penetration testing is an authorized, simulated cyberattack run by certified ethical hackers to expose exploitable vulnerabilities before real attackers find them. Lanos Logic pentests web apps, APIs, networks, and cloud infrastructure using PTES, OWASP, and MITRE ATT&CK methodologies.
+
+Penetration testing is an authorized, simulated cyberattack carried out by certified ethical hackers to expose exploitable vulnerabilities before real attackers find them. Lanos Logic pentests web applications, APIs, networks, and cloud infrastructure using industry-standard methodologies — PTES, the OWASP Web Security Testing Guide, and MITRE ATT&CK — so testing mirrors the tools, techniques, and procedures of actual adversaries rather than running a checklist. Where a scanner reports a potential issue, a pentester proves whether it can truly be exploited and how far an attacker could get.
+
+Engagements can include web app and API testing against OWASP WSTG, network and cloud infrastructure testing, and social engineering or phishing simulations that test your people as well as your systems. Every finding comes with reproduction steps, a CVSS score, and step-by-step remediation guidance, so your engineers can confirm and fix each issue without guesswork. The deliverable is a detailed report plus a prioritized remediation roadmap — and a retest to verify the fixes hold.
+
+The reports are accepted as evidence for SOC 2 Type II, ISO 27001, PCI-DSS, and regulatory audits, so a pentest satisfies both your security goals and your compliance obligations. Scope and timing are agreed on a free discovery call and quoted at a fixed price. Penetration Testing complements Security Vulnerability Scanning (continuous detection) and Systems Hardening (closing the gaps testing reveals) as the adversarial validation step in our cybersecurity practice.
 
 **Features:**
 - Web App & API Pentesting (OWASP WSTG)
@@ -210,11 +416,31 @@ Penetration testing is an authorized, simulated cyberattack run by certified eth
 - **Detailed Remediation Roadmap** — Every finding includes reproduction steps, CVSS score, and step-by-step remediation guidance.
 - **Compliance Evidence** — Pentest reports accepted for SOC 2 Type II, ISO 27001, PCI-DSS, and regulatory audits.
 
+**Frequently Asked Questions:**
+
+Q: What is Penetration Testing?
+A: Penetration testing is an authorized, simulated cyberattack run by certified ethical hackers to expose exploitable vulnerabilities before real attackers find them. Lanos Logic pentests web apps, APIs, networks, and cloud infrastructure using PTES, OWASP, and MITRE ATT&CK methodologies.
+
+Q: What does Lanos Logic’s Penetration Testing include?
+A: Our Penetration Testing service includes Web App & API Pentesting (OWASP WSTG), Network & Cloud Infrastructure Testing, Social Engineering & Phishing Simulations.
+
+Q: How can Penetration Testing help my business?
+A: Real-World Attack Simulation: Test defenses under conditions that mirror actual attacker techniques, tools, and procedures (TTPs). Detailed Remediation Roadmap: Every finding includes reproduction steps, CVSS score, and step-by-step remediation guidance. Compliance Evidence: Pentest reports accepted for SOC 2 Type II, ISO 27001, PCI-DSS, and regulatory audits.
+
+Q: How much does Penetration Testing cost and how do I get started?
+A: Penetration Testing is custom-built and scoped on a free discovery call, then quoted as a fixed project price. Most solutions are deployed within 2-6 weeks following our Analyze, Prepare, and Implement process.
+
 URL: https://lanos-logic.com/services/penetration-testing
 
 ### Systems Hardening
 
 Systems hardening is the proactive work of configuring servers, cloud infrastructure, and applications securely to shrink your attack surface. Lanos Logic hardens systems with defense-in-depth controls following CIS Benchmarks, NIST SP 800-123, and Zero Trust Architecture principles.
+
+Systems hardening is the proactive work of configuring your servers, cloud infrastructure, and applications securely to shrink the attack surface an adversary can reach. Lanos Logic hardens systems with defense-in-depth controls following CIS Benchmarks, NIST SP 800-123, and Zero Trust Architecture principles — eliminating unnecessary services, closing exposed ports, enforcing least-privilege access, and tightening configurations across your entire stack so there is simply less for an attacker to exploit.
+
+A hardening engagement typically covers CIS Benchmark implementation across operating systems and services, Zero Trust access design so no user or system is trusted by default, and Cloud Security Posture Management (CSPM) tooling that continuously watches for configuration drift. Because misconfiguration is one of the most common causes of real-world breaches, this work closes the gaps that scanning and pentesting surface and prevents new ones from creeping in as your infrastructure changes.
+
+The configurations are aligned with NIST, CIS, DISA STIG, and SOC 2 frameworks, so your environment is audit-ready and your security posture is documented rather than assumed. Automated CSPM monitoring then alerts on deviations in real time, keeping the hardened state from eroding over time. Engagements are scoped on a free discovery call and quoted at a fixed price. Systems Hardening is the remediation-and-prevention layer of our cybersecurity practice, completing the loop with Vulnerability Scanning and Penetration Testing.
 
 **Features:**
 - CIS Benchmark Implementation
@@ -225,6 +451,20 @@ Systems hardening is the proactive work of configuring servers, cloud infrastruc
 - **Reduced Attack Surface** — Eliminate unnecessary services, close exposed ports, and enforce least-privilege access across your entire stack.
 - **Regulatory Alignment** — Configurations aligned with NIST, CIS, DISA STIG, and SOC 2 frameworks for audit-ready security posture.
 - **Continuous Posture Management** — Automated CSPM tooling monitors for configuration drift and alerts on deviations in real time.
+
+**Frequently Asked Questions:**
+
+Q: What is Systems Hardening?
+A: Systems hardening is the proactive work of configuring servers, cloud infrastructure, and applications securely to shrink your attack surface. Lanos Logic hardens systems with defense-in-depth controls following CIS Benchmarks, NIST SP 800-123, and Zero Trust Architecture principles.
+
+Q: What does Lanos Logic’s Systems Hardening include?
+A: Our Systems Hardening service includes CIS Benchmark Implementation, Zero Trust Architecture Design, Cloud Security Posture Management (CSPM).
+
+Q: How can Systems Hardening help my business?
+A: Reduced Attack Surface: Eliminate unnecessary services, close exposed ports, and enforce least-privilege access across your entire stack. Regulatory Alignment: Configurations aligned with NIST, CIS, DISA STIG, and SOC 2 frameworks for audit-ready security posture. Continuous Posture Management: Automated CSPM tooling monitors for configuration drift and alerts on deviations in real time.
+
+Q: How much does Systems Hardening cost and how do I get started?
+A: Systems Hardening is custom-built and scoped on a free discovery call, then quoted as a fixed project price. Most solutions are deployed within 2-6 weeks following our Analyze, Prepare, and Implement process.
 
 URL: https://lanos-logic.com/services/systems-hardening
 
@@ -239,6 +479,20 @@ AI automation helps marketing agencies automate campaign management, content cre
 - 3x more content production
 - Automated lead nurturing
 
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Marketing Agencies?
+A: AI automation helps marketing agencies automate campaign management, content creation, analytics reporting, and client onboarding. Lanos Logic builds automations that cut reporting time, scale content production, and nurture leads without adding headcount.
+
+Q: What results can Marketing Agencies expect from automation?
+A: Typical outcomes for Marketing Agencies include 50% faster client reporting, 3x more content production, Automated lead nurturing.
+
+Q: Which automation services does Lanos Logic offer for Marketing Agencies?
+A: For Marketing Agencies we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Marketing Agencies?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
 URL: https://lanos-logic.com/industries/marketing-agencies
 
 ### Sales Agencies
@@ -249,6 +503,20 @@ AI automation helps sales agencies streamline lead qualification, follow-ups, pr
 - 40% increase in qualified leads
 - Automated follow-up sequences
 - Smart contract generation
+
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Sales Agencies?
+A: AI automation helps sales agencies streamline lead qualification, follow-ups, proposal generation, and pipeline management. Lanos Logic builds automations that qualify more leads and keep personalized follow-up sequences running automatically.
+
+Q: What results can Sales Agencies expect from automation?
+A: Typical outcomes for Sales Agencies include 40% increase in qualified leads, Automated follow-up sequences, Smart contract generation.
+
+Q: Which automation services does Lanos Logic offer for Sales Agencies?
+A: For Sales Agencies we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Sales Agencies?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
 
 URL: https://lanos-logic.com/industries/sales-agencies
 
@@ -261,6 +529,20 @@ AI automation helps e-commerce businesses run 24/7 customer support, inventory m
 - Automated inventory alerts
 - Personalized recommendations
 
+**Frequently Asked Questions:**
+
+Q: How can AI automation help E-commerce?
+A: AI automation helps e-commerce businesses run 24/7 customer support, inventory management, order processing, and personalized marketing. Lanos Logic builds automations that answer customers instantly and recommend products at scale.
+
+Q: What results can E-commerce expect from automation?
+A: Typical outcomes for E-commerce include 24/7 customer support, Automated inventory alerts, Personalized recommendations.
+
+Q: Which automation services does Lanos Logic offer for E-commerce?
+A: For E-commerce we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for E-commerce?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
 URL: https://lanos-logic.com/industries/ecommerce
 
 ### Education
@@ -271,6 +553,20 @@ AI automation helps education providers automate student enrollment, course mana
 - Streamlined admissions
 - Automated grading
 - Personalized learning paths
+
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Education?
+A: AI automation helps education providers automate student enrollment, course management, grading, and personalized learning. Lanos Logic builds automations that streamline admissions and free educators from repetitive administrative work.
+
+Q: What results can Education expect from automation?
+A: Typical outcomes for Education include Streamlined admissions, Automated grading, Personalized learning paths.
+
+Q: Which automation services does Lanos Logic offer for Education?
+A: For Education we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Education?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
 
 URL: https://lanos-logic.com/industries/education
 
@@ -283,6 +579,20 @@ AI automation helps healthcare providers improve patient scheduling, billing, re
 - Streamlined billing
 - Automated patient follow-ups
 
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Healthcare?
+A: AI automation helps healthcare providers improve patient scheduling, billing, record management, and follow-up communications. Lanos Logic builds automations that reduce no-shows and streamline billing while keeping patient data secure.
+
+Q: What results can Healthcare expect from automation?
+A: Typical outcomes for Healthcare include Reduced no-shows, Streamlined billing, Automated patient follow-ups.
+
+Q: Which automation services does Lanos Logic offer for Healthcare?
+A: For Healthcare we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Healthcare?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
 URL: https://lanos-logic.com/industries/healthcare
 
 ### Logistics
@@ -293,6 +603,20 @@ AI automation helps logistics companies optimize route planning, shipment tracki
 - Real-time tracking updates
 - Optimized delivery routes
 - Automated shipping notifications
+
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Logistics?
+A: AI automation helps logistics companies optimize route planning, shipment tracking, inventory management, and customer notifications. Lanos Logic builds automations that deliver real-time tracking updates and optimized delivery routes.
+
+Q: What results can Logistics expect from automation?
+A: Typical outcomes for Logistics include Real-time tracking updates, Optimized delivery routes, Automated shipping notifications.
+
+Q: Which automation services does Lanos Logic offer for Logistics?
+A: For Logistics we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Logistics?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
 
 URL: https://lanos-logic.com/industries/logistics
 
@@ -305,6 +629,20 @@ AI automation helps real estate firms automate lead qualification, property matc
 - Smart document processing
 - Virtual property tours
 
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Real Estate?
+A: AI automation helps real estate firms automate lead qualification, property matching, document management, and client communications. Lanos Logic builds automations that send property alerts and process documents without manual work.
+
+Q: What results can Real Estate expect from automation?
+A: Typical outcomes for Real Estate include Automated property alerts, Smart document processing, Virtual property tours.
+
+Q: Which automation services does Lanos Logic offer for Real Estate?
+A: For Real Estate we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Real Estate?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
 URL: https://lanos-logic.com/industries/real-estate
 
 ### Professional Services
@@ -315,6 +653,20 @@ AI automation helps professional services firms streamline client onboarding, pr
 - Automated time tracking
 - Smart document generation
 - Client portal access
+
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Professional Services?
+A: AI automation helps professional services firms streamline client onboarding, project management, billing, and reporting. Lanos Logic builds automations for time tracking, document generation, and self-service client portals.
+
+Q: What results can Professional Services expect from automation?
+A: Typical outcomes for Professional Services include Automated time tracking, Smart document generation, Client portal access.
+
+Q: Which automation services does Lanos Logic offer for Professional Services?
+A: For Professional Services we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Professional Services?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
 
 URL: https://lanos-logic.com/industries/professional-services
 
@@ -327,6 +679,20 @@ AI automation helps manufacturers improve production planning, quality control, 
 - Automated quality checks
 - Supply chain optimization
 
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Manufacturing?
+A: AI automation helps manufacturers improve production planning, quality control, inventory management, and supply chain operations. Lanos Logic builds automations for predictive maintenance, automated quality checks, and supply chain optimization.
+
+Q: What results can Manufacturing expect from automation?
+A: Typical outcomes for Manufacturing include Predictive maintenance, Automated quality checks, Supply chain optimization.
+
+Q: Which automation services does Lanos Logic offer for Manufacturing?
+A: For Manufacturing we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Manufacturing?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
 URL: https://lanos-logic.com/industries/manufacturing
 
 ### U.S. Government & Federal
@@ -337,6 +703,20 @@ AI automation helps U.S. federal agencies, defense contractors, and state govern
 - FedRAMP-aligned architecture
 - Secure document classification
 - Automated compliance reporting
+
+**Frequently Asked Questions:**
+
+Q: How can AI automation help U.S. Government & Federal?
+A: AI automation helps U.S. federal agencies, defense contractors, and state governments process documents, automate citizen services, and run compliance workflows securely. Lanos Logic builds FedRAMP-aligned AI solutions with secure document classification and automated compliance reporting.
+
+Q: What results can U.S. Government & Federal expect from automation?
+A: Typical outcomes for U.S. Government & Federal include FedRAMP-aligned architecture, Secure document classification, Automated compliance reporting.
+
+Q: Which automation services does Lanos Logic offer for U.S. Government & Federal?
+A: For U.S. Government & Federal we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for U.S. Government & Federal?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
 
 URL: https://lanos-logic.com/industries/government
 
@@ -349,6 +729,20 @@ AI automation helps pharmaceutical companies support drug discovery, manage clin
 - AI-powered adverse event detection
 - Clinical data pipeline automation
 
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Pharmaceutical?
+A: AI automation helps pharmaceutical companies support drug discovery, manage clinical trial data, automate regulatory submissions, and run pharmacovigilance. Lanos Logic builds vector database-powered knowledge retrieval for accelerated submissions and AI-powered adverse event detection.
+
+Q: What results can Pharmaceutical expect from automation?
+A: Typical outcomes for Pharmaceutical include Accelerated regulatory submissions, AI-powered adverse event detection, Clinical data pipeline automation.
+
+Q: Which automation services does Lanos Logic offer for Pharmaceutical?
+A: For Pharmaceutical we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Pharmaceutical?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
 URL: https://lanos-logic.com/industries/pharmaceutical
 
 ### Life Sciences
@@ -360,6 +754,20 @@ AI automation helps life sciences organizations manage research data, process ge
 - Automated lab data integration
 - AI literature analysis
 
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Life Sciences?
+A: AI automation helps life sciences organizations manage research data, process genomic data, integrate lab automation, and review literature faster. Lanos Logic builds semantic search and vector embeddings for AI-assisted research discovery and automated lab data integration.
+
+Q: What results can Life Sciences expect from automation?
+A: Typical outcomes for Life Sciences include Semantic research discovery, Automated lab data integration, AI literature analysis.
+
+Q: Which automation services does Lanos Logic offer for Life Sciences?
+A: For Life Sciences we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Life Sciences?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
 URL: https://lanos-logic.com/industries/life-sciences
 
 ### Law & Attorneys
@@ -370,6 +778,20 @@ AI automation helps law firms and attorneys analyze contracts, automate legal re
 - 80% faster contract review
 - AI-powered legal research
 - Automated due diligence
+
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Law & Attorneys?
+A: AI automation helps law firms and attorneys analyze contracts, automate legal research, manage cases, and review documents faster. Lanos Logic builds vector database-powered precedent discovery and automated due diligence that speed up contract review.
+
+Q: What results can Law & Attorneys expect from automation?
+A: Typical outcomes for Law & Attorneys include 80% faster contract review, AI-powered legal research, Automated due diligence.
+
+Q: Which automation services does Lanos Logic offer for Law & Attorneys?
+A: For Law & Attorneys we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Law & Attorneys?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
 
 URL: https://lanos-logic.com/industries/legal
 
@@ -920,6 +1342,61 @@ Erik manages cloud infrastructure, deployment pipelines, and system scalability 
 1. **Analyze** — Plan, analyze, and blueprint business processes using BPMN and documentation.
 2. **Prepare** — Refine and align processes with future state planning.
 3. **Implement** — Deploy automations that deliver immediate results.
+
+## Frequently Asked Questions
+
+**General questions:**
+
+Q: What AI automation services does Lanos Logic offer?
+A: Lanos Logic offers AI Agents, Voice AI Agents, Vector Database Solutions, Document Automation, Process Automation, Social Media Automation, Communication Automation, Mobile App Development, and Analytics & Insights, plus enterprise cybersecurity (vulnerability scanning, penetration testing, and systems hardening).
+
+Q: How much does AI automation cost?
+A: Every Lanos Logic solution is custom-scoped, so pricing depends on the workflows automated and the integrations required. We start with a free discovery call and a BPMN analysis, then quote a fixed project price before any build begins — no open-ended hourly billing.
+
+Q: How long does an AI automation project take?
+A: Most automation workflows are deployed within 2-6 weeks. Complex enterprise integrations may take 8-12 weeks. We follow a 3-phase process: Analyze, Prepare, and Implement.
+
+Q: What results can businesses expect from AI automation?
+A: Clients typically see up to a 300% increase in operational capacity, 85% reduction in processing time, 68% higher response rates, 42% higher conversion rates, 75% faster lead qualification, and around 3.5x ROI on their automation investment.
+
+Q: Which industries does Lanos Logic serve?
+A: We serve marketing and sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, U.S. government and federal agencies, pharmaceutical, life sciences, and legal firms.
+
+Q: What technology stack does Lanos Logic use?
+A: We build on Claude AI, Make.com, n8n, Zapier, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, Stripe, DocuSign, ClickUp, Miro, and PandaDoc, selecting the right tools for each client’s existing stack.
+
+Q: Do I need technical knowledge to work with Lanos Logic?
+A: No. We map your existing processes, design the automation, build it, and provide monitoring and support. You get a documented BPMN blueprint and a clear path to results without needing an in-house engineering team.
+
+Q: What does Lanos Logic do?
+A: Lanos Logic is an AI automation company that helps businesses transform their operations through intelligent automation — AI agents, voice AI, document and process automation, vector databases, and custom mobile apps — plus enterprise cybersecurity. Solutions are delivered by a team of AI and automation experts.
+
+Q: Where is Lanos Logic based and which regions does it serve?
+A: Lanos Logic is headquartered at 24 E Washington St Suite 875, Chicago, IL 60602, USA, and serves businesses across the United States, United Kingdom, and globally via remote delivery.
+
+Q: What are Lanos Logic’s core values?
+A: Lanos Logic is mission-driven (helping businesses harness AI to achieve their goals), client-focused (every solution is tailored to the client’s unique needs), committed to excellence in everything from code to customer service, and focused on innovation by staying at the forefront of AI technology.
+
+Q: How does Lanos Logic approach a new automation project?
+A: Lanos Logic follows a 3-phase process: Analyze (plan and blueprint business processes using BPMN), Prepare (refine and align processes with future-state planning), and Implement (deploy automations that deliver immediate, measurable results).
+
+Q: Do I need an in-house engineering team to work with Lanos Logic?
+A: No. Lanos Logic maps your existing processes, designs the automation, builds it, and provides monitoring and support — so you get results without needing an in-house engineering team.
+
+Q: How do I contact Lanos Logic?
+A: You can email hello@lanos-logic.com, call +1 (518) 864 3528 in the US or +44 1313 813160 in the UK, or use the contact form on this page. Business hours are 9:00 AM to 6:00 PM, Monday to Friday (CST).
+
+Q: How do I book a free consultation with Lanos Logic?
+A: Use the embedded calendar on this page to schedule a free 30-minute discovery call with the team, or visit the Book page to choose between a Discovery Call and a deeper Business Analysis session.
+
+Q: How quickly will Lanos Logic respond to my enquiry?
+A: The team responds to enquiries submitted through the contact form during business hours (9:00 AM to 6:00 PM CST, Monday to Friday). For the fastest path to a tailored recommendation, book a discovery call directly from the calendar.
+
+Q: Is the discovery call free and is there any commitment?
+A: Yes — the discovery call is free and carries no commitment. It is a chance to understand your business challenges, explore automation opportunities, and get expert recommendations tailored to your needs.
+
+Q: Where is Lanos Logic located?
+A: Lanos Logic is located at 24 E Washington St Suite 875, Chicago, IL 60602, USA, and works with clients across the US, UK, and worldwide.
 
 ## Blog
 

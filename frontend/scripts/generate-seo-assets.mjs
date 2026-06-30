@@ -26,6 +26,18 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// FAQ + overview prose, imported from the same source the React app renders so
+// llms-full.txt carries the exact answers and overviews users see. These are
+// the highest-value passages for AI retrieval / RRF (a question is a near-
+// verbatim lexical match to a user query; its answer is the semantic payload).
+import {
+  homeFaqs,
+  getServiceFaqs,
+  getIndustryFaqs,
+  aboutFaqs,
+  contactFaqs,
+} from '../src/data/faqData.js';
+import { getServiceOverview } from '../src/data/serviceOverviews.js';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(SCRIPT_DIR, '..', '..');
@@ -176,6 +188,37 @@ function statsSummary(stats) {
     .map((s) => `${s.value} ${s.label}`.trim())
     .filter(Boolean)
     .join(' · ');
+}
+
+/**
+ * Push a FAQ block (Q&A prose) onto the line buffer. Each question is a heading
+ * line and each answer a paragraph, so retrieval chunks the pair together —
+ * lexical query match (question) + semantic payload (answer) in one chunk.
+ */
+function pushFaqs(L, faqs, label = 'Frequently Asked Questions') {
+  if (!Array.isArray(faqs) || faqs.length === 0) return;
+  L.push(`**${label}:**`);
+  L.push('');
+  faqs.forEach((f) => {
+    if (!f || !f.q || !f.a) return;
+    L.push(`Q: ${f.q}`);
+    L.push(`A: ${f.a}`);
+    L.push('');
+  });
+}
+
+/** Dedupe a list of {q,a} FAQs by normalized question text (first wins). */
+function dedupeFaqs(faqs) {
+  const seen = new Set();
+  const out = [];
+  for (const f of faqs) {
+    if (!f || !f.q) continue;
+    const key = f.q.trim().toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(f);
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------------------
@@ -364,6 +407,13 @@ function buildLlmsFullTxt(data) {
     L.push('');
     L.push(s.shortDescription);
     L.push('');
+    const overview = getServiceOverview(s.id);
+    if (Array.isArray(overview) && overview.length) {
+      overview.forEach((p) => {
+        L.push(p);
+        L.push('');
+      });
+    }
     if (Array.isArray(s.features) && s.features.length) {
       L.push('**Features:**');
       s.features.forEach((f) => L.push(`- ${f}`));
@@ -374,6 +424,7 @@ function buildLlmsFullTxt(data) {
       s.benefits.forEach((b) => L.push(`- **${b.title}** — ${b.description}`));
       L.push('');
     }
+    pushFaqs(L, getServiceFaqs(s));
     L.push(`URL: ${absUrl(s.href)}`);
     L.push('');
   });
@@ -390,6 +441,7 @@ function buildLlmsFullTxt(data) {
       ind.stats.forEach((st) => L.push(`- ${st}`));
       L.push('');
     }
+    pushFaqs(L, getIndustryFaqs(ind));
     L.push(`URL: ${absUrl(ind.href)}`);
     L.push('');
   });
@@ -437,6 +489,16 @@ function buildLlmsFullTxt(data) {
     L.push(`${i + 1}. **${p.title}** — ${p.description}`)
   );
   L.push('');
+
+  // General FAQ — home, about, and contact questions deduped into one block.
+  // Per-service and per-industry FAQs live inline in their own sections above.
+  L.push('## Frequently Asked Questions');
+  L.push('');
+  pushFaqs(
+    L,
+    dedupeFaqs([...homeFaqs, ...aboutFaqs, ...contactFaqs]),
+    'General questions'
+  );
 
   if (Array.isArray(data.blogPosts) && data.blogPosts.length) {
     L.push('## Blog');

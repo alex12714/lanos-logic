@@ -9,6 +9,15 @@ import {
 // On-brand FAQ block backed by FAQPage JSON-LD. Reuses the existing radix
 // Accordion design system. The JSON-LD is rendered inline alongside the visible
 // Q&As so the structured data always matches what users see.
+//
+// `forceMount` on AccordionContent keeps every answer in the rendered DOM even
+// while collapsed (Radix applies `hidden` when closed, so the visual UX is
+// unchanged). This is essential for AI retrieval / RRF: the build-time
+// prerender snapshots the page with all FAQs collapsed, and without forceMount
+// Radix unmounts collapsed content — so the answer prose would reach only the
+// JSON-LD <script>, never the crawlable/embeddable body text. With forceMount,
+// each question (lexical match) and its answer (semantic payload) are
+// co-located in the same prerendered chunk.
 const FaqSection = ({
   faqs,
   heading = 'Frequently Asked Questions',
@@ -52,7 +61,10 @@ const FaqSection = ({
               <AccordionTrigger className="text-white text-left text-base sm:text-lg font-semibold hover:no-underline hover:text-amber-400 [&>svg]:text-amber-400">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-400 leading-relaxed text-base">
+              <AccordionContent
+                forceMount
+                className="text-gray-400 leading-relaxed text-base"
+              >
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
