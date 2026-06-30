@@ -20,8 +20,10 @@ import puppeteer from 'puppeteer';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BUILD_DIR = path.resolve(__dirname, '..', 'build');
-const PORT = 45678;
-const ORIGIN = `http://127.0.0.1:${PORT}`;
+// Bind to an OS-assigned ephemeral port (set once the server is listening) so a
+// leftover/concurrent prerender process can never cause EADDRINUSE — which would
+// abort the prerender and ship an un-prerendered SPA shell to production.
+let ORIGIN;
 const NAV_TIMEOUT = 30000;
 
 const MIME = {
@@ -71,7 +73,12 @@ function startServer() {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     res.end(SHELL_HTML);
   });
-  return new Promise((resolve) => server.listen(PORT, '127.0.0.1', () => resolve(server)));
+  return new Promise((resolve) =>
+    server.listen(0, '127.0.0.1', () => {
+      ORIGIN = `http://127.0.0.1:${server.address().port}`;
+      resolve(server);
+    })
+  );
 }
 
 function routesFromSitemap() {
