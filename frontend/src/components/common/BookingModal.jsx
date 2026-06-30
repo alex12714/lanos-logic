@@ -41,8 +41,8 @@ const BookingModal = ({ isOpen, onClose }) => {
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-white/10">
             <div>
-              <h2 className="text-2xl font-bold text-white">Book Your Free Discovery Call</h2>
-              <p className="text-gray-400 mt-1">Schedule a time that works best for you</p>
+              <h2 className="text-2xl font-bold text-white">Book Your Free Automation Audit</h2>
+              <p className="text-gray-400 mt-1">A no-obligation review of your highest-ROI automations — pick a time that works for you</p>
             </div>
             <Button
               variant="ghost"

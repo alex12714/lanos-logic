@@ -38,8 +38,9 @@ const CTASection = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-            Schedule a free discovery call with our AI experts to explore how our
-            solutions can address your specific business challenges.
+            Get a free AI Automation Audit — a no-obligation map of your
+            highest-ROI automations, a clear process blueprint, and a fixed-price
+            quote. No hard sell, just a plan.
           </p>
 
           <motion.div
@@ -53,10 +54,14 @@ const CTASection = () => {
               onClick={openBookingModal}
               className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-full px-10 h-16 gap-3 shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 transition-all duration-300 text-lg"
             >
-              Book Your Discovery Call Now
+              Get Your Free Automation Audit
               <ArrowRight className="w-6 h-6" />
             </Button>
           </motion.div>
+
+          <p className="text-gray-500 text-sm mt-6">
+            Fixed-price quote · Live in 2–6 weeks · We build until you’re satisfied
+          </p>
         </FadeInUp>
       </div>
     </section>

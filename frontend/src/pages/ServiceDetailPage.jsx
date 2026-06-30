@@ -57,6 +57,13 @@ const ServiceDetailPage = () => {
   // Self-hosted Pexels hero photo (public/services/<id>.jpg). Falls back to the
   // icon-only card if the image is missing (img is hidden onError).
   const heroImage = `/services/${service.id}.jpg`;
+  const isGeo = service.id === 'agentic-seo-geo';
+  const auditLabel = isGeo
+    ? 'Get Your Free GEO Visibility Audit'
+    : 'Get Your Free Automation Audit';
+  const auditSubtitle = isGeo
+    ? 'Get a free GEO Visibility Audit — see exactly where AI engines do (and don’t) cite you, and how to fix it.'
+    : 'Get a free AI Automation Audit — a no-obligation plan of your highest-ROI automations and a fixed-price quote.';
   const jsonLd = [
     serviceSchema(service),
     breadcrumb([
@@ -248,7 +255,7 @@ const ServiceDetailPage = () => {
             Ready to Transform Your Business with {service.name}?
           </h2>
           <p className="text-gray-400 text-lg mb-10">
-            Schedule a free discovery call with our experts.
+            {auditSubtitle}
           </p>
           <Button
             size="lg"
@@ -256,7 +263,7 @@ const ServiceDetailPage = () => {
             asChild
           >
             <Link to="/contact">
-              Book Your Discovery Call Now
+              {auditLabel}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>

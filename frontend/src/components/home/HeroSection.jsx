@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Phone, Sparkles } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from '../ui/button';
-import { heroFeatures } from '../../data/mock';
 import { useBooking } from '../../context/BookingContext';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 
@@ -107,12 +106,11 @@ const HeroSection = () => {
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight"
             variants={itemVariants}
           >
-            <span className="text-white">Strategic </span>
-            <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
-              AI Solutions
-            </span>
+            <span className="text-white">Scale your business </span>
             <br />
-            <span className="text-white">For Modern Businesses</span>
+            <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">
+              without scaling your team.
+            </span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -120,9 +118,8 @@ const HeroSection = () => {
             className="page-intro text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
-            Enterprise-grade AI solutions that transform operations across government,
-            healthcare, legal, and life sciences — from intelligent document processing
-            to vector database architectures.
+            We design and build AI automations that do the repetitive work — so you
+            grow capacity, not payroll. Fixed-price projects, live in 2–6 weeks.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -135,7 +132,7 @@ const HeroSection = () => {
               onClick={openBookingModal}
               className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-full px-8 h-14 gap-2 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 transform hover:scale-105 transition-all duration-300"
             >
-              Book Your Discovery Call
+              Get Your Free Automation Audit
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button
@@ -157,24 +154,32 @@ const HeroSection = () => {
             </Button>
           </motion.div>
 
-          {/* Feature Pills */}
-          <motion.div
-            className="flex flex-wrap items-center justify-center gap-2 pt-12"
+          {/* Reassurance microline */}
+          <motion.p
+            className="text-gray-500 text-sm pt-5"
             variants={itemVariants}
           >
-            <div className="flex items-center gap-2 bg-gradient-to-r from-amber-900/40 to-amber-800/20 border border-amber-500/30 rounded-full px-6 py-3 backdrop-blur-sm">
-              {heroFeatures.map((feature, index) => (
-                <React.Fragment key={feature}>
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-amber-400" />
-                    <span className="text-amber-200 text-sm font-medium">{feature}</span>
-                  </div>
-                  {index < heroFeatures.length - 1 && (
-                    <span className="text-amber-500/50">|</span>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
+            Free audit · Fixed-price quote · We build until you’re satisfied
+          </motion.p>
+
+          {/* Proof / trust bar */}
+          <motion.div
+            className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto pt-12"
+            variants={itemVariants}
+          >
+            {[
+              { value: '100+', label: 'Clients served' },
+              { value: '500+', label: 'Automations built' },
+              { value: '2M+', label: 'Hours saved' },
+              { value: '99%', label: 'Client satisfaction' },
+            ].map((s) => (
+              <div key={s.label} className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
+                  {s.value}
+                </div>
+                <div className="text-gray-400 text-sm mt-1">{s.label}</div>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

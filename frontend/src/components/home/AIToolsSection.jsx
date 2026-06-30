@@ -37,7 +37,7 @@ const AIToolsSection = () => {
           <motion.div className="space-y-6" {...slideIn(-1)}>
             <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 rounded-full px-4 py-2">
               <Brain className="w-4 h-4 text-purple-400" />
-              <span className="text-purple-300 text-sm font-medium">Claude AI</span>
+              <span className="text-purple-300 text-sm font-medium">Claude AI · Certified Builders</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white">
               Leverage Claude&apos;s Advanced Capabilities

@@ -24,11 +24,12 @@ const CaseStudiesSection = () => {
             {allCaseStudies.length}+ Completed Projects
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Client <span className="text-amber-400">Success Stories</span>
+            Real automations. <span className="text-amber-400">Measurable results.</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Real results from real businesses. See how our AI automation solutions
-            have transformed operations across industries.
+            Not demos — shipped projects with the numbers to prove it: thousands of
+            hours saved, staff redeployed, and revenue recovered across real
+            businesses.
           </p>
         </FadeInUp>
 
