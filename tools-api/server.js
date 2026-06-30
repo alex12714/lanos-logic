@@ -56,8 +56,15 @@ function isBlockedIp(ip) {
   return true;
 }
 
+// Our own domains are routed to the host gateway (private IP) via compose
+// extra_hosts to defeat hairpin NAT. They're a fixed, non-user-controlled set
+// that only ever reaches our own public Traefik, so they bypass the private-IP
+// SSRF guard (which would otherwise reject the host-gateway address).
+const SELF_HOSTS = new Set(['lanos-logic.com', 'www.lanos-logic.com']);
+
 async function assertPublicHost(hostname) {
   if (!hostname || hostname === 'localhost') throw new Error('blocked host');
+  if (SELF_HOSTS.has(hostname.toLowerCase())) return;
   if (net.isIP(hostname) && isBlockedIp(hostname)) throw new Error('blocked ip');
   const records = await dns.lookup(hostname, { all: true });
   if (!records.length) throw new Error('no dns');
@@ -166,7 +173,14 @@ async function aiCrawlerCheck(rawUrl) {
 
   let robots = { status: 0, body: '' };
   try { robots = await safeFetch(`${origin}/robots.txt`); }
-  catch (e) { return { error: `Could not reach that site (${e.message}). Check the URL and try again.` }; }
+  catch (e) {
+    const reason = /abort|timeout/i.test(e.message)
+      ? 'it took too long to respond'
+      : /enotfound|dns/i.test(e.message)
+        ? 'we couldn’t find that domain'
+        : 'it isn’t publicly reachable';
+    return { error: `We couldn’t reach ${origin} — ${reason}. Check the URL and make sure the site is public.` };
+  }
 
   const robotsTxt = robots.status === 200 ? robots.body : '';
   const robotsPresent = robots.status === 200 && robotsTxt.trim().length > 0;
