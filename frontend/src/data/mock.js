@@ -591,6 +591,97 @@ export const companyStats = [
 
 export const blogPosts = [
   {
+    id: "what-is-geo",
+    slug: "what-is-geo-generative-engine-optimization",
+    title: "What Is GEO? How to Get Your Business Cited by ChatGPT, Perplexity & Google AI Overviews",
+    summary: "Search is moving from ten blue links to a single AI-generated answer. Generative Engine Optimization (GEO) is how you make sure your business is the source the AI quotes — here's what it is, why it matters now, and the exact stack we use to do it.",
+    author: "Alex Podbrezsky",
+    authorRole: "Founder & CEO, Lanos Logic",
+    date: "June 30, 2026",
+    readTime: "9 min read",
+    category: "AI Search & SEO",
+    tags: ["GEO", "Generative Engine Optimization", "AI SEO", "AEO", "ChatGPT", "Perplexity"],
+    heroGradient: "from-purple-900/40 to-amber-900/20",
+    content: [
+      {
+        type: "intro",
+        text: "More and more buyers no longer scroll a page of blue links — they ask ChatGPT, Claude, Perplexity, Google's AI Overviews, or Gemini, and act on the answer they get back. Those assistants don't rank ten results; they cite a handful of sources. Generative Engine Optimization (GEO) is the practice of making sure your business is one of the sources they quote by name. At Lanos Logic we run this work for clients — and on our own website — so this is the playbook, not theory.",
+      },
+      {
+        type: "heading",
+        text: "What is Generative Engine Optimization (GEO)?",
+      },
+      {
+        type: "paragraph",
+        text: "GEO — also called Answer Engine Optimization (AEO) — is the practice of structuring your website and content so AI assistants can find, understand, and cite it inside their generated answers. Instead of chasing a ranking position on a results page, GEO optimizes for being the source an AI quotes when a potential customer asks it a question.",
+      },
+      {
+        type: "paragraph",
+        text: "The shift is fundamental: classic SEO competes for a click on a list of links, while GEO competes to be the trusted answer itself. The two share fundamentals — crawlability, clear content, structured data — but GEO adds AI-crawler access, machine-readable knowledge bases, and content engineered for the way large language models actually retrieve information.",
+      },
+      {
+        type: "heading",
+        text: "Why GEO matters now",
+      },
+      {
+        type: "paragraph",
+        text: "AI search is where a growing share of buying journeys now begin. When a prospect asks an assistant \"who builds AI automation for healthcare?\" and your competitor is the one named in the answer, you've lost the buyer before they ever reach a search result — let alone your homepage. And unlike a ranking you can watch slip, you never even see it happen.",
+      },
+      {
+        type: "paragraph",
+        text: "GEO is also durable. The structured, well-explained content that earns citations keeps working as models update, because you're optimizing for genuine clarity and authority rather than a single algorithm's quirks. Getting in early, while most businesses are still invisible to AI engines, is a compounding advantage.",
+      },
+      {
+        type: "heading",
+        text: "GEO vs traditional SEO",
+      },
+      {
+        type: "list",
+        heading: "How the two differ in practice:",
+        items: [
+          "Goal: SEO wins a ranking and a click; GEO wins a citation inside an AI-generated answer.",
+          "Audience: SEO optimizes for a human scanning links; GEO optimizes for a model retrieving and synthesizing passages.",
+          "Content shape: SEO rewards keyword-targeted pages; GEO rewards self-contained, question-and-answer passages a model can lift directly.",
+          "Access: GEO depends on letting AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) reach your site — something classic SEO ignores.",
+          "Measurement: SEO tracks rankings and traffic; GEO tracks whether and how your brand is mentioned across AI engines.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "The 5-Layer GEO Stack",
+      },
+      {
+        type: "paragraph",
+        text: "Lanos Logic delivers GEO through a repeatable system — the same stack we run on this website. Each layer builds on the one before it:",
+      },
+      {
+        type: "list",
+        heading: "The five layers:",
+        items: [
+          "1. Crawl Access — make sure the AI crawlers that feed answer engines (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot) can reach and read your site.",
+          "2. Machine Legibility — JSON-LD schema, an llms.txt / llms-full.txt knowledge base, and agent-native surfaces (MCP, agent.json) so models parse you cleanly.",
+          "3. Retrieval-Ready Content — self-contained, question-and-answer passages tuned for the hybrid lexical and semantic retrieval (Reciprocal Rank Fusion) that AI engines use to pick sources.",
+          "4. Authority & Citations — the entity consistency, citations, and mentions that make a model trust and repeat your brand as the answer.",
+          "5. Visibility Monitoring — tracking where and how you're cited across ChatGPT, Claude, Perplexity, and Gemini so the gaps that keep you out of answers get closed.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "How to get started",
+      },
+      {
+        type: "paragraph",
+        text: "GEO starts with knowing where you stand: which AI crawlers can reach you today, what structured data you expose, and whether AI engines currently cite you at all. That's exactly what our free GEO Visibility Audit covers — a no-obligation snapshot of how AI search sees your business, and the highest-impact fixes to become the answer.",
+      },
+      {
+        type: "cta",
+        text: "Find out where AI engines do — and don't — cite your business, and how to fix it. Get a free GEO Visibility Audit from the Lanos Logic team.",
+        buttonText: "Get Your Free GEO Visibility Audit",
+        buttonHref: "/services/agentic-seo-geo",
+      },
+    ],
+  },
+  {
     id: "security-services-launch",
     slug: "we-now-offer-cybersecurity-services",
     title: "Lanos Logic Now Offers Enterprise Cybersecurity Services: Penetration Testing, Vulnerability Scanning & Systems Hardening",

@@ -1443,6 +1443,14 @@ A: Lanos Logic is located at 24 E Washington St Suite 875, Chicago, IL 60602, US
 
 ## Blog
 
+### What Is GEO? How to Get Your Business Cited by ChatGPT, Perplexity & Google AI Overviews
+
+- By Alex Podbrezsky · June 30, 2026 · AI Search & SEO
+
+Search is moving from ten blue links to a single AI-generated answer. Generative Engine Optimization (GEO) is how you make sure your business is the source the AI quotes — what it is, why it matters now, and the exact 5-Layer GEO Stack we use to do it.
+
+URL: https://lanos-logic.com/blog/what-is-geo-generative-engine-optimization
+
 ### Lanos Logic Now Offers Enterprise Cybersecurity Services: Penetration Testing, Vulnerability Scanning & Systems Hardening
 
 - By Alex Podbrezsky · May 13, 2026 · Security

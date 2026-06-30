@@ -576,6 +576,20 @@
   ],
   "blogPosts": [
     {
+      "id": "what-is-geo",
+      "slug": "what-is-geo-generative-engine-optimization",
+      "title": "What Is GEO? How to Get Your Business Cited by ChatGPT, Perplexity & Google AI Overviews",
+      "summary": "Search is moving from ten blue links to a single AI-generated answer. Generative Engine Optimization (GEO) is how you make sure your business is the source the AI quotes — what it is, why it matters now, and the exact 5-Layer GEO Stack we use to do it.",
+      "author": "Alex Podbrezsky",
+      "authorRole": "Founder & CEO, Lanos Logic",
+      "date": "June 30, 2026",
+      "readTime": "9 min read",
+      "category": "AI Search & SEO",
+      "tags": ["GEO", "Generative Engine Optimization", "AI SEO", "AEO", "ChatGPT", "Perplexity"],
+      "heroGradient": "from-purple-900/40 to-amber-900/20",
+      "url": "https://lanos-logic.com/blog/what-is-geo-generative-engine-optimization"
+    },
+    {
       "id": "security-services-launch",
       "slug": "we-now-offer-cybersecurity-services",
       "title": "Lanos Logic Now Offers Enterprise Cybersecurity Services: Penetration Testing, Vulnerability Scanning & Systems Hardening",
