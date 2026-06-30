@@ -280,8 +280,8 @@ United States, United Kingdom, Canada, Australia, Germany, France, Netherlands, 
 - Case Studies: https://lanos-logic.com/case-studies
 - Contact: https://lanos-logic.com/contact
 - Blog: https://lanos-logic.com/blog
-- Free Tools: https://lanos-logic.com/tools
-- AI Crawler Access Checker (free tool): https://lanos-logic.com/tools/ai-crawler-checker
+- Free Tools: https://lanos-logic.com/free-tools
+- AI Crawler Access Checker (free tool): https://lanos-logic.com/free-tools/ai-crawler-checker
 - Book Consultation: https://lanos-logic.com/book
 - LLM Knowledge Base (full): https://lanos-logic.com/llms-full.txt
 

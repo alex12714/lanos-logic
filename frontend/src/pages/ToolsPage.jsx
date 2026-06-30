@@ -8,7 +8,7 @@ import { breadcrumb, speakableWebPage } from '../lib/seo';
 const TOOLS = [
   {
     name: 'AI Crawler Access Checker',
-    href: '/tools/ai-crawler-checker',
+    href: '/free-tools/ai-crawler-checker',
     icon: Bot,
     desc: 'See whether ChatGPT, Claude, Perplexity, and Google’s AI crawlers can read your site — with an instant AI-readiness score and the fixes to become citable.',
     tag: 'Free · Instant',
@@ -20,12 +20,12 @@ const ToolsPage = () => {
   const jsonLd = [
     breadcrumb([
       { name: 'Home', path: '/' },
-      { name: 'Free Tools', path: '/tools' },
+      { name: 'Free Tools', path: '/free-tools' },
     ]),
     speakableWebPage({
       name: 'Free GEO & AI-Search Tools | Lanos Logic',
       description: 'Free tools from Lanos Logic to check and improve how AI search engines see your website.',
-      url: '/tools',
+      url: '/free-tools',
     }),
   ];
 
@@ -34,7 +34,7 @@ const ToolsPage = () => {
       <Seo
         title="Free GEO & AI-Search Tools | Lanos Logic"
         description="Free tools to check and improve how AI search engines (ChatGPT, Claude, Perplexity, Gemini) see your website — starting with the AI Crawler Access Checker."
-        path="/tools"
+        path="/free-tools"
         jsonLd={jsonLd}
       />
       <section className="relative pt-32 pb-20 overflow-hidden">

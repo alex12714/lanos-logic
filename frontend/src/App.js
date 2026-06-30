@@ -46,8 +46,8 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/glossary" element={<GlossaryPage />} />
-            <Route path="/tools" element={<ToolsPage />} />
-            <Route path="/tools/ai-crawler-checker" element={<AiCrawlerCheckerPage />} />
+            <Route path="/free-tools" element={<ToolsPage />} />
+            <Route path="/free-tools/ai-crawler-checker" element={<AiCrawlerCheckerPage />} />
           </Routes>
         </BookingProvider>
       </BrowserRouter>

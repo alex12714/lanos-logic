@@ -63,7 +63,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/tools"
+                  to="/free-tools"
                   className="text-gray-400 hover:text-amber-400 transition-colors text-sm"
                 >
                   Free Tools

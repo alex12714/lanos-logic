@@ -65,13 +65,13 @@ const AiCrawlerCheckerPage = () => {
   const jsonLd = [
     breadcrumb([
       { name: 'Home', path: '/' },
-      { name: 'Free Tools', path: '/tools' },
-      { name: 'AI Crawler Access Checker', path: '/tools/ai-crawler-checker' },
+      { name: 'Free Tools', path: '/free-tools' },
+      { name: 'AI Crawler Access Checker', path: '/free-tools/ai-crawler-checker' },
     ]),
     speakableWebPage({
       name: 'AI Crawler Access Checker | Lanos Logic',
       description: 'Free tool: check whether ChatGPT, Claude, Perplexity, and Google AI crawlers can access your website, and get an AI-readiness score.',
-      url: '/tools/ai-crawler-checker',
+      url: '/free-tools/ai-crawler-checker',
     }),
     {
       '@context': 'https://schema.org',
@@ -80,7 +80,7 @@ const AiCrawlerCheckerPage = () => {
       applicationCategory: 'SEO / GEO tool',
       operatingSystem: 'Web',
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      url: 'https://lanos-logic.com/tools/ai-crawler-checker',
+      url: 'https://lanos-logic.com/free-tools/ai-crawler-checker',
     },
   ];
 
@@ -91,7 +91,7 @@ const AiCrawlerCheckerPage = () => {
       <Seo
         title="Free AI Crawler Access Checker — Can ChatGPT & Perplexity See Your Site? | Lanos Logic"
         description="Free tool: check whether AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) can access your website. Get an instant AI-readiness score and the fixes to become citable in AI answers."
-        path="/tools/ai-crawler-checker"
+        path="/free-tools/ai-crawler-checker"
         jsonLd={jsonLd}
       />
 
@@ -102,7 +102,7 @@ const AiCrawlerCheckerPage = () => {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Link to="/tools" className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-6 text-sm">
+          <Link to="/free-tools" className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-6 text-sm">
             ← Free Tools
           </Link>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5">
