@@ -56,15 +56,21 @@ function isBlockedIp(ip) {
   return true;
 }
 
-// Our own domains are routed to the host gateway (private IP) via compose
-// extra_hosts to defeat hairpin NAT. They're a fixed, non-user-controlled set
-// that only ever reaches our own public Traefik, so they bypass the private-IP
-// SSRF guard (which would otherwise reject the host-gateway address).
-const SELF_HOSTS = new Set(['lanos-logic.com', 'www.lanos-logic.com']);
+// A container can't hairpin back to its own host's public IP, so checking
+// lanos-logic.com (which resolves there) times out. Instead we fetch our own
+// site straight from the nginx container by name on the shared coolify network.
+// SELF_HOSTS maps the public hostname -> internal base; SELF_INTERNAL_NAMES are
+// the internal container names allowed past the private-IP SSRF guard. Both are
+// fixed and non-user-controlled, so they only ever reach our own site.
+const SELF_HOSTS = {
+  'lanos-logic.com': 'http://lanos-logic-com',
+  'www.lanos-logic.com': 'http://lanos-logic-com',
+};
+const SELF_INTERNAL_NAMES = new Set(['lanos-logic-com']);
 
 async function assertPublicHost(hostname) {
   if (!hostname || hostname === 'localhost') throw new Error('blocked host');
-  if (SELF_HOSTS.has(hostname.toLowerCase())) return;
+  if (SELF_INTERNAL_NAMES.has(hostname.toLowerCase())) return;
   if (net.isIP(hostname) && isBlockedIp(hostname)) throw new Error('blocked ip');
   const records = await dns.lookup(hostname, { all: true });
   if (!records.length) throw new Error('no dns');
@@ -170,9 +176,12 @@ async function aiCrawlerCheck(rawUrl) {
     return { error: 'Please enter a valid website URL.' };
   }
   const origin = `${u.protocol}//${u.host}`;
+  // For our own domain, fetch from the nginx container internally (no hairpin).
+  // `origin` is still what we display to the user.
+  const fetchBase = SELF_HOSTS[u.hostname.toLowerCase()] || origin;
 
   let robots = { status: 0, body: '' };
-  try { robots = await safeFetch(`${origin}/robots.txt`); }
+  try { robots = await safeFetch(`${fetchBase}/robots.txt`); }
   catch (e) {
     const reason = /abort|timeout/i.test(e.message)
       ? 'it took too long to respond'
@@ -193,12 +202,12 @@ async function aiCrawlerCheck(rawUrl) {
 
   // llms.txt
   let llmsTxt = false;
-  try { const r = await safeFetch(`${origin}/llms.txt`); llmsTxt = r.status === 200 && r.body.trim().length > 0; } catch {}
+  try { const r = await safeFetch(`${fetchBase}/llms.txt`); llmsTxt = r.status === 200 && r.body.trim().length > 0; } catch {}
 
   // homepage: schema + meta noai + sitemap
   let schema = false, metaNoAi = false, sitemap = false;
   try {
-    const home = await safeFetch(origin + '/');
+    const home = await safeFetch(fetchBase + '/');
     const html = home.body || '';
     schema = /application\/ld\+json/i.test(html);
     metaNoAi = /<meta[^>]+(noai|noimageai)/i.test(html);

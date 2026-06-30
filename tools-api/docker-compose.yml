@@ -3,13 +3,6 @@ services:
     build: .
     container_name: lanos-tools-api
     restart: unless-stopped
-    # Same-host sites resolve to this server's own public IP, which a container
-    # can't hairpin back to. Route our own domains through the host gateway (the
-    # host's Traefik on :443) so checking lanos-logic.com works. External sites
-    # (the real use case) resolve normally over the internet.
-    extra_hosts:
-      - "lanos-logic.com:host-gateway"
-      - "www.lanos-logic.com:host-gateway"
     networks:
       - coolify
     labels:
