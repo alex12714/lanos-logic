@@ -5,23 +5,23 @@ import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
-import { caseStudies } from '../data/mock';
+import { allCaseStudies } from '../data/caseStudiesData';
 import { breadcrumb, speakableWebPage } from '../lib/seo';
 
 const CaseStudiesPage = () => {
   const [filter, setFilter] = useState('all');
 
+  // Build the filter list from the real categories present in the data, so
+  // every tab actually matches case studies (and all 42 show under "All").
   const categories = [
-    { id: 'all', label: 'All Case Studies' },
-    { id: 'Enterprise AI', label: 'Enterprise AI' },
-    { id: 'U.S. Government', label: 'Government' },
-    { id: 'Marketing Agency', label: 'Marketing' },
-    { id: 'Sales Agency', label: 'Sales' },
-    { id: 'Real Estate', label: 'Real Estate' }
+    { id: 'all', label: `All Case Studies (${allCaseStudies.length})` },
+    ...Array.from(new Set(allCaseStudies.map((s) => s.category)))
+      .sort()
+      .map((c) => ({ id: c, label: c })),
   ];
 
-  const filteredStudies = caseStudies.filter(study => 
-    filter === 'all' || study.category === filter
+  const filteredStudies = allCaseStudies.filter(
+    (study) => filter === 'all' || study.category === filter
   );
 
   return (
@@ -134,7 +134,7 @@ const CaseStudiesPage = () => {
 
                   {/* Stats */}
                   <div className="space-y-2 mb-4">
-                    {study.stats.map((stat, i) => (
+                    {(study.stats || []).map((stat, i) => (
                       <div key={i} className="flex items-center gap-3">
                         <span className="text-amber-400 font-bold">{stat.value}</span>
                         <span className="text-gray-400 text-sm">{stat.label}</span>
@@ -144,7 +144,7 @@ const CaseStudiesPage = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {study.tags.map((tag, i) => (
+                    {(study.tags || []).map((tag, i) => (
                       <Badge
                         key={i}
                         variant="outline"
