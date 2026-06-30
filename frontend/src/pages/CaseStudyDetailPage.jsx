@@ -195,25 +195,33 @@ const CaseStudyDetailPage = () => {
           </div>
         </section>
 
-        {/* Hero Image */}
+        {/* Hero cover — photo used as a subtle textured hint behind brand
+            gradients, so it reads as an intentional cover, not a stock photo. */}
         <section className="pb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {caseStudy.image && (
-              <div className="relative w-full max-h-[500px] rounded-2xl overflow-hidden">
-                <img
-                  src={`/case-studies/${caseStudy.id}.jpg`}
-                  alt={caseStudy.title}
-                  className="w-full max-h-[500px] object-cover rounded-2xl"
-                  onError={(e) => {
-                    e.target.parentElement.innerHTML = `
-                      <div class="w-full h-[300px] rounded-2xl bg-gradient-to-br from-purple-900/30 to-indigo-900/30 flex items-center justify-center">
-                        <span class="text-gray-500 text-lg">Project Screenshot</span>
-                      </div>
-                    `;
-                  }}
-                />
-              </div>
-            )}
+            <div className="relative w-full h-[260px] sm:h-[380px] rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-br from-[#1a1a2e] to-[#16162a]">
+              <img
+                src={`/case-studies/${caseStudy.id}.jpg`}
+                alt={caseStudy.title}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover opacity-50"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+              {/* Gradient hints — darken toward the page + a soft brand tint */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a12] via-[#0a0a12]/40 to-[#0a0a12]/10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/15 via-transparent to-purple-600/20" />
+              {/* Category chip in the corner */}
+              {caseStudy.category && (
+                <div className="absolute bottom-6 left-6">
+                  <span className="inline-flex items-center rounded-full bg-[#0a0a12]/70 backdrop-blur-md border border-amber-500/30 px-4 py-1.5 text-sm font-medium text-amber-300">
+                    {caseStudy.category}
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
         </section>
 

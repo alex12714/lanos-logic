@@ -1,7 +1,18 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import { BookingProvider } from './context/BookingContext';
+
+// Reset scroll to the top on every route change. Without this, react-router
+// keeps the previous scroll position, so navigating from far down the long
+// case-studies list into a (shorter) detail page lands at the bottom.
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [pathname]);
+  return null;
+}
 
 // Pages are eagerly imported. Route-level code-splitting (React.lazy) was
 // tried but, with the prerendered HTML + client createRoot, it flashed the
@@ -30,6 +41,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <BookingProvider>
           <Routes>
             <Route path="/" element={<HomePage />} />
