@@ -122,6 +122,13 @@ export const industries = [
     description: "AI automation helps law firms and attorneys analyze contracts, automate legal research, manage cases, and review documents faster. Lanos Logic builds vector database-powered precedent discovery and automated due diligence that speed up contract review.",
     stats: ["80% faster contract review", "AI-powered legal research", "Automated due diligence"],
     href: "/industries/legal"
+  },
+  {
+    id: "financial-services",
+    name: "Financial Services",
+    description: "AI automation helps financial services firms streamline client onboarding, KYC/AML compliance, document processing, and regulatory reporting. Lanos Logic builds secure, audit-ready automations for fraud detection, risk analysis, and compliance workflows that keep sensitive financial data protected.",
+    stats: ["Automated KYC/AML compliance", "AI-powered fraud detection", "Streamlined regulatory reporting"],
+    href: "/industries/financial-services"
   }
 ];
 

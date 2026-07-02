@@ -20,10 +20,10 @@ const IndustriesSection = () => {
   const filteredIndustries = industries.filter((industry) => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'regulated')
-      return ['government', 'pharmaceutical', 'life-sciences', 'legal'].includes(industry.id);
+      return ['government', 'pharmaceutical', 'life-sciences', 'legal', 'financial-services'].includes(industry.id);
     if (activeFilter === 'agencies')
       return ['marketing', 'sales'].includes(industry.id);
-    return !['marketing', 'sales', 'government', 'pharmaceutical', 'life-sciences', 'legal'].includes(industry.id);
+    return !['marketing', 'sales', 'government', 'pharmaceutical', 'life-sciences', 'legal', 'financial-services'].includes(industry.id);
   });
 
   return (
