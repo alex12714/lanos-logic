@@ -44,6 +44,13 @@ if [ -d "$SITE_DIR/repo/frontend" ]; then
         sed -i 's|<script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>||g' $SITE_DIR/html/index.html
         sed -i 's|<a id="emergent-badge"[^>]*>.*</a>||g' $SITE_DIR/html/index.html
 
+        # nginx serves this for any unmatched URL with a real 404 status. It is
+        # the SPA shell (post badge-strip), so React still boots and renders its
+        # not-found view. Previously every unknown URL returned 200 + the
+        # homepage, which Google logged as "Crawled - currently not indexed".
+        cp $SITE_DIR/html/index.html $SITE_DIR/html/404.html
+        echo "[$(date)] 404.html written from SPA shell" >> $LOG
+
         docker cp $SITE_DIR/nginx.conf lanos-logic-com:/etc/nginx/conf.d/default.conf 2>/dev/null && \
         docker exec lanos-logic-com nginx -s reload >> $LOG 2>&1
     else

@@ -619,13 +619,10 @@ function buildSitemap(data) {
     });
   }
 
-  groups.push({
-    comment: 'LLM-readable content',
-    entries: [
-      { path: '/llms.txt', changefreq: 'monthly', priority: '0.5' },
-      { path: '/llms-full.txt', changefreq: 'monthly', priority: '0.5' },
-    ],
-  });
+  // NOTE: /llms.txt and /llms-full.txt are deliberately NOT listed here. They
+  // are text/plain resources, not pages — Google indexed one and reported it as
+  // "Page indexed without content". They stay discoverable via robots.txt and
+  // are served with X-Robots-Tag: noindex (see nginx.conf).
 
   const lines = [];
   lines.push('<?xml version="1.0" encoding="UTF-8"?>');
