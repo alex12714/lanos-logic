@@ -1,0 +1,61 @@
+// Long-form industry overviews — the substantive, retrievable prose body for
+// each industry page.
+//
+// Why this file exists: industry pages previously rendered a hero sentence,
+// three stat labels, and four templated FAQs that restated both (~120 words of
+// unique content). Search Console showed the result — hundreds of impressions
+// and zero clicks on queries like "document automation for government" and
+// "pharma r&d document automation solution". A thin page can surface for a
+// query and still never earn the click, because there is nothing on it that
+// answers the query better than the result above it.
+//
+// These overviews add 250-350 words of concrete prose per industry: the actual
+// documents and workflows involved, the tools we build on, a real engagement,
+// and the outcome. That gives each page a strong signal in both lexical and
+// semantic retrieval, and gives a human a reason to click.
+//
+// Single source of truth: IndustryPage renders this, and
+// scripts/generate-seo-assets.mjs inlines it into llms-full.txt. Plain ESM with
+// no imports so the Node build script can import it directly.
+//
+// EVIDENCE RULE: every client claim here traces to a real entry in
+// caseStudiesData.js. No invented clients, no invented figures, and no
+// compliance certifications we have not attained. If a vertical has no
+// delivered project, the copy describes the capability and names the vertical
+// where that capability was actually proven.
+//
+// Shape: { [industryId]: string[] }  — each string is one paragraph.
+
+export const industryOverviews = {
+  government: [
+    'Document automation for government means taking the forms, applications, permits, licences, case files, and records that move through an agency and making them move without manual re-keying. Lanos Logic builds that pipeline end to end: AI-powered extraction that reads submitted PDFs, scans, and forms and pulls the fields that matter; validation against the systems of record you already run; automatic generation of the resulting letters, certificates, and determinations; e-signature through DocuSign or PandaDoc; and archival with a complete audit trail of who changed what and when. The orchestration layer is built on Make.com or n8n, so the workflow spans the tools a department already owns rather than requiring a platform migration.',
+    'The constraint that shapes public sector work is not technical difficulty, it is accountability. Every automated decision has to be explainable after the fact, every record has to be retrievable on request, and access has to be scoped so that staff see only what their role permits. We build to that from the start: role-based access control, immutable audit logging on every document touch, configurable data residency, and a human approval step wherever a determination affects a member of the public. Nothing is a black box — each automated step records its inputs, its output, and the rule it applied.',
+    'Our public sector delivery is a GPS lone-worker monitoring platform, built in 60 days, that keeps staff working alone in hazardous situations under 24/7 real-time location monitoring. The document automation described above is proven in the most document-heavy regulated environments we work in — a law firm that sends and tracks 10,000+ pre-filled contracts and reclaims 90 hours a month, and a pharmaceutical operation that cut prescription processing time by 90% in a seven-day build. If your procurement carries a specific authorization or accreditation requirement, raise it on the first call: we will tell you exactly what we hold and whether we are the right fit before anyone writes a proposal. Every engagement starts with a free discovery call and a BPMN map of the process, and is quoted at a fixed price before any build begins.',
+  ],
+
+  pharmaceutical: [
+    'Pharmaceutical operations run on documents — prescriptions and orders, batch and SOP records, label and artwork files, safety reports, and the submission packages assembled from all of them. Lanos Logic automates the handling of that estate: AI extraction that reads inbound documents and pulls structured data out of them, template-driven generation of the documents that go back out, routing and approval chains with sign-off recorded at each step, and synchronisation across the systems that hold the files, including SharePoint and internal APIs. The result is that a document arrives, is understood, triggers the right downstream actions, and lands in the right place with its approval history attached.',
+    'Content orchestration is the layer above that: keeping one approved version of a claim, a label, or a piece of clinical content consistent everywhere it appears, so a change approved once propagates rather than being re-typed into five systems. We build this with a vector database underneath, which indexes the document estate by meaning rather than filename. Someone can ask which documents cover a given indication, formulation, or market and get the right passages back with citations, even when none of those words appear literally in the file. That same retrieval layer is what grounds an AI assistant so its answers cite real source documents instead of improvising.',
+    'A US pharmaceutical client came to us with prescription processing that consumed most of a working week. We rebuilt it on AirTable, Make.com, PDF.co, and SharePoint with API integration into their existing stack: a 90% reduction in processing time, 47 hours returned every month, delivered in seven days. That engagement sat in commercial and prescriptions operations rather than R&D, and we are specific about the distinction for a reason — the extraction, assembly, approval-routing, and semantic retrieval patterns transfer directly to R&D document work, and we would rather show you the mechanism that produced a real result than claim a trial we have not run. Bring us the document workflow that is costing your team the most hours and we will map it on a free discovery call, quote a fixed price, and typically deliver in 2-6 weeks.',
+  ],
+
+  education: [
+    'Paperless automation in education means the end of the printed form, the scanned return, and the staff member typing its contents into a student record. Lanos Logic replaces that loop with digital intake: a smart form that validates as it is filled, extraction for the documents families still submit as PDFs or photos, automatic creation and update of the student record, generated enrolment and consent documents sent for e-signature, and confirmation messaging that goes out without anyone remembering to send it. Enrolment, admissions, consent and permission slips, fee agreements, and course registration all collapse into workflows that run themselves.',
+    'The University of Minnesota engaged us on student onboarding and cut 80% of the administrative time it had been absorbing, by replacing a manual intake process with an automated flow. A language school runs contracts, onboarding, and multi-channel parent and student communication across SMS, WhatsApp, and Telegram, with ChatGPT generating lesson plans inside the same pipeline. A summer camp automated registration, onboarding, and messaging end to end. A school automated student pick-up coordination with Twilio SMS wired into Notion. The pattern repeats across every education client: the teaching is not the bottleneck, the paperwork around it is.',
+    'We build these on Make.com and n8n with AirTable or your existing student information system as the record, so the automation wraps the tools your staff already use rather than replacing them mid-year. Because the workflow enforces one consistent path, the transcription errors that creep in when the same data is typed into three systems simply stop occurring, and staff stop chasing the families who have not returned a form — the system does that itself. Engagements begin with a free discovery call and a BPMN map of the current process, are quoted at a fixed price, and typically go live in 2-6 weeks, scheduled around an academic calendar rather than through the middle of an intake.',
+  ],
+
+  legal: [
+    'Legal work is document work, and most of the hours a firm loses are spent assembling, sending, chasing, and filing paper rather than practising law. Lanos Logic automates that layer for law firms, attorneys, and in-house legal teams: contract and document generation from your own templates with client and matter data pre-filled, e-signature through DocuSign or PandaDoc, automated follow-up on anything unsigned, and filing into the matter record once it completes. Intake forms feed the matter directly, so a new client is opened without anyone rekeying what they already typed.',
+    'A law firm we worked with sends and tracks more than 10,000 custom pre-filled contracts and reclaims 90 hours every month — built on AirTable, DocuSign, and Make.com, and delivered in five days. In adjacent finance and legal work we built bulk contract dispatch and signature tracking for investment funds, where the volume is high and the cost of losing track of a signature is measured in closing delays. The mechanism is the same everywhere: the document is generated correctly the first time, its status is always visible, and nobody is maintaining a spreadsheet of who has signed.',
+    'Above the document layer sits retrieval. A vector database indexes your own precedent bank, executed agreements, and matter files by meaning, so an associate can ask for the clause or the prior matter that fits a situation and get the right passage back with a citation, rather than recalling which file it lived in. That retrieval layer also grounds any AI drafting assistance in your firm’s own work product instead of the open internet. For immigration practices specifically, we build complete AI-native case management platforms — see our Immigration Law page. Every engagement starts with a free discovery call and a BPMN map of how a matter actually moves through your firm, and is quoted at a fixed price before any build.',
+  ],
+
+  'immigration-law': [
+    'Immigration law is document warfare. A single EB-5 petition can involve hundreds of source documents — bank statements, payslips, corporate records, affidavits — that must each be classified, described, ordered into an exhibit list, and woven into a source-of-funds narrative that survives USCIS scrutiny. An H-1B premium processing case lives or dies by a 15-business-day federal clock. Lanos Logic built a US immigration firm an AI-native case management platform for exactly this: AI document intelligence that classifies and describes every uploaded exhibit, smart intake forms that collect what each track actually requires, AI-assisted drafting, USCIS PDF autofill, and a deadline engine with federal-holiday-aware premium processing countdowns and automated alerts.',
+    'The platform covers 13 visa tracks and now runs two offices — the firm was founded in Washington and expanded by acquiring a Detroit practice, and both operate on the same system. It was built as a direct alternative to ManifestOS, Visalaw.ai, and Docketwise, because the firm wanted the case model to match how it actually works rather than bending its practice around a product roadmap it does not control. That is the real argument for building rather than buying in immigration: the software encodes your intake questions, your exhibit conventions, your deadline rules, and your quality bar, and it changes when your practice changes.',
+    'For immigration lawyers weighing this, the honest framing is that a platform build is a larger commitment than wiring up an off-the-shelf tool, and it pays back where volume and document complexity are high — petition-heavy practices, multi-office firms, and anyone whose associates are spending their days describing exhibits rather than arguing cases. We start with a free discovery call and a BPMN map of how a matter moves through your firm from consultation to filing, quote a fixed price before any build, and can scope it as a focused automation (intake, exhibit handling, or deadlines alone) rather than a full platform if that is the right first step.',
+  ],
+};
+
+export default industryOverviews;

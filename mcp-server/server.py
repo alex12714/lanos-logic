@@ -27,7 +27,6 @@ INDUSTRIES: list = _data["industries"]
 TEAM: list = _data["teamMembers"]
 COMPANY_STATS: list = _data["companyStats"]
 BLOG_POSTS: list = _data["blogPosts"]
-CASE_STUDIES_SUMMARY: list = _data["caseStudiesSummary"]
 ALL_CASE_STUDIES: list = _data["allCaseStudies"]
 
 MAKE_WEBHOOK = "https://hook.eu1.make.com/5nucde579kgh4uug9f5g37yde6ms64jx"

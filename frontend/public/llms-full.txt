@@ -1,6 +1,6 @@
 # Lanos Logic — Full Knowledge Base
 
-> Strategic AI Solutions for Modern Businesses. Complete inlined content for one-fetch AI ingestion. Last updated: 2026-06-30.
+> Strategic AI Solutions for Modern Businesses. Complete inlined content for one-fetch AI ingestion. Last updated: 2026-09-17.
 
 ## Company Overview
 
@@ -588,20 +588,26 @@ URL: https://lanos-logic.com/industries/ecommerce
 
 ### Education
 
-AI automation helps education providers automate student enrollment, course management, grading, and personalized learning. Lanos Logic builds automations that streamline admissions and free educators from repetitive administrative work.
+Paperless automation for education: Lanos Logic replaces the paper and manual data entry behind enrolment, admissions, consent forms, and student records with automated digital workflows. The University of Minnesota cut 80% of its student-onboarding admin time with an automated intake flow we built; schools and language providers use the same approach for contracts, permissions, and parent communication.
+
+Paperless automation in education means the end of the printed form, the scanned return, and the staff member typing its contents into a student record. Lanos Logic replaces that loop with digital intake: a smart form that validates as it is filled, extraction for the documents families still submit as PDFs or photos, automatic creation and update of the student record, generated enrolment and consent documents sent for e-signature, and confirmation messaging that goes out without anyone remembering to send it. Enrolment, admissions, consent and permission slips, fee agreements, and course registration all collapse into workflows that run themselves.
+
+The University of Minnesota engaged us on student onboarding and cut 80% of the administrative time it had been absorbing, by replacing a manual intake process with an automated flow. A language school runs contracts, onboarding, and multi-channel parent and student communication across SMS, WhatsApp, and Telegram, with ChatGPT generating lesson plans inside the same pipeline. A summer camp automated registration, onboarding, and messaging end to end. A school automated student pick-up coordination with Twilio SMS wired into Notion. The pattern repeats across every education client: the teaching is not the bottleneck, the paperwork around it is.
+
+We build these on Make.com and n8n with AirTable or your existing student information system as the record, so the automation wraps the tools your staff already use rather than replacing them mid-year. Because the workflow enforces one consistent path, the transcription errors that creep in when the same data is typed into three systems simply stop occurring, and staff stop chasing the families who have not returned a form — the system does that itself. Engagements begin with a free discovery call and a BPMN map of the current process, are quoted at a fixed price, and typically go live in 2-6 weeks, scheduled around an academic calendar rather than through the middle of an intake.
 
 **Outcomes:**
-- Streamlined admissions
-- Automated grading
-- Personalized learning paths
+- 80% of onboarding admin time removed
+- Paperless enrolment and consent forms
+- Automated student records and messaging
 
 **Frequently Asked Questions:**
 
 Q: How can AI automation help Education?
-A: AI automation helps education providers automate student enrollment, course management, grading, and personalized learning. Lanos Logic builds automations that streamline admissions and free educators from repetitive administrative work.
+A: Paperless automation for education: Lanos Logic replaces the paper and manual data entry behind enrolment, admissions, consent forms, and student records with automated digital workflows. The University of Minnesota cut 80% of its student-onboarding admin time with an automated intake flow we built; schools and language providers use the same approach for contracts, permissions, and parent communication.
 
 Q: What results can Education expect from automation?
-A: Typical outcomes for Education include Streamlined admissions, Automated grading, Personalized learning paths.
+A: Typical outcomes for Education include 80% of onboarding admin time removed, Paperless enrolment and consent forms, Automated student records and messaging.
 
 Q: Which automation services does Lanos Logic offer for Education?
 A: For Education we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
@@ -736,47 +742,59 @@ A: Book a free discovery call. We map your current processes with a BPMN analysi
 
 URL: https://lanos-logic.com/industries/manufacturing
 
-### U.S. Government & Federal
+### Government & Public Sector
 
-AI automation helps U.S. federal agencies, defense contractors, and state governments process documents, automate citizen services, and run compliance workflows securely. Lanos Logic builds FedRAMP-aligned AI solutions with secure document classification and automated compliance reporting.
+Document automation for government: Lanos Logic builds AI document processing, records automation, and case-management workflows for public sector teams, government contractors, and state and local agencies. We automate the intake, classification, generation, and e-signature of the forms and records that move through an agency — with full audit trails, role-based access, and data-residency control.
+
+Document automation for government means taking the forms, applications, permits, licences, case files, and records that move through an agency and making them move without manual re-keying. Lanos Logic builds that pipeline end to end: AI-powered extraction that reads submitted PDFs, scans, and forms and pulls the fields that matter; validation against the systems of record you already run; automatic generation of the resulting letters, certificates, and determinations; e-signature through DocuSign or PandaDoc; and archival with a complete audit trail of who changed what and when. The orchestration layer is built on Make.com or n8n, so the workflow spans the tools a department already owns rather than requiring a platform migration.
+
+The constraint that shapes public sector work is not technical difficulty, it is accountability. Every automated decision has to be explainable after the fact, every record has to be retrievable on request, and access has to be scoped so that staff see only what their role permits. We build to that from the start: role-based access control, immutable audit logging on every document touch, configurable data residency, and a human approval step wherever a determination affects a member of the public. Nothing is a black box — each automated step records its inputs, its output, and the rule it applied.
+
+Our public sector delivery is a GPS lone-worker monitoring platform, built in 60 days, that keeps staff working alone in hazardous situations under 24/7 real-time location monitoring. The document automation described above is proven in the most document-heavy regulated environments we work in — a law firm that sends and tracks 10,000+ pre-filled contracts and reclaims 90 hours a month, and a pharmaceutical operation that cut prescription processing time by 90% in a seven-day build. If your procurement carries a specific authorization or accreditation requirement, raise it on the first call: we will tell you exactly what we hold and whether we are the right fit before anyone writes a proposal. Every engagement starts with a free discovery call and a BPMN map of the process, and is quoted at a fixed price before any build begins.
 
 **Outcomes:**
-- FedRAMP-aligned architecture
-- Secure document classification
-- Automated compliance reporting
+- AI document classification and data extraction
+- Auditable, role-based workflows
+- Forms, records and e-signature automated end to end
 
 **Frequently Asked Questions:**
 
-Q: How can AI automation help U.S. Government & Federal?
-A: AI automation helps U.S. federal agencies, defense contractors, and state governments process documents, automate citizen services, and run compliance workflows securely. Lanos Logic builds FedRAMP-aligned AI solutions with secure document classification and automated compliance reporting.
+Q: How can AI automation help Government & Public Sector?
+A: Document automation for government: Lanos Logic builds AI document processing, records automation, and case-management workflows for public sector teams, government contractors, and state and local agencies. We automate the intake, classification, generation, and e-signature of the forms and records that move through an agency — with full audit trails, role-based access, and data-residency control.
 
-Q: What results can U.S. Government & Federal expect from automation?
-A: Typical outcomes for U.S. Government & Federal include FedRAMP-aligned architecture, Secure document classification, Automated compliance reporting.
+Q: What results can Government & Public Sector expect from automation?
+A: Typical outcomes for Government & Public Sector include AI document classification and data extraction, Auditable, role-based workflows, Forms, records and e-signature automated end to end.
 
-Q: Which automation services does Lanos Logic offer for U.S. Government & Federal?
-A: For U.S. Government & Federal we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+Q: Which automation services does Lanos Logic offer for Government & Public Sector?
+A: For Government & Public Sector we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
 
-Q: How do we get started with AI automation for U.S. Government & Federal?
+Q: How do we get started with AI automation for Government & Public Sector?
 A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
 
 URL: https://lanos-logic.com/industries/government
 
 ### Pharmaceutical
 
-AI automation helps pharmaceutical companies support drug discovery, manage clinical trial data, automate regulatory submissions, and run pharmacovigilance. Lanos Logic builds vector database-powered knowledge retrieval for accelerated submissions and AI-powered adverse event detection.
+Pharma document automation: Lanos Logic automates the document-heavy operations around pharmaceutical work — prescription and order processing, submission and dossier assembly, SOP and label document generation, and content orchestration across the systems that hold them. We built a prescription automation flow that cut processing time by 90% and returned 47 hours a month. Vector-database retrieval makes the resulting document estate searchable by meaning, not filename.
+
+Pharmaceutical operations run on documents — prescriptions and orders, batch and SOP records, label and artwork files, safety reports, and the submission packages assembled from all of them. Lanos Logic automates the handling of that estate: AI extraction that reads inbound documents and pulls structured data out of them, template-driven generation of the documents that go back out, routing and approval chains with sign-off recorded at each step, and synchronisation across the systems that hold the files, including SharePoint and internal APIs. The result is that a document arrives, is understood, triggers the right downstream actions, and lands in the right place with its approval history attached.
+
+Content orchestration is the layer above that: keeping one approved version of a claim, a label, or a piece of clinical content consistent everywhere it appears, so a change approved once propagates rather than being re-typed into five systems. We build this with a vector database underneath, which indexes the document estate by meaning rather than filename. Someone can ask which documents cover a given indication, formulation, or market and get the right passages back with citations, even when none of those words appear literally in the file. That same retrieval layer is what grounds an AI assistant so its answers cite real source documents instead of improvising.
+
+A US pharmaceutical client came to us with prescription processing that consumed most of a working week. We rebuilt it on AirTable, Make.com, PDF.co, and SharePoint with API integration into their existing stack: a 90% reduction in processing time, 47 hours returned every month, delivered in seven days. That engagement sat in commercial and prescriptions operations rather than R&D, and we are specific about the distinction for a reason — the extraction, assembly, approval-routing, and semantic retrieval patterns transfer directly to R&D document work, and we would rather show you the mechanism that produced a real result than claim a trial we have not run. Bring us the document workflow that is costing your team the most hours and we will map it on a free discovery call, quote a fixed price, and typically deliver in 2-6 weeks.
 
 **Outcomes:**
-- Accelerated regulatory submissions
-- AI-powered adverse event detection
-- Clinical data pipeline automation
+- 90% faster prescription processing
+- Document assembly and content orchestration
+- Semantic search across the document estate
 
 **Frequently Asked Questions:**
 
 Q: How can AI automation help Pharmaceutical?
-A: AI automation helps pharmaceutical companies support drug discovery, manage clinical trial data, automate regulatory submissions, and run pharmacovigilance. Lanos Logic builds vector database-powered knowledge retrieval for accelerated submissions and AI-powered adverse event detection.
+A: Pharma document automation: Lanos Logic automates the document-heavy operations around pharmaceutical work — prescription and order processing, submission and dossier assembly, SOP and label document generation, and content orchestration across the systems that hold them. We built a prescription automation flow that cut processing time by 90% and returned 47 hours a month. Vector-database retrieval makes the resulting document estate searchable by meaning, not filename.
 
 Q: What results can Pharmaceutical expect from automation?
-A: Typical outcomes for Pharmaceutical include Accelerated regulatory submissions, AI-powered adverse event detection, Clinical data pipeline automation.
+A: Typical outcomes for Pharmaceutical include 90% faster prescription processing, Document assembly and content orchestration, Semantic search across the document estate.
 
 Q: Which automation services does Lanos Logic offer for Pharmaceutical?
 A: For Pharmaceutical we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
@@ -811,32 +829,106 @@ A: Book a free discovery call. We map your current processes with a BPMN analysi
 
 URL: https://lanos-logic.com/industries/life-sciences
 
-### Law & Attorneys
+### Law Firms & Attorneys
 
-AI automation helps law firms and attorneys analyze contracts, automate legal research, manage cases, and review documents faster. Lanos Logic builds vector database-powered precedent discovery and automated due diligence that speed up contract review.
+AI automation for law firms, attorneys, and in-house legal teams: document and contract automation, matter and case management, e-signature flows, and retrieval across your own precedent bank. One firm we worked with sends and tracks 10,000+ pre-filled contracts and reclaims 90 hours every month. For immigration practices we build full case-management platforms — see Immigration Law.
+
+Legal work is document work, and most of the hours a firm loses are spent assembling, sending, chasing, and filing paper rather than practising law. Lanos Logic automates that layer for law firms, attorneys, and in-house legal teams: contract and document generation from your own templates with client and matter data pre-filled, e-signature through DocuSign or PandaDoc, automated follow-up on anything unsigned, and filing into the matter record once it completes. Intake forms feed the matter directly, so a new client is opened without anyone rekeying what they already typed.
+
+A law firm we worked with sends and tracks more than 10,000 custom pre-filled contracts and reclaims 90 hours every month — built on AirTable, DocuSign, and Make.com, and delivered in five days. In adjacent finance and legal work we built bulk contract dispatch and signature tracking for investment funds, where the volume is high and the cost of losing track of a signature is measured in closing delays. The mechanism is the same everywhere: the document is generated correctly the first time, its status is always visible, and nobody is maintaining a spreadsheet of who has signed.
+
+Above the document layer sits retrieval. A vector database indexes your own precedent bank, executed agreements, and matter files by meaning, so an associate can ask for the clause or the prior matter that fits a situation and get the right passage back with a citation, rather than recalling which file it lived in. That retrieval layer also grounds any AI drafting assistance in your firm’s own work product instead of the open internet. For immigration practices specifically, we build complete AI-native case management platforms — see our Immigration Law page. Every engagement starts with a free discovery call and a BPMN map of how a matter actually moves through your firm, and is quoted at a fixed price before any build.
 
 **Outcomes:**
-- 80% faster contract review
-- AI-powered legal research
-- Automated due diligence
+- 10,000+ contracts automated for one firm
+- 90 hours a month reclaimed
+- Matter, document and e-signature automation
 
 **Frequently Asked Questions:**
 
-Q: How can AI automation help Law & Attorneys?
-A: AI automation helps law firms and attorneys analyze contracts, automate legal research, manage cases, and review documents faster. Lanos Logic builds vector database-powered precedent discovery and automated due diligence that speed up contract review.
+Q: How can AI automation help Law Firms & Attorneys?
+A: AI automation for law firms, attorneys, and in-house legal teams: document and contract automation, matter and case management, e-signature flows, and retrieval across your own precedent bank. One firm we worked with sends and tracks 10,000+ pre-filled contracts and reclaims 90 hours every month. For immigration practices we build full case-management platforms — see Immigration Law.
 
-Q: What results can Law & Attorneys expect from automation?
-A: Typical outcomes for Law & Attorneys include 80% faster contract review, AI-powered legal research, Automated due diligence.
+Q: What results can Law Firms & Attorneys expect from automation?
+A: Typical outcomes for Law Firms & Attorneys include 10,000+ contracts automated for one firm, 90 hours a month reclaimed, Matter, document and e-signature automation.
 
-Q: Which automation services does Lanos Logic offer for Law & Attorneys?
-A: For Law & Attorneys we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+Q: Which automation services does Lanos Logic offer for Law Firms & Attorneys?
+A: For Law Firms & Attorneys we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
 
-Q: How do we get started with AI automation for Law & Attorneys?
+Q: How do we get started with AI automation for Law Firms & Attorneys?
 A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
 
 URL: https://lanos-logic.com/industries/legal
 
+### Immigration Law
+
+AI case management for immigration lawyers. Lanos Logic built a US immigration firm an AI-native platform covering 13 visa tracks — AI document intelligence that classifies and describes hundreds of exhibit documents, smart intake forms, drafting, USCIS PDF autofill, and a deadline engine with federal-holiday-aware H-1B premium processing countdowns. Built as a direct alternative to ManifestOS, Visalaw.ai, and Docketwise, and now running two offices.
+
+Immigration law is document warfare. A single EB-5 petition can involve hundreds of source documents — bank statements, payslips, corporate records, affidavits — that must each be classified, described, ordered into an exhibit list, and woven into a source-of-funds narrative that survives USCIS scrutiny. An H-1B premium processing case lives or dies by a 15-business-day federal clock. Lanos Logic built a US immigration firm an AI-native case management platform for exactly this: AI document intelligence that classifies and describes every uploaded exhibit, smart intake forms that collect what each track actually requires, AI-assisted drafting, USCIS PDF autofill, and a deadline engine with federal-holiday-aware premium processing countdowns and automated alerts.
+
+The platform covers 13 visa tracks and now runs two offices — the firm was founded in Washington and expanded by acquiring a Detroit practice, and both operate on the same system. It was built as a direct alternative to ManifestOS, Visalaw.ai, and Docketwise, because the firm wanted the case model to match how it actually works rather than bending its practice around a product roadmap it does not control. That is the real argument for building rather than buying in immigration: the software encodes your intake questions, your exhibit conventions, your deadline rules, and your quality bar, and it changes when your practice changes.
+
+For immigration lawyers weighing this, the honest framing is that a platform build is a larger commitment than wiring up an off-the-shelf tool, and it pays back where volume and document complexity are high — petition-heavy practices, multi-office firms, and anyone whose associates are spending their days describing exhibits rather than arguing cases. We start with a free discovery call and a BPMN map of how a matter moves through your firm from consultation to filing, quote a fixed price before any build, and can scope it as a focused automation (intake, exhibit handling, or deadlines alone) rather than a full platform if that is the right first step.
+
+**Outcomes:**
+- 13 visa tracks supported
+- USCIS PDF autofill and exhibit automation
+- H-1B premium processing deadline engine
+
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Immigration Law?
+A: AI case management for immigration lawyers. Lanos Logic built a US immigration firm an AI-native platform covering 13 visa tracks — AI document intelligence that classifies and describes hundreds of exhibit documents, smart intake forms, drafting, USCIS PDF autofill, and a deadline engine with federal-holiday-aware H-1B premium processing countdowns. Built as a direct alternative to ManifestOS, Visalaw.ai, and Docketwise, and now running two offices.
+
+Q: What results can Immigration Law expect from automation?
+A: Typical outcomes for Immigration Law include 13 visa tracks supported, USCIS PDF autofill and exhibit automation, H-1B premium processing deadline engine.
+
+Q: Which automation services does Lanos Logic offer for Immigration Law?
+A: For Immigration Law we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Immigration Law?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
+URL: https://lanos-logic.com/industries/immigration-law
+
+### Financial Services
+
+AI automation helps financial services firms streamline client onboarding, KYC/AML compliance, document processing, and regulatory reporting. Lanos Logic builds secure, audit-ready automations for fraud detection, risk analysis, and compliance workflows that keep sensitive financial data protected.
+
+**Outcomes:**
+- Automated KYC/AML compliance
+- AI-powered fraud detection
+- Streamlined regulatory reporting
+
+**Frequently Asked Questions:**
+
+Q: How can AI automation help Financial Services?
+A: AI automation helps financial services firms streamline client onboarding, KYC/AML compliance, document processing, and regulatory reporting. Lanos Logic builds secure, audit-ready automations for fraud detection, risk analysis, and compliance workflows that keep sensitive financial data protected.
+
+Q: What results can Financial Services expect from automation?
+A: Typical outcomes for Financial Services include Automated KYC/AML compliance, AI-powered fraud detection, Streamlined regulatory reporting.
+
+Q: Which automation services does Lanos Logic offer for Financial Services?
+A: For Financial Services we most often deploy AI Agents, Voice AI Agents, Document Automation, and Process Automation, tailored to your existing tools and workflows.
+
+Q: How do we get started with AI automation for Financial Services?
+A: Book a free discovery call. We map your current processes with a BPMN analysis, identify the highest-ROI automations, and quote a fixed project price before any build begins.
+
+URL: https://lanos-logic.com/industries/financial-services
+
 ## Case Studies
+
+### US Immigration Law Firm - AI-Native Case Management Platform
+
+- Industry: Finance & Legal · Vertical: Legal · Type: Code · Country: United States · Year: 2026
+- Key results: 13 Visa tracks automated · 2 Offices unified · 300+ hrs Monthly hours saved
+
+A US immigration law firm — founded in Washington and expanded through the acquisition of a Detroit practice — now runs both offices on a custom AI-native case management platform built by Lanos Logic: a serious contender to ManifestOS, Visalaw.ai, and Docketwise, covering 13 visa tracks with AI document intelligence, drafting, smart intake forms, and USCIS PDF autofill.
+
+**Details:**
+A fast-growing US immigration law firm, founded in Washington, doubled its footprint by acquiring an established immigration practice in Detroit. Overnight, the firm had two offices, two teams, two sets of habits — and one shared problem: the tooling. Case data lived in spreadsheets and a no-code database, exhibits were assembled by hand, and every off-the-shelf option they evaluated (Docketwise, Visalaw.ai, ManifestOS) forced them to bend their practice around someone else's workflow. Immigration law is document warfare. A single EB-5 petition can involve hundreds of source documents — bank statements, payslips, corporate records, affidavits — that must be classified, described, ordered into exhibit lists, and woven into a source-of-funds narrative that holds up to USCIS scrutiny. An H-1B premium processing case lives or dies by a 15-business-day federal clock. The firm needed: Lanos Logic designed and built a full multi-tenant, multi-office platform from the ground up — the kind of product the firm would otherwise license from a legal-tech vendor, except this one is shaped exactly around how they practice. The firm's previous stack ran on a no-code database with automation glue — fine at one office, breaking at two. We ran the new platform in parallel on staging, migrated case data into Postgres with backward-compatible record IDs, and kept every client-facing upload link functional. The Washington and Detroit teams switched over without a single lost case file. The firm now operates both offices on software that competes head-to-head with ManifestOS, Visalaw.ai, and Docketwise — except it is theirs. No per-seat licensing, no waiting on a vendor roadmap, and AI woven through the entire case lifecycle rather than bolted on. Attorneys draft from live case context, paralegals stopped assembling exhibits by hand, and clients answer one smart questionnaire instead of twelve PDF attachments.
+
+URL: https://lanos-logic.com/case-studies/us-immigration-law-firm-ai-case-management-platform
 
 ### Medical Equipment Testing Company - Automated CRM and PDF Certificate Generator
 
@@ -1403,7 +1495,7 @@ Q: What results can businesses expect from AI automation?
 A: Clients typically see up to a 300% increase in operational capacity, 85% reduction in processing time, 68% higher response rates, 42% higher conversion rates, 75% faster lead qualification, and around 3.5x ROI on their automation investment.
 
 Q: Which industries does Lanos Logic serve?
-A: We serve marketing and sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, U.S. government and federal agencies, pharmaceutical, life sciences, and legal firms.
+A: We serve marketing and sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, government and public sector, pharmaceutical, life sciences, financial services, law firms and attorneys, and immigration law practices.
 
 Q: What technology stack does Lanos Logic use?
 A: We build on Claude AI, Make.com, n8n, Zapier, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, Stripe, DocuSign, ClickUp, Miro, and PandaDoc, selecting the right tools for each client’s existing stack.
@@ -1447,7 +1539,7 @@ A: Lanos Logic is located at 24 E Washington St Suite 875, Chicago, IL 60602, US
 
 - By Alex Podbrezsky · June 30, 2026 · AI Search & SEO
 
-Search is moving from ten blue links to a single AI-generated answer. Generative Engine Optimization (GEO) is how you make sure your business is the source the AI quotes — what it is, why it matters now, and the exact 5-Layer GEO Stack we use to do it.
+Search is moving from ten blue links to a single AI-generated answer. Generative Engine Optimization (GEO) is how you make sure your business is the source the AI quotes — here's what it is, why it matters now, and the exact stack we use to do it.
 
 URL: https://lanos-logic.com/blog/what-is-geo-generative-engine-optimization
 

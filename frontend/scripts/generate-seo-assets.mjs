@@ -38,6 +38,7 @@ import {
   contactFaqs,
 } from '../src/data/faqData.js';
 import { getServiceOverview } from '../src/data/serviceOverviews.js';
+import { industryOverviews } from '../src/data/industryOverviews.js';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(SCRIPT_DIR, '..', '..');
@@ -442,6 +443,13 @@ function buildLlmsFullTxt(data) {
     L.push('');
     L.push(ind.description);
     L.push('');
+    const indOverview = industryOverviews[ind.id];
+    if (Array.isArray(indOverview) && indOverview.length) {
+      indOverview.forEach((paragraph) => {
+        L.push(paragraph);
+        L.push('');
+      });
+    }
     if (Array.isArray(ind.stats) && ind.stats.length) {
       L.push('**Outcomes:**');
       ind.stats.forEach((st) => L.push(`- ${st}`));

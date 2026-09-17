@@ -6,6 +6,7 @@ import Seo from '../components/seo/Seo';
 import FaqSection from '../components/common/FaqSection';
 import { Button } from '../components/ui/button';
 import { industries, services } from '../data/mock';
+import { industryOverviews } from '../data/industryOverviews';
 import { SITE, ORG, breadcrumb, speakableWebPage } from '../lib/seo';
 import { getIndustryFaqs } from '../data/faqData';
 
@@ -13,6 +14,40 @@ import { getIndustryFaqs } from '../data/faqData';
 // industry id. Used to open the highest-proof verticals with a concrete result
 // instead of a generic description. Every figure traces to a real project in
 // caseStudiesData.js — no invented numbers.
+// Search Console (2026-09-17) showed these pages taking hundreds of
+// impressions and zero clicks, because the templated title
+// ("AI Automation for X | Lanos Logic") did not contain the language people
+// actually search. These override the title and meta description with the
+// query wording for the verticals that have real search demand. Keep titles
+// under ~60 characters so Google does not truncate them.
+const INDUSTRY_SEO = {
+  government: {
+    title: 'Document Automation for Government | Lanos Logic',
+    description:
+      'AI document automation for government and public sector teams: forms, records, permits and case files extracted, generated, e-signed and archived with a full audit trail. Fixed-price builds in 2-6 weeks.',
+  },
+  pharmaceutical: {
+    title: 'Pharma Document Automation & Content Orchestration',
+    description:
+      'Pharmaceutical document automation: prescription and order processing, document assembly, approval routing, and content orchestration with semantic search across the document estate. One client cut processing time 90%.',
+  },
+  education: {
+    title: 'Paperless Automation for Education | Lanos Logic',
+    description:
+      'Paperless automation for schools and universities: digital enrolment, admissions, consent forms, student records and automated messaging. The University of Minnesota cut 80% of onboarding admin time.',
+  },
+  legal: {
+    title: 'AI Automation for Law Firms & Attorneys | Lanos Logic',
+    description:
+      'Document and contract automation for law firms, attorneys and in-house legal teams: generation, e-signature, matter management and retrieval across your own precedent bank. One firm automated 10,000+ contracts.',
+  },
+  'immigration-law': {
+    title: 'AI Case Management for Immigration Lawyers',
+    description:
+      'AI-native case management for immigration lawyers: 13 visa tracks, AI exhibit classification, smart intake, USCIS PDF autofill and H-1B premium processing deadline tracking. An alternative to Docketwise and Visalaw.ai.',
+  },
+};
+
 const INDUSTRY_PROOF = {
   marketing: {
     metric: '95% less time on content',
@@ -38,6 +73,21 @@ const INDUSTRY_PROOF = {
     metric: '32% of team time reclaimed',
     detail:
       'A real estate design company moved off spreadsheets and reclaimed 32% of its team’s time.',
+  },
+  'immigration-law': {
+    metric: '13 visa tracks on one platform',
+    detail:
+      'A US immigration firm runs two offices on an AI-native case management platform we built — AI exhibit classification, smart intake, USCIS PDF autofill, and federal-holiday-aware H-1B premium processing countdowns.',
+  },
+  pharmaceutical: {
+    metric: '90% faster prescription processing',
+    detail:
+      'A US pharmaceutical client cut prescription processing time by 90% and returned 47 hours a month, delivered in 7 days.',
+  },
+  government: {
+    metric: '60 days to launch',
+    detail:
+      'A GPS lone-worker monitoring platform built in 60 days keeps staff working alone in hazardous situations under 24/7 real-time location monitoring.',
   },
   education: {
     metric: '80% of admin time saved',
@@ -72,6 +122,12 @@ const IndustryPage = () => {
   }
 
   const faqs = getIndustryFaqs(industry);
+  const seo = INDUSTRY_SEO[industry.id] || {};
+  const pageTitle = seo.title
+    ? `${seo.title}${seo.title.includes('Lanos Logic') ? '' : ' | Lanos Logic'}`
+    : `AI Automation for ${industry.name} | Lanos Logic`;
+  const pageDescription = seo.description || industry.description;
+  const overview = industryOverviews[industry.id];
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -98,8 +154,8 @@ const IndustryPage = () => {
   return (
     <Layout>
       <Seo
-        title={`AI Automation for ${industry.name} | Lanos Logic`}
-        description={industry.description}
+        title={pageTitle}
+        description={pageDescription}
         path={industry.href}
         jsonLd={jsonLd}
       />
@@ -185,6 +241,26 @@ const IndustryPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Long-form overview — the substantive body of the page. Only rendered
+          for industries that have one in industryOverviews.js. */}
+      {overview && (
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[#0a0a12]" />
+          <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
+              How Lanos Logic automates {industry.name}
+            </h2>
+            <div className="space-y-6">
+              {overview.map((paragraph, index) => (
+                <p key={index} className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Solutions for Industry */}
       <section className="relative py-24 overflow-hidden">

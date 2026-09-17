@@ -23,7 +23,7 @@ export const homeFaqs = [
   },
   {
     q: 'Which industries does Lanos Logic serve?',
-    a: 'We serve marketing and sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, U.S. government and federal agencies, pharmaceutical, life sciences, and legal firms.',
+    a: 'We serve marketing and sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, government and public sector, pharmaceutical, life sciences, financial services, law firms and attorneys, and immigration law practices.',
   },
   {
     q: 'What technology stack does Lanos Logic use?',
@@ -276,7 +276,7 @@ const BLOG_FAQS = {
     },
     {
       q: 'Who are these cybersecurity services for?',
-      a: 'They are designed for organisations that have built real systems and now need to protect them — SaaS companies approaching their first SOC 2 audit, fintech and healthtech startups handling regulated data, enterprises integrating AI into customer-facing workflows, and government contractors requiring FedRAMP-aligned security posture.',
+      a: 'They are designed for organisations that have built real systems and now need to protect them — SaaS companies approaching their first SOC 2 audit, fintech and healthtech startups handling regulated data, enterprises integrating AI into customer-facing workflows, and government contractors that need a documented security posture before they can bid.',
     },
     {
       q: 'How do I get started with a security engagement?',

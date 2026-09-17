@@ -56,8 +56,8 @@ export const industries = [
   {
     id: "education",
     name: "Education",
-    description: "AI automation helps education providers automate student enrollment, course management, grading, and personalized learning. Lanos Logic builds automations that streamline admissions and free educators from repetitive administrative work.",
-    stats: ["Streamlined admissions", "Automated grading", "Personalized learning paths"],
+    description: "Paperless automation for education: Lanos Logic replaces the paper and manual data entry behind enrolment, admissions, consent forms, and student records with automated digital workflows. The University of Minnesota cut 80% of its student-onboarding admin time with an automated intake flow we built; schools and language providers use the same approach for contracts, permissions, and parent communication.",
+    stats: ["80% of onboarding admin time removed", "Paperless enrolment and consent forms", "Automated student records and messaging"],
     href: "/industries/education"
   },
   {
@@ -97,16 +97,16 @@ export const industries = [
   },
   {
     id: "government",
-    name: "U.S. Government & Federal",
-    description: "AI automation helps U.S. federal agencies, defense contractors, and state governments process documents, automate citizen services, and run compliance workflows securely. Lanos Logic builds FedRAMP-aligned AI solutions with secure document classification and automated compliance reporting.",
-    stats: ["FedRAMP-aligned architecture", "Secure document classification", "Automated compliance reporting"],
+    name: "Government & Public Sector",
+    description: "Document automation for government: Lanos Logic builds AI document processing, records automation, and case-management workflows for public sector teams, government contractors, and state and local agencies. We automate the intake, classification, generation, and e-signature of the forms and records that move through an agency \u2014 with full audit trails, role-based access, and data-residency control.",
+    stats: ["AI document classification and data extraction", "Auditable, role-based workflows", "Forms, records and e-signature automated end to end"],
     href: "/industries/government"
   },
   {
     id: "pharmaceutical",
     name: "Pharmaceutical",
-    description: "AI automation helps pharmaceutical companies support drug discovery, manage clinical trial data, automate regulatory submissions, and run pharmacovigilance. Lanos Logic builds vector database-powered knowledge retrieval for accelerated submissions and AI-powered adverse event detection.",
-    stats: ["Accelerated regulatory submissions", "AI-powered adverse event detection", "Clinical data pipeline automation"],
+    description: "Pharma document automation: Lanos Logic automates the document-heavy operations around pharmaceutical work \u2014 prescription and order processing, submission and dossier assembly, SOP and label document generation, and content orchestration across the systems that hold them. We built a prescription automation flow that cut processing time by 90% and returned 47 hours a month. Vector-database retrieval makes the resulting document estate searchable by meaning, not filename.",
+    stats: ["90% faster prescription processing", "Document assembly and content orchestration", "Semantic search across the document estate"],
     href: "/industries/pharmaceutical"
   },
   {
@@ -118,10 +118,17 @@ export const industries = [
   },
   {
     id: "legal",
-    name: "Law & Attorneys",
-    description: "AI automation helps law firms and attorneys analyze contracts, automate legal research, manage cases, and review documents faster. Lanos Logic builds vector database-powered precedent discovery and automated due diligence that speed up contract review.",
-    stats: ["80% faster contract review", "AI-powered legal research", "Automated due diligence"],
+    name: "Law Firms & Attorneys",
+    description: "AI automation for law firms, attorneys, and in-house legal teams: document and contract automation, matter and case management, e-signature flows, and retrieval across your own precedent bank. One firm we worked with sends and tracks 10,000+ pre-filled contracts and reclaims 90 hours every month. For immigration practices we build full case-management platforms \u2014 see Immigration Law.",
+    stats: ["10,000+ contracts automated for one firm", "90 hours a month reclaimed", "Matter, document and e-signature automation"],
     href: "/industries/legal"
+  },
+  {
+    id: "immigration-law",
+    name: "Immigration Law",
+    description: "AI case management for immigration lawyers. Lanos Logic built a US immigration firm an AI-native platform covering 13 visa tracks \u2014 AI document intelligence that classifies and describes hundreds of exhibit documents, smart intake forms, drafting, USCIS PDF autofill, and a deadline engine with federal-holiday-aware H-1B premium processing countdowns. Built as a direct alternative to ManifestOS, Visalaw.ai, and Docketwise, and now running two offices.",
+    stats: ["13 visa tracks supported", "USCIS PDF autofill and exhibit automation", "H-1B premium processing deadline engine"],
+    href: "/industries/immigration-law"
   },
   {
     id: "financial-services",
@@ -356,78 +363,13 @@ export const services = [
   }
 ];
 
-export const caseStudies = [
-  {
-    id: "marketing-automation",
-    title: "Digital Marketing Agency Scales Operations by 300%",
-    category: "Marketing Agency",
-    description: "A digital marketing agency tripled its client capacity (a 300% increase) without adding staff by automating client reporting, content creation, and campaign management, cutting reporting time by 85% and lifting revenue by 45%.",
-    image: "/case-study-marketing.webp",
-    stats: [
-      { value: "300%", label: "increase in client capacity" },
-      { value: "85%", label: "reduction in reporting time" },
-      { value: "45%", label: "increase in revenue" }
-    ],
-    tags: ["AI Agents", "Process Automation", "Analytics"],
-    href: "/case-studies/marketing-automation"
-  },
-  {
-    id: "sales-outreach",
-    title: "Sales Agency Boosts Conversion Rates with AI Outreach",
-    category: "Sales Agency",
-    description: "A B2B sales agency implemented AI-powered outreach and follow-up sequences, lifting response rates by 68% and conversion rates by 42% for a 3.5x return on its automation investment.",
-    image: "/case-study-sales.webp",
-    stats: [
-      { value: "68%", label: "increase in response rates" },
-      { value: "42%", label: "higher conversion rate" },
-      { value: "3.5x", label: "ROI on automation investment" }
-    ],
-    tags: ["Voice AI", "AI Agents", "Process Automation"],
-    href: "/case-studies/sales-outreach"
-  },
-  {
-    id: "real-estate-automation",
-    title: "Real Estate Firm Automates Client Journey",
-    category: "Real Estate",
-    description: "A real estate brokerage automated its entire client journey from lead qualification to closing, qualifying leads 75% faster, cutting paperwork time by 90%, and increasing closings by 28%.",
-    image: "/case-study-real-estate.webp",
-    stats: [
-      { value: "75%", label: "faster lead qualification" },
-      { value: "90%", label: "reduction in paperwork time" },
-      { value: "28%", label: "increase in closings" }
-    ],
-    tags: ["Document Automation", "Process Automation", "AI Agents"],
-    href: "/case-studies/real-estate-automation"
-  },
-  {
-    id: "vector-database-integration",
-    title: "Vector Database Architecture Powers Enterprise Knowledge Discovery",
-    category: "Enterprise AI",
-    description: "A Fortune 500 pharmaceutical company deployed a vector database architecture to unify 15+ years of research data, enabling semantic search across 2M+ documents and reducing research discovery time from weeks to minutes.",
-    image: "/case-study-saas.webp",
-    stats: [
-      { value: "95%", label: "faster research discovery" },
-      { value: "2M+", label: "documents indexed semantically" },
-      { value: "60%", label: "reduction in duplicate research" }
-    ],
-    tags: ["Vector Databases", "AI Agents", "Knowledge Management"],
-    href: "/case-studies/vector-database-integration"
-  },
-  {
-    id: "government-compliance",
-    title: "Federal Agency Automates Compliance with AI Document Processing",
-    category: "U.S. Government",
-    description: "A federal regulatory agency implemented AI-powered document classification and compliance automation, processing 500K+ annual submissions with 99.2% accuracy while maintaining FedRAMP-aligned security standards.",
-    image: "/case-study-legal.webp",
-    stats: [
-      { value: "99.2%", label: "document classification accuracy" },
-      { value: "500K+", label: "annual submissions processed" },
-      { value: "70%", label: "reduction in manual review" }
-    ],
-    tags: ["Document Automation", "AI Agents", "Compliance"],
-    href: "/case-studies/government-compliance"
-  }
-];
+// NOTE: the former `caseStudies` array was removed on 2026-09-17. It held five
+// illustrative entries — including an unnamed "federal regulatory agency" and a
+// "Fortune 500 pharmaceutical company" — that did not correspond to real
+// engagements and were not present in caseStudiesData.js. Nothing rendered them
+// (every component imports allCaseStudies from caseStudiesData.js), but they
+// were being extracted into mcp-server/data.json. Real, verifiable case studies
+// live in caseStudiesData.js and are the only source of client claims.
 
 export const testimonials = [
   {
@@ -811,7 +753,7 @@ export const blogPosts = [
       },
       {
         type: "paragraph",
-        text: "These services are designed for organisations who have built real systems and now need to protect them. Specifically: SaaS companies approaching their first SOC 2 audit, fintech and healthtech startups handling regulated data, enterprises integrating AI and automation into customer-facing workflows (our core client base), government contractors requiring FedRAMP-aligned security posture, and any organisation that has grown fast and knows its security hygiene has not kept pace."
+        text: "These services are designed for organisations who have built real systems and now need to protect them. Specifically: SaaS companies approaching their first SOC 2 audit, fintech and healthtech startups handling regulated data, enterprises integrating AI and automation into customer-facing workflows (our core client base), government contractors that need a documented security posture before they can bid, and any organisation that has grown fast and knows its security hygiene has not kept pace."
       },
       {
         type: "paragraph",

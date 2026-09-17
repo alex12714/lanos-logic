@@ -57,10 +57,6 @@ const output = {
     ...rest,
     url: 'https://lanos-logic.com/blog/' + rest.slug
   })),
-  caseStudiesSummary: (mock.caseStudies || []).map(c => ({
-    ...c,
-    href: 'https://lanos-logic.com' + c.href
-  })),
   allCaseStudies: allCS
 };
 
@@ -68,6 +64,5 @@ writeFileSync(OUT_FILE, JSON.stringify(output, null, 2));
 console.log('Services:', output.services.length);
 console.log('Industries:', output.industries.length);
 console.log('Team:', output.teamMembers.length);
-console.log('Summary case studies:', output.caseStudiesSummary.length);
 console.log('All case studies:', output.allCaseStudies.length);
 console.log('Blog posts:', output.blogPosts.length);
