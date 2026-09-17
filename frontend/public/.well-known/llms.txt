@@ -238,7 +238,7 @@ Lanos Logic delivers every engagement with the ROI-First Method — a three-phas
 Lanos Logic exposes a native MCP (Model Context Protocol) server for direct agentic interaction.
 
 **MCP Endpoint**: https://lanos-logic.com/mcp
-**Protocol**: JSON-RPC 2.0, MCP version 2024-11-05
+**Protocol**: JSON-RPC 2.0 over Streamable HTTP. Supported MCP revisions: 2026-07-28, 2025-11-25, 2025-06-18, 2025-03-26, 2024-11-05. Stateless — no sessions, POST only.
 **Auth**: None required
 **Discovery**: https://lanos-logic.com/.well-known/mcp.json
 

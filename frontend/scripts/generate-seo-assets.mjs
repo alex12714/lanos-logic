@@ -319,7 +319,7 @@ function buildLlmsTxt(data) {
   );
   L.push('');
   L.push('**MCP Endpoint**: https://lanos-logic.com/mcp');
-  L.push('**Protocol**: JSON-RPC 2.0, MCP version 2024-11-05');
+  L.push(`**Protocol**: JSON-RPC 2.0 over Streamable HTTP. Supported MCP revisions: ${MCP_SUPPORTED_VERSIONS.join(', ')}. Stateless — no sessions, POST only.`);
   L.push('**Auth**: None required');
   L.push('**Discovery**: https://lanos-logic.com/.well-known/mcp.json');
   L.push('');
@@ -565,7 +565,7 @@ function buildLlmsFullTxt(data) {
 
   L.push('## AI Agent Integration (MCP & REST API)');
   L.push('');
-  L.push('- MCP Endpoint: https://lanos-logic.com/mcp (JSON-RPC 2.0, MCP 2024-11-05, no auth)');
+  L.push(`- MCP Endpoint: ${DOMAIN}/mcp (JSON-RPC 2.0 over Streamable HTTP, MCP ${MCP_SUPPORTED_VERSIONS[0]}, no auth)`);
   L.push('- MCP Discovery: https://lanos-logic.com/.well-known/mcp.json');
   L.push('- OpenAPI 3.1 spec: https://lanos-logic.com/openapi.yaml');
   L.push('- REST base URL: https://lanos-logic.com/tools/');
@@ -717,6 +717,12 @@ function buildRobots() {
 // registries. Both are kept because they cost nothing and are accurate; neither
 // should be mistaken for a distribution channel.
 // ---------------------------------------------------------------------------
+
+// Mirrors SUPPORTED_VERSIONS in mcp-server/server.py, newest first. If that
+// list changes, change this one — the feeds state it as fact to agents.
+const MCP_SUPPORTED_VERSIONS = [
+  '2026-07-28', '2025-11-25', '2025-06-18', '2025-03-26', '2024-11-05',
+];
 
 const MCP_TOOLS = [
   'list_services', 'get_service', 'list_case_studies', 'get_case_study',

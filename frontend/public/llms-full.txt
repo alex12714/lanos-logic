@@ -1570,7 +1570,7 @@ Chicago, IL 60602, USA
 
 ## AI Agent Integration (MCP & REST API)
 
-- MCP Endpoint: https://lanos-logic.com/mcp (JSON-RPC 2.0, MCP 2024-11-05, no auth)
+- MCP Endpoint: https://lanos-logic.com/mcp (JSON-RPC 2.0 over Streamable HTTP, MCP 2026-07-28, no auth)
 - MCP Discovery: https://lanos-logic.com/.well-known/mcp.json
 - OpenAPI 3.1 spec: https://lanos-logic.com/openapi.yaml
 - REST base URL: https://lanos-logic.com/tools/
