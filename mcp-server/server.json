@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.lanos-logic/lanos-logic",
+  "title": "Lanos Logic",
+  "description": "Browse Lanos Logic AI automation services, case studies and industries; submit inquiries.",
+  "version": "1.0.0",
+  "websiteUrl": "https://lanos-logic.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://lanos-logic.com/mcp"
+    }
+  ]
+}

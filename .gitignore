@@ -129,3 +129,6 @@ android-sdk/ -e
 # Environment files
 *.env
 *.env.*
+
+# MCP Registry signing key — public proof is committed, private key never is
+mcp-server/key.pem
