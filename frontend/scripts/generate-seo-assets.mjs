@@ -57,40 +57,55 @@ const BUILD_DATE = process.env.SEO_BUILD_DATE || '2026-06-29';
 
 const TAGLINE = 'Strategic AI Solutions for Modern Businesses';
 
+// Lead with what is checkable. Unverifiable superlatives ("leading",
+// "recognized as one of the top") are the first thing a retrieval ranker
+// discounts and the last thing a model will quote back, and they were occupying
+// the most valuable lines in both feeds. Named clients and specific figures are
+// what actually gets cited — those now come from clientSuccessMetrics(), which
+// is derived from real case studies rather than written by hand.
 const INTRO_PARAGRAPH =
-  'Lanos Logic is a leading AI automation provider serving businesses in the ' +
-  'United States, United Kingdom, and globally. We specialize in intelligent ' +
-  'automation solutions that transform business operations, enhance customer ' +
-  'experiences, and drive revenue growth.';
+  'Lanos Logic is an AI automation company based in Chicago, Illinois and the ' +
+  'United Kingdom, serving clients across the US, UK, and internationally. We ' +
+  'build AI agents, voice AI agents, document automation, process automation, ' +
+  'vector database (RAG) retrieval, mobile applications, and analytics ' +
+  'platforms. Engagements start with a free discovery call and a BPMN process ' +
+  'map, are quoted at a fixed price before any build, and typically deliver in ' +
+  '2-6 weeks.';
 
 const ABOUT_PARAGRAPH =
-  'Lanos Logic is recognized as one of the top AI automation providers in the ' +
-  'US and UK, offering comprehensive AI-powered solutions for businesses of all ' +
-  'sizes. Our expertise spans across multiple industries including marketing ' +
-  'agencies, sales agencies, e-commerce, healthcare, real estate, logistics, ' +
-  'education, professional services, manufacturing, government, pharmaceutical, ' +
-  'life sciences, and legal.';
+  'We work across marketing and sales agencies, e-commerce, healthcare, real ' +
+  'estate, logistics, education, professional services, manufacturing, ' +
+  'government and public sector, pharmaceutical, life sciences, financial ' +
+  'services, law firms and attorneys, and immigration law practices. The ' +
+  'deepest proof is in document-heavy regulated work: legal contract and case ' +
+  'automation, education enrolment, and healthcare certification.';
 
 const WHY_CHOOSE = [
   '**Comprehensive AI Solutions**: End-to-end AI automation services including AI agents, voice AI, document automation, process automation, vector databases, and more.',
-  '**Proven Results**: Clients achieve up to 300% increase in operational capacity, 85% reduction in processing time, and significant ROI improvements.',
+  '**Proven Results**: Every figure we publish is attached to a named engagement — see Client Success Metrics below. Examples: 4,000 monthly hours saved at the University of Minnesota, 10,000+ contracts automated for one law firm, 9,600 certificates a year automated for a medical equipment testing company.',
   '**Industry-Leading Technology**: We leverage Claude AI, Make.com, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, and Stripe.',
   "**Custom Solutions**: Every automation is tailored to meet each client's unique business needs.",
   '**Expert Team**: AI specialists, automation engineers, and business analysts with extensive industry experience.',
 ];
 
-const CLIENT_SUCCESS_METRICS = [
-  '300% increase in client capacity for marketing agencies',
-  '85% reduction in reporting time',
-  '68% increase in response rates for sales teams',
-  '42% higher conversion rates',
-  '75% faster lead qualification',
-  '90% reduction in paperwork time',
-  '3.5x ROI on automation investment',
-  '100+ clients served',
-  '500+ automations built',
-  '2M+ hours saved',
-];
+// Derived from data.allCaseStudies at generation time, never hand-written. The
+// previous hard-coded list was carried over from five illustrative entries in
+// mock.js that matched no real engagement (removed 2026-09-17); this cannot
+// drift back into fiction because there is nowhere for an unsourced number to
+// enter. Each line names the engagement, so a model quoting it carries the
+// attribution with it.
+const clientSuccessMetrics = (data) =>
+  (data.allCaseStudies || [])
+    .filter((c) => Array.isArray(c.stats) && c.stats.length)
+    .slice()
+    .sort((a, b) => (b.monthlyHoursSaved || 0) - (a.monthlyHoursSaved || 0))
+    .slice(0, 12)
+    .map((c) => {
+      const figures = c.stats
+        .map((st) => `${st.value} ${st.label}`.trim())
+        .join(', ');
+      return `${c.title}: ${figures}`;
+    });
 
 const PROCESS_STEPS = [
   {
@@ -278,7 +293,7 @@ function buildLlmsTxt(data) {
 
   L.push('## Client Success Metrics');
   L.push('');
-  CLIENT_SUCCESS_METRICS.forEach((m) => L.push(`- ${m}`));
+  clientSuccessMetrics(data).forEach((m) => L.push(`- ${m}`));
   L.push('');
 
   L.push('## The ROI-First Method (Our Process)');
@@ -404,7 +419,7 @@ function buildLlmsFullTxt(data) {
   L.push('');
   data.companyStats.forEach((s) => L.push(`- ${s.value} ${s.label}`));
   L.push('');
-  CLIENT_SUCCESS_METRICS.forEach((m) => L.push(`- ${m}`));
+  clientSuccessMetrics(data).forEach((m) => L.push(`- ${m}`));
   L.push('');
 
   L.push('## Services');
@@ -685,6 +700,112 @@ function buildRobots() {
 // Main
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// Agent discovery manifests (.well-known)
+//
+// These used to be hand-maintained static files and had already drifted: on
+// 2026-09-17 agent.json still advertised 42 case studies and 13 industries
+// against a real 43 and 15, and ai-plugin.json's "Key results" line quoted
+// 300% capacity / 85% processing / 42% conversion — figures that came from the
+// five illustrative mock.js case studies removed that same day. Generating them
+// from data.json removes the drift and the only path by which an unsourced
+// number could reach a model.
+//
+// A note on what these are worth: ai-plugin.json targets the ChatGPT plugin
+// manifest spec, which OpenAI retired in 2024, and no agent discovers MCP
+// servers by fetching /.well-known/mcp.json — MCP distribution happens through
+// registries. Both are kept because they cost nothing and are accurate; neither
+// should be mistaken for a distribution channel.
+// ---------------------------------------------------------------------------
+
+const MCP_TOOLS = [
+  'list_services', 'get_service', 'list_case_studies', 'get_case_study',
+  'list_industries', 'get_company_info', 'submit_inquiry',
+];
+
+function buildMcpJson() {
+  return JSON.stringify({
+    url: `${DOMAIN}/mcp`,
+    name: 'Lanos Logic',
+    version: '1.0.0',
+    description:
+      'MCP server for Lanos Logic AI automation services. Exposes tools to ' +
+      'browse services, case studies, industries, company info, and submit inquiries.',
+    contact: 'hello@lanos-logic.com',
+  }, null, 2) + '\n';
+}
+
+function buildAgentJson(data) {
+  return JSON.stringify({
+    name: 'Lanos Logic',
+    description:
+      'AI automation company (Chicago IL + UK). Provides tools to browse AI ' +
+      'services, case studies, industries, and submit inquiries.',
+    url: DOMAIN,
+    version: '1.0.0',
+    skills: [
+      {
+        id: 'browse-services',
+        name: 'Browse AI Services',
+        description: `List and get details on ${data.services.length} Lanos Logic AI automation services including AI agents, voice AI, document automation, vector databases, and more.`,
+        tags: ['services', 'ai', 'automation'],
+      },
+      {
+        id: 'browse-case-studies',
+        name: 'Browse Case Studies',
+        description: `Search ${data.allCaseStudies.length} real-world automation case studies filterable by industry, platform, country, and type.`,
+        tags: ['case-studies', 'portfolio', 'results'],
+      },
+      {
+        id: 'browse-industries',
+        name: 'Browse Industries',
+        description: `Explore ${data.industries.length} industries served, including ${data.industries.slice(0, 5).map((i) => i.name).join(', ')}.`,
+        tags: ['industries', 'verticals'],
+      },
+      {
+        id: 'company-info',
+        name: 'Company Information',
+        description: 'Get team members, contact details, technology stack, and engagement process.',
+        tags: ['company', 'team', 'contact'],
+      },
+      {
+        id: 'submit-inquiry',
+        name: 'Submit Inquiry',
+        description: 'Submit a contact form to the Lanos Logic sales team. Rate limited to 5/min.',
+        tags: ['contact', 'lead', 'sales'],
+      },
+    ],
+    capabilities: { streaming: false, pushNotifications: false, stateTransitionHistory: false },
+    defaultInputModes: ['text/plain', 'application/json'],
+    defaultOutputModes: ['application/json'],
+    endpoints: { mcp: `${DOMAIN}/mcp`, rest: `${DOMAIN}/tools`, openapi: `${DOMAIN}/openapi.yaml` },
+  }, null, 2) + '\n';
+}
+
+function buildAiPluginJson(data) {
+  const industries = data.industries.map((i) => i.name).join(', ');
+  const services = data.services.map((s) => s.name).join(', ');
+  // Three named, attributable results rather than unsourced aggregates.
+  const results = clientSuccessMetrics(data).slice(0, 3).join(' | ');
+  return JSON.stringify({
+    schema_version: 'v1',
+    name_for_human: 'Lanos Logic — AI Automation Solutions',
+    name_for_model: 'lanos_logic',
+    description_for_human:
+      'Browse Lanos Logic AI automation services, case studies, and industries. Submit contact inquiries.',
+    description_for_model:
+      `Lanos Logic is an AI automation company (Chicago IL + UK). Services: ${services}. ` +
+      `Industries: ${industries}. Representative results, each from a named engagement: ${results}. ` +
+      `MCP endpoint (JSON-RPC 2.0): ${DOMAIN}/mcp — ${MCP_TOOLS.length} tools: ${MCP_TOOLS.join(', ')}. ` +
+      `Full content for ingestion: ${DOMAIN}/llms-full.txt. Contact: hello@lanos-logic.com, +1 (518) 864 3528.`,
+    auth: { type: 'none' },
+    api: { type: 'openapi', url: `${DOMAIN}/openapi.yaml`, is_user_authenticated: false },
+    logo_url: `${DOMAIN}/icon.svg`,
+    contact_email: 'hello@lanos-logic.com',
+    legal_info_url: `${DOMAIN}/terms`,
+  }, null, 2) + '\n';
+}
+
 function writeFile(relPath, contents) {
   const full = join(PUBLIC_DIR, relPath);
   mkdirSync(dirname(full), { recursive: true });
@@ -706,6 +827,9 @@ function main() {
   written.push(writeFile('llms-full.txt', llmsFullTxt));
   written.push(writeFile('sitemap.xml', sitemap));
   written.push(writeFile('robots.txt', robots));
+  written.push(writeFile(join('.well-known', 'mcp.json'), buildMcpJson()));
+  written.push(writeFile(join('.well-known', 'agent.json'), buildAgentJson(data)));
+  written.push(writeFile(join('.well-known', 'ai-plugin.json'), buildAiPluginJson(data)));
 
   const locCount = (sitemap.match(/<loc>/g) || []).length;
   console.log('[generate-seo-assets] build date:', BUILD_DATE);

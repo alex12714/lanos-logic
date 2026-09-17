@@ -19,7 +19,7 @@ export const homeFaqs = [
   },
   {
     q: 'What results can businesses expect from AI automation?',
-    a: 'Clients typically see up to a 300% increase in operational capacity, 85% reduction in processing time, 68% higher response rates, 42% higher conversion rates, 75% faster lead qualification, and around 3.5x ROI on their automation investment.',
+    a: 'Results vary by workflow, so we quote real ones rather than averages. The University of Minnesota saved 80% of its student-onboarding admin time. A law firm automated 10,000+ contracts and reclaimed 90 hours a month. A medical equipment testing company automated 9,600 certificates a year and redeployed 4 full-time staff. A voice AI deployment qualifies 100-150 leads a week at a 98% completion rate. Every figure we publish is attached to a named case study.',
   },
   {
     q: 'Which industries does Lanos Logic serve?',

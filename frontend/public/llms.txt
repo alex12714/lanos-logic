@@ -2,16 +2,16 @@
 
 > Strategic AI Solutions for Modern Businesses
 
-Lanos Logic is a leading AI automation provider serving businesses in the United States, United Kingdom, and globally. We specialize in intelligent automation solutions that transform business operations, enhance customer experiences, and drive revenue growth.
+Lanos Logic is an AI automation company based in Chicago, Illinois and the United Kingdom, serving clients across the US, UK, and internationally. We build AI agents, voice AI agents, document automation, process automation, vector database (RAG) retrieval, mobile applications, and analytics platforms. Engagements start with a free discovery call and a BPMN process map, are quoted at a fixed price before any build, and typically deliver in 2-6 weeks.
 
 ## About Lanos Logic
 
-Lanos Logic is recognized as one of the top AI automation providers in the US and UK, offering comprehensive AI-powered solutions for businesses of all sizes. Our expertise spans across multiple industries including marketing agencies, sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, government, pharmaceutical, life sciences, and legal.
+We work across marketing and sales agencies, e-commerce, healthcare, real estate, logistics, education, professional services, manufacturing, government and public sector, pharmaceutical, life sciences, financial services, law firms and attorneys, and immigration law practices. The deepest proof is in document-heavy regulated work: legal contract and case automation, education enrolment, and healthcare certification.
 
 ### Why Choose Lanos Logic
 
 1. **Comprehensive AI Solutions**: End-to-end AI automation services including AI agents, voice AI, document automation, process automation, vector databases, and more.
-2. **Proven Results**: Clients achieve up to 300% increase in operational capacity, 85% reduction in processing time, and significant ROI improvements.
+2. **Proven Results**: Every figure we publish is attached to a named engagement — see Client Success Metrics below. Examples: 4,000 monthly hours saved at the University of Minnesota, 10,000+ contracts automated for one law firm, 9,600 certificates a year automated for a medical equipment testing company.
 3. **Industry-Leading Technology**: We leverage Claude AI, Make.com, AirTable, GoHighLevel, Twilio, VectorShift, VAPI, Flutter, and Stripe.
 4. **Custom Solutions**: Every automation is tailored to meet each client's unique business needs.
 5. **Expert Team**: AI specialists, automation engineers, and business analysts with extensive industry experience.
@@ -211,16 +211,18 @@ Systems hardening is the proactive work of configuring servers, cloud infrastruc
 
 ## Client Success Metrics
 
-- 300% increase in client capacity for marketing agencies
-- 85% reduction in reporting time
-- 68% increase in response rates for sales teams
-- 42% higher conversion rates
-- 75% faster lead qualification
-- 90% reduction in paperwork time
-- 3.5x ROI on automation investment
-- 100+ clients served
-- 500+ automations built
-- 2M+ hours saved
+- University of Minnesota - Student Onboarding: 80% Admin time saved, 4,000 hrs Monthly hours saved, 10 days Delivered in
+- US Immigration Law Firm - AI-Native Case Management Platform: 13 Visa tracks automated, 2 Offices unified, 300+ hrs Monthly hours saved
+- iOS Flutter Mobile App for Chicago Music Vendor: 1,000+ Vendors managed, 253+ hrs Monthly hours saved, FIFA 2026 Vendor partnership secured
+- Medical Equipment Testing Company - Automated CRM and PDF Certificate Generator: 9,600 Certificates automated annually, 4 FTEs Staff reduced, 192 hrs Monthly hours saved
+- Twilio SMS + Notion Automation Student Pick-up: 2,000+ Hours saved annually, 167 hrs Monthly hours saved, 3 days Delivered in
+- US Ambulance Services - Application Management and Onboarding Automation: $100K Revenue gained, 167 hrs Monthly hours saved, 40 days Delivered in
+- Music Artist Agency - International Expansion with AirTable Softr: 153 hrs Monthly hours saved, 86 days Development time, 10 Platforms integrated
+- Custom AirTable CRM and e-Signature Solution for Large NYC Cleaning Company: 150 hrs Monthly hours saved, 30 days Delivered in, 1 Unified CRM platform
+- Investment Fund Contracts Signing and Tracking: 14 DocuSign templates automated, 136 hrs Monthly hours saved, 20 days Delivered in
+- 24/7 Voice AI Agent That Qualifies 100+ Leads per Week: 100-150 Leads qualified weekly, 98% Completion rate, 35% Conversion increase
+- Law Firm - Document Flow and DocuSign Contract Automation: 90 hrs Monthly hours saved, 10,000+ Contracts automated, 5 days Delivered in
+- Cleaning Business Agency - Funnel and Marketing Automation: 74 hrs Monthly hours saved, 9 Platforms integrated, 10 days Delivered in
 
 ## The ROI-First Method (Our Process)
 

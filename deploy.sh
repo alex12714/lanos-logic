@@ -95,4 +95,18 @@ if [ -d "$SITE_DIR/repo/tools-api" ]; then
         || echo "[$(date)] tools-api deploy failed (non-fatal)" >> $LOG
 fi
 
+# Notify IndexNow (Bing, Yandex, Seznam, Naver) that the sitemap URLs changed.
+# Runs last, so it only ever announces content that is already live. This is the
+# fastest route into Bing's index, which matters beyond Bing itself because
+# ChatGPT's search leans on it. The script existed since the SEO work but was
+# never wired up — its own header said "run it manually after a deploy", which
+# in practice meant it never ran. Non-fatal: a failed ping must not fail a
+# deploy that has already shipped.
+if [ -f "$SITE_DIR/repo/frontend/scripts/indexnow-ping.mjs" ]; then
+    echo "[$(date)] Pinging IndexNow..." >> $LOG
+    /usr/bin/node $SITE_DIR/repo/frontend/scripts/indexnow-ping.mjs >> $LOG 2>&1 \
+        && echo "[$(date)] IndexNow ping sent" >> $LOG \
+        || echo "[$(date)] IndexNow ping failed (non-fatal)" >> $LOG
+fi
+
 echo "[$(date)] Deployment complete" >> $LOG
