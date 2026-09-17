@@ -395,8 +395,61 @@ app.add_middleware(
     allow_headers=["Content-Type", "Authorization", "Accept"],
 )
 
-MCP_VERSION = "2024-11-05"
+# ---------------------------------------------------------------------------
+# Protocol versions
+#
+# This is a "dual-era" server in the sense of the 2026-07-28 spec: it serves
+# both modern clients (which declare their protocol version in per-request
+# `_meta` and the MCP-Protocol-Version header) and legacy clients (which open
+# with an `initialize` handshake). Serving both matters commercially — the
+# connectors shipping in ChatGPT and Claude today are largely still on the
+# 2025-x handshake, and dropping them to look current would be a bad trade.
+#
+# A request is modern if it carries io.modelcontextprotocol/protocolVersion in
+# params._meta, or is server/discover. Everything else is treated as legacy.
+# ---------------------------------------------------------------------------
+MODERN_VERSION = "2026-07-28"
+LEGACY_PREFERRED = "2025-06-18"
+SUPPORTED_VERSIONS = [
+    "2026-07-28",  # modern: per-request metadata, server/discover
+    "2025-11-25",
+    "2025-06-18",
+    "2025-03-26",  # Streamable HTTP introduced
+    "2024-11-05",  # HTTP+SSE era; kept so existing integrations keep working
+]
 SERVER_INFO = {"name": "lanos-logic-mcp", "version": "1.0.0"}
+
+META_VERSION_KEY = "io.modelcontextprotocol/protocolVersion"
+META_SERVER_INFO_KEY = "io.modelcontextprotocol/serverInfo"
+
+# Error codes from the MCP-reserved sub-range.
+ERR_HEADER_MISMATCH = -32020
+ERR_UNSUPPORTED_PROTOCOL_VERSION = -32022
+ERR_METHOD_NOT_FOUND = -32601
+
+SERVER_INSTRUCTIONS = (
+    "Lanos Logic is an AI automation company (Chicago IL + UK). Use these tools to "
+    "browse its services, real client case studies, and the industries it serves, "
+    "or to submit a contact inquiry. Every figure returned by these tools is "
+    "attached to a named engagement."
+)
+
+# Sessions were removed in 2026-07-28 and were always optional before it. This
+# server is stateless: it never mints Mcp-Session-Id, and per the spec it
+# ignores Mcp-Session-Id and Last-Event-ID if an older client sends them.
+
+
+def _decode_header_value(value: str) -> str:
+    """Decode the Base64 sentinel form `=?base64?<b64>?=` used for header values
+    that cannot be represented as plain ASCII. Returns the value unchanged when
+    it is not in sentinel form."""
+    if value.startswith("=?base64?") and value.endswith("?="):
+        import base64
+        try:
+            return base64.b64decode(value[len("=?base64?"):-len("?=")]).decode("utf-8")
+        except Exception:
+            return value
+    return value
 
 
 def mcp_error(id_: Any, code: int, message: str) -> dict:
@@ -409,78 +462,254 @@ def mcp_result(id_: Any, result: Any) -> dict:
 
 @app.get("/mcp")
 async def mcp_get():
-    """MCP discovery endpoint."""
-    return JSONResponse({
-        "name": SERVER_INFO["name"],
-        "version": SERVER_INFO["version"],
-        "protocol": MCP_VERSION,
-        "tools": len(TOOLS),
-    })
+    """The 2026-07-28 revision removed the GET stream endpoint, and this server
+    never supported server-initiated streams anyway, so GET is 405 per spec.
+    The body still carries the discovery details, which costs nothing and is
+    friendlier than an empty error to anyone poking at the endpoint by hand."""
+    return JSONResponse(
+        {
+            "name": SERVER_INFO["name"],
+            "version": SERVER_INFO["version"],
+            "supportedVersions": SUPPORTED_VERSIONS,
+            "tools": len(TOOLS),
+            "hint": "POST JSON-RPC to this endpoint; call server/discover for capabilities.",
+        },
+        status_code=405,
+        headers={"Allow": "POST"},
+    )
+
+
+@app.delete("/mcp")
+async def mcp_delete():
+    """DELETE terminated a session in the 2025-x revisions. This server is
+    stateless and mints no sessions, so there is nothing to terminate."""
+    return JSONResponse(
+        {"error": "This server is stateless; there is no session to delete."},
+        status_code=405,
+        headers={"Allow": "POST"},
+    )
+
+
+def _tool_dispatch(tool_name: str, args: dict, client_ip: str):
+    """Returns (result, error_message). Shared by both eras."""
+    if tool_name == "list_services":
+        return handle_list_services(args), None
+    if tool_name == "get_service":
+        return handle_get_service(args), None
+    if tool_name == "list_case_studies":
+        return handle_list_case_studies(args), None
+    if tool_name == "get_case_study":
+        return handle_get_case_study(args), None
+    if tool_name == "list_industries":
+        return handle_list_industries(args), None
+    if tool_name == "get_company_info":
+        return handle_get_company_info(args), None
+    return None, f"Unknown tool: {tool_name}"
+
+
+def _tool_content(result: Any) -> dict:
+    return {"content": [{"type": "text", "text": json.dumps(result, ensure_ascii=False)}]}
 
 
 @app.post("/mcp")
 async def mcp_post(request: Request):
-    client_ip = request.headers.get("X-Real-IP") or request.headers.get("X-Forwarded-For", "unknown").split(",")[0].strip()
+    client_ip = (
+        request.headers.get("X-Real-IP")
+        or request.headers.get("X-Forwarded-For", "unknown").split(",")[0].strip()
+    )
 
     try:
         body = await request.json()
     except Exception:
         return JSONResponse(mcp_error(None, -32700, "Parse error"), status_code=400)
 
+    # JSON-RPC batching was removed in 2025-06-18. Reject arrays explicitly
+    # rather than letting `.get` raise and surface as a 500.
+    if isinstance(body, list):
+        return JSONResponse(
+            mcp_error(None, -32600, "Batch requests are not supported by this protocol revision"),
+            status_code=400,
+        )
+    if not isinstance(body, dict):
+        return JSONResponse(mcp_error(None, -32600, "Invalid Request"), status_code=400)
+
     method = body.get("method", "")
     req_id = body.get("id")
+    is_notification = "id" not in body
     params = body.get("params") or {}
+    meta = params.get("_meta") or {}
 
-    # --- initialize ---
-    if method == "initialize":
+    declared_version = meta.get(META_VERSION_KEY)
+    header_version = request.headers.get("mcp-protocol-version")
+
+    # --- era selection -----------------------------------------------------
+    # Per-request metadata (or server/discover, which only exists in the modern
+    # era) means modern. An `initialize` opening means legacy.
+    is_modern = declared_version is not None or method == "server/discover"
+
+    if is_modern:
+        return await _handle_modern(
+            request, body, method, req_id, is_notification, params, meta,
+            declared_version, header_version, client_ip,
+        )
+    return await _handle_legacy(body, method, req_id, is_notification, params, client_ip)
+
+
+async def _handle_modern(request, body, method, req_id, is_notification, params, meta,
+                         declared_version, header_version, client_ip):
+    """Protocol revision 2026-07-28: per-request version, mirrored headers,
+    mandatory server/discover, no sessions."""
+
+    def header_mismatch(msg: str):
+        return JSONResponse(mcp_error(req_id, ERR_HEADER_MISMATCH, f"Header mismatch: {msg}"),
+                            status_code=400)
+
+    # 1. MCP-Protocol-Version must be present and must match the body.
+    if not header_version:
+        return header_mismatch("required header MCP-Protocol-Version is missing")
+    if declared_version is None:
+        return header_mismatch(
+            f"MCP-Protocol-Version header '{header_version}' has no matching "
+            f"{META_VERSION_KEY} in params._meta"
+        )
+    if header_version != declared_version:
+        return header_mismatch(
+            f"MCP-Protocol-Version header '{header_version}' does not match body value "
+            f"'{declared_version}'"
+        )
+
+    # 2. Version must be one we implement. Checked before the remaining header
+    #    rules so the client gets the actionable error it can retry on.
+    if declared_version not in SUPPORTED_VERSIONS:
+        return JSONResponse(
+            {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "error": {
+                    "code": ERR_UNSUPPORTED_PROTOCOL_VERSION,
+                    "message": "Unsupported protocol version",
+                    "data": {"supported": SUPPORTED_VERSIONS, "requested": declared_version},
+                },
+            },
+            status_code=400,
+        )
+
+    # 3. Mcp-Method mirrors `method`.
+    header_method = request.headers.get("mcp-method")
+    if not header_method:
+        return header_mismatch("required header Mcp-Method is missing")
+    if header_method != method:
+        return header_mismatch(
+            f"Mcp-Method header '{header_method}' does not match body method '{method}'"
+        )
+
+    # 4. Mcp-Name mirrors params.name / params.uri where the method has one.
+    name_source = None
+    if method == "tools/call":
+        name_source = params.get("name")
+    elif method == "resources/read":
+        name_source = params.get("uri")
+    elif method == "prompts/get":
+        name_source = params.get("name")
+    if name_source is not None:
+        header_name = request.headers.get("mcp-name")
+        if not header_name:
+            return header_mismatch("required header Mcp-Name is missing")
+        if _decode_header_value(header_name) != name_source:
+            return header_mismatch(
+                f"Mcp-Name header does not match body value '{name_source}'"
+            )
+
+    # --- server/discover: mandatory in this revision ------------------------
+    if method == "server/discover":
+        if is_notification:
+            return Response(status_code=202)
         return JSONResponse(mcp_result(req_id, {
-            "protocolVersion": MCP_VERSION,
+            "resultType": "complete",
+            "supportedVersions": SUPPORTED_VERSIONS,
             "capabilities": {"tools": {}},
-            "serverInfo": SERVER_INFO,
+            "instructions": SERVER_INSTRUCTIONS,
+            "ttlMs": 3600000,
+            "cacheScope": "public",
+            "_meta": {META_SERVER_INFO_KEY: SERVER_INFO},
         }))
 
-    # --- tools/list ---
     if method == "tools/list":
         if not limiter.allow_read(client_ip):
-            return JSONResponse(mcp_error(req_id, -32000, "Rate limit exceeded (60 req/min)"), status_code=429)
+            return JSONResponse(mcp_error(req_id, -32000, "Rate limit exceeded (60 req/min)"),
+                                status_code=429)
+        if is_notification:
+            return Response(status_code=202)
         return JSONResponse(mcp_result(req_id, {"tools": TOOLS}))
 
-    # --- tools/call ---
     if method == "tools/call":
         tool_name = params.get("name", "")
         args = params.get("arguments") or {}
-
-        # submit_inquiry uses its own stricter rate limit
-        if tool_name != "submit_inquiry":
-            if not limiter.allow_read(client_ip):
-                return JSONResponse(mcp_error(req_id, -32000, "Rate limit exceeded (60 req/min)"), status_code=429)
-
-        if tool_name == "list_services":
-            result = handle_list_services(args)
-        elif tool_name == "get_service":
-            result = handle_get_service(args)
-        elif tool_name == "list_case_studies":
-            result = handle_list_case_studies(args)
-        elif tool_name == "get_case_study":
-            result = handle_get_case_study(args)
-        elif tool_name == "list_industries":
-            result = handle_list_industries(args)
-        elif tool_name == "get_company_info":
-            result = handle_get_company_info(args)
-        elif tool_name == "submit_inquiry":
+        if tool_name != "submit_inquiry" and not limiter.allow_read(client_ip):
+            return JSONResponse(mcp_error(req_id, -32000, "Rate limit exceeded (60 req/min)"),
+                                status_code=429)
+        if tool_name == "submit_inquiry":
             result = await handle_submit_inquiry(args, client_ip)
         else:
-            return JSONResponse(mcp_error(req_id, -32601, f"Unknown tool: {tool_name}"))
+            result, err = _tool_dispatch(tool_name, args, client_ip)
+            if err:
+                return JSONResponse(mcp_error(req_id, ERR_METHOD_NOT_FOUND, err), status_code=404)
+        if is_notification:
+            return Response(status_code=202)
+        return JSONResponse(mcp_result(req_id, _tool_content(result)))
 
+    # A notification the server accepts but has nothing to answer.
+    if is_notification:
+        return Response(status_code=202)
+
+    # Unknown method: 404 with -32601, which is what distinguishes a modern
+    # server from a legacy one that simply does not host this endpoint.
+    return JSONResponse(mcp_error(req_id, ERR_METHOD_NOT_FOUND, f"Method not found: {method}"),
+                        status_code=404)
+
+
+async def _handle_legacy(body, method, req_id, is_notification, params, client_ip):
+    """Handshake-based revisions (2025-11-25 and earlier). Kept so the clients
+    that are actually deployed today continue to work unchanged."""
+
+    if method == "initialize":
+        requested = params.get("protocolVersion")
+        # Echo the client's version when we implement it, otherwise answer with
+        # the legacy revision we prefer and let the client decide.
+        negotiated = requested if requested in SUPPORTED_VERSIONS else LEGACY_PREFERRED
         return JSONResponse(mcp_result(req_id, {
-            "content": [{"type": "text", "text": json.dumps(result, ensure_ascii=False)}]
+            "protocolVersion": negotiated,
+            "capabilities": {"tools": {}},
+            "serverInfo": SERVER_INFO,
+            "instructions": SERVER_INSTRUCTIONS,
         }))
 
-    # --- notifications/initialized (no response needed) ---
-    if method == "notifications/initialized":
-        return Response(status_code=204)
+    if method == "tools/list":
+        if not limiter.allow_read(client_ip):
+            return JSONResponse(mcp_error(req_id, -32000, "Rate limit exceeded (60 req/min)"),
+                                status_code=429)
+        return JSONResponse(mcp_result(req_id, {"tools": TOOLS}))
 
-    return JSONResponse(mcp_error(req_id, -32601, f"Method not found: {method}"), status_code=404)
+    if method == "tools/call":
+        tool_name = params.get("name", "")
+        args = params.get("arguments") or {}
+        if tool_name != "submit_inquiry" and not limiter.allow_read(client_ip):
+            return JSONResponse(mcp_error(req_id, -32000, "Rate limit exceeded (60 req/min)"),
+                                status_code=429)
+        if tool_name == "submit_inquiry":
+            result = await handle_submit_inquiry(args, client_ip)
+        else:
+            result, err = _tool_dispatch(tool_name, args, client_ip)
+            if err:
+                return JSONResponse(mcp_error(req_id, ERR_METHOD_NOT_FOUND, err))
+        return JSONResponse(mcp_result(req_id, _tool_content(result)))
+
+    # Notifications carry no id and get 202 with no body.
+    if is_notification or method.startswith("notifications/"):
+        return Response(status_code=202)
+
+    return JSONResponse(mcp_error(req_id, ERR_METHOD_NOT_FOUND, f"Method not found: {method}"),
+                        status_code=404)
 
 
 @app.get("/health")
