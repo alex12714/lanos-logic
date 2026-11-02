@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import {
   Menu, X, Phone, ArrowRight, ChevronDown,
   Bot, Workflow, Share2, MessageSquare, Database,
-  BarChart3, FileText, Smartphone, ScanLine, ShieldAlert, ShieldCheck, Bug,
+  BarChart3, FileText, Smartphone, ScanLine, ShieldAlert, ShieldCheck, Bug, Handshake,
   ExternalLink, Grid3x3, Sparkles,
 } from 'lucide-react';
 import { Button } from '../ui/button';
@@ -41,6 +41,7 @@ const serviceGroups = [
       { name: 'Vulnerability Scanning', href: '/services/security-vulnerability-scanning', icon: ScanLine,    desc: 'Attack surface & CVE detection' },
       { name: 'Penetration Testing',    href: '/services/penetration-testing',             icon: ShieldAlert, desc: 'Adversarial security testing' },
       { name: 'Hardening & Cloud Posture', href: '/services/systems-hardening',            icon: ShieldCheck, desc: 'CIS hardening & CSPM' },
+      { name: 'For Agencies (White-Label)', href: '/services/white-label-security-agencies', icon: Handshake,  desc: 'Continuous security for your clients' },
     ],
   },
 ];

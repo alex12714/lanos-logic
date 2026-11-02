@@ -95,7 +95,7 @@ Application security testing finds vulnerabilities in your code, dependencies, a
 → https://lanos-logic.com/services/application-security-testing
 
 ### Security Vulnerability Scanning
-Security vulnerability scanning is the continuous, automated process of finding known weaknesses in everything you have deployed — websites, APIs, servers, containers, and cloud accounts — before attackers do. Lanos Logic scans your external attack surface and internal network against the OWASP Top 10 and daily-updated CVE databases, and runs it as a self-updating system: new assets join the scope automatically, new CVEs are matched to your inventory the day they are published, and AI ranks what to fix first.
+Security vulnerability scanning is the continuous, automated process of finding known weaknesses in everything you have deployed - websites, APIs, servers, containers, and cloud accounts - before attackers do. Lanos Logic scans your external attack surface and internal network against the OWASP Top 10 and daily-updated CVE databases, and runs it as a self-updating system: new assets join the scope automatically, new CVEs are matched to your inventory the day they are published, and AI ranks what to fix first.
 → https://lanos-logic.com/services/security-vulnerability-scanning
 
 ### Penetration Testing
@@ -105,6 +105,10 @@ Penetration testing is an authorized, simulated cyberattack run by certified eth
 ### Systems Hardening & Cloud Posture
 Systems hardening and cloud security posture management (CSPM) shrink your attack surface and keep it small. Lanos Logic configures servers, Kubernetes, and AWS, Azure, and GCP accounts against CIS Benchmarks, NIST SP 800-123, and Zero Trust principles, then keeps it that way with continuous, self-updating posture checks that catch drift and can fix safe issues automatically.
 → https://lanos-logic.com/services/systems-hardening
+
+### White-Label Security for Agencies
+White-label, continuous security testing for software agencies and development companies that build for their own clients. Lanos Logic runs automated weekly checks, our team verifies every finding, and we track each fix through to a retest. Your clients get verified findings, clear fix steps, and evidence that each issue was closed - not just another scan report.
+→ https://lanos-logic.com/services/white-label-security-agencies
 
 ## Industries Served
 
@@ -248,7 +252,7 @@ Lanos Logic exposes a native MCP (Model Context Protocol) server for direct agen
 
 ### Available Tools
 
-- **list_services** — List all 14 AI automation services with features and URLs
+- **list_services** — List all 15 AI automation services with features and URLs
 - **get_service** — Get full details for a service by ID (e.g. `ai-agents`, `vector-database-solutions`)
 - **list_case_studies** — Browse 43 case studies; filter by industry, platform, country, or type
 - **get_case_study** — Get complete case study detail including stats, platforms, and solution description

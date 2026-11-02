@@ -330,7 +330,7 @@ export const services = [
   {
     id: "security-vulnerability-scanning",
     name: "Security Vulnerability Scanning",
-    shortDescription: "Security vulnerability scanning is the continuous, automated process of finding known weaknesses in everything you have deployed — websites, APIs, servers, containers, and cloud accounts — before attackers do. Lanos Logic scans your external attack surface and internal network against the OWASP Top 10 and daily-updated CVE databases, and runs it as a self-updating system: new assets join the scope automatically, new CVEs are matched to your inventory the day they are published, and AI ranks what to fix first.",
+    shortDescription: "Security vulnerability scanning is the continuous, automated process of finding known weaknesses in everything you have deployed - websites, APIs, servers, containers, and cloud accounts - before attackers do. Lanos Logic scans your external attack surface and internal network against the OWASP Top 10 and daily-updated CVE databases, and runs it as a self-updating system: new assets join the scope automatically, new CVEs are matched to your inventory the day they are published, and AI ranks what to fix first.",
     icon: "ScanLine",
     href: "/services/security-vulnerability-scanning",
     features: [
@@ -357,7 +357,7 @@ export const services = [
     ],
     benefits: [
       { title: "Real-World Attack Simulation", description: "Test defenses under conditions that mirror actual attacker techniques, tools, and procedures (TTPs)." },
-      { title: "Detailed Remediation Roadmap", description: "Every finding includes reproduction steps, CVSS score, and step-by-step remediation guidance, and becomes an automated regression test so a fixed hole cannot quietly reopen." },
+      { title: "Detailed Remediation Roadmap", description: "Every finding includes reproduction steps, CVSS score, and step-by-step remediation guidance, and becomes an automated regression test that flags it if a fixed hole reopens." },
       { title: "Compliance Evidence", description: "Pentest reports accepted for SOC 2 Type II, ISO 27001, PCI-DSS, and regulatory audits." }
     ]
   },
@@ -376,6 +376,44 @@ export const services = [
       { title: "Reduced Attack Surface", description: "Eliminate unnecessary services, close exposed ports, and enforce least-privilege access across your entire stack." },
       { title: "Regulatory Alignment", description: "Configurations aligned with NIST, CIS, DISA STIG, and SOC 2 frameworks for audit-ready security posture." },
       { title: "Continuous Cloud Posture", description: "Cloud accounts are checked continuously for public storage, over-permissive IAM, open security groups, and disabled logging, with drift alerts, automatic fixes for safe issues, and a posture score you can show auditors." }
+    ]
+  },
+  {
+    id: "white-label-security-agencies",
+    name: "White-Label Security for Agencies",
+    shortDescription: "White-label, continuous security testing for software agencies and development companies that build for their own clients. Lanos Logic runs automated weekly checks, our team verifies every finding, and we track each fix through to a retest. Your clients get verified findings, clear fix steps, and evidence that each issue was closed - not just another scan report.",
+    icon: "Handshake",
+    href: "/services/white-label-security-agencies",
+    features: [
+      "Monitor, Attack, and Assure Packages",
+      "Findings Verified by Our Team",
+      "Fix Tracking Through to Retest"
+    ],
+    benefits: [
+      { title: "Delivered Under Your Brand", description: "Every report comes in an agency version for your team and a clean version you can hand to your client." },
+      { title: "Verified, Not Just Scanned", description: "Each finding has evidence, business impact, and exact fix steps, prioritized by real exploitability rather than CVSS score alone." },
+      { title: "Proof Each Issue Was Closed", description: "Findings become tickets in your client's Jira or GitHub, and we retest automatically before an issue is closed." }
+    ],
+    packages: [
+      { name: "Monitor", bestFor: "Teams that need a consistent security baseline", includes: "Weekly checks for known vulnerabilities (CVEs) in dependencies and containers, exposed secrets such as API keys, TLS and security header settings, and new subdomains or open ports, with a weekly report.", frequency: "Weekly" },
+      { name: "Attack", bestFor: "Teams shipping often that need attack-path testing", includes: "Everything in Monitor, plus authenticated dynamic testing (DAST) of your staging app and an AI-assisted penetration test of login, access control, APIs, and injection risks.", frequency: "Weekly DAST, monthly AI pentest" },
+      { name: "Assure", bestFor: "Higher-risk apps or clients who need assurance", includes: "Everything in Attack, plus AI-assisted code review, proposed fix pull requests, a monthly review call, compliance evidence, and an annual human penetration test through a partner firm.", frequency: "Monthly review and call, quarterly compliance evidence, annual human pentest" }
+    ],
+    everyPackage: [
+      "A weekly report with a plain-language summary, risk trend, and new, fixed, and overdue findings",
+      "Evidence, business impact, and exact fix steps for every finding",
+      "Prioritization by real exploitability, not just CVSS score",
+      "A same-day alert for critical issues",
+      "An agency version and a clean version of every report for the end client",
+      "Tickets in your client's Jira or GitHub, retested automatically before an issue is closed"
+    ],
+    howItWorks: [
+      { step: "Onboard & authorize", desc: "The system owner gives written authorization. We agree scope, targets, and contacts." },
+      { step: "Scan", desc: "Automated checks run on your package schedule. Attack testing runs on staging by default." },
+      { step: "Verify", desc: "Our team confirms each finding and removes false positives before you see it." },
+      { step: "Track fixes", desc: "Findings become tickets in Jira or GitHub with exact fix steps." },
+      { step: "Retest", desc: "Each fix is retested automatically before the ticket is closed." },
+      { step: "Report", desc: "Weekly reports show what is new, fixed, and overdue, plus the risk trend." }
     ]
   }
 ];

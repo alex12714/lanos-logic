@@ -107,7 +107,7 @@ export const glossaryTerms = [
   {
     term: 'CSPM (Cloud Security Posture Management)',
     definition:
-      'Cloud security posture management continuously checks cloud accounts on AWS, Azure, and GCP for risky configuration — public storage, over-permissive IAM, open network rules, unencrypted data, and disabled logging — scores them against benchmarks like the CIS Foundations Benchmarks, and alerts on drift.',
+      'Cloud security posture management continuously checks cloud accounts on AWS, Azure, and GCP for risky configuration - public storage, over-permissive IAM, open network rules, unencrypted data, and disabled logging - scores them against benchmarks like the CIS Foundations Benchmarks, and alerts on drift.',
   },
   {
     term: 'Zero Trust',

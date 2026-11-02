@@ -7,7 +7,7 @@
 export const homeFaqs = [
   {
     q: 'What AI automation services does Lanos Logic offer?',
-    a: 'Lanos Logic offers AI Agents, Voice AI Agents, Vector Database Solutions, Document Automation, Process Automation, Social Media Automation, Communication Automation, Mobile App Development, and Analytics & Insights, plus enterprise cybersecurity delivered as always-on, AI-assisted systems rather than one-off audits (application security testing — SAST, DAST, SCA, secret, container and IaC scanning — vulnerability scanning, penetration testing, and systems hardening with cloud posture management).',
+    a: 'Lanos Logic offers AI Agents, Voice AI Agents, Vector Database Solutions, Document Automation, Process Automation, Social Media Automation, Communication Automation, Mobile App Development, and Analytics & Insights, plus enterprise cybersecurity delivered as always-on, AI-assisted systems rather than one-off audits, including white-label security packages for software agencies (application security testing — SAST, DAST, SCA, secret, container and IaC scanning — vulnerability scanning, penetration testing, and systems hardening with cloud posture management).',
   },
   {
     q: 'How much does AI automation cost?',
@@ -142,7 +142,7 @@ const SERVICE_FAQS = {
     },
     {
       q: 'What do container and IaC scanning check?',
-      a: 'Container scanning checks Docker images and their base layers for vulnerable OS packages and insecure settings such as running as root. Infrastructure-as-code (IaC) scanning checks Terraform, CloudFormation, Kubernetes manifests, and Helm charts for misconfigurations — public buckets, open security groups, missing encryption — before they are deployed.',
+      a: 'Container scanning checks Docker images and their base layers for vulnerable OS packages and insecure settings such as running as root. Infrastructure-as-code (IaC) scanning checks Terraform, CloudFormation, Kubernetes manifests, and Helm charts for misconfigurations - public buckets, open security groups, missing encryption - before they are deployed.',
     },
     {
       q: 'Will security scanning slow down our developers?',
@@ -160,7 +160,7 @@ const SERVICE_FAQS = {
   'security-vulnerability-scanning': [
     {
       q: 'What is security vulnerability scanning?',
-      a: 'Security vulnerability scanning is the continuous, automated process of finding known weaknesses in what you have deployed — websites, APIs, servers, containers, and cloud accounts — and checking them against the OWASP Top 10 and daily-updated CVE databases, so you can fix them before attackers exploit them.',
+      a: 'Security vulnerability scanning is the continuous, automated process of finding known weaknesses in what you have deployed - websites, APIs, servers, containers, and cloud accounts - and checking them against the OWASP Top 10 and daily-updated CVE databases, so you can fix them before attackers exploit them.',
     },
     {
       q: 'What is the difference between vulnerability scanning and application security testing?',
@@ -202,17 +202,17 @@ const SERVICE_FAQS = {
     },
     {
       q: 'How long does a penetration test take and how much does it cost?',
-      a: 'A focused web app or API test usually takes one to two weeks, with a report shortly after. Price depends on scope — applications, roles, endpoints, and network size — and is quoted as a fixed price after a free scoping call.',
+      a: 'A focused web app or API test usually takes one to two weeks, with a report shortly after. Price depends on scope - applications, roles, endpoints, and network size - and is quoted as a fixed price after a free scoping call.',
     },
     {
       q: 'What happens between penetration tests?',
-      a: 'Automated attack simulation keeps running. It replays the techniques that worked against you, mapped to MITRE ATT&CK, adds new techniques as they are published, and turns every confirmed finding into a regression test, so a fixed vulnerability cannot quietly reopen after a release.',
+      a: 'Automated attack simulation keeps running. It replays the techniques that worked against you, mapped to MITRE ATT&CK, adds new techniques as they are published, and turns every confirmed finding into a regression test, so you know if a fixed vulnerability reopens after a release.',
     },
   ],
   'systems-hardening': [
     {
       q: 'What is systems hardening?',
-      a: 'Systems hardening is the work of configuring servers, databases, containers, Kubernetes, and cloud accounts securely — removing unused services, closing ports, enforcing least privilege, and applying baselines such as the CIS Benchmarks — so attackers have far less to target.',
+      a: 'Systems hardening is the work of configuring servers, databases, containers, Kubernetes, and cloud accounts securely - removing unused services, closing ports, enforcing least privilege, and applying baselines such as the CIS Benchmarks - so attackers have far less to target.',
     },
     {
       q: 'What is cloud security posture management (CSPM)?',
@@ -220,7 +220,7 @@ const SERVICE_FAQS = {
     },
     {
       q: 'Will hardening break our applications?',
-      a: 'Not if it is done in stages. We assess current settings first, test changes in a non-production environment, roll them out gradually, and keep a rollback path for every change.',
+      a: 'Staged rollout keeps that risk low. We assess current settings first, test changes in a non-production environment, roll them out gradually, and keep a rollback path for every change.',
     },
     {
       q: 'Which standards do you harden against?',
@@ -233,6 +233,32 @@ const SERVICE_FAQS = {
     {
       q: 'Can misconfigurations be fixed automatically?',
       a: 'Yes, within rules you set. Safe, well-understood fixes, such as blocking public access on a storage bucket or re-enabling audit logging, can be applied automatically and logged. Anything that could affect production goes to an engineer for approval, with an AI-written explanation of the risk and the proposed change.',
+    },
+  ],
+  'white-label-security-agencies': [
+    {
+      q: 'What does white-label mean for this service?',
+      a: 'We run the testing, verification, and retesting; you deliver the results to your client. Every report comes in two versions: an agency version with full technical detail for your team, and a clean version for the end client. Branding and terms are agreed when you sign up.',
+    },
+    {
+      q: 'Which package should we choose?',
+      a: 'Monitor suits teams that need a consistent weekly baseline. Attack suits teams that ship often and need their login, access control, and APIs tested like an attacker would. Assure suits higher-risk apps or clients who ask for compliance evidence and an annual human penetration test.',
+    },
+    {
+      q: 'Do you test production systems?',
+      a: 'Only with written authorization from the system owner. Attack testing runs on staging by default, and production receives non-destructive checks unless we agree otherwise in writing.',
+    },
+    {
+      q: 'How does the EU Cyber Resilience Act affect our clients?',
+      a: 'Since 11 September 2026, manufacturers of products with digital elements that fall under the Cyber Resilience Act must report actively exploited vulnerabilities and severe incidents. Not every client is in scope, so check with your client. Where it applies, we provide early warning and evidence; the reporting duty stays with the manufacturer.',
+    },
+    {
+      q: 'Does this mean the application is secure?',
+      a: 'No testing service can promise that. Our findings and retests apply to what was tested and when. What you get is a consistent, verified view of risk, clear fix steps, and evidence of what has been closed.',
+    },
+    {
+      q: 'How is it priced?',
+      a: 'Per app per month, by package. Pricing is quoted after a free scoping call based on the number of apps, environments, and the package you choose.',
     },
   ],
 };

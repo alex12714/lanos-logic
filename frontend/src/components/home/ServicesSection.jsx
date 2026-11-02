@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck, Sparkles, Bug } from 'lucide-react';
+import { ArrowRight, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck, Sparkles, Bug, Handshake } from 'lucide-react';
 import { services } from '../../data/mock';
 import FadeInUp from '../common/FadeInUp';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 
 const iconMap = {
-  Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck, Sparkles, Bug,
+  Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck, Sparkles, Bug, Handshake,
 };
 
 const ServicesSection = () => {

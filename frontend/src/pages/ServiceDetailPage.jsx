@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowRight, Check, ArrowLeft, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck, Sparkles, Bug } from 'lucide-react';
+import { ArrowRight, Check, ArrowLeft, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck, Sparkles, Bug, Handshake } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import FaqSection from '../components/common/FaqSection';
@@ -24,6 +24,7 @@ const iconMap = {
   ShieldAlert: ShieldAlert,
   ShieldCheck: ShieldCheck,
   Bug: Bug,
+  Handshake: Handshake,
   Sparkles: Sparkles
 };
 
@@ -239,6 +240,56 @@ const ServiceDetailPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Packages: only for services that define them */}
+      {service.packages && (
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Packages</h2>
+              <p className="text-gray-400 text-lg">Priced per app per month. Quoted after a free scoping call.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {service.packages.map((pkg) => (
+                <div key={pkg.name} className="flex flex-col bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl p-7 hover:border-amber-500/30 transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-white">{pkg.name}</h3>
+                  <p className="text-amber-400 text-sm font-medium mt-1">{pkg.bestFor}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed mt-4 flex-1">{pkg.includes}</p>
+                  <p className="text-gray-500 text-xs uppercase tracking-wider mt-5 pt-4 border-t border-white/10">{pkg.frequency}</p>
+                </div>
+              ))}
+            </div>
+            {service.everyPackage && (
+              <div className="mt-10 bg-gradient-to-br from-[#1a1a2e]/50 to-[#16162a]/50 border border-white/5 rounded-2xl p-7">
+                <h3 className="text-lg font-bold text-white mb-4">Every package includes</h3>
+                <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+                  {service.everyPackage.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-gray-300 text-sm leading-relaxed">
+                      <Check className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {service.howItWorks && (
+              <div className="mt-10">
+                <h3 className="text-lg font-bold text-white mb-5 text-center">How it works</h3>
+                <ol className="grid sm:grid-cols-2 lg:grid-cols-6 gap-4">
+                  {service.howItWorks.map((s, i) => (
+                    <li key={s.step} className="border-t-2 border-amber-500/60 pt-3">
+                      <span className="text-amber-400 text-xs font-mono">{String(i + 1).padStart(2, '0')}</span>
+                      <p className="text-white font-semibold text-sm mt-1">{s.step}</p>
+                      <p className="text-gray-400 text-xs leading-relaxed mt-1">{s.desc}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* The 5-Layer GEO Stack — only on the GEO service page */}
       {isGeo && (
