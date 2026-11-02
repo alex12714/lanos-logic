@@ -7,7 +7,7 @@
 export const homeFaqs = [
   {
     q: 'What AI automation services does Lanos Logic offer?',
-    a: 'Lanos Logic offers AI Agents, Voice AI Agents, Vector Database Solutions, Document Automation, Process Automation, Social Media Automation, Communication Automation, Mobile App Development, and Analytics & Insights, plus enterprise cybersecurity (application security testing — SAST, DAST, SCA, secret, container and IaC scanning — vulnerability scanning, penetration testing, and systems hardening with cloud posture management).',
+    a: 'Lanos Logic offers AI Agents, Voice AI Agents, Vector Database Solutions, Document Automation, Process Automation, Social Media Automation, Communication Automation, Mobile App Development, and Analytics & Insights, plus enterprise cybersecurity delivered as always-on, AI-assisted systems rather than one-off audits (application security testing — SAST, DAST, SCA, secret, container and IaC scanning — vulnerability scanning, penetration testing, and systems hardening with cloud posture management).',
   },
   {
     q: 'How much does AI automation cost?',
@@ -152,6 +152,10 @@ const SERVICE_FAQS = {
       q: 'How much does application security testing cost and how do I get started?',
       a: 'It is scoped on a free discovery call based on your repositories, languages, and CI/CD platform, then quoted as a fixed price for the setup, with optional ongoing triage support. Most pipelines are scanning within one to three weeks.',
     },
+    {
+      q: 'Is this a one-off audit?',
+      a: 'No. We implement a system that keeps running and keeps itself current. Scanning rules and vulnerability databases update automatically, AI triage checks reachability and drafts fixes, and every fixed flaw becomes a permanent check. Threats change daily, so the protection has to as well.',
+    },
   ],
   'security-vulnerability-scanning': [
     {
@@ -173,6 +177,10 @@ const SERVICE_FAQS = {
     {
       q: 'How much does vulnerability scanning cost?',
       a: 'It is scoped on a free discovery call based on the number of domains, IP addresses, applications, and cloud accounts in scope, and quoted as a fixed monthly or annual price.',
+    },
+    {
+      q: 'How does the scanning keep up with new threats?',
+      a: 'It updates itself. New assets are discovered and added automatically, each newly published CVE is matched against your inventory the same day, and an AI layer ranks it using exploit signals such as the CISA Known Exploited Vulnerabilities catalogue and EPSS together with your exposure. Dismissed false positives teach the system what to ignore.',
     },
   ],
   'penetration-testing': [
@@ -196,6 +204,10 @@ const SERVICE_FAQS = {
       q: 'How long does a penetration test take and how much does it cost?',
       a: 'A focused web app or API test usually takes one to two weeks, with a report shortly after. Price depends on scope — applications, roles, endpoints, and network size — and is quoted as a fixed price after a free scoping call.',
     },
+    {
+      q: 'What happens between penetration tests?',
+      a: 'Automated attack simulation keeps running. It replays the techniques that worked against you, mapped to MITRE ATT&CK, adds new techniques as they are published, and turns every confirmed finding into a regression test, so a fixed vulnerability cannot quietly reopen after a release.',
+    },
   ],
   'systems-hardening': [
     {
@@ -217,6 +229,10 @@ const SERVICE_FAQS = {
     {
       q: 'How much does systems hardening and cloud posture management cost?',
       a: 'It is scoped on a free discovery call based on the number of servers, clusters, and cloud accounts, then quoted as a fixed price for the hardening work, with optional ongoing posture monitoring.',
+    },
+    {
+      q: 'Can misconfigurations be fixed automatically?',
+      a: 'Yes, within rules you set. Safe, well-understood fixes, such as blocking public access on a storage bucket or re-enabling audit logging, can be applied automatically and logged. Anything that could affect production goes to an engineer for approval, with an AI-written explanation of the risk and the proposed change.',
     },
   ],
 };

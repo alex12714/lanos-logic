@@ -313,7 +313,7 @@ export const services = [
   {
     id: "application-security-testing",
     name: "Application Security Testing",
-    shortDescription: "Application security testing finds vulnerabilities in your code, dependencies, and build pipeline before they reach production. Lanos Logic sets up SAST, DAST, software composition analysis (SCA), secret scanning, and container and infrastructure-as-code (IaC) scanning inside your CI/CD, tuned so developers see a short list of real issues on every pull request.",
+    shortDescription: "Application security testing finds vulnerabilities in your code, dependencies, and build pipeline before they reach production. Lanos Logic sets up SAST, DAST, software composition analysis (SCA), secret scanning, and container and infrastructure-as-code (IaC) scanning inside your CI/CD as an always-on system: rules update themselves, AI triage cuts the noise, and developers see a short list of real issues on every pull request.",
     icon: "Bug",
     href: "/services/application-security-testing",
     features: [
@@ -324,19 +324,19 @@ export const services = [
     benefits: [
       { title: "Catch Issues Before Release", description: "Flaws are flagged on the pull request that introduces them, when a fix takes minutes instead of an emergency patch." },
       { title: "Supply-Chain Visibility", description: "Know every open-source package and container base image you ship, which ones carry known CVEs or licence risk, and produce an SBOM on demand." },
-      { title: "Low-Noise Results", description: "Rules are tuned to your stack and the baseline is triaged, so builds fail only on real, high-severity issues and developers keep trusting the alerts." }
+      { title: "AI Triage, Low Noise", description: "An AI layer checks whether a flaw is actually reachable, ranks it, and drafts the fix, so builds fail only on real, high-severity issues and developers keep trusting the alerts." }
     ]
   },
   {
     id: "security-vulnerability-scanning",
     name: "Security Vulnerability Scanning",
-    shortDescription: "Security vulnerability scanning is the continuous, automated process of finding known weaknesses in everything you have deployed — websites, APIs, servers, containers, and cloud accounts — before attackers do. Lanos Logic scans your external attack surface and internal network against the OWASP Top 10 and daily-updated CVE databases, validates the results, and alerts you when new exposures appear.",
+    shortDescription: "Security vulnerability scanning is the continuous, automated process of finding known weaknesses in everything you have deployed — websites, APIs, servers, containers, and cloud accounts — before attackers do. Lanos Logic scans your external attack surface and internal network against the OWASP Top 10 and daily-updated CVE databases, and runs it as a self-updating system: new assets join the scope automatically, new CVEs are matched to your inventory the day they are published, and AI ranks what to fix first.",
     icon: "ScanLine",
     href: "/services/security-vulnerability-scanning",
     features: [
       "External Attack Surface & Network Scanning",
       "OWASP Top 10 & CVE Detection",
-      "Continuous Monitoring & Alerts"
+      "Self-Updating, AI-Prioritised Monitoring"
     ],
     benefits: [
       { title: "Proactive Threat Detection", description: "Find and fix exposed services, outdated software, and newly disclosed CVEs before attackers exploit them." },
@@ -347,7 +347,7 @@ export const services = [
   {
     id: "penetration-testing",
     name: "Penetration Testing",
-    shortDescription: "Penetration testing is an authorized, simulated cyberattack run by certified ethical hackers to expose exploitable vulnerabilities before real attackers find them. Lanos Logic pentests web apps, APIs, networks, and cloud infrastructure using PTES, OWASP, and MITRE ATT&CK methodologies.",
+    shortDescription: "Penetration testing is an authorized, simulated cyberattack run by certified ethical hackers to expose exploitable vulnerabilities before real attackers find them. Lanos Logic pentests web apps, APIs, networks, and cloud infrastructure using PTES, OWASP, and MITRE ATT&CK methodologies, then keeps testing between engagements with automated attack simulation.",
     icon: "ShieldAlert",
     href: "/services/penetration-testing",
     features: [
@@ -357,14 +357,14 @@ export const services = [
     ],
     benefits: [
       { title: "Real-World Attack Simulation", description: "Test defenses under conditions that mirror actual attacker techniques, tools, and procedures (TTPs)." },
-      { title: "Detailed Remediation Roadmap", description: "Every finding includes reproduction steps, CVSS score, and step-by-step remediation guidance." },
+      { title: "Detailed Remediation Roadmap", description: "Every finding includes reproduction steps, CVSS score, and step-by-step remediation guidance, and becomes an automated regression test so a fixed hole cannot quietly reopen." },
       { title: "Compliance Evidence", description: "Pentest reports accepted for SOC 2 Type II, ISO 27001, PCI-DSS, and regulatory audits." }
     ]
   },
   {
     id: "systems-hardening",
     name: "Systems Hardening & Cloud Posture",
-    shortDescription: "Systems hardening and cloud security posture management (CSPM) shrink your attack surface and keep it small. Lanos Logic configures servers, Kubernetes, and AWS, Azure, and GCP accounts against CIS Benchmarks, NIST SP 800-123, and Zero Trust principles, then checks your cloud posture continuously for misconfigurations and drift.",
+    shortDescription: "Systems hardening and cloud security posture management (CSPM) shrink your attack surface and keep it small. Lanos Logic configures servers, Kubernetes, and AWS, Azure, and GCP accounts against CIS Benchmarks, NIST SP 800-123, and Zero Trust principles, then keeps it that way with continuous, self-updating posture checks that catch drift and can fix safe issues automatically.",
     icon: "ShieldCheck",
     href: "/services/systems-hardening",
     features: [
@@ -375,7 +375,7 @@ export const services = [
     benefits: [
       { title: "Reduced Attack Surface", description: "Eliminate unnecessary services, close exposed ports, and enforce least-privilege access across your entire stack." },
       { title: "Regulatory Alignment", description: "Configurations aligned with NIST, CIS, DISA STIG, and SOC 2 frameworks for audit-ready security posture." },
-      { title: "Continuous Cloud Posture", description: "Cloud accounts are checked continuously for public storage, over-permissive IAM, open security groups, and disabled logging, with drift alerts and a posture score you can show auditors." }
+      { title: "Continuous Cloud Posture", description: "Cloud accounts are checked continuously for public storage, over-permissive IAM, open security groups, and disabled logging, with drift alerts, automatic fixes for safe issues, and a posture score you can show auditors." }
     ]
   }
 ];
