@@ -1,50 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import {
-  Menu, X, Phone, ArrowRight, ChevronDown,
-  Bot, Workflow, Share2, MessageSquare, Database,
-  BarChart3, FileText, Smartphone, ScanLine, ShieldAlert, ShieldCheck, Bug, Handshake,
-  ExternalLink, Grid3x3, Sparkles,
-} from 'lucide-react';
+import { Menu, X, Phone, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useBooking } from '../../context/BookingContext';
+import { categories } from '../../data/categories';
+import { serviceIcon } from '../../lib/serviceIcons';
 
-/* ── dropdown data ─────────────────────────────────────────────────────────── */
-const serviceGroups = [
-  {
-    label: 'AI & Automation',
-    color: 'text-amber-400',
-    items: [
-      { name: 'AI Agents',               href: '/services/ai-agents',                icon: Bot,            desc: 'Intelligent automation, 24/7' },
-      { name: 'Voice AI Agents',         href: '/services/voice-ai-agents',          icon: Phone,          desc: 'Natural voice interactions' },
-      { name: 'Process Automation',      href: '/services/process-automation',       icon: Workflow,       desc: 'End-to-end workflow automation' },
-      { name: 'Social Media Automation', href: '/services/social-media-automation',  icon: Share2,         desc: 'AI content & scheduling' },
-      { name: 'Communication Automation',href: '/services/communication-automation', icon: MessageSquare,  desc: 'SMS, voice & multi-channel' },
-    ],
-  },
-  {
-    label: 'Data & Intelligence',
-    color: 'text-purple-400',
-    items: [
-      { name: 'Vector Database Solutions', href: '/services/vector-database-solutions', icon: Database,   desc: 'Semantic search at scale' },
-      { name: 'Analytics & Insights',      href: '/services/analytics-insights',        icon: BarChart3,  desc: 'Data-driven decisions' },
-      { name: 'Agentic SEO & GEO',         href: '/services/agentic-seo-geo',           icon: Sparkles,   desc: 'Get cited by AI search' },
-      { name: 'Document Automation',       href: '/services/document-automation',       icon: FileText,   desc: 'Intelligent document processing' },
-      { name: 'Mobile App Development',    href: '/services/mobile-app-development',    icon: Smartphone, desc: 'Cross-platform Flutter apps' },
-    ],
-  },
-  {
-    label: 'Security',
-    color: 'text-red-400',
-    items: [
-      { name: 'App Security Testing',   href: '/services/application-security-testing',    icon: Bug,         desc: 'SAST, DAST, SCA & secrets' },
-      { name: 'Vulnerability Scanning', href: '/services/security-vulnerability-scanning', icon: ScanLine,    desc: 'Attack surface & CVE detection' },
-      { name: 'Penetration Testing',    href: '/services/penetration-testing',             icon: ShieldAlert, desc: 'Adversarial security testing' },
-      { name: 'Hardening & Cloud Posture', href: '/services/systems-hardening',            icon: ShieldCheck, desc: 'CIS hardening & CSPM' },
-      { name: 'For Agencies (White-Label)', href: '/services/white-label-security-agencies', icon: Handshake,  desc: 'Continuous security for your clients' },
-    ],
-  },
-];
+/* Which category does the current page belong to (category page or one of its services)? */
+const categoryForPath = (pathname) =>
+  categories.find(
+    (c) => pathname === c.href || c.services.some((sv) => pathname === `/services/${sv.id}`)
+  );
 
 /* navLinks without Solutions — we render Solutions manually */
 const simpleNavLinks = [
@@ -58,10 +24,23 @@ const simpleNavLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled]         = useState(false);
   const [isMobileOpen, setIsMobileOpen]     = useState(false);
-  const [solutionsOpen, setSolutionsOpen]   = useState(false);   // desktop hover
+  const [solutionsOpen, setSolutionsOpen]   = useState(false);   // desktop mega menu
   const [mobileSolOpen, setMobileSolOpen]   = useState(false);   // mobile accordion
-  const dropdownRef = useRef(null);
+  const [mobileCat, setMobileCat]           = useState(null);    // mobile: expanded category id
   const location    = useLocation();
+  const [activeCat, setActiveCat]           = useState(categories[0].id);
+  const closeTimer  = useRef(null);
+
+  const openMenu = () => {
+    clearTimeout(closeTimer.current);
+    if (!solutionsOpen) setActiveCat((categoryForPath(location.pathname) || categories[0]).id);
+    setSolutionsOpen(true);
+  };
+  const closeMenuSoon = () => {
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setSolutionsOpen(false), 160);
+  };
+  useEffect(() => () => clearTimeout(closeTimer.current), []);
   const { openBookingModal, openCallbackModal } = useBooking();
 
   /* scroll shadow */
@@ -75,20 +54,20 @@ const Navbar = () => {
   useEffect(() => {
     setIsMobileOpen(false);
     setMobileSolOpen(false);
+    setMobileCat(null);
+    setSolutionsOpen(false);
   }, [location.pathname]);
 
-  /* close desktop dropdown on outside click */
+  /* close desktop menu on Escape */
   useEffect(() => {
-    const handler = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setSolutionsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
-  }, []);
+    if (!solutionsOpen) return undefined;
+    const onKey = (e) => { if (e.key === 'Escape') setSolutionsOpen(false); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [solutionsOpen]);
 
-  const isServiceActive = location.pathname.startsWith('/services');
+  const isServiceActive = location.pathname.startsWith('/services') || location.pathname.startsWith('/solutions');
+  const active = categories.find((c) => c.id === activeCat) || categories[0];
   const isHomePage = location.pathname === '/';
   const hasBackground = isScrolled || !isHomePage;
 
@@ -118,88 +97,28 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-6">
 
-            {/* Solutions dropdown trigger */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setSolutionsOpen((v) => !v)}
-                className={`flex items-center gap-1.5 text-sm font-medium transition-all duration-300 hover:text-amber-400 ${
+            {/* Solutions trigger: hover opens the full-width menu, click goes to all services */}
+            <div className="flex items-center" onMouseEnter={openMenu} onMouseLeave={closeMenuSoon}>
+              <Link
+                to="/services"
+                onFocus={openMenu}
+                className={`text-sm font-medium transition-all duration-300 hover:text-amber-400 ${
                   isServiceActive || solutionsOpen ? 'text-amber-400' : 'text-gray-300'
                 }`}
               >
                 Solutions
-                <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${solutionsOpen ? 'rotate-180' : ''}`}
-                />
+              </Link>
+              <button
+                type="button"
+                aria-label="Show solutions menu"
+                aria-expanded={solutionsOpen}
+                onClick={() => (solutionsOpen ? setSolutionsOpen(false) : openMenu())}
+                className={`ml-1 p-1 rounded-md transition-colors hover:text-amber-400 ${
+                  isServiceActive || solutionsOpen ? 'text-amber-400' : 'text-gray-300'
+                }`}
+              >
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${solutionsOpen ? 'rotate-180' : ''}`} />
               </button>
-
-              {/* Mega dropdown panel */}
-              {solutionsOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-[#0f0f1e] border border-white/10 rounded-2xl shadow-2xl shadow-black/60 overflow-hidden">
-                  {/* Header row */}
-                  <div className="flex items-center justify-between px-6 py-4 border-b border-white/5">
-                    <div className="flex items-center gap-2 text-white font-semibold">
-                      <Grid3x3 className="w-4 h-4 text-amber-400" />
-                      All Solutions
-                    </div>
-                    <Link
-                      to="/services"
-                      onClick={() => setSolutionsOpen(false)}
-                      className="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 transition-colors font-medium"
-                    >
-                      View all services
-                      <ExternalLink className="w-3 h-3" />
-                    </Link>
-                  </div>
-
-                  {/* Groups grid */}
-                  <div className="grid grid-cols-3 gap-0 divide-x divide-white/5">
-                    {serviceGroups.map((group) => (
-                      <div key={group.label} className="p-5">
-                        <p className={`text-xs font-bold uppercase tracking-widest mb-3 ${group.color}`}>
-                          {group.label}
-                        </p>
-                        <ul className="space-y-1">
-                          {group.items.map((item) => {
-                            const Icon = item.icon;
-                            return (
-                              <li key={item.href}>
-                                <Link
-                                  to={item.href}
-                                  onClick={() => setSolutionsOpen(false)}
-                                  className="flex items-start gap-3 p-2 rounded-xl hover:bg-white/5 transition-colors group/item"
-                                >
-                                  <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover/item:bg-amber-500/15 transition-colors">
-                                    <Icon className="w-4 h-4 text-gray-400 group-hover/item:text-amber-400 transition-colors" />
-                                  </div>
-                                  <div>
-                                    <p className="text-sm font-medium text-gray-200 group-hover/item:text-white transition-colors leading-tight">
-                                      {item.name}
-                                    </p>
-                                    <p className="text-xs text-gray-500 mt-0.5 leading-tight">{item.desc}</p>
-                                  </div>
-                                </Link>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Footer CTA */}
-                  <div className="px-6 py-3 bg-white/2 border-t border-white/5 flex items-center justify-between">
-                    <p className="text-xs text-gray-500">Not sure where to start?</p>
-                    <Link
-                      to="/contact"
-                      onClick={() => setSolutionsOpen(false)}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors"
-                    >
-                      Book a free consultation
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  </div>
-                </div>
-              )}
             </div>
 
             {/* Simple links */}
@@ -252,10 +171,101 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Desktop mega menu: full width, categories | services | picture */}
+      {solutionsOpen && (
+        <div
+          className="hidden lg:block absolute top-full left-0 right-0 bg-[#0c0c18] border-y border-white/10 shadow-2xl shadow-black/60"
+          onMouseEnter={openMenu}
+          onMouseLeave={closeMenuSoon}
+        >
+          <div className="max-w-7xl mx-auto px-8 py-8 grid grid-cols-12 gap-8">
+            {/* 1. Categories */}
+            <div className="col-span-3 flex flex-col">
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3 px-3">Solutions</p>
+              <ul className="space-y-1">
+                {categories.map((c) => {
+                  const isActive = c.id === active.id;
+                  return (
+                    <li key={c.id}>
+                      <Link
+                        to={c.href}
+                        onMouseEnter={() => setActiveCat(c.id)}
+                        onFocus={() => setActiveCat(c.id)}
+                        className={`group flex items-center justify-between gap-3 px-3 py-3 rounded-xl border transition-colors ${
+                          isActive ? 'bg-white/[0.06] border-white/10' : 'border-transparent hover:bg-white/[0.03]'
+                        }`}
+                      >
+                        <span>
+                          <span className={`block text-base font-semibold ${isActive ? c.accent : 'text-gray-200'}`}>{c.name}</span>
+                          <span className="block text-xs text-gray-500 mt-0.5 leading-snug">{c.tagline}</span>
+                        </span>
+                        <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-all ${isActive ? `${c.accent} translate-x-0.5` : 'text-gray-600'}`} />
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              <Link to="/services" className="mt-auto pt-6 px-3 inline-flex items-center gap-1.5 text-sm font-medium text-amber-400 hover:text-amber-300 transition-colors">
+                View all services
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* 2. Services in the active category */}
+            <div className="col-span-5 border-l border-white/5 pl-8">
+              <p className={`text-xs font-bold uppercase tracking-widest mb-3 px-2 ${active.accent}`}>{active.name}</p>
+              <ul className="space-y-1">
+                {active.services.map((sv) => {
+                  const Icon = serviceIcon(sv.icon);
+                  return (
+                    <li key={sv.id}>
+                      <Link
+                        to={`/services/${sv.id}`}
+                        className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/5 transition-colors group/item"
+                      >
+                        <span className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover/item:bg-amber-500/15 transition-colors">
+                          <Icon className="w-4 h-4 text-gray-400 group-hover/item:text-amber-400 transition-colors" />
+                        </span>
+                        <span>
+                          <span className="block text-sm font-medium text-gray-200 group-hover/item:text-white transition-colors leading-tight">{sv.navName}</span>
+                          <span className="block text-xs text-gray-500 mt-0.5 leading-tight">{sv.desc}</span>
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            {/* 3. Category picture */}
+            <Link to={active.href} className="col-span-4 group relative min-h-[300px] rounded-2xl overflow-hidden border border-white/10 bg-[#1a1a2e]">
+              <img
+                key={active.image}
+                src={active.image}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute inset-0 bg-gradient-to-t from-[#0a0a12] via-[#0a0a12]/40 to-transparent" />
+              <span className="absolute bottom-0 left-0 right-0 p-5">
+                <span className={`block text-xs font-bold uppercase tracking-widest mb-1 ${active.accent}`}>
+                  {active.services.length} services
+                </span>
+                <span className="block text-xl font-bold text-white">{active.name}</span>
+                <span className="block text-sm text-gray-300 mt-1 leading-snug">{active.tagline}</span>
+                <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-amber-400">
+                  Explore {active.name}
+                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                </span>
+              </span>
+            </Link>
+          </div>
+        </div>
+      )}
+
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-[#0a0a12]/98 backdrop-blur-xl border-b border-white/5 transition-all duration-300 overflow-hidden ${
-          isMobileOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        className={`lg:hidden absolute top-full left-0 right-0 bg-[#0a0a12] shadow-2xl shadow-black/60 border-b border-white/5 transition-all duration-300 overflow-hidden ${
+          isMobileOpen ? 'max-h-[calc(100vh-5rem)] overflow-y-auto opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-4 py-5 space-y-1">
@@ -281,30 +291,51 @@ const Navbar = () => {
                 mobileSolOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="pl-3 pt-1 pb-2 space-y-4">
-                {serviceGroups.map((group) => (
-                  <div key={group.label}>
-                    <p className={`text-xs font-bold uppercase tracking-widest px-3 mb-1.5 ${group.color}`}>
-                      {group.label}
-                    </p>
-                    {group.items.map((item) => {
-                      const Icon = item.icon;
-                      return (
+              <div className="pl-3 pt-1 pb-2 space-y-1">
+                {categories.map((c) => {
+                  const open = mobileCat === c.id;
+                  return (
+                    <div key={c.id} className="rounded-xl">
+                      <div className="flex items-center">
                         <Link
-                          key={item.href}
-                          to={item.href}
-                          className="flex items-center gap-3 px-3 py-2 rounded-xl text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-colors"
+                          to={c.href}
+                          className={`flex-1 px-3 py-2.5 text-sm font-semibold ${c.accent}`}
                         >
-                          <Icon className="w-4 h-4 flex-shrink-0" />
-                          {item.name}
+                          {c.name}
                         </Link>
-                      );
-                    })}
-                  </div>
-                ))}
+                        <button
+                          type="button"
+                          aria-label={`Show ${c.name} services`}
+                          aria-expanded={open}
+                          onClick={() => setMobileCat(open ? null : c.id)}
+                          className="p-2.5 text-gray-400 hover:text-white rounded-lg"
+                        >
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+                        </button>
+                      </div>
+                      {open && (
+                        <div className="pb-2">
+                          {c.services.map((sv) => {
+                            const Icon = serviceIcon(sv.icon);
+                            return (
+                              <Link
+                                key={sv.id}
+                                to={`/services/${sv.id}`}
+                                className="flex items-center gap-3 px-3 py-2 rounded-xl text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-colors"
+                              >
+                                <Icon className="w-4 h-4 flex-shrink-0" />
+                                {sv.navName}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
                 <Link
                   to="/services"
-                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-amber-400 hover:text-amber-300 transition-colors"
+                  className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-amber-400 hover:text-amber-300 transition-colors"
                 >
                   View all services
                   <ArrowRight className="w-3.5 h-3.5" />

@@ -591,6 +591,9 @@ function buildSitemap(data) {
     entries: [
       { path: '/', changefreq: 'weekly', priority: '1.0' },
       { path: '/services', changefreq: 'weekly', priority: '0.9' },
+      { path: '/solutions/ai-automation', changefreq: 'monthly', priority: '0.8' },
+      { path: '/solutions/data-intelligence', changefreq: 'monthly', priority: '0.8' },
+      { path: '/solutions/security', changefreq: 'monthly', priority: '0.8' },
       { path: '/case-studies', changefreq: 'weekly', priority: '0.9' },
       { path: '/about', changefreq: 'monthly', priority: '0.8' },
       { path: '/contact', changefreq: 'monthly', priority: '0.8' },

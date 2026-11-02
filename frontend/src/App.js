@@ -23,6 +23,7 @@ function ScrollToTop() {
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
+import CategoryPage from './pages/CategoryPage';
 import AboutPage from './pages/AboutPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
@@ -47,6 +48,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+            <Route path="/solutions/:categoryId" element={<CategoryPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetailPage />} />
