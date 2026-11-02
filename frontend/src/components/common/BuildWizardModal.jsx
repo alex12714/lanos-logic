@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, ArrowRight, ArrowLeft, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, CheckCircle } from 'lucide-react';
 import { Button } from '../ui/button';
+import OnFireBooking, { BOOKING_PAGE_URL } from './OnFireBooking';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 
@@ -55,7 +56,7 @@ const solutionOptions = [
   }
 ];
 
-const BOOKING_URL = 'https://api.leadconnectorhq.com/widget/booking/EMs6NlYokvHW7xJWUimR';
+
 
 const BuildWizardModal = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1);
@@ -85,14 +86,6 @@ const BuildWizardModal = ({ isOpen, onClose }) => {
     
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      // Load the form embed script for calendar (only for desktop)
-      if (!isMobile) {
-        const script = document.createElement('script');
-        script.src = 'https://link.msgsndr.com/js/form_embed.js';
-        script.type = 'text/javascript';
-        script.async = true;
-        document.body.appendChild(script);
-      }
     } else {
       document.body.style.overflow = 'unset';
       // Reset state when closed
@@ -411,7 +404,7 @@ const BuildWizardModal = ({ isOpen, onClose }) => {
                       Click the button below to open our booking calendar and select a time that works for you.
                     </p>
                     <Button
-                      onClick={() => window.open(BOOKING_URL, '_blank')}
+                      onClick={() => window.open(BOOKING_PAGE_URL, '_blank', 'noopener')}
                       className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-semibold rounded-xl h-14 gap-2"
                     >
                       Book Your Discovery Call
@@ -427,15 +420,7 @@ const BuildWizardModal = ({ isOpen, onClose }) => {
                   </div>
                 ) : (
                   /* Desktop: Show embedded calendar */
-                  <div className="bg-white rounded-xl overflow-hidden">
-                    <iframe 
-                      src={BOOKING_URL}
-                      style={{ width: '100%', minHeight: '500px', border: 'none', overflow: 'hidden' }}
-                      scrolling="no" 
-                      id="wizard-booking-iframe"
-                      title="Book Discovery Call"
-                    />
-                  </div>
+                  <OnFireBooking />
                 )}
               </div>
             )}

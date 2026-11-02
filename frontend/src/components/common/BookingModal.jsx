@@ -1,28 +1,13 @@
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { Button } from '../ui/button';
+import OnFireBooking from './OnFireBooking';
 
 const BookingModal = ({ isOpen, onClose }) => {
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      
-      // Load the form embed script
-      const script = document.createElement('script');
-      script.src = 'https://link.msgsndr.com/js/form_embed.js';
-      script.type = 'text/javascript';
-      script.async = true;
-      document.body.appendChild(script);
-      
-      return () => {
-        document.body.style.overflow = 'unset';
-        // Clean up script if needed
-        const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
-        if (existingScript) {
-          existingScript.remove();
-        }
-      };
-    }
+    if (!isOpen) return undefined;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -56,15 +41,7 @@ const BookingModal = ({ isOpen, onClose }) => {
           
           {/* Calendar Embed */}
           <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
-            <div className="bg-white rounded-xl overflow-hidden">
-              <iframe 
-                src="https://api.leadconnectorhq.com/widget/booking/EMs6NlYokvHW7xJWUimR" 
-                style={{ width: '100%', minHeight: '600px', border: 'none', overflow: 'hidden' }}
-                scrolling="no" 
-                id="EMs6NlYokvHW7xJWUimR_1764857900173"
-                title="Book a Call"
-              />
-            </div>
+            <OnFireBooking />
           </div>
         </div>
       </div>

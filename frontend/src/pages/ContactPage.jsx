@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Send, User, Building2, MessageSquare, Clock, ArrowRight } from 'lucide-react';
+import OnFireBooking from '../components/common/OnFireBooking';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import FaqSection from '../components/common/FaqSection';
@@ -287,15 +288,7 @@ const ContactPage = () => {
                     Schedule a free 30-minute discovery call with our AI experts
                   </p>
                 </div>
-                <div className="bg-white">
-                  <iframe 
-                    src="https://api.leadconnectorhq.com/widget/booking/EMs6NlYokvHW7xJWUimR" 
-                    style={{ width: '100%', minHeight: '600px', border: 'none', overflow: 'hidden' }}
-                    scrolling="no" 
-                    id="EMs6NlYokvHW7xJWUimR_contact"
-                    title="Book a Call"
-                  />
-                </div>
+                <OnFireBooking />
               </div>
             </div>
           </div>

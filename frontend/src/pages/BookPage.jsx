@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Settings, Calendar, CheckCircle, Users, FileText, TestTube, ArrowRight } from 'lucide-react';
+import OnFireBooking from '../components/common/OnFireBooking';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import { breadcrumb, youTubeVideoObject } from '../lib/seo';
@@ -16,21 +17,6 @@ const BookPage = () => {
   const [showUATModal, setShowUATModal] = useState(false);
   const [showBPMNModal, setShowBPMNModal] = useState(false);
 
-  useEffect(() => {
-    // Load the form embed script
-    const script = document.createElement('script');
-    script.src = 'https://link.msgsndr.com/js/form_embed.js';
-    script.type = 'text/javascript';
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
 
   const businessAnalysisBenefits = [
     'Get clarity of the existing processes in place',
@@ -237,15 +223,7 @@ const BookPage = () => {
                   <h3 className="text-xl font-bold text-white">Book Your Business Analysis Session</h3>
                   <p className="text-gray-400 text-sm mt-1">Select a time that works best for you</p>
                 </div>
-                <div className="bg-white">
-                  <iframe 
-                    src="https://api.leadconnectorhq.com/widget/booking/EMs6NlYokvHW7xJWUimR" 
-                    style={{ width: '100%', minHeight: '650px', border: 'none', overflow: 'hidden' }}
-                    scrolling="no" 
-                    id="ba-booking-iframe"
-                    title="Book Business Analysis Session"
-                  />
-                </div>
+                <OnFireBooking />
               </div>
             </div>
           )}
@@ -293,15 +271,7 @@ const BookPage = () => {
                   <h3 className="text-xl font-bold text-white">Book Your Discovery Call</h3>
                   <p className="text-gray-400 text-sm mt-1">Select a time that works best for you</p>
                 </div>
-                <div className="bg-white">
-                  <iframe 
-                    src="https://api.leadconnectorhq.com/widget/booking/EMs6NlYokvHW7xJWUimR" 
-                    style={{ width: '100%', minHeight: '650px', border: 'none', overflow: 'hidden' }}
-                    scrolling="no" 
-                    id="discovery-booking-iframe"
-                    title="Book Discovery Call"
-                  />
-                </div>
+                <OnFireBooking />
               </div>
             </div>
           )}
