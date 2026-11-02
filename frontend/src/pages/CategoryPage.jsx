@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowRight, ArrowLeft, Check } from 'lucide-react';
+import { ArrowRight, ArrowLeft, ChevronRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import { Button } from '../components/ui/button';
@@ -114,42 +114,32 @@ const CategoryPage = () => {
       </section>
 
       {/* Services in this category */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-14 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a12] via-[#0d0d18] to-[#0a0a12]" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
             {category.name} services
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {items.map(({ ref, service }) => {
               const Icon = serviceIcon(ref.icon);
               return (
                 <Link
                   key={service.id}
                   to={service.href}
-                  className="group flex flex-col bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-3xl p-7 hover:border-amber-500/30 transition-all duration-300"
+                  aria-label={`${service.name}: ${ref.desc}. Read more`}
+                  className="group min-w-0 flex items-center gap-4 bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl px-4 py-3.5 hover:border-amber-500/40 hover:bg-[#1d1d33] transition-all duration-200"
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-amber-400" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                      {service.name}
-                    </h3>
-                  </div>
-                  <p className="text-gray-400 leading-relaxed mb-5">{service.shortDescription}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-gray-300 text-sm">
-                        <Check className="w-4 h-4 text-amber-400 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <span className="mt-auto inline-flex items-center gap-2 text-amber-400 font-medium">
-                    Learn more
-                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  <span className="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-amber-400" />
                   </span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-base font-semibold text-white group-hover:text-amber-400 transition-colors truncate">
+                      {ref.navName}
+                    </span>
+                    <span className="block text-sm text-gray-400 truncate">{ref.desc}</span>
+                  </span>
+                  <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-amber-400 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
                 </Link>
               );
             })}

@@ -50,7 +50,7 @@ export const categories = [
       { id: 'security-vulnerability-scanning', navName: 'Vulnerability Scanning', desc: 'Attack surface & CVE detection', icon: 'ScanLine' },
       { id: 'penetration-testing', navName: 'Penetration Testing', desc: 'Adversarial security testing', icon: 'ShieldAlert' },
       { id: 'systems-hardening', navName: 'Hardening & Cloud Posture', desc: 'CIS hardening & CSPM', icon: 'ShieldCheck' },
-      { id: 'white-label-security-agencies', navName: 'For Agencies (White-Label)', desc: 'Continuous security for your clients', icon: 'Handshake' },
+      { id: 'white-label-security-agencies', navName: 'For Agencies (White-Label)', desc: 'Security for your clients', icon: 'Handshake' },
     ],
   },
 ];
