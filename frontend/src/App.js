@@ -24,6 +24,7 @@ import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import CategoryPage from './pages/CategoryPage';
+import LoginPage from './pages/LoginPage';
 import AboutPage from './pages/AboutPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
@@ -53,6 +54,7 @@ function App() {
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="/industries/:industryId" element={<IndustryPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsOfServicePage />} />

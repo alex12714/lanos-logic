@@ -157,7 +157,7 @@ const Navbar = () => {
               className="border-white/20 text-white hover:bg-white/5 rounded-full px-5 h-10 transition-all duration-300"
               asChild
             >
-              <Link to="/contact">Client Portal</Link>
+              <Link to="/login">Client Portal</Link>
             </Button>
           </div>
 
@@ -373,6 +373,13 @@ const Navbar = () => {
               className="w-full border-purple-500/50 text-purple-300 rounded-full h-12"
             >
               Request Call Back
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full border-white/20 text-white hover:bg-white/5 rounded-full h-12"
+              asChild
+            >
+              <Link to="/login">Client Portal</Link>
             </Button>
           </div>
         </div>

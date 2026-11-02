@@ -22,6 +22,7 @@ const FaqSection = ({
   faqs,
   heading = 'Frequently Asked Questions',
   subheading,
+  embedded = false,
 }) => {
   if (!faqs || faqs.length === 0) return null;
 
@@ -34,6 +35,40 @@ const FaqSection = ({
       acceptedAnswer: { '@type': 'Answer', text: faq.a },
     })),
   };
+
+  const ld = (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+
+  if (embedded) {
+    return (
+      <div>
+        <Accordion type="single" collapsible className="space-y-4">
+          {faqs.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={`faq-${index}`}
+              className="bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-2xl px-6 [&:last-child]:border-b"
+            >
+              <AccordionTrigger className="text-white text-left text-base sm:text-lg font-semibold hover:no-underline hover:text-amber-400 [&>svg]:text-amber-400">
+                {faq.q}
+              </AccordionTrigger>
+              <AccordionContent
+                forceMount
+                className="text-gray-400 leading-relaxed text-base"
+              >
+                {faq.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+        {ld}
+      </div>
+    );
+  }
 
   return (
     <section className="relative py-24 overflow-hidden">
