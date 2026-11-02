@@ -90,6 +90,26 @@ export const glossaryTerms = [
       'Systems hardening is the proactive work of reducing a system’s attack surface by applying secure configuration baselines across servers, cloud, containers, and databases. Grounded in standards like the CIS Benchmarks and NIST guidelines, hardening ensures that even if a vulnerability exists, attackers have far less to target.',
   },
   {
+    term: 'SAST (Static Application Security Testing)',
+    definition:
+      'SAST analyses an application’s source code without running it to find security flaws such as injection, unsafe deserialisation, and missing authorisation checks. Because it points to the exact file and line, it is usually run on every pull request so developers can fix issues before code is merged.',
+  },
+  {
+    term: 'DAST (Dynamic Application Security Testing)',
+    definition:
+      'DAST tests a running web application or API from the outside, sending crafted requests the way an attacker would. It finds runtime issues that code analysis cannot see, such as misconfigured headers, weak session handling, and exposed endpoints, and is commonly run against staging environments.',
+  },
+  {
+    term: 'SCA (Software Composition Analysis)',
+    definition:
+      'Software composition analysis inventories the open-source libraries and packages an application depends on, including indirect dependencies, and flags versions with known CVEs or licence risks. It is the main control for software supply-chain risk and can produce a software bill of materials (SBOM).',
+  },
+  {
+    term: 'CSPM (Cloud Security Posture Management)',
+    definition:
+      'Cloud security posture management continuously checks cloud accounts on AWS, Azure, and GCP for risky configuration — public storage, over-permissive IAM, open network rules, unencrypted data, and disabled logging — scores them against benchmarks like the CIS Foundations Benchmarks, and alerts on drift.',
+  },
+  {
     term: 'Zero Trust',
     definition:
       'Zero Trust is a security model built on the principle “never trust, always verify.” Rather than assuming anything inside the network is safe, it continuously authenticates and authorises every user, device, and request with least-privilege access — a foundational approach for protecting cloud-native and AI-driven architectures.',

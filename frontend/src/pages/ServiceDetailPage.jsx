@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowRight, Check, ArrowLeft, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, Check, ArrowLeft, Bot, Phone, FileText, Workflow, Share2, MessageSquare, Smartphone, BarChart3, Database, ScanLine, ShieldAlert, ShieldCheck, Sparkles, Bug } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/seo/Seo';
 import FaqSection from '../components/common/FaqSection';
@@ -23,6 +23,7 @@ const iconMap = {
   ScanLine: ScanLine,
   ShieldAlert: ShieldAlert,
   ShieldCheck: ShieldCheck,
+  Bug: Bug,
   Sparkles: Sparkles
 };
 

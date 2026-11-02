@@ -7,7 +7,7 @@
 export const homeFaqs = [
   {
     q: 'What AI automation services does Lanos Logic offer?',
-    a: 'Lanos Logic offers AI Agents, Voice AI Agents, Vector Database Solutions, Document Automation, Process Automation, Social Media Automation, Communication Automation, Mobile App Development, and Analytics & Insights, plus enterprise cybersecurity (vulnerability scanning, penetration testing, and systems hardening).',
+    a: 'Lanos Logic offers AI Agents, Voice AI Agents, Vector Database Solutions, Document Automation, Process Automation, Social Media Automation, Communication Automation, Mobile App Development, and Analytics & Insights, plus enterprise cybersecurity (application security testing — SAST, DAST, SCA, secret, container and IaC scanning — vulnerability scanning, penetration testing, and systems hardening with cloud posture management).',
   },
   {
     q: 'How much does AI automation cost?',
@@ -129,6 +129,94 @@ const SERVICE_FAQS = {
     {
       q: 'How much does agentic SEO / GEO cost and how long does it take?',
       a: 'It is scoped on a free discovery call and quoted as a fixed project price based on the size of your site and the depth of optimization. An initial GEO audit and the core structural work are typically delivered within 2-6 weeks, with ongoing measurement of where AI engines mention your brand so we can keep closing gaps.',
+    },
+  ],
+  'application-security-testing': [
+    {
+      q: 'What is the difference between SAST and DAST?',
+      a: 'SAST (static application security testing) reads your source code without running it and points to the exact file and line of a flaw, such as an injection or a missing authorisation check. DAST (dynamic application security testing) attacks the running application from the outside and finds issues that only appear at runtime, such as misconfigured headers, session handling, or exposed endpoints. They catch different problems, so we run both.',
+    },
+    {
+      q: 'What are SCA and secret scanning?',
+      a: 'Software composition analysis (SCA) lists every open-source library and package your application depends on, including indirect ones, and flags versions with known CVEs or risky licences. Secret scanning searches code, configuration, and git history for API keys, tokens, passwords, and private keys, and can block a commit before a secret leaves a developer’s machine.',
+    },
+    {
+      q: 'What do container and IaC scanning check?',
+      a: 'Container scanning checks Docker images and their base layers for vulnerable OS packages and insecure settings such as running as root. Infrastructure-as-code (IaC) scanning checks Terraform, CloudFormation, Kubernetes manifests, and Helm charts for misconfigurations — public buckets, open security groups, missing encryption — before they are deployed.',
+    },
+    {
+      q: 'Will security scanning slow down our developers?',
+      a: 'It should not. Fast checks (secrets, SAST on changed files, SCA) run on each pull request in minutes; heavier DAST scans run nightly or against staging. We tune rules and triage the first baseline so builds fail only on real, high-severity issues instead of burying the team in noise.',
+    },
+    {
+      q: 'How much does application security testing cost and how do I get started?',
+      a: 'It is scoped on a free discovery call based on your repositories, languages, and CI/CD platform, then quoted as a fixed price for the setup, with optional ongoing triage support. Most pipelines are scanning within one to three weeks.',
+    },
+  ],
+  'security-vulnerability-scanning': [
+    {
+      q: 'What is security vulnerability scanning?',
+      a: 'Security vulnerability scanning is the continuous, automated process of finding known weaknesses in what you have deployed — websites, APIs, servers, containers, and cloud accounts — and checking them against the OWASP Top 10 and daily-updated CVE databases, so you can fix them before attackers exploit them.',
+    },
+    {
+      q: 'What is the difference between vulnerability scanning and application security testing?',
+      a: 'Application security testing (SAST, SCA, secret and IaC scanning) looks inside your code and build pipeline before release. Vulnerability scanning looks at what is already live: your external attack surface, internal hosts, running containers, and cloud services. Most teams need both, because new CVEs are published every day for software that was clean when it shipped.',
+    },
+    {
+      q: 'How often should we run vulnerability scans?',
+      a: 'External scans should run at least weekly and after every significant change; PCI-DSS requires quarterly external and internal scans as a minimum. We usually run continuous or daily external monitoring plus weekly authenticated scans, with alerts for newly disclosed critical CVEs that affect your stack.',
+    },
+    {
+      q: 'Is vulnerability scanning a substitute for a penetration test?',
+      a: 'No. Scanning finds known weaknesses automatically and at scale; a penetration test uses a human attacker to prove which ones are exploitable and to find logic flaws scanners miss. Scanning keeps you covered between pentests.',
+    },
+    {
+      q: 'How much does vulnerability scanning cost?',
+      a: 'It is scoped on a free discovery call based on the number of domains, IP addresses, applications, and cloud accounts in scope, and quoted as a fixed monthly or annual price.',
+    },
+  ],
+  'penetration-testing': [
+    {
+      q: 'What is penetration testing?',
+      a: 'Penetration testing is an authorised, simulated cyberattack carried out by certified ethical hackers to find and prove exploitable vulnerabilities in your web apps, APIs, networks, and cloud infrastructure before real attackers do.',
+    },
+    {
+      q: 'What is the difference between black-box, grey-box, and white-box testing?',
+      a: 'Black-box testing starts with no inside knowledge, like an external attacker. Grey-box testing starts with a normal user account, which is how most real breaches unfold. White-box testing includes source code and architecture access and gives the deepest coverage for the time spent. We recommend the approach on the scoping call based on your goals and compliance needs.',
+    },
+    {
+      q: 'How often should we run a penetration test?',
+      a: 'At least once a year, and after major changes such as a new product, a large release, or a cloud migration. SOC 2, ISO 27001, and PCI-DSS auditors typically expect an annual test, and PCI-DSS also requires testing after significant changes.',
+    },
+    {
+      q: 'Will a penetration test disrupt our production systems?',
+      a: 'Testing follows written rules of engagement that set scope, timing, and techniques. Destructive tests are excluded or run against staging, and we stop and call you immediately if we find a critical issue or anything unexpected.',
+    },
+    {
+      q: 'How long does a penetration test take and how much does it cost?',
+      a: 'A focused web app or API test usually takes one to two weeks, with a report shortly after. Price depends on scope — applications, roles, endpoints, and network size — and is quoted as a fixed price after a free scoping call.',
+    },
+  ],
+  'systems-hardening': [
+    {
+      q: 'What is systems hardening?',
+      a: 'Systems hardening is the work of configuring servers, databases, containers, Kubernetes, and cloud accounts securely — removing unused services, closing ports, enforcing least privilege, and applying baselines such as the CIS Benchmarks — so attackers have far less to target.',
+    },
+    {
+      q: 'What is cloud security posture management (CSPM)?',
+      a: 'CSPM continuously checks your AWS, Azure, and GCP accounts for risky configuration: public storage buckets, over-permissive IAM roles and keys, security groups open to the internet, unencrypted data, and disabled logging. It scores each account against benchmarks such as the CIS Foundations Benchmarks and alerts when a change undoes a control.',
+    },
+    {
+      q: 'Will hardening break our applications?',
+      a: 'Not if it is done in stages. We assess current settings first, test changes in a non-production environment, roll them out gradually, and keep a rollback path for every change.',
+    },
+    {
+      q: 'Which standards do you harden against?',
+      a: 'CIS Benchmarks and CIS Controls v8, NIST SP 800-123, DISA STIGs for regulated and government environments, NSA/CISA Kubernetes hardening guidance, and Zero Trust Architecture principles. The result is documented for SOC 2, ISO 27001, and PCI-DSS audits.',
+    },
+    {
+      q: 'How much does systems hardening and cloud posture management cost?',
+      a: 'It is scoped on a free discovery call based on the number of servers, clusters, and cloud accounts, then quoted as a fixed price for the hardening work, with optional ongoing posture monitoring.',
     },
   ],
 };
