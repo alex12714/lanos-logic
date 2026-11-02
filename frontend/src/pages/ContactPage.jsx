@@ -125,12 +125,14 @@ const ContactPage = () => {
       {/* 1. Schedule a call */}
       <section id="schedule" className="relative pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-[#0a0a12]" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* max-w-5xl keeps the booking frame wider than 860px on desktop, which is
+            where the OnFire embed switches to its side-by-side layout
+            (details left, calendar right). Phones get the stacked layout. */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-[#1a1a2e] to-[#16162a] border border-white/10 rounded-3xl overflow-hidden">
-            <div className="p-6 sm:p-7 border-b border-white/10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
+            <div className="px-6 py-4 border-b border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
               <div>
-                <h2 className="text-2xl font-bold text-white">Schedule a Call</h2>
-                <p className="text-gray-400 text-sm mt-1">Free discovery call with our team. Pick a time that works for you.</p>
+                <h2 className="text-xl font-bold text-white">Schedule a Call</h2>
               </div>
               <a href="#message" className="text-sm text-amber-400 hover:text-amber-300 whitespace-nowrap">
                 Prefer to write? Send a message
